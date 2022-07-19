@@ -1,8 +1,8 @@
-## LDN 呪いのアドオン
+# LDN 呪いのアドオン
 
 ここに説明文を記入
 
-### 呪いのmob
+## 呪いのmob
 
 ![呪いのアドオンmob1h](https://user-images.githubusercontent.com/48090196/179731621-263e2442-1a99-48a3-938d-0ac5f7c1015b.png)
 
@@ -12,17 +12,18 @@
 
 ![呪いのアドオンmob4h](https://user-images.githubusercontent.com/48090196/179731661-1bf18447-0832-40de-96cd-b1407ca4ef2c.png)
 
-### 呪いの建物
+## 呪いの建物
 
 ![呪いのアドオンbuilding1](https://user-images.githubusercontent.com/48090196/179731886-f79092fc-408f-4979-abaa-df635b7d9ab5.png)
 
 ![呪いのアドオンbuilding2](https://user-images.githubusercontent.com/48090196/179731897-3fa7abbc-fbfa-4e49-9c7a-f8d7a8f0a34b.png)
 
-### 呪いの要素
+## 呪いの要素
 
 ![呪われたアドオン要素1](https://user-images.githubusercontent.com/48090196/179731967-3ed7d718-fa44-4f08-8275-18be9102214a.gif)
 
-詳しくはwiki https://github.com/LDNServer/LDN_Cursed_Addon/wiki で
+### 詳しくは
+https://github.com/LDNServer/LDN_Cursed_Addon/wiki
 
-ダウンロード
+### ダウンロード
 ここにリンクを挿入
