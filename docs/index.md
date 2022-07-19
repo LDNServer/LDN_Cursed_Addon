@@ -23,3 +23,6 @@
 ![呪われたアドオン要素1](https://user-images.githubusercontent.com/48090196/179731967-3ed7d718-fa44-4f08-8275-18be9102214a.gif)
 
 詳しくはwiki https://github.com/LDNServer/LDN_Cursed_Addon/wiki で
+
+ダウンロード
+ここにリンクを挿入
