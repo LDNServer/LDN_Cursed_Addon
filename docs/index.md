@@ -12,6 +12,9 @@
 
 ![image](https://user-images.githubusercontent.com/48090196/184121649-d6b090ed-8afd-4542-a9f1-efeac98ba6da.png)
 
+![image](https://user-images.githubusercontent.com/48090196/184124540-29c3f530-ac63-4a45-8d68-6d45afbec078.png)
+
+![image](https://user-images.githubusercontent.com/48090196/184124637-e4cc35a9-d95f-482d-818a-baa6026b48fe.png)
 
 ## 呪いの建物
 
