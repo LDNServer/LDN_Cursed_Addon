@@ -4,13 +4,14 @@
 
 ## 呪いのmob
 
-![呪いのアドオンmob1h](https://user-images.githubusercontent.com/48090196/179731621-263e2442-1a99-48a3-938d-0ac5f7c1015b.png)
+![image](https://user-images.githubusercontent.com/48090196/184119658-40e4fb40-0666-4d14-bf05-1c6e6a198e51.png)
 
-![呪いのアドオンmob2h](https://user-images.githubusercontent.com/48090196/179731632-bb9be19d-ac05-473e-9456-c63d866bb892.png)
+![image](https://user-images.githubusercontent.com/48090196/184120115-7b740e56-4ccf-42a6-acc2-231d49f1aecb.png)
 
-![呪いのアドオンmob3h](https://user-images.githubusercontent.com/48090196/179731645-5dcc3da0-d839-487e-bec3-b468dd744b45.png)
+![image](https://user-images.githubusercontent.com/48090196/184121519-e76d0b91-06e1-4cde-9dd6-2f0ab91f3690.png)
 
-![呪いのアドオンmob4h](https://user-images.githubusercontent.com/48090196/179731661-1bf18447-0832-40de-96cd-b1407ca4ef2c.png)
+![image](https://user-images.githubusercontent.com/48090196/184121649-d6b090ed-8afd-4542-a9f1-efeac98ba6da.png)
+
 
 ## 呪いの建物
 
@@ -26,4 +27,4 @@
 [呪いのバージョン「Minecraft LDN」Wiki](https://github.com/LDNServer/LDN_Cursed_Addon/wiki)
 
 ### ダウンロード
-[ダウンロード(まだできてないのでwikiページに飛びます)](https://github.com/LDNServer/LDN_Cursed_Addon/wiki)
+[ダウンロード](https://github.com/LDNServer/LDN_Cursed_Addon/wiki)
