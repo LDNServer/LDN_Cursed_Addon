@@ -1,0 +1,24 @@
+{
+    "format_version": "1.8.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "ldns:bomber_dungeon_player_checker_entity",
+            "materials": {
+                "default": "fireball"
+            },
+            "textures": {
+                "default": "textures/entity/ldns/onibi_spawn_controller"
+            },
+            "geometry": {
+                "default": "geometry.ldns.test"
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ],
+            "spawn_egg": {
+                "base_color": "#333333",
+                "overlay_color": "#944444"
+            }
+        }
+    }
+}

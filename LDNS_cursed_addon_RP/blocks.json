@@ -1,0 +1,18 @@
+{
+    "ldns:fake_stone_explosive": {
+        "sound": "stone",
+        "textures": "stone"
+    },
+    "ldns:fake_deepslate_explosive": {
+      "isotropic" : {
+         "down" : true,
+         "up" : true
+      },
+      "sound" : "deepslate",
+      "textures" : {
+         "down" : "deepslate_top",
+         "side" : "deepslate",
+         "up" : "deepslate_top"
+      }
+    }
+}

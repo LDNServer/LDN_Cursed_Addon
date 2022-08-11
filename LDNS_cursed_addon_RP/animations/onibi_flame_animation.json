@@ -1,0 +1,20 @@
+{
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.ldns.onibi.flame": {
+            "animation_length": 8,
+            "loop": true,
+            "particle_effects": {
+                "0.0": {
+                    "effect": "flame",
+                    "locator": "body"
+                }
+            },
+            "sound_effects": {
+                "0.0": {
+                    "effect": "flaming"
+                }
+            }
+        }
+    }
+}

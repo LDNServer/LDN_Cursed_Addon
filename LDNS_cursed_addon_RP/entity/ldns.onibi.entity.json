@@ -1,0 +1,35 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ldns:onibi",
+      "materials": {
+        "default": "fireball"
+      },
+      "textures": {
+        "default": "textures/entity/ldns/onibi"
+      },
+      "geometry": {
+        "default": "geometry.fireball"
+      },
+      "animations": {
+        "flame":"animation.ldns.onibi.flame",
+        "face_player": "animation.actor.billboard"
+      },
+      "particle_effects": {
+        "flame": "ldns:onibi_flame"
+      },
+      "sound_effects": {
+      	"flaming": "mob.ldns.onibi.flaming"
+      },
+      "scripts": {
+        "scale": "1.0",
+        "animate": [
+          "face_player",
+          "flame"
+        ]
+      },
+      "render_controllers": [ "controller.render.zombie" ]
+    }
+  }
+}

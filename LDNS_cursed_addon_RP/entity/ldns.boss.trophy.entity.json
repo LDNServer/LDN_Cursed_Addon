@@ -1,0 +1,26 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ldns:boss_trophy",
+      "min_engine_version": "1.8.0",
+      "materials": {
+        "default": "armor_stand"
+      },
+      "textures": {
+        "normal": "textures/entity/ldns/boss/boss_trophy_normal",
+        "mad":"textures/entity/ldns/boss/boss_trophy_mad",
+        "halloween":"textures/entity/ldns/boss/boss_trophy_halloween"
+      },
+      "geometry": {
+        "default": "geometry.boss_trophy"
+      },
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 33
+      },
+      "render_controllers": [ "controller.render.ldns.boss_trophy" ],
+      "enable_attachables": true
+    }
+  }
+}

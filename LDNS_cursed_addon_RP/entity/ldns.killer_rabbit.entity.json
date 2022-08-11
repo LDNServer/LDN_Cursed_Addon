@@ -1,0 +1,36 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ldns:killer_rabbit",
+      "min_engine_version": "1.8.0",
+      "materials": { "default": "rabbit" },
+      "textures": {
+        "brown": "textures/entity/ldns/killer_rabbit/brown",
+        "white": "textures/entity/ldns/killer_rabbit/white",
+        "black": "textures/entity/ldns/killer_rabbit/blackrabbit",
+        "white_splotched": "textures/entity/ldns/killer_rabbit/white_splotched",
+        "gold": "textures/entity/ldns/killer_rabbit/gold",
+        "salt": "textures/entity/ldns/killer_rabbit/salt",
+        "toast": "textures/entity/ldns/killer_rabbit/toast"
+      },
+      "geometry": {
+        "default": "geometry.rabbit.v1.8"
+      },
+      "animations": {
+        "move": "animation.rabbit.move",
+        "baby_transform": "animation.rabbit.baby_transform",
+        "look_at_target": "animation.common.look_at_target"
+      },
+      "animation_controllers": [
+        { "general": "controller.animation.rabbit.general" },
+        { "baby": "controller.animation.rabbit.baby" }
+      ],
+      "render_controllers": [ "controller.render.rabbit" ],
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 24
+      }
+    }
+  }
+}

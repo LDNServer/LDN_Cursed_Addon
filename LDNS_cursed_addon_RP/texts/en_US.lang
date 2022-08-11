@@ -1,0 +1,53 @@
+##Entities & Spawn eggs
+
+entity.ldns:onibi.name=Will-o'-the-wisp
+entity.ldns:onibi<>.name=Will-o'-the-wisp
+item.spawn_egg.entity.ldns:onibi.name=Spawn Will-o'-the-wisp
+
+entity.ldns:skele_zombie.name=Skele Zombie
+item.spawn_egg.entity.ldns:skele_zombie.name=Spawn Skele zombie
+
+entity.ldns:bomber_zombie.name=Bomber zombie
+item.spawn_egg.entity.ldns:bomber_zombie.name=Spawn Bomber zombie
+
+entity.ldns:shadow_mob.name=Shadow mob
+item.spawn_egg.entity.ldns:shadow_mob.name=Spawn Shadow mob
+
+entity.ldns:bomb.name=Bomb
+
+entity.ldns:bed_explosion.name=Cursed bed
+
+entity.ldns:nether_portal_explosion_no_fire.name=Cursed portal
+entity.ldns:nether_portal_explosion.name=Cursed portal
+
+entity.ldns:killer_rabbit.name=Killer rabbit
+item.spawn_egg.entity.ldns:killer_rabbit.name=Spawn Killer rabbit
+
+entity.ldns:bse_cow.name=BSE cow
+item.spawn_egg.entity.ldns:bse_cow.name=Spawn BSE cow
+
+entity.ldns:skeleton_trader.name=Skeleton trader
+item.spawn_egg.entity.ldns:skeleton_trader.name=Spawn skeleton trader
+
+entity.ldns:dr.naba.name=Dr.Naba
+entity.ldns:dr.naba<>.name=Dr.Naba
+item.spawn_egg.entity.ldns:dr.naba.name=Spawn Dr.Naba
+
+##Items
+
+item.ldns:travel_ticket=Travel ticket
+
+item.ldns:bomb=Bomb
+
+item.ldns:cursed_soul=Cursed soul
+
+item.ldns:heavy_stone=Heavy stone
+
+item.ldns:boss_trophy=Boss trophy
+
+item.ldns:cursed_idol=Cursed idol
+
+##Messages
+
+message.ldns.enable_debug_log=Enabled debug logs
+message.ldns.disable_debug_log=Disabled debug logs

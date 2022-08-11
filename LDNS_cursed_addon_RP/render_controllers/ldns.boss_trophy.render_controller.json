@@ -1,0 +1,25 @@
+{
+    "format_version": "1.8.0",
+    "render_controllers": {
+        "controller.render.ldns.boss_trophy": {
+            "arrays": {
+                "textures": {
+                    "Array.skins": [
+                        "Texture.normal",
+                        "Texture.mad",
+                        "Texture.halloween"
+                    ]
+                }
+            },
+            "geometry": "Geometry.default",
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "textures": [
+                "Array.skins[query.variant]"
+            ]
+        }
+    }
+}

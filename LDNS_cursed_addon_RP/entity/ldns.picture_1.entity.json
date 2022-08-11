@@ -1,0 +1,20 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ldns:picture_1",
+      "materials": { "default": "entity_emissive_alpha_one_sided" },
+      "textures": {
+        "default": "textures/entity/ldns/pictures/picture_1"
+      },
+      "geometry": {
+        "default": "geometry.ldns.picture_HD"
+      },
+      "render_controllers": [ "controller.render.default" ],
+      "spawn_egg": {
+        "base_color": "#ffffff",
+        "overlay_color": "#9fffff"
+      }
+    }
+  }
+}

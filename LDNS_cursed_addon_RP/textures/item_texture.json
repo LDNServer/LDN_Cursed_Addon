@@ -1,0 +1,24 @@
+{
+	"resource_pack_name": "ldns",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"bomb": {
+			"textures": "textures/item/ldns/ldns_bomb"
+		},
+		"travel_ticket": {
+			"textures": "textures/item/ldns/ldns_travel_ticket"
+		},
+		"cursed_soul": {
+		  "textures": "textures/item/ldns/ldns_cursed_soul"
+		},
+		"heavy_stone": {
+			"textures": "textures/item/ldns/ldns_heavy_stone"
+		},
+		"boss_trophy": {
+			"textures": "textures/item/ldns/ldns_boss_trophy"
+		},
+		"cursed_idol":{
+			"textures": "textures/item/ldns/ldns_cursed_idol"			
+		}
+	}
+}

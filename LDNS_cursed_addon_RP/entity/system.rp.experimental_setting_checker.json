@@ -1,0 +1,18 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ldns:experimental_setting_checker",
+      "materials": {
+        "default": "fireball"
+      },
+      "textures": {
+        "default": "textures/entity/ldns/onibi"
+      },
+      "geometry": {
+        "default": "geometry.fireball"
+      },
+      "render_controllers": [ "controller.render.default" ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ldns:bed_explosion",
+      "materials": {
+        "default": "fireball"
+      },
+      "textures": {
+        "default": "textures/entity/ldns/onibi"
+      },
+      "geometry": {
+        "default": "geometry.fireball"
+      },
+      "render_controllers": [ "controller.render.default" ],
+      "spawn_egg": {
+        "base_color": "#1234f5",
+        "overlay_color": "#9fb4ff"
+      }
+    }
+  }
+}

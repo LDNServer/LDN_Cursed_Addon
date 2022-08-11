@@ -1,0 +1,24 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ldns:shadow_mob",
+      "min_engine_version": "1.8.0",
+      "materials": {
+        "default": "fireball"
+      },
+      "textures": {
+        "default": "textures/entity/ldns/onibi"
+      },
+      "geometry": {
+        "default": "geometry.fireball"
+      },
+      "spawn_egg": {
+        "base_color": "#3fh480",
+        "overlay_color": "#943324"
+      },
+      "render_controllers": [ "controller.render.default" ],
+      "enable_attachables": true
+    }
+  }
+}
