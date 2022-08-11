@@ -30,4 +30,4 @@
 [呪いのバージョン「Minecraft LDN」Wiki](https://github.com/LDNServer/LDN_Cursed_Addon/wiki)
 
 ### ダウンロード
-[ダウンロード](https://github.com/LDNServer/LDN_Cursed_Addon/wiki)
+[ダウンロード](https://minecraft-mcworld.com/17029/)
