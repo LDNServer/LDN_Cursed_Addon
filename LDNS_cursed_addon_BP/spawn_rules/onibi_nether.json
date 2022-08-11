@@ -1,0 +1,40 @@
+{
+    "format_version": "1.8.0",
+    "minecraft:spawn_rules": {
+        "description": {
+            "identifier": "ldns:onibi",
+            "population_control": "monster"
+        },
+        "conditions": [
+            {
+              "minecraft:spawns_underground": {
+              },
+                "minecraft:brightness_filter": {
+                    "min": 0,
+                    "max": 10,
+                    "adjust_for_weather": true
+                },
+                "minecraft:difficulty_filter": {
+                    "min": "easy",
+                    "max": "hard"
+                },
+                "minecraft:weight": {
+                    "default": 70
+                },
+                "minecraft:herd": {
+                    "min_size": 1,
+                    "max_size": 2
+                },
+                "minecraft:biome_filter": {
+                    "all_of": [
+                        {
+                            "test": "has_biome_tag",
+                            "operator": "==",
+                            "value": "soulsand_valley"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

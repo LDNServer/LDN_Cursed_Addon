@@ -1,0 +1,135 @@
+{
+    "tiers": [
+        {
+            "total_exp_required": 0,
+            "trades": [
+                {
+                    "wants": [
+                        {
+                            "item": "minecraft:dye:15",
+                            "quantity": 21
+                        }
+                    ],
+                    "gives": [
+                        {
+                            "item": "minecraft:emerald",
+                            "quantity": 1
+                        }
+                    ],
+                    "trader_exp": 0,
+                    "max_uses": -1,
+                    "reward_exp": true
+                },
+                {
+                    "wants": [
+                        {
+                            "item": "ldns:cursed_soul",
+                            "quantity": 1
+                        }
+                    ],
+                    "gives": [
+                        {
+                            "item": "minecraft:emerald",
+                            "quantity": 3
+                        }
+                    ],
+                    "trader_exp": 0,
+                    "max_uses": 16,
+                    "reward_exp": true
+                },
+                {
+                    "wants": [
+                        {
+                            "item": "minecraft:emerald",
+                            "quantity": 10
+                        }
+                    ],
+                    "gives": [
+                        {
+                            "item": "minecraft:potion:12",
+                            "quantity": 1
+                        }
+                    ],
+                    "trader_exp": 0,
+                    "max_uses": 16,
+                    "reward_exp": true
+                },
+                {
+                    "wants": [
+                        {
+                            "item": "minecraft:emerald",
+                            "quantity": 12
+                        }
+                    ],
+                    "gives": [
+                        {
+                            "item": "ldns:bomb",
+                            "quantity": 4
+                        }
+                    ],
+                    "trader_exp": 0,
+                    "max_uses": 16,
+                    "reward_exp": true
+                },
+                {
+                    "wants": [
+                        {
+                            "item": "minecraft:emerald",
+                            "quantity": 16
+                        }
+                    ],
+                    "gives": [
+                        {
+                            "item": "minecraft:shield",
+                            "functions": [
+                                {
+                                    "function": "specific_enchants",
+                                    "enchants": [
+                                        {
+                                            "id": "unbreaking",
+                                            "level": [
+                                                3,
+                                                3
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "function": "set_name",
+                                    "name": "丈夫な盾"
+                                }
+                            ],
+                            "quantity": 1
+                        }
+                    ],
+                    "trader_exp": 0,
+                    "max_uses": 16,
+                    "reward_exp": true
+                },
+                {
+                    "wants": [
+                        {
+                            "item": "minecraft:emerald",
+                            "quantity": 32
+                        }
+                    ],
+                    "gives": [
+                        {
+                            "item": "ldns:travel_ticket",
+                            "functions": [
+                                {
+                                    "function": "set_lore",
+                                    "lore": "異世界へ安全に移動するために必要。"
+                                }
+                            ],
+                            "quantity": 1
+                        }
+                    ],
+                    "trader_exp": 0,
+                    "max_uses": 16,
+                    "reward_exp": true
+                }
+            ]
+        }
+    ]
+}
