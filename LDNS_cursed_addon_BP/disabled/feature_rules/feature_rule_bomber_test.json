@@ -1,0 +1,39 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:feature_rules": {
+        "description": {
+            "identifier": "ldns:feature_rule_bomber_test",
+            "places_feature": "ldns:feature_bomber_test"
+        },
+        "conditions": {
+            "placement_pass": "surface_pass",
+            "minecraft:biome_filter": {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "overworld"
+            }
+        },
+        "distribution": {
+            "iterations": 1,
+            "x": {
+                "extent": [
+                    0,
+                    16
+                ],
+                "distribution": "uniform"
+            },
+            "y": 70,
+            "z": {
+                "extent": [
+                    0,
+                    16
+                ],
+                "distribution": "uniform"
+            },
+            "scatter_chance": {
+                "numerator": 1,
+                "denominator": 3
+            }
+        }
+    }
+}

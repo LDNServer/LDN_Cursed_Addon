@@ -1,0 +1,74 @@
+{
+  "format_version": "1.18.30",
+ "minecraft:entity": {
+  "description": {
+    "identifier": "ldns:boss.bomb",
+    "is_spawnable": false,
+    "is_summonable": true,
+    "is_experimental": false
+  },
+
+  "component_groups": {
+   "minecraft:exploding": {
+    "minecraft:explode": {
+     "fuse_length": 0,
+     "fuse_lit": true,
+     "breaks_blocks": true,
+     "power": 1.5,
+     "causes_fire": false,
+     "fire_affected_by_griefing": true,
+     "destroy_affected_by_griefing": true
+    }
+   }
+  },
+
+  "components": {
+   "minecraft:collision_box": {
+    "width": 0.01,
+    "height": 0.01
+   },
+   "minecraft:projectile": {
+    "on_hit": {
+     "definition_event": {
+      "affect_projectile": true,
+      "event_trigger": {
+            "event": "minecraft:explode",
+            "target": "self"
+      }
+     }
+    },
+    "power": 1.5,
+    "gravity": 0.3,
+    "liquid_inertia": 0,
+    "uncertainty_base": 100,
+    "uncertainty_multiplier": 0,
+    "offset": [ 0, 2.0, 0.0 ],
+    "angle_offset": -10,
+    "catch_fire": false
+   },
+   "minecraft:physics": {
+   },
+   "minecraft:pushable": {
+    "is_pushable": true,
+    "is_pushable_by_piston": true
+   },
+   "minecraft:damage_sensor": {
+       "triggers": {
+           "cause": "all",
+           "deals_damage": false
+       }
+   },
+   "minecraft:conditional_bandwidth_optimization": {
+  }
+  },
+  "events": {
+   "minecraft:explode": {
+    "add": {
+     "component_groups": [
+      "minecraft:exploding"
+     ]
+    }
+   }
+  }
+ }
+}

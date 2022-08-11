@@ -1,0 +1,18 @@
+{
+    "format_version": "1.18.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "ldns:heavy_stone",
+            "category": "Items"
+        },
+        "components": {
+            "minecraft:icon": {
+                "texture": "heavy_stone"
+            },
+            "minecraft:hand_equipped": false,
+            "minecraft:stacked_by_data": true,
+            "minecraft:foil": false,
+            "minecraft:max_stack_size": 1
+        }
+    }
+}

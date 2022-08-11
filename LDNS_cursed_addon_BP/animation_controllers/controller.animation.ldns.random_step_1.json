@@ -1,0 +1,30 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.ldns.random_step_1": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "ldns.step_1": "math.mod(query.life_time,5) == math.die_roll_integer(1,0,50)"
+                        }
+                    ]
+                },
+                "ldns.step_1": {
+                    "transitions": [
+                        {
+                            "default": "variable.time_step_1 = (variable.time_step_1 ?? 0) ; variable.time_step_1 = variable.time_step_1 < 1200 ? variable.time_step_1 + 1:0;return variable.time_step_1 == 0;"
+                        }
+                    ],
+                    "on_entry": [
+                        "/playsound player.ldns.random_step_1 @s ~10 ~-5 ~4 0.3",
+                        "/tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_step_1) : ldns.step_1\"}]}"
+                    ],
+                    "on_exit": [
+                        "/tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_step_1) : default \"}]}"
+                    ]
+                }
+            }
+        }
+    }
+}

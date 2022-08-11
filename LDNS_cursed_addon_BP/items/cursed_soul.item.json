@@ -1,0 +1,18 @@
+{
+    "format_version": "1.18.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "ldns:cursed_soul",
+            "category": "Items"
+        },
+        "components": {
+            "minecraft:icon": {
+                "texture": "cursed_soul"
+            },
+            "minecraft:hand_equipped": false,
+            "minecraft:stacked_by_data": true,
+            "minecraft:foil": false,
+            "minecraft:max_stack_size": 64
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+  "format_version": "1.17.0",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "ldns:ldns.fake_stone_place"
+    },
+    "count": 4,
+    "replace_rules": [
+      {
+        "places_block": "ldns:fake_stone_explosive",
+        "may_replace": ["minecraft:stone"]
+      },
+      {
+        "places_block": "ldns:fake_deepslate_explosive",
+        "may_replace": ["minecraft:deepslate"]
+      }
+    ]
+  }
+}

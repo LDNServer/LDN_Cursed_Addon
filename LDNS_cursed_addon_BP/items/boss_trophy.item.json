@@ -1,0 +1,21 @@
+{
+    "format_version": "1.18.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "ldns:boss_trophy",
+            "category": "Items"
+        },
+        "components": {
+            "minecraft:icon": {
+                "texture": "boss_trophy"
+            },
+            "minecraft:entity_placer":{
+              "entity": "ldns:boss_trophy"
+            },
+            "minecraft:hand_equipped": false,
+            "minecraft:stacked_by_data": true,
+            "minecraft:foil": false,
+            "minecraft:max_stack_size": 16
+        }
+    }
+}

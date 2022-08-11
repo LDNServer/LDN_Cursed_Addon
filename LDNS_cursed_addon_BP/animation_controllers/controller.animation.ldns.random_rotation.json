@@ -1,0 +1,31 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.ldns.random_rotation": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "ldns.rotation": "math.mod(query.life_time,5) == math.die_roll_integer(1,0,300) "
+                        }
+                    ]
+                },
+                "ldns.rotation": {
+                    "transitions": [
+                        {
+                            "default": "variable.time_lightning = (variable.time_lightning ?? 0) ; variable.time_lightning = variable.time_lightning < 2400 ? variable.time_lightning + 1:0;return variable.time_lightning == 0; "
+                        }
+                    ],
+                    "on_entry": [
+                        "/tp @s[m=0] ~ ~ ~ facing ^ ^360 ^",
+                        "/tp @s[m=0] ~ ~ ~ facing ^ ^ ^-90",
+                        "/tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_rotation) : ldns.rotation\"}]}"
+                    ],
+                    "on_exit": [
+                        "/tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_rotation) : default \"}]}"
+                    ]
+                }
+            }
+        }
+    }
+}

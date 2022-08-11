@@ -1,0 +1,39 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.ldns.long_night": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "ldns.long_night_1": "query.time_of_day > 0.75 || query.time_of_day < 0.25"
+                        }
+                    ],
+                  "on_entry": ["/scoreboard players set @a is_daytime 0"]
+                },
+                "ldns.long_night_1": {
+                    "transitions": [
+                        {
+                            "ldns.long_night_2": "variable.time_long_night = (variable.time_long_night ?? 0) ; variable.time_long_night = variable.time_long_night < 10 ? variable.time_long_night + 1:0;return variable.time_long_night == 0;"
+                        },
+                        {
+                            "default": "0.25 <= query.time_of_day && query.time_of_day <= 0.75"
+                        }
+                    ],
+                    "on_entry": ["/scoreboard players set @a is_daytime 1"]
+                },
+                "ldns.long_night_2": {
+                    "transitions": [
+                        {
+                            "ldns.long_night_1": "variable.time_long_night = (variable.time_long_night ?? 0) ; variable.time_long_night = variable.time_long_night < 10 ? variable.time_long_night + 1:0;return variable.time_long_night == 0;"
+                        },
+                        {
+                            "default": "0.25 <= query.time_of_day && query.time_of_day <= 0.75"
+                        }
+                    ],
+                    "on_entry": []
+                }
+            }
+        }
+    }
+}
