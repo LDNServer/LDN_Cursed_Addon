@@ -2,6 +2,8 @@
 
 呪いのバージョン「Minecraft LDN」は、LDN Server(通称LDNS)で作られたいろいろな呪いのバージョンを参考にして作られたアドオンです。<br>自称世界一安全にダウンロードできる呪いのアドオンです。(適当)<br>呪いの内容は様々。変なテクスチャのゾンビが出てきたり、爆弾を持ったゾンビが出てきたり、突然雷が降ってきたり…など<br>友達へのドッキリ、Minecraft動画のネタ、肝試しなどに使ってみてはいかがでしょうか？<br>
 
+[![](https://img.youtube.com/vi/5ZAA2FWlyQw/0.jpg)](https://www.youtube.com/watch?v=5ZAA2FWlyQw)
+
 ## 呪いのmob
 
 ![image](https://user-images.githubusercontent.com/48090196/184119658-40e4fb40-0666-4d14-bf05-1c6e6a198e51.png)
