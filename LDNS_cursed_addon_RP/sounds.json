@@ -85,7 +85,32 @@
                },
                "pitch" : [ 0.80, 1.20 ],
                "volume" : 1.0
-            }
+            },
+            "ldns:bse_cow" : {
+                "events" : {
+                   "ambient" : "mob.cow.say",
+                   "death" : "mob.cow.hurt",
+                   "eat" : "",
+                   "hurt" : "mob.cow.hurt",
+                   "step" : {
+                      "pitch" : [ 0.90, 1.10 ],
+                      "sound" : "mob.cow.step",
+                      "volume" : 0.650
+                   }
+                },
+                "pitch" : [ 0.80, 1.20 ],
+                "volume" : 1.0
+             },
+             "ldns:killer_rabbit" : {
+                "events" : {
+                   "ambient" : "mob.rabbit.idle",
+                   "death" : "mob.rabbit.death",
+                   "eat" : "",
+                   "hurt" : "mob.rabbit.hurt"
+                },
+                "pitch" : [ 0.80, 1.20 ],
+                "volume" : 0.80
+             }
         }
     }
 }

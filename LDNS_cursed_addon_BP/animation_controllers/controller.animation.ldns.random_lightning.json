@@ -17,11 +17,13 @@
                         }
                     ],
                     "on_entry": [
+                        "/tag @r add ldns_lightning",
                         "/function system.lightning_trigger",
                         "/tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_lightning) : ldns.summon_lightning\"}]}"
                     ],
                     "on_exit": [
-                        "/tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_lightning) : default \"}]}"
+                        "/tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_lightning) : default \"}]}",
+                        "/tag @a remove ldns_lightning"
                     ]
                 }
             }
