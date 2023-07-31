@@ -47,6 +47,17 @@ item.ldns:boss_trophy=Boss trophy
 
 item.ldns:cursed_idol=Cursed idol
 
+item.ldns:error_helmet=§kError§r Helmet
+item.ldns:error_chestplate=§kError§r Chestplate
+item.ldns:error_leggings=§kError§r Leggings
+item.ldns:error_boots=§kError§r Boots
+
+item.ldns:error_sword=§kError§r Sword
+item.ldns:error_pickaxe=§kError§r Pickaxe
+item.ldns:error_axe=§kError§r Axe
+item.ldns:error_shovel=§kError§r Shovel
+item.ldns:error_hoe=§kError§r Hoe
+
 ##Messages
 
 message.ldns.enable_debug_log=Enabled debug logs
