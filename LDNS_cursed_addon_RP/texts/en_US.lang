@@ -47,16 +47,16 @@ item.ldns:boss_trophy=Boss trophy
 
 item.ldns:cursed_idol=Cursed idol
 
-item.ldns:error_helmet=§kError§r Helmet
-item.ldns:error_chestplate=§kError§r Chestplate
-item.ldns:error_leggings=§kError§r Leggings
-item.ldns:error_boots=§kError§r Boots
+item.ldns:error_helmet=繧ｨ繝ｩ繝ｼ Helmet
+item.ldns:error_chestplate=繧ｨ繝ｩ繝ｼ Chestplate
+item.ldns:error_leggings=繧ｨ繝ｩ繝ｼ Leggings
+item.ldns:error_boots=繧ｨ繝ｩ繝ｼ Boots
 
-item.ldns:error_sword=§kError§r Sword
-item.ldns:error_pickaxe=§kError§r Pickaxe
-item.ldns:error_axe=§kError§r Axe
-item.ldns:error_shovel=§kError§r Shovel
-item.ldns:error_hoe=§kError§r Hoe
+item.ldns:error_sword=繧ｨ繝ｩ繝ｼ Sword
+item.ldns:error_pickaxe=繧ｨ繝ｩ繝ｼ Pickaxe
+item.ldns:error_axe=繧ｨ繝ｩ繝ｼ Axe
+item.ldns:error_shovel=繧ｨ繝ｩ繝ｼ Shovel
+item.ldns:error_hoe=繧ｨ繝ｩ繝ｼ Hoe
 
 ##Messages
 

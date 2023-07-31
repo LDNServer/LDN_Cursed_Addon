@@ -47,16 +47,16 @@ item.ldns:boss_trophy=ボストロフィー
 
 item.ldns:cursed_idol=呪いの人形
 
-item.ldns:error_helmet=§k繧ｨ繝ｩ繝ｼ§rのヘルメット
-item.ldns:error_chestplate=§k繧ｨ繝ｩ繝ｼ§rのチェストプレート
-item.ldns:error_leggings=§k繧ｨ繝ｩ繝ｼ§rのレギンス
-item.ldns:error_boots=§k繧ｨ繝ｩ繝ｼ§rのブーツ
+item.ldns:error_helmet=繧ｨ繝ｩ繝ｼのヘルメット
+item.ldns:error_chestplate=繧ｨ繝ｩ繝ｼのチェストプレート
+item.ldns:error_leggings=繧ｨ繝ｩ繝ｼのレギンス
+item.ldns:error_boots=繧ｨ繝ｩ繝ｼのブーツ
 
-item.ldns:error_sword=§k繧ｨ繝ｩ繝ｼ§rの剣
-item.ldns:error_pickaxe=§k繧ｨ繝ｩ繝ｼ§rのツルハシ
-item.ldns:error_axe=§k繧ｨ繝ｩ繝ｼ§rの斧
-item.ldns:error_shovel=§k繧ｨ繝ｩ繝ｼ§rのシャベル
-item.ldns:error_hoe=§k繧ｨ繝ｩ繝ｼ§rのクワ
+item.ldns:error_sword=繧ｨ繝ｩ繝ｼの剣
+item.ldns:error_pickaxe=繧ｨ繝ｩ繝ｼのツルハシ
+item.ldns:error_axe=繧ｨ繝ｩ繝ｼの斧
+item.ldns:error_shovel=繧ｨ繝ｩ繝ｼのシャベル
+item.ldns:error_hoe=繧ｨ繝ｩ繝ｼのクワ
 
 ##メッセージ
 
