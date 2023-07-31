@@ -21,16 +21,16 @@
 			"textures": "textures/item/ldns/ldns_cursed_idol"
 		},
 		"error_helmet": {
-			"textures": "textures/items/iron_helmet"
+			"textures": "textures/item/ldns/error/error_helmet"
 		},
 		"error_chestplate": {
-			"textures": "textures/items/iron_chestplate"
+			"textures": "textures/item/ldns/error/error_chestplate"
 		},
 		"error_leggings": {
-			"textures": "textures/items/iron_leggings"
+			"textures": "textures/item/ldns/error/error_leggings"
 		},
 		"error_boots": {
-			"textures": "textures/items/iron_boots"
+			"textures": "textures/item/ldns/error/error_boots"
 		}
 	}
 }

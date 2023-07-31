@@ -3,13 +3,13 @@
   "minecraft:attachable": {
     "description": {
       "identifier": "ldns:error_chestplate.player",
-      "item": { "ldns:error_chestplate": "query.owner_identifier == 'minecraft:player'" },
+      "item": { "ldns:error_chestplate": "query.is_owner_identifier_any('minecraft:player')" },
       "materials": {
         "default": "armor",
         "enchanted": "armor_enchanted"
       },
       "textures": {
-        "default": "textures/models/armor/iron_1",
+        "default": "textures/models/armor/error_1",
         "enchanted": "textures/misc/enchanted_item_glint"
       },
       "geometry": {

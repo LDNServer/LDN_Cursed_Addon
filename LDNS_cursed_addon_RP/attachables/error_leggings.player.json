@@ -3,13 +3,13 @@
   "minecraft:attachable": {
     "description": {
       "identifier": "ldns:error_leggings.player",
-      "item": { "ldns:error_leggings": "query.owner_identifier == 'minecraft:player'" },
+      "item": { "ldns:error_leggings": "query.is_owner_identifier_any('minecraft:player')" },
       "materials": {
         "default": "armor",
         "enchanted": "armor_enchanted"
       },
       "textures": {
-        "default": "textures/models/armor/iron_2",
+        "default": "textures/models/armor/error_2",
         "enchanted": "textures/misc/enchanted_item_glint"
       },
       "geometry": {
