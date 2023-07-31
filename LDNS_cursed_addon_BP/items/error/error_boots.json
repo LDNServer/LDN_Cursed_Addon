@@ -1,0 +1,32 @@
+{
+    "format_version": "1.18.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "ldns:error_boots",
+            "category": "Equipment"
+        },
+        "components": {
+            "minecraft:icon": {
+                "texture": "error_boots"
+            },
+            "minecraft:hand_equipped": false,
+            "minecraft:foil": false,
+            "minecraft:stacked_by_data": false,
+            "minecraft:max_stack_size": 1,
+            "minecraft:wearable": {
+                "slot": "slot.armor.feet",
+                "dispensable": true
+            },
+            "minecraft:enchantable": {
+                "value": 10,
+                "slot": "armor_feet"
+            },
+            "minecraft:armor": {
+                "protection": 2
+            },
+            "minecraft:durability": {
+                "max_durability": 195
+            }
+        }
+    }
+}
