@@ -9,6 +9,9 @@
             "minecraft:icon": {
                 "texture": "error_chestplate"
             },
+            "minecraft:creative_category": {
+              "parent": "itemGroup.name.chestplate"
+            },
             "minecraft:hand_equipped": false,
             "minecraft:foil": false,
             "minecraft:stacked_by_data": false,
@@ -25,7 +28,7 @@
                 "protection": 6
             },
             "minecraft:durability": {
-                "max_durability": 240
+                "max_durability": 666
             }
         }
     }

@@ -9,6 +9,9 @@
             "minecraft:icon": {
                 "texture": "error_leggings"
             },
+            "minecraft:creative_category": {
+              "parent": "itemGroup.name.leggings"
+            },
             "minecraft:hand_equipped": false,
             "minecraft:foil": false,
             "minecraft:stacked_by_data": false,
@@ -25,7 +28,7 @@
                 "protection": 5
             },
             "minecraft:durability": {
-                "max_durability": 225
+                "max_durability": 666
             }
         }
     }

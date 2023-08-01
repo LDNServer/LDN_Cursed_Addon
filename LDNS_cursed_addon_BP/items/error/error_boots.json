@@ -9,6 +9,9 @@
             "minecraft:icon": {
                 "texture": "error_boots"
             },
+            "minecraft:creative_category": {
+              "parent": "itemGroup.name.boots"
+            },
             "minecraft:hand_equipped": false,
             "minecraft:foil": false,
             "minecraft:stacked_by_data": false,
@@ -25,7 +28,7 @@
                 "protection": 2
             },
             "minecraft:durability": {
-                "max_durability": 195
+                "max_durability": 666
             }
         }
     }
