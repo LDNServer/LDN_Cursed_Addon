@@ -32,9 +32,12 @@
                             "tags": "query.any_tag('wood', 'pumpkin', 'log', 'text_sign')"
                         },
                         "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
+                        "on_dig": { "event": "durability_update" }
+                    },
+                    {
+                        "block": "minecraft:crafting_table",
+                        "speed": 10,
+                        "on_dig": { "event": "durability_update" }
                     }
                 ],
                 "on_dig": {
