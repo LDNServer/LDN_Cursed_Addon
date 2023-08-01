@@ -47,6 +47,19 @@ item.ldns:boss_trophy=ボストロフィー
 
 item.ldns:cursed_idol=呪いの人形
 
+item.ldns:error_helmet=繧ｨ繝ｩ繝ｼのヘルメット
+item.ldns:error_chestplate=繧ｨ繝ｩ繝ｼのチェストプレート
+item.ldns:error_leggings=繧ｨ繝ｩ繝ｼのレギンス
+item.ldns:error_boots=繧ｨ繝ｩ繝ｼのブーツ
+
+item.ldns:error_sword=繧ｨ繝ｩ繝ｼの剣
+item.ldns:error_pickaxe=繧ｨ繝ｩ繝ｼのツルハシ
+item.ldns:error_axe=繧ｨ繝ｩ繝ｼの斧
+item.ldns:error_shovel=繧ｨ繝ｩ繝ｼのシャベル
+item.ldns:error_hoe=繧ｨ繝ｩ繝ｼのクワ
+
+item.ldns:error_ingot=繧ｨ繝ｩ繝ｼのインゴット
+
 ##メッセージ
 
 message.ldns.enable_debug_log=デバッグログを有効化しました

@@ -18,7 +18,37 @@
 			"textures": "textures/item/ldns/ldns_boss_trophy"
 		},
 		"cursed_idol":{
-			"textures": "textures/item/ldns/ldns_cursed_idol"			
+			"textures": "textures/item/ldns/ldns_cursed_idol"
+		},
+		"error_helmet": {
+			"textures": "textures/item/ldns/error/error_helmet"
+		},
+		"error_chestplate": {
+			"textures": "textures/item/ldns/error/error_chestplate"
+		},
+		"error_leggings": {
+			"textures": "textures/item/ldns/error/error_leggings"
+		},
+		"error_boots": {
+			"textures": "textures/item/ldns/error/error_boots"
+		},
+		"error_sword": {
+			"textures": "textures/item/ldns/error/error_sword"
+		},
+		"error_pickaxe": {
+			"textures": "textures/item/ldns/error/error_pickaxe"
+		},
+		"error_shovel": {
+			"textures": "textures/item/ldns/error/error_shovel"
+		},
+		"error_axe": {
+			"textures": "textures/item/ldns/error/error_axe"
+		},
+		"error_hoe": {
+			"textures": "textures/item/ldns/error/error_hoe"
+		},
+		"error_ingot": {
+			"textures": "textures/item/ldns/error/error_ingot"
 		}
 	}
 }
