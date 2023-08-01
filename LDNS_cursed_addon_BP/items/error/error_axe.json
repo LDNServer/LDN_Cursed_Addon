@@ -1,0 +1,63 @@
+{
+    "format_version": "1.18.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "ldns:error_axe",
+            "category": "Equipment"
+        },
+        "components": {
+            "minecraft:icon": {
+                "texture": "error_axe"
+            },
+            "minecraft:creative_category": {
+                "parent": "itemGroup.name.axe"
+            },
+            "minecraft:hand_equipped": true,
+            "minecraft:foil": false,
+            "minecraft:stacked_by_data": false,
+            "minecraft:max_stack_size": 1,
+            "minecraft:enchantable": {
+                "value": 10,
+                "slot": "axe"
+            },
+            "minecraft:durability": {
+                "max_durability": 666
+            },
+            "minecraft:damage": 7,
+            "minecraft:digger": {
+                "use_efficiency": true,
+                "destroy_speeds": [
+                    {
+                        "block": {
+                            "tags": "query.any_tag('wood', 'pumpkin', 'log', 'text_sign')"
+                        },
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    }
+                ],
+                "on_dig": {
+                    "event": "durability_update"
+                }
+            },
+            "tag:minecraft:is_axe": {}
+        },
+        "events": {
+            "durability_update": {
+                "damage": {
+                    "type": "durability",
+                    "amount": 1,
+                    "target": "self"
+                }
+            },
+            "on_tool_used": {
+                "damage": {
+                    "type": "durability",
+                    "amount": 1,
+                    "target": "self"
+                }
+            }
+        }
+    }
+}

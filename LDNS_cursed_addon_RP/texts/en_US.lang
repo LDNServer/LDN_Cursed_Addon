@@ -58,6 +58,8 @@ item.ldns:error_axe=繧ｨ繝ｩ繝ｼ Axe
 item.ldns:error_shovel=繧ｨ繝ｩ繝ｼ Shovel
 item.ldns:error_hoe=繧ｨ繝ｩ繝ｼ Hoe
 
+item.ldns:error_ingot=繧ｨ繝ｩ繝ｼ Ingot
+
 ##Messages
 
 message.ldns.enable_debug_log=Enabled debug logs

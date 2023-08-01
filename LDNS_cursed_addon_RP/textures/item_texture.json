@@ -31,6 +31,24 @@
 		},
 		"error_boots": {
 			"textures": "textures/item/ldns/error/error_boots"
+		},
+		"error_sword": {
+			"textures": "textures/item/ldns/error/error_sword"
+		},
+		"error_pickaxe": {
+			"textures": "textures/item/ldns/error/error_pickaxe"
+		},
+		"error_shovel": {
+			"textures": "textures/item/ldns/error/error_shovel"
+		},
+		"error_axe": {
+			"textures": "textures/item/ldns/error/error_axe"
+		},
+		"error_hoe": {
+			"textures": "textures/item/ldns/error/error_hoe"
+		},
+		"error_ingot": {
+			"textures": "textures/item/ldns/error/error_ingot"
 		}
 	}
 }

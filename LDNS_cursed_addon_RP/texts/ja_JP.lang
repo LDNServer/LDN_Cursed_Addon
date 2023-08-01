@@ -58,6 +58,8 @@ item.ldns:error_axe=繧ｨ繝ｩ繝ｼの斧
 item.ldns:error_shovel=繧ｨ繝ｩ繝ｼのシャベル
 item.ldns:error_hoe=繧ｨ繝ｩ繝ｼのクワ
 
+item.ldns:error_ingot=繧ｨ繝ｩ繝ｼのインゴット
+
 ##メッセージ
 
 message.ldns.enable_debug_log=デバッグログを有効化しました
