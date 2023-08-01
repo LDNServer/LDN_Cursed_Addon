@@ -1,0 +1,26 @@
+{
+  "format_version": "1.18",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ldns:error_sword"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "E",
+      "E",
+      "S"
+    ],
+    "key": {
+      "E": {
+        "item": "ldns:error_ingot"
+      },
+      "S": {
+        "item": "minecraft:stick"
+      }
+    },
+    "result": {
+      "item": "ldns:error_sword",
+      "count": 1
+    }
+  }
+}

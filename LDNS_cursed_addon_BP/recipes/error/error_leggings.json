@@ -1,0 +1,23 @@
+{
+  "format_version": "1.18",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ldns:error_leggings"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "EEE",
+      "E E",
+      "E E"
+    ],
+    "key": {
+      "E": {
+        "item": "ldns:error_ingot"
+      }
+    },
+    "result": {
+      "item": "ldns:error_leggings",
+      "count": 1
+    }
+  }
+}
