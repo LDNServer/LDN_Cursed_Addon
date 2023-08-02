@@ -64,3 +64,6 @@ item.ldns:error_ingot=繧ｨ繝ｩ繝ｼ Ingot
 
 message.ldns.enable_debug_log=Enabled debug logs
 message.ldns.disable_debug_log=Disabled debug logs
+
+## UI
+container.crafting=繧ｯ繝ｩ繝輔ヨ
