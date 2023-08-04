@@ -64,3 +64,6 @@ item.ldns:error_ingot=繧ｨ繝ｩ繝ｼ Ingot
 
 message.ldns.enable_debug_log=Enabled debug logs
 message.ldns.disable_debug_log=Disabled debug logs
+
+message.ldns.enable_random_chat=Enabled random chats
+message.ldns.disable_random_chat=Disabled random chats

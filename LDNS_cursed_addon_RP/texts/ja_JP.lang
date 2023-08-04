@@ -64,3 +64,6 @@ item.ldns:error_ingot=繧ｨ繝ｩ繝ｼのインゴット
 
 message.ldns.enable_debug_log=デバッグログを有効化しました
 message.ldns.disable_debug_log=デバッグログを無効化しました
+
+message.ldns.enable_random_chat=ランダムチャットを有効化しました
+message.ldns.disable_random_chat=ランダムチャットを無効化しました
