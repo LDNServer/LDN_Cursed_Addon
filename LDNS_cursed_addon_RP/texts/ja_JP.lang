@@ -49,6 +49,8 @@ item.ldns:boss_trophy=ボストロフィー
 
 item.ldns:cursed_idol=呪いの人形
 
+item.ldns:gray_ender_pearl=グレーエンダーパール
+
 item.ldns:error_helmet=繧ｨ繝ｩ繝ｼのヘルメット
 item.ldns:error_chestplate=繧ｨ繝ｩ繝ｼのチェストプレート
 item.ldns:error_leggings=繧ｨ繝ｩ繝ｼのレギンス
@@ -68,6 +70,8 @@ item.ldns:entity787_scythe=Entity787の鎌
 
 message.ldns.enable_debug_log=デバッグログを有効化しました
 message.ldns.disable_debug_log=デバッグログを無効化しました
+message.ldns.enable_random_chat=ランダムチャットを有効化しました
+message.ldns.disable_random_chat=ランダムチャットを無効化しました
 
-## UI
+##UI
 container.crafting=繧ｯ繝ｩ繝輔ヨ

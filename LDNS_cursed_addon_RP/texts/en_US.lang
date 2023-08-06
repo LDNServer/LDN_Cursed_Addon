@@ -49,6 +49,8 @@ item.ldns:boss_trophy=Boss trophy
 
 item.ldns:cursed_idol=Cursed idol
 
+item.ldns:gray_ender_pearl=Gray Ender pearl
+
 item.ldns:error_helmet=繧ｨ繝ｩ繝ｼ Helmet
 item.ldns:error_chestplate=繧ｨ繝ｩ繝ｼ Chestplate
 item.ldns:error_leggings=繧ｨ繝ｩ繝ｼ Leggings
@@ -64,10 +66,12 @@ item.ldns:error_ingot=繧ｨ繝ｩ繝ｼ Ingot
 
 item.ldns:entity787_scythe=Entity787's Scythe
 
-## Messages
+##Messages
 
 message.ldns.enable_debug_log=Enabled debug logs
 message.ldns.disable_debug_log=Disabled debug logs
+message.ldns.enable_random_chat=Enabled random chats
+message.ldns.disable_random_chat=Disabled random chats
 
-## UI
+##UI
 container.crafting=繧ｯ繝ｩ繝輔ヨ
