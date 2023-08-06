@@ -49,6 +49,9 @@
 		},
 		"error_ingot": {
 			"textures": "textures/item/ldns/error/error_ingot"
+		},
+		"entity787_scythe": {
+		  "textures": "textures/item/ldns/scythe787"
 		}
 	}
 }
