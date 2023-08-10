@@ -32,9 +32,12 @@
                             "tags": "query.any_tag('stone', 'metal', 'iron_pick_diggable', 'mob_spawner', 'rail')"
                         },
                         "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
+                        "on_dig": { "event": "durability_update" }
+                    },
+                    {
+                        "block": "minecraft:stonebrick",
+                        "speed": 10,
+                        "on_dig": { "event": "durability_update" }
                     }
                 ],
                 "on_dig": {
