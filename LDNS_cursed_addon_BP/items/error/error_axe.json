@@ -112,13 +112,6 @@
                         }
                     },
                     {
-                        "block": "minecraft:banner",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
                         "block": "minecraft:barrel",
                         "speed": 10,
                         "on_dig": {
@@ -1015,13 +1008,6 @@
                         }
                     },
                     {
-                        "block": "minecraft:",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
                         "block": "minecraft:cherry_slab",
                         "speed": 10,
                         "on_dig": {
@@ -1064,13 +1050,6 @@
                         }
                     },
                     {
-                        "block": "minecraft:cherry_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
                         "block": "minecraft:cherry_hanging_sign",
                         "speed": 10,
                         "on_dig": {
@@ -1086,6 +1065,104 @@
                     },
                     {
                         "block": "minecraft:cherry_pressure_plate",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:bamboo_planks",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:bamboo_mosaic",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:bamboo_fence",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:bamboo_fence_gate",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:bamboo_stairs",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:bamboo_mosaic_stairs",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:bamboo_door",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:bamboo_trapdoor",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:bamboo_slab",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:bamboo_mosaic_slab",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:bamboo_block",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:stripped_bamboo_block",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:bamboo_button",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:bamboo_pressure_plate",
                         "speed": 10,
                         "on_dig": {
                             "event": "durability_update"
