@@ -112,6 +112,20 @@
                         "on_dig": {
                             "event": "durability_update"
                         }
+                    },
+                    {
+                        "block": "minecraft:soul_soil",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:soul_sand",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
                     }
                 ],
                 "on_dig": {
