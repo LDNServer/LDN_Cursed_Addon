@@ -5,7 +5,7 @@
         "name": "§c§l呪いのアドオン§r§b Presented by LDNServer§a v1.0.0",
         "uuid": "4115a0c0-60cf-4a69-a4e3-af05b58b9b53",
         "version": [ 1, 0, 0 ],
-        "min_engine_version": [ 1, 19, 0 ]
+        "min_engine_version": [ 1, 20, 0 ]
     },
     "metadata":{
       "authors":["Kagaribi172"],
