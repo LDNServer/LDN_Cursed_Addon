@@ -273,13 +273,6 @@
                         }
                     },
                     {
-                        "block": "minecraft:crimson_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
                         "block": "minecraft:crimson_slab",
                         "speed": 10,
                         "on_dig": {
@@ -427,13 +420,6 @@
                         }
                     },
                     {
-                        "block": "minecraft:jungle_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
                         "block": "minecraft:jungle_stairs",
                         "speed": 10,
                         "on_dig": {
@@ -553,13 +539,6 @@
                         }
                     },
                     {
-                        "block": "minecraft:oak_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
                         "block": "minecraft:smithing_table",
                         "speed": 10,
                         "on_dig": {
@@ -596,13 +575,6 @@
                     },
                     {
                         "block": "minecraft:spruce_pressure_plate",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:spruce_sign",
                         "speed": 10,
                         "on_dig": {
                             "event": "durability_update"
@@ -749,13 +721,6 @@
                         }
                     },
                     {
-                        "block": "minecraft:warped_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
                         "block": "minecraft:warped_slab",
                         "speed": 10,
                         "on_dig": {
@@ -826,252 +791,7 @@
                         }
                     },
                     {
-                        "block": "minecraft:standing_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:spruce_standing_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:birch_standing_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:jungle_standing_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:acacia_standing_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:darkoak_standing_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:mangrove_standing_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:cherry_standing_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:bamboo_standing_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:crimson_standing_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:warped_standing_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:wall_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:spruce_wall_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:birch_wall_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:jungle_wall_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:acacia_wall_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:darkoak_wall_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:mangrove_wall_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:cherry_wall_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:bamboo_wall_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:crimson_wall_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:warped_wall_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:oak_hanging_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:spruce_hanging_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:birch_hanging_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:jungle_hanging_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:acacia_hanging_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:dark_oak_hanging_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:mangrove_hanging_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:cherry_hanging_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:bamboo_hanging_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:crimson_hanging_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:warped_hanging_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:mangrove_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
                         "block": "minecraft:mangrove_fence",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:cherry_fence",
                         "speed": 10,
                         "on_dig": {
                             "event": "durability_update"
@@ -1092,13 +812,6 @@
                         }
                     },
                     {
-                        "block": "minecraft:cherry_fence_gate",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
                         "block": "minecraft:mangrove_fence_gate",
                         "speed": 10,
                         "on_dig": {
@@ -1113,13 +826,6 @@
                         }
                     },
                     {
-                        "block": "minecraft:cherry_door",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
                         "block": "minecraft:mangrove_door",
                         "speed": 10,
                         "on_dig": {
@@ -1128,13 +834,6 @@
                     },
                     {
                         "block": "minecraft:bamboo_trapdoor",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:cherryo_trapdoor",
                         "speed": 10,
                         "on_dig": {
                             "event": "durability_update"
@@ -1162,13 +861,6 @@
                         }
                     },
                     {
-                        "block": "minecraft:cherry_slab",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
                         "block": "minecraft:mangrove_slab",
                         "speed": 10,
                         "on_dig": {
@@ -1177,13 +869,6 @@
                     },
                     {
                         "block": "minecraft:mangrove_stairs",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:cherry_stairs",
                         "speed": 10,
                         "on_dig": {
                             "event": "durability_update"
@@ -1211,27 +896,6 @@
                         }
                     },
                     {
-                        "block": "minecraft:stripped_cherry_log",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:cherry_log",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:stripped_cherry_wood",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
                         "block": "minecraft:stripped_mangrove_wood",
                         "speed": 10,
                         "on_dig": {
@@ -1240,13 +904,6 @@
                     },
                     {
                         "block": "minecraft:mangrove_wood",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:cherry_wood",
                         "speed": 10,
                         "on_dig": {
                             "event": "durability_update"
@@ -1267,13 +924,6 @@
                         }
                     },
                     {
-                        "block": "minecraft:bamboo_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
                         "block": "minecraft:chiseled_bookshelf",
                         "speed": 10,
                         "on_dig": {
@@ -1282,27 +932,6 @@
                     },
                     {
                         "block": "minecraft:bamboo_planks",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:cherry_planks",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:cherry_sign",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:cherry_pressure_plate",
                         "speed": 10,
                         "on_dig": {
                             "event": "durability_update"
@@ -1330,13 +959,6 @@
                         }
                     },
                     {
-                        "block": "minecraft:cherry_button",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
                         "block": "minecraft:bamboo_button",
                         "speed": 10,
                         "on_dig": {
@@ -1345,6 +967,125 @@
                     },
                     {
                         "block": "minecraft:chest",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:cherry_planks",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:cherry_fence",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:cherry_fence_gate",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:cherry_stairs",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:cherry_door",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:cherry_trapdoor",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:cherry_slab",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:cherry_log",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:stripped_cherry_log",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:cherry_wood",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:stripped_cherry_wood",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:cherry_sapling",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:cherry_sign",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:cherry_hanging_sign",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:cherry_button",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:cherry_pressure_plate",
                         "speed": 10,
                         "on_dig": {
                             "event": "durability_update"
