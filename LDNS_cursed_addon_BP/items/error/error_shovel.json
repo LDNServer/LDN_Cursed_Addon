@@ -44,13 +44,6 @@
                         }
                     },
                     {
-                        "block": "minecraft:rooted_dirt",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
                         "block": "minecraft:dirt",
                         "speed": 10,
                         "on_dig": {
