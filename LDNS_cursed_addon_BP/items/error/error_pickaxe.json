@@ -609,21 +609,7 @@
                         }
                     },
                     {
-                        "block": "minecraft:large_amethyst_bud",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
                         "block": "minecraft:lightning_rod",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:medium_amethyst_bud",
                         "speed": 10,
                         "on_dig": {
                             "event": "durability_update"
@@ -1590,6 +1576,48 @@
                     },
                     {
                         "block": "minecraft:mud_brick_wall",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:amethyst_block",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:budding_amethyst",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:amethyst_cluster",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:large_amethyst_bud",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:medium_amethyst_bud",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:small_amethyst_bud",
                         "speed": 10,
                         "on_dig": {
                             "event": "durability_update"
