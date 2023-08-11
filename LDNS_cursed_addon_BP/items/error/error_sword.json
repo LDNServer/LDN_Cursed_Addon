@@ -30,6 +30,10 @@
                     {
                         "block": "minecraft:web",
                         "speed": 10
+                    },
+                    {
+                        "block": "minecraft:bamboo",
+                        "speed": 10
                     }
                 ],
                 "on_dig": {
