@@ -34,7 +34,7 @@
                         "speed": 10,
                         "on_dig": {
                             "event": "durability_update"
-                        },
+                        }
                     },
                     {
                         "block": "minecraft:mud",
