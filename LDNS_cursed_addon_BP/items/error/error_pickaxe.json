@@ -467,7 +467,7 @@
                         "on_dig": {
                             "event": "durability_update"
                         }
-                    }
+                    },
                     {
                         "block": "minecraft:infested_deepslate",
                         "speed": 10,
