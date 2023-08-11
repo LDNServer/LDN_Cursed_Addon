@@ -35,91 +35,63 @@
                     },
                     {
                         "block": "minecraft:mangrove_leaves",
-                        "speed": 10
+                        "speed": 10,
                     },
                     {
                         "block": "minecraft:azalea",
-                        "speed": 10
+                        "speed": 10,
                     },
                     {
                         "block": "minecraft:azalea_leaves",
-                        "speed": 10
-                    },
-                    {
-                        "block": "minecraft:big_dripleaf",
-                        "speed": 10
+                        "speed": 10,
                     },
                     {
                         "block": "minecraft:flowering_azalea",
-                        "speed": 10
+                        "speed": 10,
                     },
                     {
                         "block": "minecraft:azalea_leaves_flowered",
-                        "speed": 10
+                        "speed": 10,
                     },
                     {
                         "block": "minecraft:glow_lichen",
-                        "speed": 10
-                    },
-                    {
-                        "block": "minecraft:hanging_roots",
-                        "speed": 10
+                        "speed": 10,
                     },
                     {
                         "block": "minecraft:moss_block",
-                        "speed": 10
+                        "speed": 10,
                     },
                     {
                         "block": "minecraft:moss_carpet",
-                        "speed": 10
-                    },
-                    {
-                        "block": "minecraft:small_dripleaf",
-                        "speed": 10
-                    },
-                    {
-                        "block": "minecraft:spore_blossom",
-                        "speed": 10
+                        "speed": 10,
                     },
                     {
                         "block": "minecraft:dried_kelp_block",
-                        "speed": 10
+                        "speed": 10,
                     },
                     {
                         "block": "minecraft:leaves",
-                        "speed": 10
+                        "speed": 10,
                     },
                     {
                         "block": "minecraft:leaves2",
-                        "speed": 10
-                    },
-                    {
-                        "block": "minecraft:nether_sprouts",
-                        "speed": 10
+                        "speed": 10,
                     },
                     {
                         "block": "minecraft:nether_wart_block",
-                        "speed": 10
-                    },
-                    {
-                        "block": "minecraft:twisting_vines",
-                        "speed": 10
-                    },
-                    {
-                        "block": "minecraft:vine",
-                        "speed": 10
-                    },
-                    {
-                        "block": "minecraft:warped_roots",
-                        "speed": 10
-                    },
-                    {
-                        "block": "minecraft:weeping_vines",
-                        "speed": 10
+                        "speed": 10,
                     },
                     {
                         "block": "minecraft:cherry_leaves",
-                        "speed": 10
+                        "speed": 10,
+                    },
+                    {
+                        "block": "minecraft:warped_wart_block",
+                        "speed": 10,
+                    },
+                    {
+                        "block": "minecraft:vine",
+                        "speed": 10,
                     }
                 ],
                 "on_dig": {
