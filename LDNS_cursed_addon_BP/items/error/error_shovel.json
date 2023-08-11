@@ -34,6 +34,90 @@
                         "speed": 10,
                         "on_dig": {
                             "event": "durability_update"
+                        },
+                    },
+                    {
+                        "block": "minecraft:mud",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:rooted_dirt",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:dirt",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:grass",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:grass_path",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:gravel",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:mycelium",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:sand",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:snow",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:snow_layer",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:podzol",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:suspicious_gravel",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
                         }
                     }
                 ],
