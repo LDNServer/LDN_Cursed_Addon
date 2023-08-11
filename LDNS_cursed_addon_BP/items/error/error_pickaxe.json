@@ -1501,14 +1501,21 @@
                         "block": "minecraft:mud_brick_slab",
                         "speed": 10,
                         "on_dig": {
-                            "event": "hurt"
+                            "event": "durability_update"
                         }
                     },
                     {
                         "block": "minecraft:mud_brick_stairs",
                         "speed": 10,
                         "on_dig": {
-                            "event": "hurt"
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:mud_brick_wall",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
                         }
                     }
                 ],
