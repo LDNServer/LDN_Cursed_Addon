@@ -112,20 +112,6 @@
                         }
                     },
                     {
-                        "block": "minecraft:copper_block",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:raw_copper_block",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
                         "block": "minecraft:raw_gold_block",
                         "speed": 10,
                         "on_dig": {
@@ -189,6 +175,167 @@
                         }
                     },
                     {
+                        "block": "minecraft:cut_copper_stairs",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:exposed_cut_copper_stairs",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:weathered_cut_copper_stairs",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:oxidized_cut_copper_stairs",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:waxed_cut_copper_stairs",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:waxed_weathered_cut_copper_stairs",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:waxed_oxidized_cut_copper_stairs",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:cut_copper_slab",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:exposed_cut_copper_slab",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:weathered_cut_copper_slab",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:oxidized_cut_copper_slab",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:waxed_cut_copper_slab",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:waxed_exposed_cut_copper_slab",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:waxed_weathered_cut_copper_slab",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:waxed_oxidized_cut_copper_slab",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:copper_block",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:exposed_copper",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:weathered_copper",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:oxidized_copper",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:waxed_cut_copper",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:waxed_exposed_cut_copper",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:waxed_weathered_cut_copper",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
+                        "block": "minecraft:waxed_oxidized_cut_copper",
+                        "speed": 10,
+                        "on_dig": {
+                            "event": "durability_update"
+                        }
+                    },
+                    {
                         "block": "minecraft:cracked_deepslate_bricks",
                         "speed": 10,
                         "on_dig": {
@@ -239,13 +386,6 @@
                     },
                     {
                         "block": "minecraft:deepslate_coal_ore",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:deepslate_copper_ore",
                         "speed": 10,
                         "on_dig": {
                             "event": "durability_update"
@@ -327,35 +467,7 @@
                         "on_dig": {
                             "event": "durability_update"
                         }
-                    },
-                    {
-                        "block": "minecraft:exposed_copper",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:exposed_cut_copper",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:exposed_cut_copper_slab",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:exposed_cut_copper_stairs",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
+                    }
                     {
                         "block": "minecraft:infested_deepslate",
                         "speed": 10,
@@ -379,34 +491,6 @@
                     },
                     {
                         "block": "minecraft:medium_amethyst_bud",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:oxidized_copper",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:oxidized_cut_copper",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:oxidized_cut_copper_slab",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:oxidized_cut_copper_stairs",
                         "speed": 10,
                         "on_dig": {
                             "event": "durability_update"
@@ -456,146 +540,6 @@
                     },
                     {
                         "block": "minecraft:tuff",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:waxed_copper_block",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:waxed_cut_copper",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:waxed_cut_copper_slab",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:waxed_cut_copper_stairs",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:waxed_exposed_copper",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:waxed_exposed_cut_copper",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:waxed_exposed_cut_copper_slab",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:waxed_exposed_cut_copper_stairs",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:waxed_oxidized_copper",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:waxed_oxidized_cut_copper",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:waxed_oxidized_cut_copper_slab",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:waxed_oxidized_cut_copper_stairs",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:waxed_weathered_copper",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:waxed_weathered_cut_copper",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:waxed_weathered_cut_copper_slab",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:waxed_weathered_cut_copper_stairs",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:weathered_copper",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:weathered_cut_copper",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:weathered_cut_copper_slab",
-                        "speed": 10,
-                        "on_dig": {
-                            "event": "durability_update"
-                        }
-                    },
-                    {
-                        "block": "minecraft:weathered_cut_copper_stairs",
                         "speed": 10,
                         "on_dig": {
                             "event": "durability_update"
