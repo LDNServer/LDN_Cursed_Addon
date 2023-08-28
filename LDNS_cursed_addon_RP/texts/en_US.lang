@@ -33,6 +33,8 @@ entity.ldns:dr.naba.name=Dr.Naba
 entity.ldns:dr.naba<>.name=Dr.Naba
 item.spawn_egg.entity.ldns:dr.naba.name=Spawn Dr.Naba
 
+entity.ldns:scythe_bullet.name=Voltwave
+
 ##Items
 
 item.ldns:travel_ticket=Travel ticket
@@ -62,10 +64,14 @@ item.ldns:error_hoe=繧ｨ繝ｩ繝ｼ Hoe
 
 item.ldns:error_ingot=繧ｨ繝ｩ繝ｼ Ingot
 
+item.ldns:entity787_scythe=Entity787's Scythe
+
 ##Messages
 
 message.ldns.enable_debug_log=Enabled debug logs
 message.ldns.disable_debug_log=Disabled debug logs
-
 message.ldns.enable_random_chat=Enabled random chats
 message.ldns.disable_random_chat=Disabled random chats
+
+##UI
+container.crafting=繧ｯ繝ｩ繝輔ヨ

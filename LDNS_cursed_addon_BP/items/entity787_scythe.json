@@ -2,15 +2,12 @@
     "format_version": "1.18.0",
     "minecraft:item": {
         "description": {
-            "identifier": "ldns:error_sword",
+            "identifier": "ldns:entity787_scythe",
             "category": "Equipment"
         },
         "components": {
             "minecraft:icon": {
-                "texture": "error_sword"
-            },
-            "minecraft:creative_category": {
-              "parent": "itemGroup.name.sword"
+                "texture": "entity787_scythe"
             },
             "minecraft:hand_equipped": true,
             "minecraft:foil": false,
@@ -21,28 +18,44 @@
                 "slot": "sword"
             },
             "minecraft:durability": {
-                "max_durability": 666
+                "max_durability": 787
             },
             "minecraft:damage": 10,
             "minecraft:digger": {
                 "use_efficiency": true,
-                "destroy_speeds": [
-                    {
-                        "block": "minecraft:web",
-                        "speed": 10
-                    },
-                    {
-                        "block": "minecraft:bamboo",
-                        "speed": 10
-                    }
-                ],
                 "on_dig": {
                     "event": "durability_update"
                 }
+            },
+            "minecraft:on_use": {
+                "on_use": { "event": "throw" }
+            },
+            "minecraft:cooldown": {
+                "category": "scythe",
+                "duration": 3
             }
         },
         "events": {
             "durability_update": {
+                "damage": {
+                    "type": "durability",
+                    "amount": 1,
+                    "target": "self"
+                }
+            },
+            "throw": {
+                "shoot": {
+                    "projectile": "ldns:scythe_bullet",
+                    "launch_power": 2,
+                    "angle_offset": 0
+                },
+                "swing": {},
+                "run_command": {
+                    "command": [
+                        "playsound fire.ignite",
+                        "playsound mob.witch.throw"
+                    ]
+                },
                 "damage": {
                     "type": "durability",
                     "amount": 1,

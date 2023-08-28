@@ -34,34 +34,64 @@
                         "speed": 10
                     },
                     {
-                        "block": "minecraft:leaves",
-                        "speed": 20,
-                        "on_dig": { "event": "durability_update" }
+                        "block": "minecraft:mangrove_leaves",
+                        "speed": 10
                     },
                     {
-                        "block": "minecraft:leaves2",
-                        "speed": 20,
-                        "on_dig": { "event": "durability_update" }
+                        "block": "minecraft:azalea",
+                        "speed": 10
                     },
                     {
                         "block": "minecraft:azalea_leaves",
-                        "speed": 20,
-                        "on_dig": { "event": "durability_update" }
+                        "speed": 10
+                    },
+                    {
+                        "block": "minecraft:flowering_azalea",
+                        "speed": 10
                     },
                     {
                         "block": "minecraft:azalea_leaves_flowered",
-                        "speed": 20,
-                        "on_dig": { "event": "durability_update" }
+                        "speed": 10
+                    },
+                    {
+                        "block": "minecraft:glow_lichen",
+                        "speed": 10
+                    },
+                    {
+                        "block": "minecraft:moss_block",
+                        "speed": 10
+                    },
+                    {
+                        "block": "minecraft:moss_carpet",
+                        "speed": 10
+                    },
+                    {
+                        "block": "minecraft:dried_kelp_block",
+                        "speed": 10
+                    },
+                    {
+                        "block": "minecraft:leaves",
+                        "speed": 10
+                    },
+                    {
+                        "block": "minecraft:leaves2",
+                        "speed": 10
+                    },
+                    {
+                        "block": "minecraft:nether_wart_block",
+                        "speed": 10
                     },
                     {
                         "block": "minecraft:cherry_leaves",
-                        "speed": 20,
-                        "on_dig": { "event": "durability_update" }
+                        "speed": 10
                     },
                     {
-                        "block": "minecraft:mangrove_leaves",
-                        "speed": 20,
-                        "on_dig": { "event": "durability_update" }
+                        "block": "minecraft:warped_wart_block",
+                        "speed": 10
+                    },
+                    {
+                        "block": "minecraft:vine",
+                        "speed": 10
                     }
                 ],
                 "on_dig": {

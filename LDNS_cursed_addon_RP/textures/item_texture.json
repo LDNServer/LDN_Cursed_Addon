@@ -50,6 +50,9 @@
 		"error_ingot": {
 			"textures": "textures/item/ldns/error/error_ingot"
 		},
+		"entity787_scythe": {
+		  "textures": "textures/item/ldns/scythe/scythe787"
+		},
 		"gray_ender_pearl": {
 			"textures": "textures/item/ldns/gray_ender_pearl"
 		}

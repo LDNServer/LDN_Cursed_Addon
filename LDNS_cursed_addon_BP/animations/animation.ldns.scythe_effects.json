@@ -1,0 +1,14 @@
+{
+    "format_version": "1.10.0",
+    "animations": {
+        "animation.ldns.scythe_effects": {
+            "timeline": {
+                "0.0": [
+                  "/effect @s fire_resistance 1 0 true"
+                ]
+            },
+            "animation_length": 0.2,
+            "loop": true
+        }
+    }
+}
