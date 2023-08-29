@@ -10,7 +10,8 @@ system.runInterval(() => {
     // nTickに1回 m分の1の確率でeffect付与
     if (util.random(0, config.randomEffectRate - 1) === 0) {
       const effectId = util.randomValue(Object.values(MinecraftEffectTypes));
-      player.addEffect(effectId, util.random(2, 30));
+      const duration = util.random(config.randomEffectDuration[0], config.randomEffectDuration[1]);
+      player.addEffect(effectId, duration);
     }
   }
 }, config.randomEffectInterval);
