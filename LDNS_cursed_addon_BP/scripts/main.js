@@ -13,7 +13,7 @@ system.runInterval(() => {
       const duration = util.random(config.randomEffectDuration[0], config.randomEffectDuration[1]);
       if (effectId === MinecraftEffectTypes.InstantDamage) {
         const health = player.getComponent('minecraft:health');
-        entity.applyDamage(Math.round(health.currentValue / 2))
+        player.applyDamage(Math.round(health.currentValue / 2));
       } else {
         player.addEffect(effectId, duration*20);
       }
