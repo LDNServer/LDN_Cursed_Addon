@@ -1,5 +1,4 @@
 // @ts-check
-
 import { system, world } from '@minecraft/server';
 import { MinecraftEffectTypes } from './lib/mojang-effect';
 import * as util from './util';
