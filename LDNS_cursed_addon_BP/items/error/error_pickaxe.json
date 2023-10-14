@@ -605,11 +605,6 @@
                         "on_dig": { "event": "durability_update" }
                     },
                     {
-                        "block": "minecraft:crying_obsidian",
-                        "speed": 10,
-                        "on_dig": { "event": "durability_update" }
-                    },
-                    {
                         "block": "minecraft:cyan_glazed_terracotta",
                         "speed": 10,
                         "on_dig": { "event": "durability_update" }
@@ -781,11 +776,6 @@
                     },
                     {
                         "block": "minecraft:observer",
-                        "speed": 10,
-                        "on_dig": { "event": "durability_update" }
-                    },
-                    {
-                        "block": "minecraft:obsidian",
                         "speed": 10,
                         "on_dig": { "event": "durability_update" }
                     },
