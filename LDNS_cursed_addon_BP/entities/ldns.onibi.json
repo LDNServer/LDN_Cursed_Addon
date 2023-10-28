@@ -111,7 +111,7 @@
               "operator": "==",
               "value": true
             },
-            "cause": "fatal",
+            "cause": "all",
             "damage_per_tick": 1
           }
         ]
