@@ -1,5 +1,5 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.20.30",
     "animation_controllers": {
         "controller.animation.ldns.random_sign_1": {
             "states": {
@@ -17,7 +17,7 @@
                         }
                     ],
                     "on_entry": [
-                        "/execute @s ^ ^ ^-10 summon ldns:sign_ground_execute ~ ~ ~ ",
+                        "/execute as @s at @s positioned ^ ^ ^-10 run summon ldns:sign_ground_execute ~ ~ ~ ",
                         "/tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_sign_1) : ldns.place_random_sign_1 \"}]}"
                     ]
                 },
@@ -28,9 +28,9 @@
                         }
                     ],
                     "on_entry": [
-                        "/execute @e[type=ldns:sign_ground_execute,c=1] ~ ~ ~ detect ~ ~ ~ air 0 tag @s add block_placed",
-                        "/execute @e[type=ldns:sign_ground_execute,c=1,tag=block_placed] ~ ~ ~ detect ~ ~-1 ~ air 0 tag @s remove block_placed",
-                        "/execute @e[type=ldns:sign_ground_execute,c=1,tag=block_placed] ~ ~ ~ structure load random_sign_1 ~ ~ ~ 0_degrees"
+                        "/execute as @e[type=ldns:sign_ground_execute,c=1] at @s if block ~ ~ ~ air run tag @s add block_placed",
+                        "/execute as @e[type=ldns:sign_ground_execute,c=1,tag=block_placed] at @s if block ~ ~-1 ~ air run tag @s remove block_placed",
+                        "/execute as @e[type=ldns:sign_ground_execute,c=1,tag=block_placed] at @s run structure load random_sign_1 ~ ~ ~ 0_degrees"
                     ],
                     "on_exit": [
                         "/tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_sign_1) : default \"}]}"
