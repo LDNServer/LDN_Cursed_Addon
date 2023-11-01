@@ -1,5 +1,5 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.20.30",
     "animation_controllers": {
         "controller.animation.ldns.nether_portal_explosion": {
             "states": {
@@ -17,7 +17,7 @@
                         }
                     ],
                     "on_entry": [
-                        "/execute @s[hasitem={item=ldns:travel_ticket,quantity=0},m=0] ~ ~ ~ detect ~ ~ ~ portal -1 function system.nether_portal_explosion"
+                        "/execute as @s[hasitem={item=ldns:travel_ticket,quantity=0},m=0] at @s if block ~ ~ ~ portal run function system.nether_portal_explosion"
                     ]
                 }
             }
