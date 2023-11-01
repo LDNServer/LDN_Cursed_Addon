@@ -1,5 +1,5 @@
 {
-  "format_version": "1.8.0",
+  "format_version": "1.20.30",
   "minecraft:client_entity": {
     "description": {
       "identifier": "ldns:lightning_execute",
