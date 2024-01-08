@@ -23,7 +23,7 @@
             "minecraft:durability": {
                 "max_durability": 666
             },
-            "minecraft:damage": 5,
+            "minecraft:damage": 3,
             "minecraft:digger": {
                 "use_efficiency": true,
                 "destroy_speeds": [
@@ -31,72 +31,72 @@
                         "block": {
                             "tags": "query.any_tag('dirt', 'sand', 'snow', 'grass', 'gravel', 'plant')"
                         },
-                        "speed": 10,
+                        "speed": 7,
                         "on_dig": { "event": "durability_update" }
                     },
                     {
                         "block": "minecraft:mud",
-                        "speed": 10,
+                        "speed": 7,
                         "on_dig": { "event": "durability_update" }
                     },
                     {
                         "block": "minecraft:dirt",
-                        "speed": 10,
+                        "speed": 7,
                         "on_dig": { "event": "durability_update" }
                     },
                     {
                         "block": "minecraft:grass",
-                        "speed": 10,
+                        "speed": 7,
                         "on_dig": { "event": "durability_update" }
                     },
                     {
                         "block": "minecraft:grass_path",
-                        "speed": 10,
+                        "speed": 7,
                         "on_dig": { "event": "durability_update" }
                     },
                     {
                         "block": "minecraft:gravel",
-                        "speed": 10,
+                        "speed": 7,
                         "on_dig": { "event": "durability_update" }
                     },
                     {
                         "block": "minecraft:mycelium",
-                        "speed": 10,
+                        "speed": 7,
                         "on_dig": { "event": "durability_update" }
                     },
                     {
                         "block": "minecraft:sand",
-                        "speed": 10,
+                        "speed": 7,
                         "on_dig": { "event": "durability_update" }
                     },
                     {
                         "block": "minecraft:snow",
-                        "speed": 10,
+                        "speed": 7,
                         "on_dig": { "event": "durability_update" }
                     },
                     {
                         "block": "minecraft:snow_layer",
-                        "speed": 10,
+                        "speed": 7,
                         "on_dig": { "event": "durability_update" }
                     },
                     {
                         "block": "minecraft:podzol",
-                        "speed": 10,
+                        "speed": 7,
                         "on_dig": { "event": "durability_update" }
                     },
                     {
                         "block": "minecraft:suspicious_gravel",
-                        "speed": 10,
+                        "speed": 7,
                         "on_dig": { "event": "durability_update" }
                     },
                     {
                         "block": "minecraft:soul_soil",
-                        "speed": 10,
+                        "speed": 7,
                         "on_dig": { "event": "durability_update" }
                     },
                     {
                         "block": "minecraft:soul_sand",
-                        "speed": 10,
+                        "speed": 7,
                         "on_dig": { "event": "durability_update" }
                     }
                 ],

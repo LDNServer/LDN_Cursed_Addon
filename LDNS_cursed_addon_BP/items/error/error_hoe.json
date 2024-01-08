@@ -23,7 +23,7 @@
             "minecraft:durability": {
                 "max_durability": 666
             },
-            "minecraft:damage": 5,
+            "minecraft:damage": 4,
             "minecraft:digger": {
                 "use_efficiency": true,
                 "destroy_speeds": [
@@ -31,67 +31,67 @@
                         "block": {
                             "tags": "query.any_tag('minecraft:crop')"
                         },
-                        "speed": 10
+                        "speed": 7
                     },
                     {
                         "block": "minecraft:mangrove_leaves",
-                        "speed": 10
+                        "speed": 7
                     },
                     {
                         "block": "minecraft:azalea",
-                        "speed": 10
+                        "speed": 7
                     },
                     {
                         "block": "minecraft:azalea_leaves",
-                        "speed": 10
+                        "speed": 7
                     },
                     {
                         "block": "minecraft:flowering_azalea",
-                        "speed": 10
+                        "speed": 7
                     },
                     {
                         "block": "minecraft:azalea_leaves_flowered",
-                        "speed": 10
+                        "speed": 7
                     },
                     {
                         "block": "minecraft:glow_lichen",
-                        "speed": 10
+                        "speed": 7
                     },
                     {
                         "block": "minecraft:moss_block",
-                        "speed": 10
+                        "speed": 7
                     },
                     {
                         "block": "minecraft:moss_carpet",
-                        "speed": 10
+                        "speed": 7
                     },
                     {
                         "block": "minecraft:dried_kelp_block",
-                        "speed": 10
+                        "speed": 7
                     },
                     {
                         "block": "minecraft:leaves",
-                        "speed": 10
+                        "speed": 7
                     },
                     {
                         "block": "minecraft:leaves2",
-                        "speed": 10
+                        "speed": 7
                     },
                     {
                         "block": "minecraft:nether_wart_block",
-                        "speed": 10
+                        "speed": 7
                     },
                     {
                         "block": "minecraft:cherry_leaves",
-                        "speed": 10
+                        "speed": 7
                     },
                     {
                         "block": "minecraft:warped_wart_block",
-                        "speed": 10
+                        "speed": 7
                     },
                     {
                         "block": "minecraft:vine",
-                        "speed": 10
+                        "speed": 7
                     }
                 ],
                 "on_dig": {
