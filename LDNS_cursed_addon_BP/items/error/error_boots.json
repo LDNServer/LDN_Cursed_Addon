@@ -21,7 +21,7 @@
                 "dispensable": true
             },
             "minecraft:enchantable": {
-                "value": 10,
+                "value": 0,
                 "slot": "armor_feet"
             },
             "minecraft:armor": {
