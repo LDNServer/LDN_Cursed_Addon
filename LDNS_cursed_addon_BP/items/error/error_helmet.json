@@ -21,7 +21,7 @@
                 "dispensable": true
             },
             "minecraft:enchantable": {
-                "value": 10,
+                "value": 1,
                 "slot": "armor_head"
             },
             "minecraft:armor": {
