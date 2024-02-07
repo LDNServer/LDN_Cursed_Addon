@@ -110,7 +110,29 @@
                 },
                 "pitch" : [ 0.80, 1.20 ],
                 "volume" : 0.80
-             }
+             },
+            "ldns:explosive_frog" : {
+                "events" : {
+                    "fuse" : {
+                       "pitch" : 0.50,
+                       "sound" : "random.fuse",
+                       "volume" : 1.0
+                    },
+                    "ambient" : "mob.frog.ambient",
+                    "ambient.baby" : {
+                       "pitch" : 1.20,
+                       "sound" : "mob.frog.ambient",
+                       "volume" : 2.50
+                    },
+                    "death" : "mob.frog.death",
+                    "eat" : "mob.frog.eat",
+                    "hurt" : "mob.frog.hurt",
+                    "jump_to_block" : "mob.frog.jump_to_block",
+                    "step" : "mob.frog.step"
+                 },
+                 "pitch" : [ 0.80, 1.20 ],
+                 "volume" : 1.0               
+            } 
         }
     }
 }
