@@ -35,6 +35,13 @@ item.spawn_egg.entity.ldns:dr.naba.name=Dr.Nabaのスポーンエッグ
 
 entity.ldns:scythe_bullet.name=電波動
 
+entity.ldns:explosive_frog.name=爆発カエル
+item.spawn_egg.entity.ldns:explosive_frog.name=爆発カエルのスポーンエッグ
+
+entity.ldns:gray_enderman.name=グレーエンダーマン
+item.spawn_egg.entity.ldns:gray_enderman.name=グレーエンダーマンのスポーンエッグ
+
+
 ##アイテム
 
 item.ldns:travel_ticket=異世界旅行券

@@ -132,7 +132,22 @@
                  },
                  "pitch" : [ 0.80, 1.20 ],
                  "volume" : 1.0               
-            } 
+            },
+            "ldns:gray_enderman" : {
+                "events" : {
+                   "ambient" : "mob.endermen.idle",
+                   "death" : "mob.endermen.death",
+                   "hurt" : "mob.endermen.hit",
+                   "mad" : "mob.endermen.scream",
+                   "stare" : {
+                      "pitch" : 1.0,
+                      "sound" : "mob.endermen.stare",
+                      "volume" : 1.0
+                   }
+                },
+                "pitch" : [ 1.40, 1.80 ],
+                "volume" : 1.0
+             }
         }
     }
 }
