@@ -450,5 +450,45 @@
 				]
 			}
 		]
+	},
+	"geometry.head_only_sheep": {
+		"texturewidth": 64,
+		"textureheight": 64,
+		"visible_bounds_width": 2,
+		"visible_bounds_height": 2.375,
+		"visible_bounds_offset": [0, 0.8125, 0],
+		"bones": [
+			{
+				"name": "head",
+				"pivot": [0, 18, -8],
+				"cubes": [
+					{"origin": [-3, 10, -12], "size": [6, 6, 6], "uv": [0, 32], "inflate": 0.6}
+				]
+			},
+			{
+				"name": "body",
+				"pivot": [0, 19, 2]
+			},
+			{
+				"name": "leg0",
+				"parent": "body",
+				"pivot": [-3, 12, 7]
+			},
+			{
+				"name": "leg1",
+				"parent": "body",
+				"pivot": [3, 12, 7]
+			},
+			{
+				"name": "leg2",
+				"parent": "body",
+				"pivot": [-3, 12, -5]
+			},
+			{
+				"name": "leg3",
+				"parent": "body",
+				"pivot": [3, 12, -5]
+			}
+		]
 	}
 }
