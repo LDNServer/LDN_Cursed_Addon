@@ -35,6 +35,13 @@ item.spawn_egg.entity.ldns:dr.naba.name=Spawn Dr.Naba
 
 entity.ldns:scythe_bullet.name=Voltwave
 
+entity.ldns:explosive_frog.name=Explosive frog
+item.spawn_egg.entity.ldns:explosive_frog.name=Spawn Explosive frog
+
+entity.ldns:gray_enderman.name=Gray enderman
+item.spawn_egg.entity.ldns:gray_enderman.name=Spawn Gray enderman
+
+
 ##Items
 
 item.ldns:travel_ticket=Travel ticket
