@@ -156,25 +156,6 @@
         "priority": 5,
         "speed_multiplier": 1.1
       },
-      "minecraft:behavior.eat_block": {
-        "priority": 6,
-        "success_chance": "query.is_baby ? 0.02 : 0.001",
-        "time_until_eat": 1.8,
-        "eat_and_replace_block_pairs": [
-          {
-            "eat_block": "grass",
-            "replace_block": "dirt"
-          },
-          {
-            "eat_block": "tallgrass",
-            "replace_block": "air"
-          }
-        ],
-        "on_eat": {
-          "event": "minecraft:on_eat_block",
-          "target": "self"
-        }
-      },
       "minecraft:behavior.random_stroll": {
         "priority": 7,
         "speed_multiplier": 0.8

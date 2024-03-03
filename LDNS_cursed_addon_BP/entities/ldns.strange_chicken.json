@@ -45,7 +45,7 @@
           "table": "loot_tables/entities/chicken.json"
         },
         "minecraft:attack": {
-          "damage": 5
+          "damage": 3
         },
         "minecraft:breedable": {
           "require_tame": false,
