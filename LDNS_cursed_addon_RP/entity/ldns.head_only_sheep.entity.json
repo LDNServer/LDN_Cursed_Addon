@@ -10,7 +10,7 @@
       },
       "geometry": {
         "default": "geometry.head_only_sheep",
-        "sheared": "geometry.head_only_sheep"
+        "sheared": "geometry.head_only_sheep.sheared"
       },
       "animations": {
         "setup": "animation.sheep.setup",
