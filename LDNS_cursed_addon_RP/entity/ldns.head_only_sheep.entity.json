@@ -6,7 +6,7 @@
       "min_engine_version": "1.8.0",
       "materials": { "default": "sheep" },
       "textures": {
-        "default": "textures/entity/sheep/sheep"
+        "default": "textures/entity/ldns/head_only_sheep"
       },
       "geometry": {
         "default": "geometry.head_only_sheep",
