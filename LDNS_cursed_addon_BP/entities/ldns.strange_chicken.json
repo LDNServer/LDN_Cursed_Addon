@@ -47,29 +47,6 @@
         "minecraft:attack": {
           "damage": 3
         },
-        "minecraft:breedable": {
-          "require_tame": false,
-          "breeds_with": {
-            "mate_type": "minecraft:chicken",
-            "baby_type": "minecraft:chicken",
-            "breed_event": {
-              "event": "minecraft:entity_born",
-              "target": "baby"
-            }
-          },
-          "breed_items": [
-            "wheat_seeds",
-            "beetroot_seeds",
-            "melon_seeds",
-            "pumpkin_seeds",
-            "pitcher_pod",
-            "torchflower_seeds"
-          ]
-        },
-        "minecraft:behavior.breed": {
-          "priority": 3,
-          "speed_multiplier": 1.5
-        },
         "minecraft:rideable": {
           "seat_count": 1,
           "family_types": [
