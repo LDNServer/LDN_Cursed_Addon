@@ -47,6 +47,8 @@ item.spawn_egg.entity.ldns:strange_chicken.name=Spawn Strange chicken
 entity.ldns:head_only_sheep.name=Head only sheep
 item.spawn_egg.entity.ldns:head_only_sheep.name=Spawn Head only sheep
 
+entity.ldns:nullbrain.name=Null brain
+item.spawn_egg.entity.ldns:nullbrain.name=Spawn Null brain
 
 ##Items
 
