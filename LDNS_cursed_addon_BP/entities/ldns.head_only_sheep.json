@@ -5,7 +5,8 @@
       "identifier": "ldns:head_only_sheep",
       "is_spawnable": true,
       "is_summonable": true,
-      "is_experimental": false
+      "is_experimental": false,
+      "runtime_identifier": "minecraft:sheep"
     },
     "component_groups": {
       "minecraft:sheep_baby": {

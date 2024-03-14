@@ -14,10 +14,10 @@
         "default": "geometry.chicken.v1.12"
       },
       "animations": {
-        "move": "animation.strange_chicken.move",
-        "general": "animation.strange_chicken.general",
+        "move": "animation.chicken.move",
+        "general": "animation.chicken.general",
         "look_at_target": "animation.common.look_at_target",
-        "baby_transform": "animation.strange_chicken.baby_transform"
+        "baby_transform": "animation.chicken.baby_transform"
       },
       "scripts": {
         "animate": [

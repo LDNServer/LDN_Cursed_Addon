@@ -5,7 +5,8 @@
         "identifier": "ldns:explosive_frog",
         "is_spawnable": true,
         "is_summonable": true,
-        "is_experimental": false
+        "is_experimental": false,
+        "runtime_identifier": "minecraft:frog"
       },
       "component_groups": {
         "temperate_frog": {
