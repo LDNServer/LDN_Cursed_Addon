@@ -9,10 +9,30 @@
         },
         "component_groups": {
             "ldns:nullbrain_effect": {
-                "minecraft:mob_effect": {
-                    "effect_range": 0.47,
-                    "effect_time": 10,
-                    "mob_effect": "poison"
+                "minecraft:behavior.send_event": {
+                    "event_choices": [
+                        {
+                            "max_activation_range": 64.0,
+                            "min_activation_range": 0.0,
+                            "cast_duration": 0.0,
+                            "particle_color": "#30BEBE",
+                            "sequence": [
+                                {
+                                    "base_delay": 0,
+                                    "event": "ldns:nullbrain_effect_player"
+                                }
+                            ],
+                            "weight": 4
+                        }
+                    ]
+                },
+                "minecraft:timer": {
+                    "time": 10,
+                    "looping": false,
+                    "time_down_event": {
+                        "event": "ldns:explosion_null",
+                        "target": "self"
+                    }
                 }
             },
             "ldns:nullbrain_explode": {
@@ -25,7 +45,8 @@
                     "max_resistance": 0,
                     "power": 3
                 }
-            }
+            },
+            "ldns:nullbrain_non": {}
         },
         "components": {
             "minecraft:nameable": {},
@@ -60,10 +81,13 @@
                     {
                         "on_damage": {
                             "filters": {
-                                "test": "actor_health",
-                                "subject": "self",
-                                "operator": "equals",
-                                "value": 6
+                                "all_of": [
+                                    {
+                                        "test": "actor_health",
+                                        "subject": "self",
+                                        "value": 6
+                                    }
+                                ]
                             },
                             "event": "ldns:nullbrain_randomize",
                             "target": "self"
@@ -90,8 +114,28 @@
                             ]
                         },
                         "weight": 1
+                    },
+                    {
+                        "add": {
+                            "component_groups": [
+                                "ldns:nullbrain_non"
+                            ]
+                        },
+                        "weight": 1
                     }
                 ]
+            },
+            "ldns:explosion_null": {
+                "remove": {
+                    "component_groups": [
+                        "ldns:nullbrain_effect"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "ldns:nullbrain_explode"
+                    ]
+                }
             }
         }
     }
