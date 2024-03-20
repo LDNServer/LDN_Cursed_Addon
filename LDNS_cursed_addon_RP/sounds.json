@@ -93,12 +93,12 @@
                    "eat" : "",
                    "hurt" : "mob.cow.hurt",
                    "step" : {
-                      "pitch" : [ 0.90, 1.10 ],
+                      "pitch" : [ 0.40, 0.80 ],
                       "sound" : "mob.cow.step",
                       "volume" : 0.650
                    }
                 },
-                "pitch" : [ 0.80, 1.20 ],
+                "pitch" : [ 0.30, 0.60 ],
                 "volume" : 1.0
              },
              "ldns:killer_rabbit" : {
@@ -108,7 +108,7 @@
                    "eat" : "",
                    "hurt" : "mob.rabbit.hurt"
                 },
-                "pitch" : [ 0.80, 1.20 ],
+                "pitch" : [ 0.40, 0.80 ],
                 "volume" : 0.80
              },
             "ldns:explosive_frog" : {
@@ -146,6 +146,37 @@
                    }
                 },
                 "pitch" : [ 1.40, 1.80 ],
+                "volume" : 1.0
+             },
+             "ldns:strange_chicken" : {
+                "events" : {
+                   "ambient" : "mob.chicken.say",
+                   "death" : "mob.chicken.hurt",
+                   "eat" : "",
+                   "hurt" : "mob.chicken.hurt",
+                   "plop" : "mob.chicken.plop",
+                   "step" : {
+                      "pitch" : 0.5,
+                      "sound" : "mob.chicken.step",
+                      "volume" : 0.250
+                   }
+                },
+                "pitch" : [ 0.20, 0.50 ],
+                "volume" : 1.0
+             },
+             "ldns:head_only_sheep" : {
+                "events" : {
+                   "ambient" : "mob.sheep.say",
+                   "death" : "mob.sheep.say",
+                   "eat" : "",
+                   "hurt" : "mob.sheep.say",
+                   "step" : {
+                      "pitch" : 0.5,
+                      "sound" : "mob.sheep.step",
+                      "volume" : 0.40
+                   }
+                },
+                "pitch" : [ 0.20, 0.50 ],
                 "volume" : 1.0
              }
         }

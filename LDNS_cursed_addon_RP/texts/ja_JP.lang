@@ -41,6 +41,14 @@ item.spawn_egg.entity.ldns:explosive_frog.name=爆発カエルのスポーンエ
 entity.ldns:gray_enderman.name=グレーエンダーマン
 item.spawn_egg.entity.ldns:gray_enderman.name=グレーエンダーマンのスポーンエッグ
 
+entity.ldns:strange_chicken.name=変なニワトリ
+item.spawn_egg.entity.ldns:strange_chicken.name=変なニワトリのスポーンエッグ
+
+entity.ldns:head_only_sheep.name=顔だけヒツジ
+item.spawn_egg.entity.ldns:head_only_sheep.name=顔だけヒツジのスポーンエッグ
+
+entity.ldns:nullbrain.name=ヌルブライン
+item.spawn_egg.entity.ldns:nullbrain.name=ヌルブラインのスポーンエッグ
 
 ##アイテム
 

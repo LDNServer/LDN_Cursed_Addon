@@ -17,7 +17,9 @@
                     "ldns:break_torch",
                     "ldns:random_chat",
                     "ldns:random_rotation",
-                    { "ldns:scythe_effects": "q.is_item_name_any('slot.weapon.mainhand', 0, 'ldns:entity787_scythe')" }
+                    {
+                        "ldns:scythe_effects": "q.is_item_name_any('slot.weapon.mainhand', 0, 'ldns:entity787_scythe')"
+                    }
                 ]
             },
             "animations": {
@@ -70,6 +72,30 @@
                 "minecraft:spell_effects": {
                     "remove_effects": "bad_omen"
                 }
+            },
+            "ldns:null_weakness": {
+                "minecraft:spell_effects": {
+                    "add_effects": [
+                        {
+                            "effect": "weakness",
+                            "duration": 10,
+                            "amplifier": 666
+                        }
+                    ]
+                },
+                "minecraft:timer": {
+                    "time": 5,
+                    "looping": false,
+                    "time_down_event": {
+                        "event": "ldns:clear_null_player",
+                        "target": "self"
+                    }
+                }
+            },
+            "ldns:clear_null": {
+                "minecraft:spell_effects": {
+                    "remove_effects": "weakness"
+                }
             }
         },
         "components": {
@@ -93,7 +119,6 @@
             "minecraft:movement": {
                 "value": 0.1
             },
-
             "minecraft:hurt_on_condition": {
                 "damage_conditions": [
                     {
@@ -240,6 +265,25 @@
                 "remove": {
                     "component_groups": [
                         "minecraft:raid_trigger"
+                    ]
+                }
+            },
+            "ldns:nullbrain_effect_player": {
+                "add": {
+                    "component_groups": [
+                        "ldns:null_weakness"
+                    ]
+                }
+            },
+            "ldns:clear_null_player": {
+                "remove": {
+                    "component_groups": [
+                        "ldns:null_weakness"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "ldns:clear_null"
                     ]
                 }
             }

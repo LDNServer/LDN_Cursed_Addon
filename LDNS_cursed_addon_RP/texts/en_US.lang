@@ -41,6 +41,14 @@ item.spawn_egg.entity.ldns:explosive_frog.name=Spawn Explosive frog
 entity.ldns:gray_enderman.name=Gray enderman
 item.spawn_egg.entity.ldns:gray_enderman.name=Spawn Gray enderman
 
+entity.ldns:strange_chicken.name=Strange chicken
+item.spawn_egg.entity.ldns:strange_chicken.name=Spawn Strange chicken
+
+entity.ldns:head_only_sheep.name=Head only sheep
+item.spawn_egg.entity.ldns:head_only_sheep.name=Spawn Head only sheep
+
+entity.ldns:nullbrain.name=Null brain
+item.spawn_egg.entity.ldns:nullbrain.name=Spawn Null brain
 
 ##Items
 
