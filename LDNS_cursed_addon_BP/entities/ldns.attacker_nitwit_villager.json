@@ -4,7 +4,7 @@
     "description": {
       "identifier": "ldns:attacker_nitwit_villager",
       "is_spawnable": true,
-      "is_summonable": false,
+      "is_summonable": true,
       "is_experimental": false,
       "runtime_identifier": "minecraft:villager_v2"
     },
@@ -59,7 +59,7 @@
       },
       "minecraft:nameable": {},
       "minecraft:movement": {
-        "value": 0.5
+        "value": 1.0
       },
       "minecraft:navigation.walk": {
         "can_path_over_water": true,
@@ -81,8 +81,8 @@
         "probability": 0.02
       },
       "minecraft:behavior.random_stroll": {
-        "priority": 11,
-        "speed_multiplier": 0.6
+        "priority": 8,
+        "speed_multiplier": 0.8
       },
       "minecraft:physics": {},
       "minecraft:pushable": {
