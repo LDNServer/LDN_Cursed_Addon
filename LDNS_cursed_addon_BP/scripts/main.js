@@ -4,6 +4,7 @@ import { system, world } from '@minecraft/server';
 import './random_effect';
 import './dangerous_cactus';
 import './random_time';
+import './error-tool-effects';
 
 const timezoneOffset = 0;
 
