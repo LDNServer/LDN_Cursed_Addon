@@ -1,0 +1,59 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ldns:mysterious_players",
+      "min_engine_version": "1.8.0",
+      "materials": {
+        "default": "entity_emissive_alpha_one_sided"
+      },
+      "textures": {
+        "default": "textures/entity/ldns/mysterious_players/mcd",
+        "default_slim": "textures/entity/ldns/mysterious_players/mcds",
+        "mc1": "textures/entity/ldns/mysterious_players/mc1",
+        "mc2": "textures/entity/ldns/mysterious_players/mc2",
+        "mc3": "textures/entity/ldns/mysterious_players/mc3",
+        "mc4": "textures/entity/ldns/mysterious_players/mc4",
+        "mc5": "textures/entity/ldns/mysterious_players/mc5"
+      },
+      "geometry": {
+        "default": "geometry.humanoid",
+        "default_slim": "geometry.humanoid.customSlim",
+        "mc1": "geometry.humanoid.customSlim",
+        "mc2": "geometry.humanoid",
+        "mc3": "geometry.humanoid",
+        "mc4": "geometry.humanoid",
+        "mc5": "geometry.humanoid"
+      },
+      "spawn_egg": {
+        "base_color": "#f0f8ff",
+        "overlay_color": "#f0f8ff"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"
+        ]
+      },
+      "animations": {
+        "look_at_target_default": "animation.humanoid.look_at_target.default",
+        "look_at_target_gliding": "animation.humanoid.look_at_target.gliding",
+        "look_at_target_swimming": "animation.humanoid.look_at_target.swimming",
+        "move": "animation.humanoid.move",
+        "charging": "animation.humanoid.charging",
+        "bob": "animation.humanoid.bob",
+        "damage_nearby_mobs": "animation.humanoid.damage_nearby_mobs"
+      },
+      "animation_controllers": [
+        { "look_at_target": "controller.animation.humanoid.look_at_target" },
+        { "move": "controller.animation.humanoid.move" },
+        { "charging": "controller.animation.humanoid.charging" },
+        { "bob": "controller.animation.humanoid.bob" },
+        { "damage_nearby_mobs": "controller.animation.humanoid.damage_nearby_mobs" }
+      ],
+      "render_controllers": [
+        "controller.render.ldns.mysterious_players"
+      ],
+      "enable_attachables": true
+    }
+  }
+}

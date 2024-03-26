@@ -81,7 +81,8 @@
       "minecraft:type_family": {
         "family": [
           "chicken",
-          "mob"
+          "mob",
+          "monster"
         ]
       },
       "minecraft:behavior.melee_attack": {

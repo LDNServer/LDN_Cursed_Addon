@@ -50,6 +50,12 @@ item.spawn_egg.entity.ldns:head_only_sheep.name=Spawn Head only sheep
 entity.ldns:nullbrain.name=Null brain
 item.spawn_egg.entity.ldns:nullbrain.name=Spawn Null brain
 
+entity.ldns:mysterious_players.name=Mysterious Players
+item.spawn_egg.entity.ldns:mysterious_players.name=Spawn Mysterious Players
+
+entity.ldns:attacker_nitwit_villager.name=Villager?
+item.spawn_egg.entity.ldns:attacker_nitwit_villager.name=Spawn Villager?
+
 ##Items
 
 item.ldns:travel_ticket=Travel ticket

@@ -59,7 +59,8 @@
       "minecraft:type_family": {
         "family": [
           "sheep",
-          "mob"
+          "mob",
+          "monster"
         ]
       },
       "minecraft:breathable": {
