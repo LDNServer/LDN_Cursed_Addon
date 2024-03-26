@@ -6,14 +6,14 @@
                 "default": {
                     "transitions": [
                         {
-                            "ldns.mysterious_player_spawn": "math.mod(query.life_time,10) == math.die_roll_integer(1,0,12000)"
+                            "ldns.mysterious_player_spawn": "math.mod(query.life_time,1000) == math.die_roll_integer(1,0,200)"
                         }
                     ]
                 },
                 "ldns.mysterious_player_spawn": {
                     "transitions": [
                         {
-                            "default": "variable.time_player_spawn = (variable.time_player_spawn ?? 0) ; variable.time_player_spawn = variable.time_player_spawn < 9900 ? variable.time_player_spawn + 1:0;return variable.time_player_spawn == 0;"
+                            "default": "variable.time_player_spawn = (variable.time_player_spawn ?? 0) ; variable.time_player_spawn = variable.time_player_spawn < 2400 ? variable.time_player_spawn + 1:0;return variable.time_player_spawn == 0;"
                         }
                     ],
                     "on_entry": [
