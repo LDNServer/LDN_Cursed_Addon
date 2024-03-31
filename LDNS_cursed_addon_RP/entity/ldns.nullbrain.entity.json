@@ -29,14 +29,41 @@
         "move": "animation.humanoid.move",
         "charging": "animation.humanoid.charging",
         "bob": "animation.humanoid.bob",
-        "damage_nearby_mobs": "animation.humanoid.damage_nearby_mobs"
+        "damage_nearby_mobs": "animation.humanoid.damage_nearby_mobs",
+        "riding.arms": "animation.player.riding.arms",
+        "riding.legs": "animation.player.riding.legs",
+        "sneaking": "animation.player.sneaking",
+        "holding": "animation.player.holding",
+        "holding_spyglass": "animation.humanoid.holding_spyglass"
       },
       "animation_controllers": [
-        { "look_at_target": "controller.animation.humanoid.look_at_target" },
-        { "move": "controller.animation.humanoid.move" },
-        { "charging": "controller.animation.humanoid.charging" },
-        { "bob": "controller.animation.humanoid.bob" },
-        { "damage_nearby_mobs": "controller.animation.humanoid.damage_nearby_mobs" }
+        {
+          "look_at_target": "controller.animation.humanoid.look_at_target"
+        },
+        {
+          "move": "controller.animation.humanoid.move"
+        },
+        {
+          "charging": "controller.animation.humanoid.charging"
+        },
+        {
+          "bob": "controller.animation.humanoid.bob"
+        },
+        {
+          "damage_nearby_mobs": "controller.animation.humanoid.damage_nearby_mobs"
+        },
+        {
+          "riding": "controller.animation.humanoid.riding"
+        },
+        {
+          "holding": "controller.animation.humanoid.holding"
+        },
+        {
+          "attack": "controller.animation.humanoid.attack"
+        },
+        {
+          "sneaking": "controller.animation.humanoid.sneaking"
+        }
       ],
       "render_controllers": [
         "controller.render.default"
