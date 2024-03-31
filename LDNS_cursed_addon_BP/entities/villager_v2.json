@@ -1158,6 +1158,11 @@
         },
         "minecraft:variant": {
           "value": 14
+        },
+        "minecraft:economy_trade_table": {
+          "display_name": "辟｡閨ｷ蜿門ｼ",
+          "table": "trading/economy_trades/nitwit_trader_trade.json",
+          "new_screen": true
         }
       },
 
