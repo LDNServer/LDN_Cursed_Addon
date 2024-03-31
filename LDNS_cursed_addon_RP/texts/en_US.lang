@@ -58,7 +58,9 @@ item.spawn_egg.entity.ldns:attacker_nitwit_villager.name=Spawn Villager?
 
 ##Items
 
-item.ldns:travel_ticket=Travel ticket
+item.ldns:travel_ticket=Pendant of daybreak
+
+item.ldns:pendant_of_goscubus=Pendant of goscubus
 
 item.ldns:bomb=Bomb
 

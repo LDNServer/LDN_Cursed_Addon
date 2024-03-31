@@ -59,9 +59,6 @@
           "holding": "controller.animation.humanoid.holding"
         },
         {
-          "attack": "controller.animation.humanoid.attack"
-        },
-        {
           "sneaking": "controller.animation.humanoid.sneaking"
         }
       ],
