@@ -56,6 +56,12 @@ item.spawn_egg.entity.ldns:mysterious_players.name=Spawn Mysterious Players
 entity.ldns:attacker_nitwit_villager.name=Villager?
 item.spawn_egg.entity.ldns:attacker_nitwit_villager.name=Spawn Villager?
 
+entity.ldns:pp.name=§dPP
+item.spawn_egg.entity.ldns:pp.name=Spawn §dPP
+
+entity.ldns:yy.name=§eyy
+item.spawn_egg.entity.ldns:yy.name=Spawn §eyy
+
 ##Items
 
 item.ldns:travel_ticket=Pendant of daybreak
