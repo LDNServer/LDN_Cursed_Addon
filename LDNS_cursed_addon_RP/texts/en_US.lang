@@ -56,10 +56,10 @@ item.spawn_egg.entity.ldns:mysterious_players.name=Spawn Mysterious Players
 entity.ldns:attacker_nitwit_villager.name=Villager?
 item.spawn_egg.entity.ldns:attacker_nitwit_villager.name=Spawn Villager?
 
-entity.ldns:pp.name=§dPP
+entity.ldns:pp.name=§dPseudo Ping
 item.spawn_egg.entity.ldns:pp.name=Spawn §dPP
 
-entity.ldns:yy.name=§eyy
+entity.ldns:yy.name=§eYields Yes
 item.spawn_egg.entity.ldns:yy.name=Spawn §eyy
 
 ##Items
