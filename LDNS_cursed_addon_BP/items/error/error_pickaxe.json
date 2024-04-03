@@ -620,11 +620,6 @@
                         "on_dig": { "event": "durability_update" }
                     },
                     {
-                        "block": "minecraft:dirt",
-                        "speed": 7,
-                        "on_dig": { "event": "durability_update" }
-                    },
-                    {
                         "block": "minecraft:dispenser",
                         "speed": 7,
                         "on_dig": { "event": "durability_update" }
