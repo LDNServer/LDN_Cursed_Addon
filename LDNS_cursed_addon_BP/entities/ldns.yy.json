@@ -103,9 +103,9 @@
                 }
             },
             "minecraft:mob_effect": {
-                "effect_range": 0.5,
+                "effect_range": 0.3,
                 "effect_time": 8,
-                "mob_effect": "levitation"
+                "mob_effect": "slowness"
             }
         },
         "events": {
