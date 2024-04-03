@@ -24,6 +24,8 @@ const targetEntities = {
   'minecraft:zombie_pigman': { variant: [1, 2] },
   'ldns:skele_zombie': {},
   'ldns:skeleton_trader': {},
+  'ldns:pp': {},
+  'ldns:yy': {}
 }
 
 world.afterEvents.entityHurt.subscribe(ev => {
@@ -38,5 +40,5 @@ world.afterEvents.entityHurt.subscribe(ev => {
     if (typeof conditions.variant === 'number' && conditions.variant !== variant) return;
     if (Array.isArray(conditions.variant) && !conditions.variant.includes(variant)) return;
   }
-  hurtEntity.addEffect(MinecraftEffectTypes.Weakness, 10*20);
+  hurtEntity.addEffect(MinecraftEffectTypes.Weakness, 10 * 20);
 });
