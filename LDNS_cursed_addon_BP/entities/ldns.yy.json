@@ -27,8 +27,8 @@
                 "height": 1.8
             },
             "minecraft:health": {
-                "value": 20,
-                "max": 20
+                "value": 37,
+                "max": 37
             },
             "minecraft:loot": {
                 "table": "loot_tables/entities/yy.json"
@@ -101,6 +101,11 @@
                     "event": "ldns:despawn_yy_event",
                     "target": "self"
                 }
+            },
+            "minecraft:mob_effect": {
+                "effect_range": 0.3,
+                "effect_time": 8,
+                "mob_effect": "slowness"
             }
         },
         "events": {
