@@ -8,4 +8,6 @@ declare module '@minecraft/server' {
 
 interface EntityComponentMap {
   [mc.EntityHealthComponent.componentId]: mc.EntityHealthComponent;
+  [mc.EntityEquippableComponent.componentId]: mc.EntityEquippableComponent;
+  [mc.EntityVariantComponent.componentId]: mc.EntityVariantComponent;
 }
