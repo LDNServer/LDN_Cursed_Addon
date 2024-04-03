@@ -6,7 +6,10 @@
 			"textures": "textures/item/ldns/ldns_bomb"
 		},
 		"travel_ticket": {
-			"textures": "textures/item/ldns/ldns_travel_ticket"
+			"textures": "textures/item/ldns/pendant_of_daybreak"
+		},
+		"pendant_of_goscubus": {
+			"textures": "textures/item/ldns/pendant_of_goscubus"
 		},
 		"cursed_soul": {
 		  "textures": "textures/item/ldns/ldns_cursed_soul"

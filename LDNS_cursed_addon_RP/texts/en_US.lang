@@ -41,10 +41,32 @@ item.spawn_egg.entity.ldns:explosive_frog.name=Spawn Explosive frog
 entity.ldns:gray_enderman.name=Gray enderman
 item.spawn_egg.entity.ldns:gray_enderman.name=Spawn Gray enderman
 
+entity.ldns:strange_chicken.name=Strange chicken
+item.spawn_egg.entity.ldns:strange_chicken.name=Spawn Strange chicken
+
+entity.ldns:head_only_sheep.name=Head only sheep
+item.spawn_egg.entity.ldns:head_only_sheep.name=Spawn Head only sheep
+
+entity.ldns:nullbrain.name=Null brain
+item.spawn_egg.entity.ldns:nullbrain.name=Spawn Null brain
+
+entity.ldns:mysterious_players.name=Mysterious Players
+item.spawn_egg.entity.ldns:mysterious_players.name=Spawn Mysterious Players
+
+entity.ldns:attacker_nitwit_villager.name=Villager?
+item.spawn_egg.entity.ldns:attacker_nitwit_villager.name=Spawn Villager?
+
+entity.ldns:pp.name=§dPseudo Ping
+item.spawn_egg.entity.ldns:pp.name=Spawn §dPP
+
+entity.ldns:yy.name=§eYields Yes
+item.spawn_egg.entity.ldns:yy.name=Spawn §eyy
 
 ##Items
 
-item.ldns:travel_ticket=Travel ticket
+item.ldns:travel_ticket=Pendant of daybreak
+
+item.ldns:pendant_of_goscubus=Pendant of goscubus
 
 item.ldns:bomb=Bomb
 

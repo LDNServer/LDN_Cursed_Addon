@@ -41,10 +41,32 @@ item.spawn_egg.entity.ldns:explosive_frog.name=爆発カエルのスポーンエ
 entity.ldns:gray_enderman.name=グレーエンダーマン
 item.spawn_egg.entity.ldns:gray_enderman.name=グレーエンダーマンのスポーンエッグ
 
+entity.ldns:strange_chicken.name=変なニワトリ
+item.spawn_egg.entity.ldns:strange_chicken.name=変なニワトリのスポーンエッグ
+
+entity.ldns:head_only_sheep.name=顔だけヒツジ
+item.spawn_egg.entity.ldns:head_only_sheep.name=顔だけヒツジのスポーンエッグ
+
+entity.ldns:nullbrain.name=ヌルブライン
+item.spawn_egg.entity.ldns:nullbrain.name=ヌルブラインのスポーンエッグ
+
+entity.ldns:mysterious_players.name=プレイヤー？
+item.spawn_egg.entity.ldns:mysterious_players.name=プレイヤー？のスポーンエッグ
+
+entity.ldns:attacker_nitwit_villager.name=村人？
+item.spawn_egg.entity.ldns:attacker_nitwit_villager.name=村人？のスポーンエッグ
+
+entity.ldns:pp.name=§dPseudo Ping
+item.spawn_egg.entity.ldns:pp.name=§dPP のスポーンエッグ
+
+entity.ldns:yy.name=§eYields Yes
+item.spawn_egg.entity.ldns:yy.name=§eyy のスポーンエッグ
 
 ##アイテム
 
-item.ldns:travel_ticket=異世界旅行券
+item.ldns:travel_ticket=黎明のペンダント
+
+item.ldns:pendant_of_goscubus=夢魔のペンダント
 
 item.ldns:bomb=爆弾
 
