@@ -75,7 +75,7 @@
                 ]
             },
             "minecraft:attack": {
-                "damage": 2
+                "damage": 4
             },
             "minecraft:behavior.random_swim": {
                 "avoid_surface": true,
@@ -124,6 +124,11 @@
                     "event": "ldns:despawn_pp_event",
                     "target": "self"
                 }
+            },
+            "minecraft:mob_effect": {
+                "effect_range": 0.3,
+                "effect_time": 8,
+                "mob_effect": "blindness"
             }
         },
         "events": {
