@@ -1,0 +1,26 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.ldns.random_nitwit_spawn": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "ldns.nitwit_spawn": "math.mod(query.life_time,5) == math.die_roll_integer(1,0,5200)"
+                        }
+                    ]
+                },
+                "ldns.nitwit_spawn": {
+                    "transitions": [
+                        {
+                            "default": "variable.time_nitwit_spawn = (variable.time_nitwit_spawn ?? 0) ; variable.time_nitwit_spawn = variable.time_nitwit_spawn < 41600 ? variable.time_nitwit_spawn + 1:0;return variable.time_nitwit_spawn == 0;"
+                        }
+                    ],
+                    "on_entry": [
+                        "/summon ldns:attacker_nitwit_villager ~ ~1 ~"
+                    ]
+                }
+            }
+        }
+    }
+}

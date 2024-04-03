@@ -74,6 +74,42 @@
                 {
                     "name": "sounds/ldns/step/random_step_1",
                     "volume": 1.0
+                },
+                {
+                    "name": "sounds/ldns/mysterious/8L0Yv8qmEd",
+                    "volume": 1.0
+                },
+                {
+                    "name": "sounds/ldns/mysterious/B5PqyWt4VV",
+                    "volume": 1.0
+                },
+                {
+                    "name": "sounds/ldns/mysterious/c1HKRJTejH",
+                    "volume": 1.0
+                },
+                {
+                    "name": "sounds/ldns/mysterious/Eot5MYBBkq",
+                    "volume": 1.0
+                },
+                {
+                    "name": "sounds/ldns/mysterious/EXVkAqOgCg",
+                    "volume": 1.0
+                },
+                {
+                    "name": "sounds/ldns/mysterious/FRduMHMhOM",
+                    "volume": 1.0
+                },
+                {
+                    "name": "sounds/ldns/mysterious/qt8iVGumG8",
+                    "volume": 1.0
+                },
+                {
+                    "name": "sounds/ldns/mysterious/suf2ps8heq",
+                    "volume": 1.0
+                },
+                {
+                    "name": "sounds/ldns/mysterious/UnSF0hfNRE",
+                    "volume": 1.0
                 }
             ]
         }
