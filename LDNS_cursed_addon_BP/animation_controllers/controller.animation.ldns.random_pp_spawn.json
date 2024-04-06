@@ -18,7 +18,7 @@
                     ],
                     "on_entry": [
                         "/execute if score hour SystemClock matches 12..24 run playsound mob.spider.say @s ~ ~ ~ 1.00 0.25 1.00",
-                        "/execute if score hour SystemClock matches 12..24 summon ldns:pp ~ ~1 ~"
+                        "/execute if score hour SystemClock matches 12..24 run summon ldns:pp ~ ~1 ~"
                     ]
                 }
             }

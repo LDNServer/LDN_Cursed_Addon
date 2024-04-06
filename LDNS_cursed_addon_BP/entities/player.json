@@ -17,9 +17,11 @@
                     "ldns:break_torch",
                     "ldns:random_chat",
                     "ldns:mysterious_player_spawn",
-                    "ldns:attacker_nitwit_villager",
-                    "ldns:pp",
-                    "ldns:yy",
+                    "ldns:attacker_nitwit_villager_spawn",
+                    "ldns:pp_spawn",
+                    "ldns:yy_spawn",
+                    "ldns:ld5987_spawn",
+                    "ldns:ld3895_spawn",
                     "ldns:random_rotation",
                     {
                         "ldns:scythe_effects": "q.is_item_name_any('slot.weapon.mainhand', 0, 'ldns:entity787_scythe')"
@@ -38,9 +40,11 @@
                 "ldns:random_rotation": "controller.animation.ldns.random_rotation",
                 "ldns:scythe_effects": "animation.ldns.scythe_effects",
                 "ldns:mysterious_player_spawn": "controller.animation.ldns.random_player_spawn",
-                "ldns:attacker_nitwit_villager": "controller.animation.ldns.random_nitwit_spawn",
-                "ldns:pp": "controller.animation.ldns.random_pp_spawn",
-                "ldns:yy": "controller.animation.ldns.random_yy_spawn"
+                "ldns:attacker_nitwit_villager_spawn": "controller.animation.ldns.random_nitwit_spawn",
+                "ldns:pp_spawn": "controller.animation.ldns.random_pp_spawn",
+                "ldns:yy_spawn": "controller.animation.ldns.random_yy_spawn",
+                "ldns:ld5987_spawn": "controller.animation.ldns.random_ld5987_spawn",
+                "ldns:ld3895_spawn": "controller.animation.ldns.random_ld3895_spawn"
             }
         },
         "component_groups": {
