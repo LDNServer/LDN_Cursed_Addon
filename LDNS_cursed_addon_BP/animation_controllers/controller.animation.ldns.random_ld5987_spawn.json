@@ -17,7 +17,7 @@
                         }
                     ],
                     "on_entry": [
-                        "/execute if score hour SystemClock matches 12..24 run give @s ldns:ld5987 5"
+                        "/execute if score hour SystemClock matches 12..24 run give @s ldns:ld5987"
                     ]
                 }
             }
