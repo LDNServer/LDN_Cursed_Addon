@@ -1,4 +1,4 @@
-import { EquipmentSlot, Player, world } from '@minecraft/server';
+import { Entity, EntityEquippableComponent, EquipmentSlot, Player, world } from '@minecraft/server';
 import { MinecraftEffectTypes } from './lib/mojang-effect';
 
 const errorTools = [
@@ -30,8 +30,35 @@ const targetEntities = {
 
 world.afterEvents.entityHurt.subscribe(ev => {
   const { hurtEntity, damageSource: { damagingEntity } } = ev;
+  applyToolEffects(hurtEntity, damagingEntity);
+  applyArmorEffects(hurtEntity, damagingEntity);
+});
+
+/**
+ * @param {Entity} hurtEntity
+ * @param {Entity} damagingEntity 
+ */
+function applyArmorEffects(hurtEntity, damagingEntity) {
+  if (!(hurtEntity instanceof Player)) return;
+  const equippable = hurtEntity.getComponent('minecraft:equippable');
+  if (
+    equippable.getEquipment(EquipmentSlot.Head)?.typeId === 'ldns:error_helmet' &&
+    equippable.getEquipment(EquipmentSlot.Chest)?.typeId === 'ldns:error_chestplate' &&
+    equippable.getEquipment(EquipmentSlot.Legs)?.typeId === 'ldns:error_leggings' &&
+    equippable.getEquipment(EquipmentSlot.Feet)?.typeId === 'ldns:error_boots'
+  ) {
+    hurtEntity.addEffect(MinecraftEffectTypes.Resistance, 5*20);
+  }
+}
+
+/**
+ * @param {Entity} hurtEntity
+ * @param {Entity} damagingEntity 
+ */
+function applyToolEffects(hurtEntity, damagingEntity) {
   if (!(damagingEntity instanceof Player)) return;
-  const mainHand = damagingEntity.getComponent('minecraft:equippable').getEquipment(EquipmentSlot.Mainhand);
+  const equippable = damagingEntity.getComponent('minecraft:equippable');
+  const mainHand = equippable.getEquipment(EquipmentSlot.Mainhand);
   if (!(errorTools.includes(mainHand?.typeId) && hurtEntity.typeId in targetEntities)) return;
 
   const conditions = targetEntities[hurtEntity.typeId];
@@ -40,5 +67,10 @@ world.afterEvents.entityHurt.subscribe(ev => {
     if (typeof conditions.variant === 'number' && conditions.variant !== variant) return;
     if (Array.isArray(conditions.variant) && !conditions.variant.includes(variant)) return;
   }
+<<<<<<< HEAD
   hurtEntity.addEffect(MinecraftEffectTypes.Weakness, 10 * 20);
 });
+=======
+  hurtEntity.addEffect(MinecraftEffectTypes.Weakness, 10*20);
+}
+>>>>>>> dfde7c0 (feat: エラー装備を着てダメージを受けた時耐性を付与)
