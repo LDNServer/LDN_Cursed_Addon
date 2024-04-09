@@ -221,25 +221,27 @@
          },
          "ldns:pp": {
             "events": {
-               "death": "mob.villager.no",
-               "hurt": "mob.villager.haggle"
+               "ambient": "mob.ldns.ppyy",
+               "death": "mob.ldns.ppyy",
+               "hurt": "mob.ldns.ppyy"
             },
             "pitch": [
-               0.20,
+               0.80,
                4.10
             ],
-            "volume": 1.0
+            "volume": 0.5
          },
          "ldns:yy": {
             "events": {
-               "death": "mob.villager.idle",
-               "hurt": "mob.villager.yes"
+               "ambient": "mob.ldns.ppyy",
+               "death": "mob.ldns.ppyy",
+               "hurt": "mob.ldns.ppyy"
             },
             "pitch": [
-               0.20,
+               0.80,
                4.10
             ],
-            "volume": 1.0
+            "volume": 0.5
          }
       }
    }

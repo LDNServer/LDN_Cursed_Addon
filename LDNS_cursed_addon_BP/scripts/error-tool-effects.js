@@ -24,6 +24,8 @@ const targetEntities = {
   'minecraft:zombie_pigman': { variant: [1, 2] },
   'ldns:skele_zombie': {},
   'ldns:skeleton_trader': {},
+  'ldns:pp': {},
+  'ldns:yy': {}
 }
 
 world.afterEvents.entityHurt.subscribe(ev => {

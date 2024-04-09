@@ -95,6 +95,9 @@ item.ldns:error_ingot=繧ｨ繝ｩ繝ｼ Ingot
 
 item.ldns:entity787_scythe=Entity787's Scythe
 
+item.ldns:ld5987=§eL§cD§75§a9§98§47
+item.ldns:dn3895=§aD§bN§93§38§69§a5
+
 ##Messages
 
 message.ldns.enable_debug_log=Enabled debug logs

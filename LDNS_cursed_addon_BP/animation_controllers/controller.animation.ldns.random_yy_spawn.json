@@ -6,7 +6,7 @@
                 "default": {
                     "transitions": [
                         {
-                            "ldns.yy_spawn": "math.mod(query.life_time,5) == math.die_roll_integer(1,0,6502)"
+                            "ldns.yy_spawn": "math.mod(query.life_time,5) == math.die_roll_integer(1,0,17520)"
                         }
                     ]
                 },
@@ -17,8 +17,7 @@
                         }
                     ],
                     "on_entry": [
-                        "/playsound mob.spider.say @s ~ ~ ~ 1.00 2.15 1.00",
-                        "/summon ldns:yy ~ ~1 ~"
+                        "/execute if score hour SystemClock matches 0..12 run summon ldns:yy ~ ~1 ~"
                     ]
                 }
             }
