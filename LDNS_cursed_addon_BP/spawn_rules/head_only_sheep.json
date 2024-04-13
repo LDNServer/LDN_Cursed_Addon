@@ -59,10 +59,6 @@
               "value": "cherry_grove"
             }
           ]
-        },
-        "minecraft:difficulty_filter": {
-          "min": "easy",
-          "max": "hard"
         }
       }
     ]
