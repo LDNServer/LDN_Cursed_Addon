@@ -67,10 +67,5 @@ function applyToolEffects(hurtEntity, damagingEntity) {
     if (typeof conditions.variant === 'number' && conditions.variant !== variant) return;
     if (Array.isArray(conditions.variant) && !conditions.variant.includes(variant)) return;
   }
-<<<<<<< HEAD
-  hurtEntity.addEffect(MinecraftEffectTypes.Weakness, 10 * 20);
-});
-=======
   hurtEntity.addEffect(MinecraftEffectTypes.Weakness, 10*20);
 }
->>>>>>> dfde7c0 (feat: エラー装備を着てダメージを受けた時耐性を付与)
