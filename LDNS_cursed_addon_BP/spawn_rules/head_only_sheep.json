@@ -25,10 +25,6 @@
           "test": "has_biome_tag",
           "operator": "==",
           "value": "animal"
-        },
-        "minecraft:difficulty_filter": {
-          "min": "easy",
-          "max": "hard"
         }
       },
       {
