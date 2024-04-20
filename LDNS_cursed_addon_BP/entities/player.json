@@ -22,6 +22,7 @@
                     "ldns:yy_spawn",
                     "ldns:ld5987_spawn",
                     "ldns:ld3895_spawn",
+                    "ldns:entity787_spawn",
                     "ldns:random_rotation",
                     {
                         "ldns:scythe_effects": "q.is_item_name_any('slot.weapon.mainhand', 0, 'ldns:entity787_scythe')"
@@ -43,6 +44,7 @@
                 "ldns:attacker_nitwit_villager_spawn": "controller.animation.ldns.random_nitwit_spawn",
                 "ldns:pp_spawn": "controller.animation.ldns.random_pp_spawn",
                 "ldns:yy_spawn": "controller.animation.ldns.random_yy_spawn",
+                "ldns:entity787_spawn": "controller.animation.ldns.entity787_spawn",
                 "ldns:ld5987_spawn": "controller.animation.ldns.random_ld5987_spawn",
                 "ldns:ld3895_spawn": "controller.animation.ldns.random_ld3895_spawn"
             }

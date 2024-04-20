@@ -242,6 +242,20 @@
                4.10
             ],
             "volume": 0.5
+         },
+         "ldns:entity787": {
+            "events": {
+               "ambient": {
+                  "pitch": [1.8, 2.4],
+                  "sound": "mob.ldns.onibi.ambient"
+               },
+               "death": "mob.ldns.ppyy"
+            },
+            "pitch":[
+               0.80,
+               1.20
+            ],
+            "volume": 0.5
          }
       }
    }
