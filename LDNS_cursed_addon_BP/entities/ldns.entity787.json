@@ -93,17 +93,6 @@
             },
             "minecraft:jump.static": {},
             "minecraft:can_climb": {},
-            "minecraft:shareables": {
-                "singular_pickup": true,
-                "items": [
-                    {
-                        "item": "ldns:entity787_scythe",
-                        "want_amount": 1,
-                        "surplus_amount": 1,
-                        "priority": 1
-                    }
-                ]
-            },
             "minecraft:behavior.ranged_attack": {
                 "attack_interval_min": 0.7,
                 "attack_interval_max": 0.8,
@@ -117,7 +106,13 @@
             },
             "minecraft:fire_immune": {},
             "minecraft:equipment": {
-                "table": "loot_tables/entities/gear/entity787.json"
+                "table": "loot_tables/entities/gear/entity787.json",
+                "slot_drop_chance": [
+                    {
+                        "drop_chance": 0.0,
+                        "slot": "slot.weapon.mainhand"
+                    }
+                ]
             },
             "minecraft:timer": {
                 "time": 120,
