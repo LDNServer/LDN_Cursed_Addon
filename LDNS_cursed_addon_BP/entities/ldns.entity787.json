@@ -94,8 +94,8 @@
             "minecraft:jump.static": {},
             "minecraft:can_climb": {},
             "minecraft:behavior.ranged_attack": {
-                "attack_interval_min": 0.7,
-                "attack_interval_max": 0.8,
+                "attack_interval_min": 0.8,
+                "attack_interval_max": 1.0,
                 "attack_radius": 20.0
             },
             "minecraft:shooter": {
