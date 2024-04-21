@@ -25,7 +25,8 @@ const targetEntities = {
   'ldns:skele_zombie': {},
   'ldns:skeleton_trader': {},
   'ldns:pp': {},
-  'ldns:yy': {}
+  'ldns:yy': {},
+  "ldns:entity787": {}
 }
 
 world.afterEvents.entityHurt.subscribe(ev => {
@@ -47,7 +48,7 @@ function applyArmorEffects(hurtEntity, damagingEntity) {
     equippable.getEquipment(EquipmentSlot.Legs)?.typeId === 'ldns:error_leggings' &&
     equippable.getEquipment(EquipmentSlot.Feet)?.typeId === 'ldns:error_boots'
   ) {
-    hurtEntity.addEffect(MinecraftEffectTypes.Resistance, 5*20);
+    hurtEntity.addEffect(MinecraftEffectTypes.Resistance, 5 * 20);
   }
 }
 
@@ -67,5 +68,5 @@ function applyToolEffects(hurtEntity, damagingEntity) {
     if (typeof conditions.variant === 'number' && conditions.variant !== variant) return;
     if (Array.isArray(conditions.variant) && !conditions.variant.includes(variant)) return;
   }
-  hurtEntity.addEffect(MinecraftEffectTypes.Weakness, 10*20);
+  hurtEntity.addEffect(MinecraftEffectTypes.Weakness, 10 * 20);
 }
