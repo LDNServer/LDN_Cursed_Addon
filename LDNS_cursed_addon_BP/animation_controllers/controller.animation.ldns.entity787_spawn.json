@@ -9,7 +9,7 @@
                     ],
                     "transitions": [
                         {
-                            "controller_entity787_spawn": "v.entity787_spawn = q.is_moving ? 0 : v.entity787_spawn + 1; return v.entity787_spawn >= 9600;"
+                            "controller_entity787_spawn": "v.entity787_spawn = q.is_moving ? 0 : v.entity787_spawn + 1; return v.entity787_spawn >= 14400;"
                         }
                     ]
                 },
