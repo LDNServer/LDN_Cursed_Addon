@@ -1,4 +1,4 @@
-import { Entity, EntityEquippableComponent, EquipmentSlot, Player, world } from '@minecraft/server';
+import { Entity, EquipmentSlot, Player, world } from '@minecraft/server';
 import { MinecraftEffectTypes } from './lib/mojang-effect';
 
 const errorTools = [
@@ -43,6 +43,7 @@ function applyArmorEffects(hurtEntity, damagingEntity) {
   if (!(hurtEntity instanceof Player)) return;
   const equippable = hurtEntity.getComponent('minecraft:equippable');
   if (
+    damagingEntity.typeId.startsWith('ldns:') &&
     equippable.getEquipment(EquipmentSlot.Head)?.typeId === 'ldns:error_helmet' &&
     equippable.getEquipment(EquipmentSlot.Chest)?.typeId === 'ldns:error_chestplate' &&
     equippable.getEquipment(EquipmentSlot.Legs)?.typeId === 'ldns:error_leggings' &&
