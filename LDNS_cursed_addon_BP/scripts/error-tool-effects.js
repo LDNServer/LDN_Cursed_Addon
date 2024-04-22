@@ -37,13 +37,13 @@ world.afterEvents.entityHurt.subscribe(ev => {
 
 /**
  * @param {Entity} hurtEntity
- * @param {Entity} damagingEntity 
+ * @param {Entity} [damagingEntity] 
  */
 function applyArmorEffects(hurtEntity, damagingEntity) {
   if (!(hurtEntity instanceof Player)) return;
   const equippable = hurtEntity.getComponent('minecraft:equippable');
   if (
-    damagingEntity.typeId.startsWith('ldns:') &&
+    damagingEntity?.typeId.startsWith('ldns:') &&
     equippable.getEquipment(EquipmentSlot.Head)?.typeId === 'ldns:error_helmet' &&
     equippable.getEquipment(EquipmentSlot.Chest)?.typeId === 'ldns:error_chestplate' &&
     equippable.getEquipment(EquipmentSlot.Legs)?.typeId === 'ldns:error_leggings' &&
@@ -55,7 +55,7 @@ function applyArmorEffects(hurtEntity, damagingEntity) {
 
 /**
  * @param {Entity} hurtEntity
- * @param {Entity} damagingEntity 
+ * @param {Entity} [damagingEntity] 
  */
 function applyToolEffects(hurtEntity, damagingEntity) {
   if (!(damagingEntity instanceof Player)) return;
