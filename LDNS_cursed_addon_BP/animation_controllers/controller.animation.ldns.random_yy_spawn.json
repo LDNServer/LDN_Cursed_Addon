@@ -17,6 +17,7 @@
                         }
                     ],
                     "on_entry": [
+                        "/playsound mob.enderdragon.death",
                         "/execute if score hour SystemClock matches 0..12 run summon ldns:yy ~ ~1 ~"
                     ]
                 }
