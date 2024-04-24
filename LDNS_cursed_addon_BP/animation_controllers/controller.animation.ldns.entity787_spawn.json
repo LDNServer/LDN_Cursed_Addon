@@ -20,6 +20,7 @@
                         }
                     ],
                     "on_entry": [
+                        "/tellraw @a {\"rawtext\":[{\"text\":\"No! It's not me!§c§l§oHelp me!§r I'm scared! Don't make me cry! Don't hit me! §bDon't curse!§rDon't betray me... §l§oI'll turn it off?\"}]}",
                         "/playsound mob.ldns.onibi.damege",
                         "/summon ldns:entity787"
                     ]
