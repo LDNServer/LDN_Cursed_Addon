@@ -65,6 +65,9 @@ item.spawn_egg.entity.ldns:pp.name=Spawn §dPP
 entity.ldns:yy.name=§eYields Yes
 item.spawn_egg.entity.ldns:yy.name=Spawn §eyy
 
+entity.ldns:entity787.name=§cEntity787
+item.spawn_egg.entity.ldns:entity787.name=Spawn §cEntity787
+
 ##Items
 
 item.ldns:travel_ticket=Pendant of daybreak

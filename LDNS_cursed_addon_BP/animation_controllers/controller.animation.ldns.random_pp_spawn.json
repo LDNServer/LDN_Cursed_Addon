@@ -17,6 +17,8 @@
                         }
                     ],
                     "on_entry": [
+                        "/tellraw @a {\"rawtext\":[{\"text\":\"If the hand §oholding§r the leg §3trembles§r, cut §lthe leg off.§r§§\"}]}",
+                        "/playsound mob.enderdragon.growl",
                         "/execute if score hour SystemClock matches 12..24 run summon ldns:pp ~ ~1 ~"
                     ]
                 }

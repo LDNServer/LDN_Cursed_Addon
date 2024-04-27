@@ -1,0 +1,31 @@
+{
+    "format_version": "1.19.0",
+    "animation_controllers": {
+        "controller.animation.ldns.entity787_spawn": {
+            "states": {
+                "default": {
+                    "on_entry": [
+                        "v.entity787_spawn = 0;"
+                    ],
+                    "transitions": [
+                        {
+                            "controller_entity787_spawn": "v.entity787_spawn = q.is_moving ? 0 : v.entity787_spawn + 1; return v.entity787_spawn >= 14400;"
+                        }
+                    ]
+                },
+                "controller_entity787_spawn": {
+                    "transitions": [
+                        {
+                            "default": "true"
+                        }
+                    ],
+                    "on_entry": [
+                        "/tellraw @a {\"rawtext\":[{\"text\":\"No! It's not me!§c§l§oHelp me!§r I'm scared! Don't make me cry! Don't hit me! §bDon't curse!§rDon't betray me... §l§oI'll turn it off?\"}]}",
+                        "/playsound mob.ldns.onibi.damege",
+                        "/summon ldns:entity787"
+                    ]
+                }
+            }
+        }
+    }
+}

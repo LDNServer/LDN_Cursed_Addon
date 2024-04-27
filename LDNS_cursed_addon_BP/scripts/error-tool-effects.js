@@ -1,4 +1,4 @@
-import { Entity, EntityEquippableComponent, EquipmentSlot, Player, world } from '@minecraft/server';
+import { Entity, EquipmentSlot, Player, world } from '@minecraft/server';
 import { MinecraftEffectTypes } from './lib/mojang-effect';
 
 const errorTools = [
@@ -25,7 +25,8 @@ const targetEntities = {
   'ldns:skele_zombie': {},
   'ldns:skeleton_trader': {},
   'ldns:pp': {},
-  'ldns:yy': {}
+  'ldns:yy': {},
+  "ldns:entity787": {}
 }
 
 world.afterEvents.entityHurt.subscribe(ev => {
@@ -36,24 +37,25 @@ world.afterEvents.entityHurt.subscribe(ev => {
 
 /**
  * @param {Entity} hurtEntity
- * @param {Entity} damagingEntity 
+ * @param {Entity} [damagingEntity] 
  */
 function applyArmorEffects(hurtEntity, damagingEntity) {
   if (!(hurtEntity instanceof Player)) return;
   const equippable = hurtEntity.getComponent('minecraft:equippable');
   if (
+    damagingEntity?.typeId.startsWith('ldns:') &&
     equippable.getEquipment(EquipmentSlot.Head)?.typeId === 'ldns:error_helmet' &&
     equippable.getEquipment(EquipmentSlot.Chest)?.typeId === 'ldns:error_chestplate' &&
     equippable.getEquipment(EquipmentSlot.Legs)?.typeId === 'ldns:error_leggings' &&
     equippable.getEquipment(EquipmentSlot.Feet)?.typeId === 'ldns:error_boots'
   ) {
-    hurtEntity.addEffect(MinecraftEffectTypes.Resistance, 5*20);
+    hurtEntity.addEffect(MinecraftEffectTypes.Resistance, 5 * 20);
   }
 }
 
 /**
  * @param {Entity} hurtEntity
- * @param {Entity} damagingEntity 
+ * @param {Entity} [damagingEntity] 
  */
 function applyToolEffects(hurtEntity, damagingEntity) {
   if (!(damagingEntity instanceof Player)) return;
@@ -67,5 +69,5 @@ function applyToolEffects(hurtEntity, damagingEntity) {
     if (typeof conditions.variant === 'number' && conditions.variant !== variant) return;
     if (Array.isArray(conditions.variant) && !conditions.variant.includes(variant)) return;
   }
-  hurtEntity.addEffect(MinecraftEffectTypes.Weakness, 10*20);
+  hurtEntity.addEffect(MinecraftEffectTypes.Weakness, 10 * 20);
 }
