@@ -9,30 +9,30 @@
             "placement_pass": "first_pass",
             "minecraft:biome_filter": {
                 "any_of": [
-									{
-											"all_of": [
-													{
-															"test": "has_biome_tag",
-															"operator": "==",
-															"value": "frozen"
-													},
-													{
-															"test": "has_biome_tag",
-															"operator": "!=",
-															"value": "ocean"
-													},
-                          {
-                              "test": "has_biome_tag",
-                              "operator": "!=",
-                              "value": "river"
-                          }
-											]
-									},
-									{
-											"test": "has_biome_tag",
-											"operator": "==",
-											"value": "taiga"
-									}
+                    {
+                        "all_of": [
+                            {
+                                "test": "has_biome_tag",
+                                "operator": "==",
+                                "value": "frozen"
+                            },
+                            {
+                                "test": "has_biome_tag",
+                                "operator": "!=",
+                                "value": "ocean"
+                            },
+                            {
+                                "test": "has_biome_tag",
+                                "operator": "!=",
+                                "value": "river"
+                            }
+                        ]
+                    },
+                    {
+                        "test": "has_biome_tag",
+                        "operator": "==",
+                        "value": "taiga"
+                    }
                 ]
             }
         },
