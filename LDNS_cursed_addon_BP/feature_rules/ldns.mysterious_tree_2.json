@@ -10,9 +10,9 @@
             "minecraft:biome_filter": {
                 "all_of": [
                     {
-                        "test": "has_biome_tag",
+                        "test": "is_biome",
                         "operator": "==",
-                        "value": "overworld"
+                        "value": "forest"
                     },
                     {
                         "test": "has_biome_tag",
@@ -23,11 +23,6 @@
                         "test": "has_biome_tag",
                         "operator": "!=",
                         "value": "river"
-                    },
-                    {
-                        "test": "has_biome_tag",
-                        "operator": "==",
-                        "value": "forest"
                     }
                 ]
             }
