@@ -18,7 +18,7 @@
                     ],
                     "on_entry": [
                         "/tellraw @a {\"rawtext\":[{\"text\":\"I'm on your §lside§r, so I'll keep§l§o watching§r until that §6blood dries§r.\"}]}",
-                        "/playsound mob.enderdragon.death",
+                        "/playsound ldns.yy_spawn",
                         "/execute if score hour SystemClock matches 0..12 run summon ldns:yy ~ ~1 ~"
                     ]
                 }

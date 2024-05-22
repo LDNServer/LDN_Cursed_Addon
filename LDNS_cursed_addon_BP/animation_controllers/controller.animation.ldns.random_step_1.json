@@ -6,7 +6,7 @@
                 "default": {
                     "transitions": [
                         {
-                            "ldns.step_1": "math.mod(query.life_time,5) == math.die_roll_integer(1,0,50)"
+                            "ldns.step_1": "math.mod(query.life_time,5) == math.die_roll_integer(1,0,300)"
                         }
                     ]
                 },

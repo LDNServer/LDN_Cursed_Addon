@@ -59,6 +59,9 @@
 		"gray_ender_pearl": {
 			"textures": "textures/item/ldns/gray_ender_pearl"
 		},
+		"pigcorundum": {
+			"textures": "textures/item/ldns/pigcorundum"
+		},
 		"ld5987": {
 			"textures": "textures/item/ldns/ld5987"
 		},

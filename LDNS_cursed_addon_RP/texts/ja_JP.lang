@@ -101,6 +101,8 @@ item.ldns:entity787_scythe=Entity787の鎌
 item.ldns:ld5987=§eL§cD§75§a9§98§47
 item.ldns:dn3895=§aD§bN§93§38§69§a5
 
+item.ldns:pigcorundum=ピッグコランダム
+
 ##メッセージ
 
 message.ldns.enable_debug_log=デバッグログを有効化しました
