@@ -1,4 +1,4 @@
-import { Entity, EquipmentSlot, Player, world } from '@minecraft/server';
+import { Entity, EquipmentSlot, Player, system, world } from '@minecraft/server';
 import { MinecraftEffectTypes } from './lib/mojang-effect';
 
 const errorTools = [

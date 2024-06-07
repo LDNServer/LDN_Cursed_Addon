@@ -5,6 +5,7 @@ import './random_effect';
 import './dangerous_cactus';
 import './random_time';
 import './error-tool-effects';
+import './error-tool-damage'
 import './nametag_mysterious_players';
 
 const timezoneOffset = 0;
