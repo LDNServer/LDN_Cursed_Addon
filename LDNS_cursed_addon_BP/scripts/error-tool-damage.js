@@ -46,15 +46,22 @@ function error_tool_damage(targetPlayer) {
         equippable.getEquipment(EquipmentSlot.Legs)?.typeId === 'ldns:error_leggings' ||
         equippable.getEquipment(EquipmentSlot.Feet)?.typeId === 'ldns:error_boots'
     ) {
-        let rand = Math.floor(random(0, (6666 / (kr * krx))));
-        if (rand === 78) {
-            targetPlayer.applyDamage(2);
-        }
-        if (rand === 66) {
-            targetPlayer.addEffect(MinecraftEffectTypes.Hunger, 10 * 20);
-        }
-        if (rand === 33) {
-            targetPlayer.playSound('ldns.ppyy_spawn')
+        if (equippable.getEquipment(EquipmentSlot.Offhand)?.typeId !== 'ldns:pendant_of_twilight') {
+            if (Math.floor(random(0, (6666 / (kr * krx)))) === 78) {
+                targetPlayer.applyDamage(2);
+            }
+            if (Math.floor(random(0, (6666 / (kr * krx)))) === 66) {
+                targetPlayer.addEffect(MinecraftEffectTypes.Hunger, 10 * 20);
+            }
+            if (Math.floor(random(0, (6666 / (kr * krx)))) === 55) {
+                targetPlayer.playSound('ldns.yy_spawn');
+            }
+            if (Math.floor(random(0, (6666 / (kr * krx)))) === 44) {
+                targetPlayer.playSound('ldns.pp_spawn');
+            }
+            if (Math.floor(random(0, (6666 / (kr * krx)))) === 33) {
+                targetPlayer.playSound('ldns.ppyy_spawn');
+            }
         }
     }
 }

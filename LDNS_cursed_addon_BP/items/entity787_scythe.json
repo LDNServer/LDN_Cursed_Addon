@@ -33,6 +33,16 @@
             "minecraft:cooldown": {
                 "category": "scythe",
                 "duration": 3
+            },
+            "minecraft:repairable": {
+                "repair_items": [
+                    {
+                        "items": [
+                            "ldns:heavy_stone"
+                        ],
+                        "repair_amount": 100
+                    }
+                ]
             }
         },
         "events": {

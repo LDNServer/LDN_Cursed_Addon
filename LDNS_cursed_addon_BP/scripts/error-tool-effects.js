@@ -1,5 +1,6 @@
 import { Entity, EquipmentSlot, Player, system, world } from '@minecraft/server';
 import { MinecraftEffectTypes } from './lib/mojang-effect';
+import { targetEntities } from './lib/ldns_entity';
 
 const errorTools = [
   'ldns:error_sword',
@@ -8,26 +9,6 @@ const errorTools = [
   'ldns:error_shovel',
   'ldns:error_hoe',
 ];
-
-/** @type {Record<string, { variant?: number | number[] }>} */
-const targetEntities = {
-  'ldns:killer_rabbit': {},
-  'ldns:gray_enderman': {},
-  'ldns:nullbrain': {},
-  'ldns:strange_chicken': {},
-  'ldns:head_only_sheep': {},
-  'ldns:dr.naba': {},
-  'ldns:onibi': {},
-  'ldns:shadow_mob': {},
-  'minecraft:zombie': { variant: 1 },
-  'minecraft:skeleton': { variant: 1 },
-  'minecraft:zombie_pigman': { variant: [1, 2] },
-  'ldns:skele_zombie': {},
-  'ldns:skeleton_trader': {},
-  'ldns:pp': {},
-  'ldns:yy': {},
-  "ldns:entity787": {}
-}
 
 world.afterEvents.entityHurt.subscribe(ev => {
   const { hurtEntity, damageSource: { damagingEntity } } = ev;

@@ -11,6 +11,12 @@
 		"pendant_of_goscubus": {
 			"textures": "textures/item/ldns/pendant_of_goscubus"
 		},
+		"pendant_of_twilight": {
+			"textures": "textures/item/ldns/pendant_of_nightmare"
+		},
+		"pendant_of_heat_sand": {
+			"textures": "textures/item/ldns/pendant_of_heat_sand"
+		},
 		"cursed_soul": {
 		  "textures": "textures/item/ldns/ldns_cursed_soul"
 		},
