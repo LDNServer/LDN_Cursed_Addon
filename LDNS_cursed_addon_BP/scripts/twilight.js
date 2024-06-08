@@ -14,8 +14,8 @@ world.afterEvents.entityHitEntity.subscribe(ev => {
 
 function applyItemEffect(hitEntity, damagingEntity) {
     if (!(damagingEntity instanceof Player)) return;
-    const lefthand = damagingEntity.getComponent('minecraft:equippable');
-    if (!((lefthand.getEquipment(EquipmentSlot.Offhand)?.typeId === 'ldns:pendant_of_twilight') && hitEntity.typeId in targetEntities)) return;
+    const items = damagingEntity.runCommand('testfor @s[hasitem={item=ldns:pendant_of_twilight}]').successCount;
+    if (!((items >= 1) && hitEntity.typeId in targetEntities)) return;
     const conditions = targetEntities[hitEntity.typeId];
     if ('variant' in conditions) {
         const variant = hitEntity.getComponent('minecraft:variant')?.value;
