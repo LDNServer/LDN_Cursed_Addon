@@ -36,18 +36,10 @@ function error_tool_damage(targetPlayer) {
         })
     }
     let krx = 0;
-    if (equippable.getEquipment(EquipmentSlot.Head)?.typeId === 'ldns:error_helmet') {
-        krx += 4;
-    }
-    if (equippable.getEquipment(EquipmentSlot.Chest)?.typeId === 'ldns:error_chestplate') {
-        krx += 6;
-    }
-    if (equippable.getEquipment(EquipmentSlot.Legs)?.typeId === 'ldns:error_leggings') {
-        krx += 4;
-    }
-    if (equippable.getEquipment(EquipmentSlot.Feet)?.typeId === 'ldns:error_boots') {
-        krx += 2;
-    }
+    if (equippable.getEquipment(EquipmentSlot.Head)?.typeId === 'ldns:error_helmet') krx += 4;
+    if (equippable.getEquipment(EquipmentSlot.Chest)?.typeId === 'ldns:error_chestplate') krx += 6;
+    if (equippable.getEquipment(EquipmentSlot.Legs)?.typeId === 'ldns:error_leggings') krx += 4;
+    if (equippable.getEquipment(EquipmentSlot.Feet)?.typeId === 'ldns:error_boots') krx += 2;
     if (erroritemscount >= 1 ||
         equippable.getEquipment(EquipmentSlot.Head)?.typeId === 'ldns:error_helmet' ||
         equippable.getEquipment(EquipmentSlot.Chest)?.typeId === 'ldns:error_chestplate' ||
