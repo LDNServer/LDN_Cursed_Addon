@@ -29,6 +29,16 @@
             },
             "minecraft:durability": {
                 "max_durability": 666
+            },
+            "minecraft:repairable": {
+                "repair_items": [
+                    {
+                        "items": [
+                            "ldns:error_ingot"
+                        ],
+                        "repair_amount": 200
+                    }
+                ]
             }
         }
     }

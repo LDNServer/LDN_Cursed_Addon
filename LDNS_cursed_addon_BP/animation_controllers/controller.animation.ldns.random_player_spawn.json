@@ -6,7 +6,7 @@
                 "default": {
                     "transitions": [
                         {
-                            "ldns.player_spawn": "math.mod(query.life_time,5) == math.die_roll_integer(1,0,2666)"
+                            "ldns.player_spawn": "math.mod(query.life_time,5) == math.die_roll_integer(1,0,6000)"
                         }
                     ]
                 },

@@ -6,16 +6,16 @@
                 "default": {
                     "transitions": [
                         {
-                            "ldns.x_plus": "math.mod(query.life_time,5) == math.die_roll_integer(1,0,300)"
+                            "ldns.x_plus": "math.mod(query.life_time,5) == math.die_roll_integer(1,0,1000)"
                         },
                         {
-                            "ldns.x_minus": "math.mod(query.life_time,5) == math.die_roll_integer(1,0,300)"
+                            "ldns.x_minus": "math.mod(query.life_time,5) == math.die_roll_integer(1,0,1000)"
                         },
                         {
-                            "ldns.z_plus": "math.mod(query.life_time,5) == math.die_roll_integer(1,0,300)"
+                            "ldns.z_plus": "math.mod(query.life_time,5) == math.die_roll_integer(1,0,1000)"
                         },
                         {
-                            "ldns.z_minus": "math.mod(query.life_time,5) == math.die_roll_integer(1,0,300)"
+                            "ldns.z_minus": "math.mod(query.life_time,5) == math.die_roll_integer(1,0,1000)"
                         }
                     ],
                     "on_entry": [
@@ -25,7 +25,7 @@
                 "ldns.x_plus": {
                     "transitions": [
                         {
-                            "default": "variable.time_break_torch = (variable.time_break_torch ?? 0) ; variable.time_break_torch = variable.time_break_torch < 2400 ? variable.time_break_torch + 1:0;return variable.time_break_torch == 0;"
+                            "default": "variable.time_break_torch = (variable.time_break_torch ?? 0) ; variable.time_break_torch = variable.time_break_torch < 4800 ? variable.time_break_torch + 1:0;return variable.time_break_torch == 0;"
                         }
                     ],
                     "on_entry": [
@@ -36,7 +36,7 @@
                 "ldns.x_minus": {
                     "transitions": [
                         {
-                            "default": "variable.time_break_torch = (variable.time_break_torch ?? 0) ; variable.time_break_torch = variable.time_break_torch < 2400 ? variable.time_break_torch + 1:0;return variable.time_break_torch == 0;"
+                            "default": "variable.time_break_torch = (variable.time_break_torch ?? 0) ; variable.time_break_torch = variable.time_break_torch < 4800 ? variable.time_break_torch + 1:0;return variable.time_break_torch == 0;"
                         }
                     ],
                     "on_entry": [
@@ -47,7 +47,7 @@
                 "ldns.z_plus": {
                     "transitions": [
                         {
-                            "default": "variable.time_break_torch = (variable.time_break_torch ?? 0) ; variable.time_break_torch = variable.time_break_torch < 2400 ? variable.time_break_torch + 1:0;return variable.time_break_torch == 0;"
+                            "default": "variable.time_break_torch = (variable.time_break_torch ?? 0) ; variable.time_break_torch = variable.time_break_torch < 4800 ? variable.time_break_torch + 1:0;return variable.time_break_torch == 0;"
                         }
                     ],
                     "on_entry": [
@@ -58,7 +58,7 @@
                 "ldns.z_minus": {
                     "transitions": [
                         {
-                            "default": "variable.time_break_torch = (variable.time_break_torch ?? 0) ; variable.time_break_torch = variable.time_break_torch < 2400 ? variable.time_break_torch + 1:0;return variable.time_break_torch == 0;"
+                            "default": "variable.time_break_torch = (variable.time_break_torch ?? 0) ; variable.time_break_torch = variable.time_break_torch < 4800 ? variable.time_break_torch + 1:0;return variable.time_break_torch == 0;"
                         }
                     ],
                     "on_entry": [

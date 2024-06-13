@@ -1,5 +1,6 @@
-import { Entity, EquipmentSlot, Player, world } from '@minecraft/server';
+import { Entity, EquipmentSlot, Player, system, world } from '@minecraft/server';
 import { MinecraftEffectTypes } from './lib/mojang-effect';
+import { targetEntities } from './lib/ldns_entity';
 
 const errorTools = [
   'ldns:error_sword',
@@ -9,29 +10,11 @@ const errorTools = [
   'ldns:error_hoe',
 ];
 
-/** @type {Record<string, { variant?: number | number[] }>} */
-const targetEntities = {
-  'ldns:killer_rabbit': {},
-  'ldns:gray_enderman': {},
-  'ldns:nullbrain': {},
-  'ldns:strange_chicken': {},
-  'ldns:head_only_sheep': {},
-  'ldns:dr.naba': {},
-  'ldns:onibi': {},
-  'ldns:shadow_mob': {},
-  'minecraft:zombie': { variant: 1 },
-  'minecraft:skeleton': { variant: 1 },
-  'minecraft:zombie_pigman': { variant: [1, 2] },
-  'ldns:skele_zombie': {},
-  'ldns:skeleton_trader': {},
-  'ldns:pp': {},
-  'ldns:yy': {},
-  "ldns:entity787": {}
-}
-
 world.afterEvents.entityHurt.subscribe(ev => {
   const { hurtEntity, damageSource: { damagingEntity } } = ev;
+  // ツールエフェクト
   applyToolEffects(hurtEntity, damagingEntity);
+  // 装備エフェクト
   applyArmorEffects(hurtEntity, damagingEntity);
 });
 
@@ -49,6 +32,7 @@ function applyArmorEffects(hurtEntity, damagingEntity) {
     equippable.getEquipment(EquipmentSlot.Legs)?.typeId === 'ldns:error_leggings' &&
     equippable.getEquipment(EquipmentSlot.Feet)?.typeId === 'ldns:error_boots'
   ) {
+    // 特定のmobに攻撃されると自分に耐性がつく
     hurtEntity.addEffect(MinecraftEffectTypes.Resistance, 5 * 20);
   }
 }
@@ -69,5 +53,8 @@ function applyToolEffects(hurtEntity, damagingEntity) {
     if (typeof conditions.variant === 'number' && conditions.variant !== variant) return;
     if (Array.isArray(conditions.variant) && !conditions.variant.includes(variant)) return;
   }
+  // 特定のmobに攻撃するとその攻撃したmobに攻撃力低下がつく
   hurtEntity.addEffect(MinecraftEffectTypes.Weakness, 10 * 20);
 }
+
+// 繧ｨ繝ｩ繝ｼ縺ｫ萓ｵ鬟溘＆繧後※繧ょ鴨繧偵°繧翫ｋ縺具ｼ

@@ -1,0 +1,64 @@
+{
+  "format_version": "1.18.30",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "ldns:gray_enderman_dummy",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false,
+      "scripts": {
+        "animate": [
+          "ldns:gray_enderman_transform_animation"
+        ]
+      },
+      "animations": {
+        "ldns:gray_enderman_transform_animation": "controller.animation.ldns.gray_enderman_transform"
+      }
+    },
+    "component_groups": {
+      "ldns:gray_enderman_transform": {
+        "minecraft:transformation": {
+          "into": "ldns:gray_enderman"
+        }
+      },
+      "ldns:gray_enderman_dummy_despawn": {
+        "minecraft:instant_despawn": {
+          "remove_child_entities": false
+        }
+      }
+    },
+    "components": {
+      "minecraft:collision_box": {
+        "width": 0,
+        "height": 0
+      },
+      "minecraft:health": {
+        "value": 1,
+        "max": 1
+      },
+      "minecraft:timer": {
+        "time": 3,
+        "time_down_event": {
+          "event": "ldns:gray_enderman_dummy_despawn_event",
+          "target": "self"
+        }
+      }
+    },
+    "events": {
+      "ldns:gray_enderman_transform_event": {
+        "add": {
+          "component_groups": [
+            "ldns:gray_enderman_transform"
+          ]
+        }
+      },
+      "ldns:gray_enderman_dummy_despawn_event": {
+        "add": {
+          "component_groups": [
+            "ldns:gray_enderman_dummy_despawn"
+          ]
+        }
+      }
+    }
+  }
+}

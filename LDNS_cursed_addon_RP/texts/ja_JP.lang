@@ -74,6 +74,8 @@ item.ldns:travel_ticket=黎明のペンダント
 
 item.ldns:pendant_of_goscubus=夢魔のペンダント
 
+item.ldns:pendant_of_twilight=夕焼けのペンダント
+
 item.ldns:bomb=爆弾
 
 item.ldns:cursed_soul=呪われた魂
@@ -103,6 +105,8 @@ item.ldns:entity787_scythe=Entity787の鎌
 
 item.ldns:ld5987=§eL§cD§75§a9§98§47
 item.ldns:dn3895=§aD§bN§93§38§69§a5
+
+item.ldns:pigcorundum=ピッグコランダム
 
 ##メッセージ
 

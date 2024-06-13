@@ -17,13 +17,13 @@
         "mc5": "textures/entity/ldns/mysterious_players/mc5"
       },
       "geometry": {
-        "default": "geometry.humanoid",
-        "default_slim": "geometry.humanoid.customSlim",
-        "mc1": "geometry.humanoid.customSlim",
-        "mc2": "geometry.humanoid",
-        "mc3": "geometry.humanoid",
-        "mc4": "geometry.humanoid",
-        "mc5": "geometry.humanoid"
+        "default": "geometry.players",
+        "default_slim": "geometry.player_slim",
+        "mc1": "geometry.player_slim",
+        "mc2": "geometry.players",
+        "mc3": "geometry.players",
+        "mc4": "geometry.players",
+        "mc5": "geometry.players"
       },
       "spawn_egg": {
         "base_color": "#f0f8ff",

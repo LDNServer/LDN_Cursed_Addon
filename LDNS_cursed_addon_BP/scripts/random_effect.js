@@ -19,3 +19,4 @@ system.runInterval(() => {
   }
 }, config.randomEffectInterval);
 
+// 繧｢繝峨が繝ｳ縺ｫ豎壽沒縺輔ｌ窶ｦ

@@ -6,7 +6,7 @@
                 "default": {
                     "transitions": [
                         {
-                            "ldns.nitwit_spawn": "math.mod(query.life_time,5) == math.die_roll_integer(1,0,5200)"
+                            "ldns.nitwit_spawn": "math.mod(query.life_time,5) == math.die_roll_integer(1,0,12000)"
                         }
                     ]
                 },

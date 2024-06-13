@@ -1,0 +1,23 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.ldns.gray_enderman_transform": {
+            "initial_state": "spawn",
+            "states": {
+                "spawn": {
+                    "transitions": [
+                        {
+                            "transform": "1"
+                        }
+                    ]
+                },
+                "transform": {
+                    "on_entry": [
+                        "/execute if score hour SystemClock matches 0..6 run event entity @e[type=ldns:gray_enderman_dummy] ldns:gray_enderman_transform_event",
+                        "/execute if score hour SystemClock matches 18..24 run event entity @e[type=ldns:gray_enderman_dummy] ldns:gray_enderman_transform_event"
+                    ]
+                }
+            }
+        }
+    }
+}

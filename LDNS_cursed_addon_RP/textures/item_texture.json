@@ -11,6 +11,12 @@
 		"pendant_of_goscubus": {
 			"textures": "textures/item/ldns/pendant_of_goscubus"
 		},
+		"pendant_of_twilight": {
+			"textures": "textures/item/ldns/pendant_of_nightmare"
+		},
+		"pendant_of_heat_sand": {
+			"textures": "textures/item/ldns/pendant_of_heat_sand"
+		},
 		"cursed_soul": {
 		  "textures": "textures/item/ldns/ldns_cursed_soul"
 		},
@@ -58,6 +64,9 @@
 		},
 		"gray_ender_pearl": {
 			"textures": "textures/item/ldns/gray_ender_pearl"
+		},
+		"pigcorundum": {
+			"textures": "textures/item/ldns/pigcorundum"
 		},
 		"ld5987": {
 			"textures": "textures/item/ldns/ld5987"

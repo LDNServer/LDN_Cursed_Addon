@@ -1,5 +1,6 @@
 import { EntityDamageCause, world } from '@minecraft/server';
 
+// 継続ダメージを抑える
 world.afterEvents.entityHurt.subscribe(ev => {
   const { damageSource: { cause }, hurtEntity } = ev;
 

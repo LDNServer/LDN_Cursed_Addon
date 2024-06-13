@@ -10,7 +10,7 @@
                 "texture": "error_helmet"
             },
             "minecraft:creative_category": {
-              "parent": "itemGroup.name.helmet"
+                "parent": "itemGroup.name.helmet"
             },
             "minecraft:hand_equipped": false,
             "minecraft:foil": false,
@@ -29,6 +29,16 @@
             },
             "minecraft:durability": {
                 "max_durability": 666
+            },
+            "minecraft:repairable": {
+                "repair_items": [
+                    {
+                        "items": [
+                            "ldns:error_ingot"
+                        ],
+                        "repair_amount": 200
+                    }
+                ]
             }
         }
     }
