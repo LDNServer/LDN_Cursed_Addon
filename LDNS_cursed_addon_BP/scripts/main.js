@@ -8,6 +8,8 @@ import './error-tool-effects';
 import './error-tool-damage';
 import './nametag_mysterious_players';
 import './twilight';
+import './error-tool-block-event';
+import './boss-trophy';
 
 const timezoneOffset = 0;
 

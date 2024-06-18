@@ -3,8 +3,8 @@
     "minecraft:entity": {
         "description": {
             "identifier": "ldns:scythe_bullet",
-            "is_spawnable": false,
-            "is_summonable": false,
+            "is_spawnable": true,
+            "is_summonable": true,
             "is_experimental": false,
             "runtime_identifier": "minecraft:snowball"
         },
@@ -25,8 +25,7 @@
                     },
                     "remove_on_hit": {}
                 },
-                "power": 1,
-                "gravity": 0.01
+                "power": 1
             },
             "minecraft:physics": {},
             "minecraft:pushable": {
@@ -40,7 +39,6 @@
                     "use_motion_prediction_hints": true
                 }
             }
-        },
-        "events": {}
+        }
     }
 }

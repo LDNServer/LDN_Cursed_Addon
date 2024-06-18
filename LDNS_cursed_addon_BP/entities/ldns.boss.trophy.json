@@ -125,25 +125,7 @@
                     "component_groups": [
                         "skin_normal"
                     ]
-                },
-                "sequence": [
-                    {
-                      "run_command": {
-                        "command": [
-                          "tp @s ~ ~ ~ facing @p",
-                          "execute as @s[rym=-23,ry=22] at @s run tp @s ~ ~ ~ 0 ~",
-                          "execute as @s[rym=22,ry=67] at @s run tp @s ~ ~ ~ 45 ~",
-                          "execute as @s[rym=67,ry=112] at @s run tp @s ~ ~ ~ 90 ~",
-                          "execute as @s[rym=112,ry=157] at @s run tp @s ~ ~ ~ 135 ~",
-                          "execute as @s[rym=157,ry=-158] at @s run tp @s ~ ~ ~ 180 ~",
-                          "execute as @s[rym=-158,ry=-113] at @s run tp @s ~ ~ ~ -135 ~",
-                          "execute as @s[rym=-113,ry=-68] at @s run tp @s ~ ~ ~ -90 ~",
-                          "execute as @s[rym=-68,ry=-23] at @s run tp @s ~ ~ ~ -45 ~"
-                        ],
-                        "target": "self"
-                      }
-                    }
-                  ]
+                }
             },
             "switch_skin": {
                 "randomize": [

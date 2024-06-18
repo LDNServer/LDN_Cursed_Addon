@@ -1,17 +1,21 @@
 {
-    "format_version": "1.18.0",
+    "format_version": "1.20.80",
     "minecraft:item": {
         "description": {
             "identifier": "ldns:pigcorundum",
-            "category": "Items"
+            "menu_category": {
+                "category": "items"
+            }
         },
         "components": {
             "minecraft:icon": {
-                "texture": "pigcorundum"
+                "textures": {
+                    "default": "pigcorundum"
+                }
             },
             "minecraft:hand_equipped": false,
             "minecraft:stacked_by_data": true,
-            "minecraft:foil": false,
+            "minecraft:glint": false,
             "minecraft:max_stack_size": 64
         }
     }

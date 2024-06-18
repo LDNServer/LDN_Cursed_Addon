@@ -1,17 +1,21 @@
 {
-    "format_version": "1.18.0",
+    "format_version": "1.20.80",
     "minecraft:item": {
         "description": {
             "identifier": "ldns:pendant_of_heat_sand",
-            "category": "Items"
+            "menu_category": {
+                "category": "items"
+            }
         },
         "components": {
             "minecraft:icon": {
-                "texture": "pendant_of_heat_sand"
+                "textures": {
+                    "default": "pendant_of_heat_sand"
+                }
             },
             "minecraft:hand_equipped": false,
             "minecraft:stacked_by_data": true,
-            "minecraft:foil": true,
+            "minecraft:glint": true,
             "minecraft:max_stack_size": 1,
             "minecraft:allow_off_hand": true
         }

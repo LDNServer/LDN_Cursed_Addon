@@ -1,16 +1,23 @@
 {
-    "format_version": "1.18.0",
+    "format_version": "1.20.80",
     "minecraft:item": {
         "description": {
             "identifier": "ldns:entity787_scythe",
-            "category": "Equipment"
+            "menu_category": {
+                "category": "equipment"
+            }
         },
         "components": {
             "minecraft:icon": {
-                "texture": "entity787_scythe"
+                "textures": {
+                    "default": "entity787_scythe"
+                }
             },
+            "minecraft:custom_components": [
+                "ldns:entity787_scythe_c"
+            ],
             "minecraft:hand_equipped": true,
-            "minecraft:foil": false,
+            "minecraft:glint": false,
             "minecraft:stacked_by_data": false,
             "minecraft:max_stack_size": 1,
             "minecraft:enchantable": {
@@ -20,20 +27,14 @@
             "minecraft:durability": {
                 "max_durability": 787
             },
-            "minecraft:damage": 10,
-            "minecraft:digger": {
-                "use_efficiency": true,
-                "on_dig": {
-                    "event": "durability_update"
-                }
-            },
-            "minecraft:on_use": {
-                "on_use": { "event": "throw" }
+            "minecraft:damage": {
+                "value": 10
             },
             "minecraft:cooldown": {
                 "category": "scythe",
                 "duration": 3
             },
+            "minecraft:can_destroy_in_creative": false,
             "minecraft:repairable": {
                 "repair_items": [
                     {
@@ -43,34 +44,9 @@
                         "repair_amount": 100
                     }
                 ]
-            }
-        },
-        "events": {
-            "durability_update": {
-                "damage": {
-                    "type": "durability",
-                    "amount": 1,
-                    "target": "self"
-                }
             },
-            "throw": {
-                "shoot": {
-                    "projectile": "ldns:scythe_bullet",
-                    "launch_power": 2,
-                    "angle_offset": 0
-                },
-                "swing": {},
-                "run_command": {
-                    "command": [
-                        "playsound fire.ignite",
-                        "playsound mob.witch.throw"
-                    ]
-                },
-                "damage": {
-                    "type": "durability",
-                    "amount": 1,
-                    "target": "self"
-                }
+            "minecraft:use_modifiers": {
+                "use_duration": 3
             }
         }
     }

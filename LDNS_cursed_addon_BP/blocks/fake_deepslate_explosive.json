@@ -1,40 +1,31 @@
 {
-    "format_version": "1.16.100",
+    "format_version": "1.20.80",
     "minecraft:block": {
         "description": {
             "identifier": "ldns:fake_deepslate_explosive",
-            "is_experimental": false,
-            "register_to_creative_menu": true
+            "menu_category": {
+                "category": "none"
+            }
         },
         "components": {
+            "minecraft:custom_components": [
+                "ldns:fake_deepslate_explosive_c"
+            ],
             "minecraft:loot": "loot_tables/empty.json",
-            "minecraft:destroy_time": 1.5,
-            "minecraft:explosion_resistance": 6,
+            "minecraft:destructible_by_mining":{
+                "seconds_to_destroy": 1.5
+            },
+            "minecraft:destructible_by_explosion":{
+                "explosion_resistance": 6
+            },
             "minecraft:friction": 0.4,
             "minecraft:flammable": {
-                "flame_odds": 0,
-                "burn_odds": 0
-            },
-            "minecraft:on_player_destroyed": {
-                "event": "explosion",
-                "target": "self"
+                "catch_chance_modifier": 0,
+                "destroy_chance_modifier": 0
             },
             "minecraft:map_color": "#707070",
-            "minecraft:block_light_absorption": 0,
-            "minecraft:block_light_emission": 0,
-            "minecraft:creative_category": {
-                "category": "nature",
-                "group": "itemGroup.name.stone"
-            }
-        },
-        "events": {
-            "explosion": {
-                "run_command": {
-                    "command": [
-                        "summon ldns:entity.fake_stone_explosive ~ ~ ~"
-                    ]
-                }
-            }
+            "minecraft:light_dampening": 0,
+            "minecraft:light_emission": 0
         }
     }
 }
