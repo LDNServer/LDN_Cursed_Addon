@@ -7,47 +7,6 @@
             "is_summonable": true,
             "is_experimental": false
         },
-        "component_groups": {
-            "ldns:nullbrain_effect": {
-                "minecraft:behavior.send_event": {
-                    "event_choices": [
-                        {
-                            "max_activation_range": 64.0,
-                            "min_activation_range": 0.0,
-                            "cast_duration": 0.0,
-                            "particle_color": "#30BEBE",
-                            "sequence": [
-                                {
-                                    "base_delay": 0,
-                                    "event": "ldns:nullbrain_effect_player"
-                                }
-                            ],
-                            "weight": 4
-                        }
-                    ]
-                },
-                "minecraft:timer": {
-                    "time": 10,
-                    "looping": false,
-                    "time_down_event": {
-                        "event": "ldns:explosion_null",
-                        "target": "self"
-                    }
-                }
-            },
-            "ldns:nullbrain_explode": {
-                "minecraft:explode": {
-                    "breaks_blocks": true,
-                    "causes_fire": false,
-                    "destroy_affected_by_griefing": false,
-                    "fire_affected_by_griefing": false,
-                    "fuse_lit": true,
-                    "max_resistance": 0,
-                    "power": 3
-                }
-            },
-            "ldns:nullbrain_non": {}
-        },
         "components": {
             "minecraft:nameable": {},
             "minecraft:type_family": {
@@ -75,68 +34,7 @@
             "minecraft:behavior.random_look_around": {
                 "priority": 9
             },
-            "minecraft:physics": {},
-            "minecraft:damage_sensor": {
-                "triggers": [
-                    {
-                        "on_damage": {
-                            "filters": {
-                                "all_of": [
-                                    {
-                                        "test": "actor_health",
-                                        "subject": "self",
-                                        "value": 6
-                                    }
-                                ]
-                            },
-                            "event": "ldns:nullbrain_randomize",
-                            "target": "self"
-                        }
-                    }
-                ]
-            }
-        },
-        "events": {
-            "ldns:nullbrain_randomize": {
-                "randomize": [
-                    {
-                        "add": {
-                            "component_groups": [
-                                "ldns:nullbrain_effect"
-                            ]
-                        },
-                        "weight": 2
-                    },
-                    {
-                        "add": {
-                            "component_groups": [
-                                "ldns:nullbrain_explode"
-                            ]
-                        },
-                        "weight": 1
-                    },
-                    {
-                        "add": {
-                            "component_groups": [
-                                "ldns:nullbrain_non"
-                            ]
-                        },
-                        "weight": 1
-                    }
-                ]
-            },
-            "ldns:explosion_null": {
-                "remove": {
-                    "component_groups": [
-                        "ldns:nullbrain_effect"
-                    ]
-                },
-                "add": {
-                    "component_groups": [
-                        "ldns:nullbrain_explode"
-                    ]
-                }
-            }
+            "minecraft:physics": {}
         }
     }
 }

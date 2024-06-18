@@ -10,6 +10,7 @@ import './nametag_mysterious_players';
 import './twilight';
 import './error-tool-block-event';
 import './boss-trophy';
+import './nullbrain';
 
 const timezoneOffset = 0;
 

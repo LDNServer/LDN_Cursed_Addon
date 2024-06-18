@@ -86,30 +86,6 @@
                 "minecraft:spell_effects": {
                     "remove_effects": "bad_omen"
                 }
-            },
-            "ldns:null_weakness": {
-                "minecraft:spell_effects": {
-                    "add_effects": [
-                        {
-                            "effect": "weakness",
-                            "duration": 10,
-                            "amplifier": 666
-                        }
-                    ]
-                },
-                "minecraft:timer": {
-                    "time": 5,
-                    "looping": false,
-                    "time_down_event": {
-                        "event": "ldns:clear_null_player",
-                        "target": "self"
-                    }
-                }
-            },
-            "ldns:clear_null": {
-                "minecraft:spell_effects": {
-                    "remove_effects": "weakness"
-                }
             }
         },
         "components": {
@@ -279,25 +255,6 @@
                 "remove": {
                     "component_groups": [
                         "minecraft:raid_trigger"
-                    ]
-                }
-            },
-            "ldns:nullbrain_effect_player": {
-                "add": {
-                    "component_groups": [
-                        "ldns:null_weakness"
-                    ]
-                }
-            },
-            "ldns:clear_null_player": {
-                "remove": {
-                    "component_groups": [
-                        "ldns:null_weakness"
-                    ]
-                },
-                "add": {
-                    "component_groups": [
-                        "ldns:clear_null"
                     ]
                 }
             }
