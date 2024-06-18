@@ -26,8 +26,10 @@
       },
       "minecraft:is_hidden_when_invisible": {},
       "minecraft:health": {
-        "value": 666,
-        "max": 1000
+        "value": [
+          666,
+          1000
+        ]
       },
       "minecraft:skin_id": {
         "value": 0
