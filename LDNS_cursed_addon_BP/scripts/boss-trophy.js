@@ -1,4 +1,5 @@
 import { world } from '@minecraft/server';
+// ボストロフィーに使うイベント(コマンドを実行)
 world.afterEvents.entitySpawn.subscribe((entityEvent) => {
     if (entityEvent.entity.typeId == "ldns:boss_trophy") {
         entityEvent.entity.runCommand("tp @s ~ ~ ~ facing @p")
@@ -12,3 +13,5 @@ world.afterEvents.entitySpawn.subscribe((entityEvent) => {
         entityEvent.entity.runCommand("execute as @s[rym=-68,ry=-23] at @s run tp @s ~ ~ ~ -45 ~")
     }
 });
+
+// 繝医Ο繝輔ぅ繝ｼ
