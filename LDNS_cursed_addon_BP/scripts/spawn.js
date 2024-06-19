@@ -32,4 +32,4 @@ system.runInterval(() => {
             world.getDimension(v.dimension.id).spawnEntity("ldns:mysterious_players", { x: v.location.x + (v.getViewDirection().x * 2), y: v.location.y, z: v.location.z + (v.getViewDirection().z * 2) });
         }
     });
-}, 20 * 666);
+}, 20 * 2666);
