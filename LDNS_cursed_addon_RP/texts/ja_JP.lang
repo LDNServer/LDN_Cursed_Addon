@@ -50,6 +50,9 @@ item.spawn_egg.entity.ldns:head_only_sheep.name=顔だけヒツジのスポー�
 entity.ldns:nullbrain.name=ヌルブライン
 item.spawn_egg.entity.ldns:nullbrain.name=ヌルブラインのスポーンエッグ
 
+entity.ldns:nonebrain.name=ノンブライン
+item.spawn_egg.entity.ldns:nonebrain.name=ノンブラインのスポーンエッグ
+
 entity.ldns:mysterious_players.name=プレイヤー？
 item.spawn_egg.entity.ldns:mysterious_players.name=プレイヤー？のスポーンエッグ
 
