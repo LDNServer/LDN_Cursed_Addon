@@ -11,7 +11,7 @@
         "default": "textures/entity/ldns/nonebrain"
       },
       "geometry": {
-        "default": "geometry.humanoid"
+        "default": "geometry.nonebrain"
       },
       "spawn_egg": {
         "base_color": "#ffb300",
