@@ -50,6 +50,9 @@ item.spawn_egg.entity.ldns:head_only_sheep.name=Spawn Head only sheep
 entity.ldns:nullbrain.name=Null brain
 item.spawn_egg.entity.ldns:nullbrain.name=Spawn Null brain
 
+entity.ldns:nonebrain.name=None brain
+item.spawn_egg.entity.ldns:nonebrain.name=Spawn None brain
+
 entity.ldns:mysterious_players.name=Mysterious Players
 item.spawn_egg.entity.ldns:mysterious_players.name=Spawn Mysterious Players
 
