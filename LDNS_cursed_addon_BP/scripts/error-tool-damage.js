@@ -68,23 +68,23 @@ function error_tool_damage(targetPlayer) {
         if (items <= 0) {
             // errorツールを持っているときは*2、Errorインゴットを持っているときは*0.25(1になると発動)
             // ダメージを受ける
-            if (Math.floor(random(0, (6666 / ((krx + (errortoolscount * 2) + (erroritemscount * 0.25)))))) === 0) {
+            if (Math.floor(random(0, (16666 / ((krx + (errortoolscount * 2) + (erroritemscount * 0.25)))))) === 0) {
                 targetPlayer.applyDamage(2);
             }
             // 空腹
-            if (Math.floor(random(0, (6666 / ((krx + (errortoolscount * 2) + (erroritemscount * 0.25)))))) === 0) {
+            if (Math.floor(random(0, (16666 / ((krx + (errortoolscount * 2) + (erroritemscount * 0.25)))))) === 0) {
                 targetPlayer.addEffect(MinecraftEffectTypes.Hunger, 10 * 20);
             }
             // YYのスポーン時の音が鳴る
-            if (Math.floor(random(0, (6666 / ((krx + (errortoolscount * 2) + (erroritemscount * 0.25)))))) === 0) {
+            if (Math.floor(random(0, (16666 / ((krx + (errortoolscount * 2) + (erroritemscount * 0.25)))))) === 0) {
                 targetPlayer.playSound('ldns.yy_spawn');
             }
             // PPのスポーン時の音が鳴る
-            if (Math.floor(random(0, (6666 / ((krx + (errortoolscount * 2) + (erroritemscount * 0.25)))))) === 0) {
+            if (Math.floor(random(0, (16666 / ((krx + (errortoolscount * 2) + (erroritemscount * 0.25)))))) === 0) {
                 targetPlayer.playSound('ldns.pp_spawn');
             }
             // PPYYのスポーン時の音が鳴る
-            if (Math.floor(random(0, (6666 / ((krx + (errortoolscount * 2) + (erroritemscount * 0.25)))))) === 0) {
+            if (Math.floor(random(0, (16666 / ((krx + (errortoolscount * 2) + (erroritemscount * 0.25)))))) === 0) {
                 targetPlayer.playSound('ldns.ppyy_spawn');
             }
         }
