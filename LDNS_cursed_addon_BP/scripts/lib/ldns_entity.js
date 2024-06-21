@@ -2,7 +2,9 @@
 export const targetEntities = {
     'ldns:killer_rabbit': {},
     'ldns:gray_enderman': {},
+    'ldns:nonebrain': {},
     'ldns:nullbrain': {},
+    'ldns:errormob': {},
     'ldns:strange_chicken': {},
     'ldns:head_only_sheep': {},
     'ldns:dr.naba': {},

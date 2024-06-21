@@ -27,8 +27,7 @@
                 "height": 1.8
             },
             "minecraft:health": {
-                "value": 151,
-                "max": 251
+                "value": 151
             },
             "minecraft:loot": {
                 "table": "loot_tables/entities/pp.json"

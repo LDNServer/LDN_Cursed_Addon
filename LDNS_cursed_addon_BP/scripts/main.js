@@ -11,7 +11,8 @@ import './twilight';
 import './error-tool-block-event';
 import './boss-trophy';
 import './nullbrain';
-import './spawn'
+import './spawn';
+import './errormob-effect';
 
 const timezoneOffset = 0;
 

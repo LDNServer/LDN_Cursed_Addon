@@ -71,6 +71,9 @@
             },
             "minecraft:behavior.melee_attack": {
               "priority": 1
+            },
+            "minecraft:loot": {
+                "table": "loot_tables/entities/nonebrain.json"
             }
         },
         "events": {
