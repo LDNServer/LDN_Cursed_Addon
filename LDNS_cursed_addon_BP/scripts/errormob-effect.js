@@ -9,9 +9,7 @@ world.afterEvents.entityHitEntity.subscribe((e) => {
 
 function errordamage(targetPlayer) {
     if (!(targetPlayer instanceof Player)) return;
-    // ペンダントを持っているときのカウント
-    const rand = random(0, 666);
-
+    const rand = random(0, 66);
     // 攻撃力低下(攻撃できなくなる)
     if (rand > 0 && rand < 6) {
         targetPlayer.addEffect(MinecraftEffectTypes.Weakness, 20 * 3, { amplifier: 255 });
