@@ -48,7 +48,7 @@
                 "damage": 4
             },
             "minecraft:behavior.nearest_attackable_target": {
-                "priority": 1,
+                "priority": 10,
                 "entity_types": [
                     {
                         "filters": {

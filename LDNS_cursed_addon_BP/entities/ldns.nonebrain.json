@@ -45,7 +45,7 @@
             "minecraft:physics": {},
             "minecraft:target_nearby_sensor": {
                 "must_see": false,
-                "inside_range": 16.0,
+                "inside_range": 26.0,
                 "outside_range": 0.0,
                 "on_inside_range": {
                     "event": "ldns:nonebrain_despawn_event",

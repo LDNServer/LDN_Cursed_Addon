@@ -1,4 +1,4 @@
-import { EnchantmentTypes, EquipmentSlot, ItemStack, Player, world } from "@minecraft/server";
+import { ItemStack, Player, world } from "@minecraft/server";
 import { random } from './util';
 import { MinecraftEffectTypes } from './lib/mojang-effect';
 
@@ -42,10 +42,18 @@ function errordamage(targetPlayer) {
             }
         }
     }
+    // レベルリセット
     else if (rand === 16) targetPlayer.resetLevel();
-    else if (rand === 22) targetPlayer.setSpawnPoint();
+    // スポーンポイント設定
+    else if (rand === 22) {
+        targetPlayer.setSpawnPoint({ dimension: targetPlayer.dimension, x: targetPlayer.location.x, y: targetPlayer.location.y, z: targetPlayer.location.z });
+        targetPlayer.runCommand("tellraw @s {\"rawtext\":[{\"text\":\"§4Set Spawn\"}]}");
+    }
+    // テレポート
+    /**
     else if (rand === 26) {
         if (!targetPlayer.getSpawnPoint()) return;
         else targetPlayer.teleport(targetPlayer.getSpawnPoint());
     }
+    */
 }
