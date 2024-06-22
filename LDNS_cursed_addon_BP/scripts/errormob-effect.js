@@ -37,7 +37,7 @@ function errordamage(targetPlayer) {
             }
             // アイテムを置き換える
             else {
-                let rand2 = random(0, 120);
+                let rand2 = random(0, 66);
                 if (rand2 === 6) container.setItem(i, randomitem);
             }
         }
@@ -45,7 +45,7 @@ function errordamage(targetPlayer) {
     else if (rand === 16) targetPlayer.resetLevel();
     else if (rand === 22) targetPlayer.setSpawnPoint();
     else if (rand === 26) {
-        if (!targetPlayer.getSpawnPoint()) targetPlayer.teleport(world.getDefaultSpawnLocation());
+        if (!targetPlayer.getSpawnPoint()) return;
         else targetPlayer.teleport(targetPlayer.getSpawnPoint());
     }
 }
