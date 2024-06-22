@@ -10,7 +10,7 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
             // クリエイティブ時のみ耐久値が減る
             if (attackingEntity.getGameMode() !== GameMode.creative) {
                 let item = itemStack.getComponent("durability");
-                item.damage = 1;
+                item.damage += 1;
                 attackingEntity.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
             }
         },
@@ -21,7 +21,7 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
             // クリエイティブ時のみ耐久値が減る
             if (source.getGameMode() !== GameMode.creative) {
                 let item = itemStack.getComponent("durability");
-                item.damage = 1;
+                item.damage += 1;
                 source.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
             }
         },
@@ -33,7 +33,7 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
             // クリエイティブ時のみ耐久値が減る
             if (source.getGameMode() !== GameMode.creative) {
                 let item = itemStack.getComponent("durability");
-                item.damage = 1;
+                item.damage += 1;
                 source.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
             }
         }
@@ -47,7 +47,7 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
             // クリエイティブ時のみ耐久値が減る
             if (attackingEntity.getGameMode() !== GameMode.creative) {
                 let item = itemStack.getComponent("durability");
-                item.damage = 1;
+                item.damage += 1;
                 attackingEntity.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
             }
         },
@@ -58,7 +58,7 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
             // クリエイティブ時のみ耐久値が減る
             if (source.getGameMode() !== GameMode.creative) {
                 let item = itemStack.getComponent("durability");
-                item.damage = 1;
+                item.damage += 1;
                 source.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
             }
         },
@@ -70,7 +70,7 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
             // クリエイティブ時のみ耐久値が減る
             if (source.getGameMode() !== GameMode.creative) {
                 let item = itemStack.getComponent("durability");
-                item.damage = 1;
+                item.damage += 1;
                 source.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
             }
         }
@@ -84,7 +84,7 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
             // クリエイティブ時のみ耐久値が減る
             if (attackingEntity.getGameMode() !== GameMode.creative) {
                 let item = itemStack.getComponent("durability");
-                item.damage = 1;
+                item.damage += 1;
                 // 更新
                 attackingEntity.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
             }
@@ -96,7 +96,7 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
             // クリエイティブ時のみ耐久値が減る
             if (source.getGameMode() !== GameMode.creative) {
                 let item = itemStack.getComponent("durability");
-                item.damage = 1;
+                item.damage += 1;
                 // 更新
                 source.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
             }
@@ -111,7 +111,7 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
             // クリエイティブ時のみ耐久値が減る
             if (attackingEntity.getGameMode() !== GameMode.creative) {
                 let item = itemStack.getComponent("durability");
-                item.damage = 1;
+                item.damage += 1;
                 // 更新
                 attackingEntity.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
             }
@@ -123,7 +123,7 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
             // クリエイティブ時のみ耐久値が減る
             if (source.getGameMode() !== GameMode.creative) {
                 let item = itemStack.getComponent("durability");
-                item.damage = 1;
+                item.damage += 1;
                 // 更新
                 source.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
             }
@@ -136,7 +136,7 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
             // クリエイティブ時のみ耐久値が減る
             if (source.getGameMode() !== GameMode.creative) {
                 let item = itemStack.getComponent("durability");
-                item.damage = 1;
+                item.damage += 1;
                 // 更新
                 source.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
             }
@@ -151,7 +151,7 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
             // クリエイティブ時のみ耐久値が減る
             if (attackingEntity.getGameMode() !== GameMode.creative) {
                 let item = itemStack.getComponent("durability");
-                item.damage = 1;
+                item.damage += 1;
                 // 更新
                 attackingEntity.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
             }
@@ -162,7 +162,7 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
             // クリエイティブ時のみ耐久値が減る
             if (source.getGameMode() !== GameMode.creative) {
                 let item = itemStack.getComponent("durability");
-                item.damage = 1;
+                item.damage += 1;
                 // 更新
                 source.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
             }
@@ -177,7 +177,7 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
             // クリエイティブ時のみ耐久値が減る
             if (attackingEntity.getGameMode() !== GameMode.creative) {
                 let item = itemStack.getComponent("durability");
-                item.damage = 1;
+                item.damage += 1;
                 // 更新
                 attackingEntity.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
             }
@@ -188,7 +188,7 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
             // クリエイティブ時のみ耐久値が減る
             if (source.getGameMode() !== GameMode.creative) {
                 let item = itemStack.getComponent("durability");
-                item.damage = 1;
+                item.damage += 1;
                 source.playSound("fire.ignite");
                 source.playSound("mob.witch.throw");
             }
