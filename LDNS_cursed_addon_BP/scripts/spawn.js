@@ -40,5 +40,18 @@ system.runInterval(() => {
         else if (rand <= 725 && rand >= 675) {
             world.getDimension(v.dimension.id).spawnEntity("ldns:mysterious_players", { x: v.location.x + (v.getViewDirection().x * 2), y: v.location.y, z: v.location.z + (v.getViewDirection().z * 2) });
         }
+        else if (rand <= 1166 && rand >= 999) {
+            v.addTag("ldns_lightning");
+            v.runCommand("function system.lightning_trigger");
+            v.runCommand("tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_lightning) : ldns.summon_lightning\"}]}");
+            v.runCommand("tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_lightning) : default \"}]}");
+            v.removeTag("ldns_lightning");
+        }
+        else if (rand <= 2666 && rand >= 2500) {
+            v.runCommand("tp @s[m=0] ~ ~ ~ facing ^ ^360 ^");
+            v.runCommand("tp @s[m=0] ~ ~ ~ facing ^ ^ ^-90");
+            v.runCommand("tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_rotation) : ldns.rotation\"}]}");
+            v.runCommand("tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_rotation) : default \"}]}");
+        }
     });
 }, 20 * 2666);

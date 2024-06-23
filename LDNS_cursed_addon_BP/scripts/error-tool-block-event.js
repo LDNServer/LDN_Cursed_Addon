@@ -189,9 +189,9 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
             if (source.getGameMode() !== GameMode.creative) {
                 let item = itemStack.getComponent("durability");
                 item.damage += 1;
-                source.playSound("fire.ignite");
-                source.playSound("mob.witch.throw");
             }
+            source.playSound("fire.ignite");
+            source.playSound("mob.witch.throw");
             // 電波動を出す
             const scythe_bullets = source.dimension.spawnEntity("ldns:scythe_bullet", { x: source.location.x + (source.getViewDirection().x * 2), y: source.location.y + 3, z: source.location.z + (source.getViewDirection().z * 3) });
             const projectiles = scythe_bullets.getComponent("minecraft:projectile");
