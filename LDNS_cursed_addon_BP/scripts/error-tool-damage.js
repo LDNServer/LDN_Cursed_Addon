@@ -75,18 +75,6 @@ function error_tool_damage(targetPlayer) {
             if (Math.floor(random(0, (16666 / ((krx + (errortoolscount * 2) + (erroritemscount * 0.25)))))) === 0) {
                 targetPlayer.addEffect(MinecraftEffectTypes.Hunger, 10 * 20);
             }
-            // YYのスポーン時の音が鳴る
-            if (Math.floor(random(0, (16666 / ((krx + (errortoolscount * 2) + (erroritemscount * 0.25)))))) === 0) {
-                targetPlayer.playSound('ldns.yy_spawn');
-            }
-            // PPのスポーン時の音が鳴る
-            if (Math.floor(random(0, (16666 / ((krx + (errortoolscount * 2) + (erroritemscount * 0.25)))))) === 0) {
-                targetPlayer.playSound('ldns.pp_spawn');
-            }
-            // PPYYのスポーン時の音が鳴る
-            if (Math.floor(random(0, (16666 / ((krx + (errortoolscount * 2) + (erroritemscount * 0.25)))))) === 0) {
-                targetPlayer.playSound('ldns.ppyy_spawn');
-            }
         }
     }
 }
