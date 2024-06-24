@@ -58,7 +58,7 @@
                     "wants": [
                         {
                             "item": "ldns:heavy_stone",
-                            "quantity": 10
+                            "quantity": 30
                         },
                         {
                             "item": "ldns:dn3895",

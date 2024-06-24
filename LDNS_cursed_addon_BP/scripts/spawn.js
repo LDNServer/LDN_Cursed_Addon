@@ -40,6 +40,7 @@ system.runInterval(() => {
         else if (rand <= 725 && rand >= 675) {
             world.getDimension(v.dimension.id).spawnEntity("ldns:mysterious_players", { x: v.location.x + (v.getViewDirection().x * 2), y: v.location.y, z: v.location.z + (v.getViewDirection().z * 2) });
         }
+        // randが999~1166の時に雷が落ちてくるように
         else if (rand <= 1166 && rand >= 999) {
             v.addTag("ldns_lightning");
             v.runCommand("function system.lightning_trigger");
@@ -47,11 +48,18 @@ system.runInterval(() => {
             v.runCommand("tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_lightning) : default \"}]}");
             v.removeTag("ldns_lightning");
         }
+        // randが2500~2666の時にローテーション
         else if (rand <= 2666 && rand >= 2500) {
             v.runCommand("tp @s[m=0] ~ ~ ~ facing ^ ^360 ^");
             v.runCommand("tp @s[m=0] ~ ~ ~ facing ^ ^ ^-90");
             v.runCommand("tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_rotation) : ldns.rotation\"}]}");
             v.runCommand("tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_rotation) : default \"}]}");
+        }
+        // randが2800~3200の時に謎の音が鳴るように
+        else if (rand <= 3200 && rand >= 2800) {
+            v.playSound("player.ldns.random_step_1", { location: { x: v.location.x + 10, y: v.location.y - 5, z: v.location.y + 4 }, volume: 0.3 });
+            v.runCommand("tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_step_1) : ldns.step_1\"}]}");
+            v.runCommand("tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_step_1) : default \"}]}");
         }
     });
 }, 20 * 60);

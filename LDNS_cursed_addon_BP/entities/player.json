@@ -10,7 +10,6 @@
                 "animate": [
                     "ldns:no_sleeping",
                     "ldns:random_sign_1",
-                    "ldns:random_step_1",
                     "ldns:long_night",
                     "ldns:portal_explosion",
                     "ldns:break_torch",
@@ -24,7 +23,6 @@
             "animations": {
                 "ldns:no_sleeping": "controller.animation.ldns.disturb_player_sleeping",
                 "ldns:random_sign_1": "controller.animation.ldns.random_sign_1",
-                "ldns:random_step_1": "controller.animation.ldns.random_step_1",
                 "ldns:long_night": "controller.animation.ldns.long_night",
                 "ldns:portal_explosion": "controller.animation.ldns.nether_portal_explosion",
                 "ldns:break_torch": "controller.animation.ldns.random_break_torch",
