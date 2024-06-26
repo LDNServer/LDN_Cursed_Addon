@@ -1,4 +1,4 @@
-import { EquipmentSlot, GameMode, Player, world } from "@minecraft/server";
+import { Direction, EquipmentSlot, GameMode, Player, world } from "@minecraft/server";
 
 world.beforeEvents.worldInitialize.subscribe((event) => {
     // Error斧の時
@@ -26,12 +26,13 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
             }
         },
         // ブロック上で右クリックしたとき
-        onUse(e) {
-            const { source, itemStack } = e;
+        onUseOn(e) {
+            const { block, source, itemStack } = e;
+            if (!(source instanceof Player)) return;
             // 音を鳴らす
             source.playSound("use.wood");
             // クリエイティブ時のみ耐久値が減る
-            if (source.getGameMode() !== GameMode.creative) {
+            if (source.getGameMode() !== GameMode.creative && block.hasTag("wood") && block.hasTag("log")) {
                 let item = itemStack.getComponent("durability");
                 item.damage += 1;
                 source.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
@@ -63,12 +64,13 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
             }
         },
         // ブロック上で右クリックしたとき
-        onUse(e) {
-            const { source, itemStack } = e;
+        onUseOn(e) {
+            const { block, blockFace, source, itemStack } = e;
+            if (!(source instanceof Player)) return;
             // 音を鳴らす
             source.playSound("use.gravel");
             // クリエイティブ時のみ耐久値が減る
-            if (source.getGameMode() !== GameMode.creative) {
+            if (source.getGameMode() !== GameMode.creative && block.hasTag("grass") && blockFace == Direction.Up) {
                 let item = itemStack.getComponent("durability");
                 item.damage += 1;
                 source.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
@@ -129,12 +131,13 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
             }
         },
         // ブロック上で右クリックしたとき
-        onUse(e) {
-            const { source, itemStack } = e;
+        onUseOn(e) {
+            const { block, blockFace, source, itemStack } = e;
+            if (!(source instanceof Player)) return;
             // 音を鳴らす
             source.playSound("use.grass");
             // クリエイティブ時のみ耐久値が減る
-            if (source.getGameMode() !== GameMode.creative) {
+            if (source.getGameMode() !== GameMode.creative && block.typeId == "minecraft:grass" && blockFace == Direction.Up) {
                 let item = itemStack.getComponent("durability");
                 item.damage += 1;
                 // 更新
