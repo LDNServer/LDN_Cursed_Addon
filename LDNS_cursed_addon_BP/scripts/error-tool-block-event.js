@@ -207,7 +207,7 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
         }
     });
     // 松明を壊すブロック
-    event.blockTypeRegistry.registerCustomComponent("ldns:replace_torch_block_c", {
+    event.blockComponentRegistry.registerCustomComponent("ldns:replace_torch_block_c", {
         onTick: (e) => {
             const { block, dimension } = e;
             // 松明を壊すコマンド
@@ -215,7 +215,7 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
         }
     });
     // ボマーのダンジョンのブロック
-    event.blockTypeRegistry.registerCustomComponent("ldns:bomber_dungeon_player_checker_c", {
+    event.blockComponentRegistry.registerCustomComponent("ldns:bomber_dungeon_player_checker_c", {
         onTick: (e) => {
             const { block, dimension } = e;
             // コマンド
@@ -223,7 +223,7 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
         }
     });
     // 爆発深層岩の時
-    event.blockTypeRegistry.registerCustomComponent("ldns:fake_deepslate_explosive_c", {
+    event.blockComponentRegistry.registerCustomComponent("ldns:fake_deepslate_explosive_c", {
         // 壊したとき
         onPlayerDestroy: (e) => {
             const { player, block, dimension, destroyedBlockPermutation } = e;
@@ -232,7 +232,7 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
         }
     });
     // 爆発石の時
-    event.blockTypeRegistry.registerCustomComponent("ldns:fake_stone_explosive_c", {
+    event.blockComponentRegistry.registerCustomComponent("ldns:fake_stone_explosive_c", {
         // 壊したとき
         onPlayerDestroy: (e) => {
             const { player, block, dimension, destroyedBlockPermutation } = e;
