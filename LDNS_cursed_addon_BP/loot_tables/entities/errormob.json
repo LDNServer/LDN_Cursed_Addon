@@ -12,7 +12,7 @@
                 }
             ],
             "rolls": {
-                "max": 3,
+                "max": 2,
                 "min": 1
             },
             "entries": [
