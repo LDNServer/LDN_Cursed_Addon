@@ -17,7 +17,7 @@ system.runInterval(() => {
     targetPlayers.forEach((targetPlayer) => {
         error_tool_damage(targetPlayer);
     })
-}, 20)
+}, 20 * 2)
 
 /**
  * @param {Player} [targetPlayer] 

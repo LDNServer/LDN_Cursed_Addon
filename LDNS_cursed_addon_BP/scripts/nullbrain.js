@@ -25,18 +25,24 @@ function nullbraindievent(damagingEntity, deadEntity) {
     // ペンダントを持っているときは無効
     const items = damagingEntity.runCommand('testfor @s[hasitem={item=ldns:pendant_of_twilight}]').successCount;
     if (items <= 0) {
+        // 値を事前に設定
+        const entitylocation = deadEntity.location;
+        const xentity = entitylocation.x;
+        const yentity = entitylocation.y;
+        const zentity = entitylocation.z;
+        const dimensions = deadEntity.dimension;
         // randが2以下の時は爆発(1)
         if (rand <= 2) {
-            deadEntity.dimension.createExplosion({ x: deadEntity.location.x, y: deadEntity.location.y, z: deadEntity.location.z }, 1.666);
             deadEntity.remove();
+            dimensions.createExplosion({ x: xentity, y: yentity, z: zentity }, 1.666);
         }
         // randが60以上の時は攻撃した自身にエフェクトがつく(2)
         else if (rand >= 60) damagingEntity.addEffect(MinecraftEffectTypes.Weakness, 20 * 13, { amplifier: 255 });
         // randが6の時は(1)(2)両方起こる
         else if (rand === 6) {
             damagingEntity.addEffect(MinecraftEffectTypes.Weakness, 20 * 13, { amplifier: 255 });
-            deadEntity.dimension.createExplosion({ x: deadEntity.location.x, y: deadEntity.location.y, z: deadEntity.location.z }, 1.666);
             deadEntity.remove();
+            dimensions.createExplosion({ x: xentity, y: yentity, z: zentity }, 1.666);
         }
     }
 }
@@ -55,10 +61,16 @@ function nullbrainhurtevent(damage, damagingEntity, hurtEntity) {
     if (items <= 0) {
         // 与えたダメージが4以下のとき
         if (damage <= 4) {
+            // 値を事前に設定
+            const entitylocation = hurtEntity.location;
+            const xentity = entitylocation.x;
+            const yentity = entitylocation.y;
+            const zentity = entitylocation.z;
+            const dimensions = hurtEntity.dimension;
             // randが2以下の時は爆発(1)
             if (rand <= 2) {
-                hurtEntity.dimension.createExplosion({ x: hurtEntity.location.x, y: hurtEntity.location.y, z: hurtEntity.location.z }, 1.666);
                 hurtEntity.remove();
+                dimensions.createExplosion({ x: xentity, y: yentity, z: zentity }, 1.666);
             }
             // randが60以上の時は攻撃した自身にエフェクトがつく(2)
             else if (rand >= 60) damagingEntity.addEffect(MinecraftEffectTypes.Weakness, 20 * 13, { amplifier: 255 });
@@ -66,8 +78,8 @@ function nullbrainhurtevent(damage, damagingEntity, hurtEntity) {
             else if (rand === 6) {
                 damagingEntity.addEffect(MinecraftEffectTypes.Weakness, 20 * 13, { amplifier: 255 });
                 system.runTimeout(() => {
-                    hurtEntity.dimension.createExplosion({ x: hurtEntity.location.x, y: hurtEntity.location.y, z: hurtEntity.location.z }, 1.666);
                     hurtEntity.remove();
+                    dimensions.createExplosion({ x: xentity, y: yentity, z: zentity }, 1.666);
                 }, 20 * 13)
             }
         }
