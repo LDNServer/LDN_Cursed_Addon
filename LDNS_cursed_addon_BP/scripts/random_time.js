@@ -16,6 +16,6 @@ system.runInterval(() => {
       world.setTimeOfDay(TimeOfDay.Day);
     }
   }
-}, 20 * 60);
+}, 20 * 10);
 
 // 譎る俣繧貞､ｧ縺帙▽縺ｫ

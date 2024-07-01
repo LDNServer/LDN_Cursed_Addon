@@ -62,4 +62,4 @@ system.runInterval(() => {
             v.runCommand("tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_step_1) : default \"}]}");
         }
     });
-}, 20 * 60);
+}, 20 * 4);
