@@ -7,7 +7,7 @@ system.runInterval(() => {
     // ワールドのプレイヤーを獲得
     world.getPlayers().forEach((v, i, a) => {
         // ランダム
-        const rand = random(0, 14900);
+        const rand = random(0, 17000);
         // 時刻獲得
         const d = new Date(Date.now() + ((new Date().getTimezoneOffset() + (timezoneOffset * 60)) * 60 * 1000));
         // randが6の時
@@ -41,7 +41,7 @@ system.runInterval(() => {
             world.getDimension(v.dimension.id).spawnEntity("ldns:mysterious_players", { x: v.location.x + (v.getViewDirection().x * 2), y: v.location.y, z: v.location.z + (v.getViewDirection().z * 2) });
         }
         // randが2500~2666の時にローテーション
-        else if (rand <= 9999 && rand >= 7000) {
+        else if (rand <= 9999 && rand >= 8000) {
             v.runCommand("tp @s[m=0] ~ ~ ~ facing ^ ^360 ^");
             v.runCommand("tp @s[m=0] ~ ~ ~ facing ^ ^ ^-90");
             v.runCommand("tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_rotation) : ldns.rotation\"}]}");
@@ -54,4 +54,6 @@ system.runInterval(() => {
             v.runCommand("tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_step_1) : default \"}]}");
         }
     });
-}, 20 * 60);
+}, 2133);
+
+// 繝｡繝｢繝ｪ繝ｼ繝ｬ繧､繝?Φ繧ｷ繝ｼ繧ｨ繝ｩ繝ｼ

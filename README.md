@@ -34,3 +34,8 @@ https://docs.microsoft.com/ja-jp/minecraft/creator/documents/addonpackinstallati
 * ある程度のサバイバルの土台が出来たのなら、アドオンの建物を探しに行こう。<br>装備を整えたいのなら<a href= "https://github.com/LDNServer/LDN_Cursed_Addon/wiki/建物#ボマーダンジョン" >ボマーダンジョン</a>が、ネザーに行きたいのなら<a href= "https://github.com/LDNServer/LDN_Cursed_Addon/wiki/建物#スケルトンの商人の取引所" >スケルトンの商人の取引所</a>を探しに行くのがいいだろう。
 * ネザーに行って、ブレイズパウダーと呪いの魂を集めよう。ネザーに行くためには<a href="https://github.com/LDNServer/LDN_Cursed_Addon/wiki/モブ#スケルトンの商人">スケルトンの商人</a>が取引してくれる異世界旅行券が必要だ。
 * ボスの召喚アイテム、<a href="https://github.com/LDNServer/LDN_Cursed_Addon/wiki/アイテム#呪いの人形">呪いの人形</a>をクラフトしよう。ゾンビの頭が必要だが、帯電クリーパーならそこら中にいる。
+
+## 素材クレジット
+* https://www.ravbug.com/bsod/
+* https://taira-komori.jpn.org/freesound.html
+* https://on-jin.com

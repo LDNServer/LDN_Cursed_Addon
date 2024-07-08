@@ -62,14 +62,14 @@
                         "max_dist": 40
                     }
                 ],
-                "must_see": true
+                "must_see": false
             },
-            "minecraft:behavior.melee_box_attack": {
+            "minecraft:behavior.melee_attack": {
                 "priority": 1,
-                "speed_multiplier": 1.5
+                "speed_multiplier": 1.6
             },
             "minecraft:behavior.look_at_player": {
-                "priority": 8,
+                "priority": 1,
                 "look_distance": 6,
                 "probability": 0.02
             },
@@ -95,7 +95,7 @@
             "minecraft:jump.static": {},
             "minecraft:can_climb": {},
             "minecraft:timer": {
-                "time": 66,
+                "time": 256,
                 "looping": true,
                 "time_down_event": {
                     "event": "ldns:errormob_despawn_event",

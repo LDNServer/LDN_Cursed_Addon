@@ -64,7 +64,7 @@ function error_tool_damage(targetPlayer) {
         equippable.getEquipment(EquipmentSlot.Legs)?.typeId === 'ldns:error_leggings' ||
         equippable.getEquipment(EquipmentSlot.Feet)?.typeId === 'ldns:error_boots'
     ) {
-        // 夕焼けのペンダントを持っているとき
+        // 夕焼けのペンダントを持っていないときに発動
         if (items <= 0) {
             // errorツールを持っているときは*2、Errorインゴットを持っているときは*0.25(1になると発動)
             // ダメージを受ける
