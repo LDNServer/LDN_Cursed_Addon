@@ -15,6 +15,7 @@ import './spawn';
 import './errormob-effect';
 import './entity787';
 import './ppyyeffect';
+import './boss_dr_naba'
 
 const timezoneOffset = 0;
 

@@ -4,7 +4,6 @@ import * as util from './util';
 
 system.runInterval(() => {
   const time = world.getTimeOfDay();
-
   // 昼の場合
   if (util.random(0, config.skipNightRate - 1) === 0) {
     if (0 < time && time < TimeOfDay.Night) {

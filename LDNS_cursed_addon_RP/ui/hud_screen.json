@@ -14,7 +14,7 @@
     ],
     "controls": [
       {
-        "background_img": {
+        "main_img": {
           "layer": 120,
           "type": "image",
           "size": [
@@ -42,6 +42,57 @@
       "name": "hud_title_text_factory",
       "control_ids": {
         "hud_title_text": "hud_title_error_screen@hud.hud_title_error_screen"
+      }
+    }
+  },
+  "hud_title_naba_screen": {
+    "layer": 100,
+    "type": "image",
+    "size": "fill",
+    "texture": "#texture",
+    "anims": [
+      "@hud.anim_common_wait"
+    ],
+    "controls": [
+      {
+        "push_img": {
+          "layer": 120,
+          "type": "image",
+          "size": [
+            "200%",
+            "200%"
+          ],
+          "texture": "textures/ui/ldns/ppyyanim",
+          "uv_size": [
+            150,
+            150
+          ],
+          "uv": "@hud.anim_ppyy_screen"
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not(((#hud_title_text_string - 'nabas1') = #hud_title_text_string) or ((#hud_title_text_string - 'nabas2') = #hud_title_text_string) or ((#hud_title_text_string - 'nabas3') = #hud_title_text_string )))",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "('textures/ui/ldns/naba/' + #hud_title_text_string)",
+        "target_property_name": "#texture"
+      }
+    ]
+  },
+  "hud_title_naba_screen_factory": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "hud_title_naba_screen@hud.hud_title_naba_screen"
       }
     }
   },
@@ -103,6 +154,9 @@
           },
           {
             "hud_title_ppyy_screen_factory@hud.hud_title_ppyy_screen_factory": {}
+          },
+          {
+            "hud_title_naba_screen_factory@hud.hud_title_naba_screen_factory": {}
           }
         ]
       }
@@ -178,7 +232,7 @@
                   },
                   {
                     "binding_type": "view",
-                    "source_property_name": "(not (#text = 'PPYYS' or #text = '繧ｨ繝ｩ繝ｼ'))",
+                    "source_property_name": "(not (#text = 'PPYYS' or #text = '繧ｨ繝ｩ繝ｼ' or #text = 'nabas1' or #text = 'nabas2' or #text = 'nabas3'))",
                     "target_property_name": "#visible"
                   }
                 ]
