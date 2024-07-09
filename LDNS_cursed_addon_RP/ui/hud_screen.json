@@ -45,6 +45,53 @@
       }
     }
   },
+  "hud_title_ppyy_screen": {
+    "layer": 100,
+    "$hud_ppyy_string": "PPYYS",
+    "type": "image",
+    "size": [
+      "200%",
+      "200%"
+    ],
+    "texture": "textures/ui/ldns/ppyyanim",
+    "uv_size": [
+      150,
+      150
+    ],
+    "uv": "@hud.anim_ppyy_screen",
+    "anims": [
+      "@hud.anim_common_wait"
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#hud_title_text_string - $hud_ppyy_string) = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "anim_ppyy_screen": {
+    "anim_type": "flip_book",
+    "initial_uv": [
+      0,
+      0
+    ],
+    "frame_count": 10,
+    "frame_step": 60,
+    "fps": 30
+  },
+  "hud_title_ppyy_screen_factory": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "hud_title_ppyy_screen@hud.hud_title_ppyy_screen"
+      }
+    }
+  },
   "root_panel": {
     "modifications": [
       {
@@ -53,6 +100,9 @@
         "value": [
           {
             "hud_title_error_screen_factory@hud.hud_title_error_screen_factory": {}
+          },
+          {
+            "hud_title_ppyy_screen_factory@hud.hud_title_ppyy_screen_factory": {}
           }
         ]
       }
@@ -129,6 +179,11 @@
                   {
                     "binding_type": "view",
                     "source_property_name": "(not (#text = '繧ｨ繝ｩ繝ｼ'))",
+                    "target_property_name": "#visible"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(not (#text = 'PPYYS'))",
                     "target_property_name": "#visible"
                   }
                 ]

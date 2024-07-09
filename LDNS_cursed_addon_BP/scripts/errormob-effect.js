@@ -1,4 +1,4 @@
-import { ItemStack, Player, world } from "@minecraft/server";
+import { Player, world } from "@minecraft/server";
 import { random } from './util';
 import { MinecraftEffectTypes } from './lib/mojang-effect';
 
@@ -16,11 +16,11 @@ function errordamage(targetPlayer) {
     if (!(targetPlayer instanceof Player)) return;
     const rand = random(0, 66);
     // 攻撃力低下(攻撃できなくなる)
-    if (rand > 0 && rand < 6) {
+    if (rand >= 0 && rand <= 4) {
         targetPlayer.addEffect(MinecraftEffectTypes.Weakness, 20 * 3, { amplifier: 255 });
     }
     // Error画面
-    else if (rand > 6 && rand < 9) {
+    else if (rand >= 6 && rand <= 7) {
         targetPlayer.playSound("ldns.error_the_error");
         targetPlayer.onScreenDisplay.setTitle("繧ｨ繝ｩ繝ｼ");
     }
@@ -40,6 +40,7 @@ function errordamage(targetPlayer) {
         targetPlayer.setSpawnPoint({ dimension: targetPlayer.dimension, x: targetPlayer.location.x, y: targetPlayer.location.y, z: targetPlayer.location.z });
         targetPlayer.runCommand("tellraw @s {\"rawtext\":[{\"text\":\"§4Set Spawn\"}]}");
     }
+    // ノックバック
     else if (rand === 30) {
         targetPlayer.applyKnockback(targetPlayer.getViewDirection().x * 5, targetPlayer.getViewDirection().z * 5, 1.5, 1.5)
     }
@@ -61,7 +62,7 @@ function errorhurt(damageSource) {
     // Error画面
     // 夕焼けのペンダントを持っていないときに発動
     if (items <= 0) {
-        if (rand > 6 && rand < 9) {
+        if (rand === 6) {
             damageSource.playSound("ldns.error_the_error");
             damageSource.onScreenDisplay.setTitle("繧ｨ繝ｩ繝ｼ");
         }

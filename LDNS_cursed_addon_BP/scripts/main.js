@@ -13,6 +13,8 @@ import './boss-trophy';
 import './nullbrain';
 import './spawn';
 import './errormob-effect';
+import './entity787';
+import './ppyyeffect';
 
 const timezoneOffset = 0;
 
