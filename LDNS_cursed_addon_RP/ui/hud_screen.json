@@ -178,12 +178,7 @@
                   },
                   {
                     "binding_type": "view",
-                    "source_property_name": "(not (#text = '繧ｨ繝ｩ繝ｼ'))",
-                    "target_property_name": "#visible"
-                  },
-                  {
-                    "binding_type": "view",
-                    "source_property_name": "(not (#text = 'PPYYS'))",
+                    "source_property_name": "(not (#text = 'PPYYS' or #text = '繧ｨ繝ｩ繝ｼ'))",
                     "target_property_name": "#visible"
                   }
                 ]
