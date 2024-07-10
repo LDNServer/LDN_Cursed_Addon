@@ -8,6 +8,7 @@
       "conditions": [
         {
           "minecraft:spawns_on_surface": {},
+          "minecraft:spawns_underground": {},
           "minecraft:brightness_filter": {
             "min": 0,
             "max": 7,
@@ -18,11 +19,11 @@
             "max": "hard"
           },
           "minecraft:weight": {
-            "default": 7
+            "default": 15
           },
           "minecraft:herd": {
             "min_size": 1,
-            "max_size": 1
+            "max_size": 3
           },
           "minecraft:biome_filter": {
             "test": "has_biome_tag", "operator": "==", "value": "monster"

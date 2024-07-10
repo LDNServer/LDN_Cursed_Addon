@@ -47,7 +47,6 @@ function errorhurt(damageSource) {
     // ペンダントを持っているときのカウント
     const items = damageSource.runCommand('testfor @s[hasitem={item=ldns:pendant_of_twilight}]').successCount;
     const rand = random(0, 66);
-
     // Error画面
     // 夕焼けのペンダントを持っていないときに発動
     if (items <= 0) {

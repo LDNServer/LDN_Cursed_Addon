@@ -64,9 +64,12 @@
                 ],
                 "must_see": false
             },
-            "minecraft:behavior.melee_attack": {
+            "minecraft:behavior.melee_box_attack": {
                 "priority": 1,
-                "speed_multiplier": 1.6
+                "speed_multiplier": 1.6,
+                "cooldown_time": 0.75,
+                "set_persistent": true,
+                "track_target": true
             },
             "minecraft:behavior.look_at_player": {
                 "priority": 1,
@@ -82,7 +85,7 @@
             },
             "minecraft:physics": {},
             "minecraft:movement": {
-                "value": 0.2
+                "value": 0.3
             },
             "minecraft:floats_in_liquid": {},
             "minecraft:behavior.float": {},
@@ -101,6 +104,20 @@
                     "event": "ldns:errormob_despawn_event",
                     "target": "self"
                 }
+            },
+            "minecraft:flocking": {
+                "cohesion_threshold": 1,
+                "cohesion_weight": 1,
+                "goal_weight": 0,
+                "high_flock_limit": 10,
+                "in_water": false,
+                "influence_radius": 0,
+                "innner_cohesion_threshold": 0,
+                "loner_chance": 0,
+                "low_flock_limit": 0,
+                "match_variants": false,
+                "separation_threshold": 2,
+                "separation_weight": 1
             }
         },
         "events": {
