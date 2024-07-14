@@ -43,7 +43,7 @@
                 "height": 1.8
             },
             "minecraft:health": {
-                "value": 87
+                "value": 100
             },
             "minecraft:loot": {
                 "table": "loot_tables/entities/entity787.json"

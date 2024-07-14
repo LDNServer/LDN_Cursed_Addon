@@ -14,7 +14,7 @@ world.afterEvents.entityHurt.subscribe((e) => {
 // PPに攻撃されたとき
 function ppdamage(targetPlayer) {
     if (!(targetPlayer instanceof Player)) return;
-    const rand = random(0, 66);
+    const rand = random(0, 86);
     // PP画面
     if (rand <= 2) {
         targetPlayer.playSound("ldns.pp_spawn");
@@ -24,7 +24,7 @@ function ppdamage(targetPlayer) {
 // エンティティが傷つけられたとき
 function ppyyhurt(hurtEntity, damageSource) {
     if (!(damageSource instanceof Player)) return;
-    const rand = random(0, 66);
+    const rand = random(0, 120);
     // PP画面
     if (hurtEntity.typeId == "ldns:pp" && rand < 2) {
         damageSource.playSound("ldns.pp_spawn");

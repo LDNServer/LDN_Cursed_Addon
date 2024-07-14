@@ -85,7 +85,7 @@
             },
             "minecraft:physics": {},
             "minecraft:movement": {
-                "value": 0.3
+                "value": 0.275
             },
             "minecraft:floats_in_liquid": {},
             "minecraft:behavior.float": {},

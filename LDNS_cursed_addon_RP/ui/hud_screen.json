@@ -1,5 +1,333 @@
 {
   "namespace": "hud",
+  "hud_title_error_screens1": {
+    "layer": 100,
+    "$hud_string": "Error1",
+    "type": "image",
+    "size": [
+      "250%",
+      "250%"
+    ],
+    "texture": "textures/ui/ldns/errorscreen/errorscreen1",
+    "anims": [
+      "@hud.anim_common_wait"
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#hud_title_text_string - $hud_string) = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "hud_title_error_screens1_factory": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "hud_title_error_screens1@hud.hud_title_error_screens1"
+      }
+    }
+  },
+  "hud_title_error_screens2": {
+    "layer": 100,
+    "$hud_string": "Error2",
+    "type": "image",
+    "size": [
+      "250%",
+      "250%"
+    ],
+    "texture": "textures/ui/ldns/errorscreen/errorscreen2",
+    "anims": [
+      "@hud.anim_common_wait"
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#hud_title_text_string - $hud_string) = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "hud_title_error_screens2_factory": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "hud_title_error_screens2@hud.hud_title_error_screens2"
+      }
+    }
+  },
+  "hud_title_cursed_screens1": {
+    "layer": 100,
+    "$hud_string": "Cursed1",
+    "type": "image",
+    "size": [
+      "250%",
+      "250%"
+    ],
+    "texture": "textures/ui/ldns/errorscreen/cursed1",
+    "anims": [
+      "@hud.anim_common_wait"
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#hud_title_text_string - $hud_string) = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "hud_title_cursed_screens1_factory": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "hud_title_cursed_screens1@hud.hud_title_cursed_screens1"
+      }
+    }
+  },
+  "hud_title_cursed_screens2": {
+    "layer": 100,
+    "$hud_string": "Cursed2",
+    "type": "image",
+    "size": [
+      "250%",
+      "250%"
+    ],
+    "texture": "textures/ui/ldns/errorscreen/cursed2",
+    "anims": [
+      "@hud.anim_common_wait"
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#hud_title_text_string - $hud_string) = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "hud_title_cursed_screens2_factory": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "hud_title_cursed_screens2@hud.hud_title_cursed_screens2"
+      }
+    }
+  },
+  "hud_title_error_screens1_noisy": {
+    "layer": 100,
+    "$hud_string": "Error1Noisy",
+    "type": "image",
+    "size": [
+      "250%",
+      "250%"
+    ],
+    "texture": "textures/ui/ldns/errorscreen/errorscreen1",
+    "anims": [
+      "@hud.anim_common_wait"
+    ],
+    "controls": [
+      {
+        "push_img": {
+          "layer": 120,
+          "type": "image",
+          "size": [
+            "80%",
+            "80%"
+          ],
+          "texture": "textures/ui/ldns/ppyyanim",
+          "uv_size": [
+            150,
+            150
+          ],
+          "uv": "@hud.anim_ppyy_screen"
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#hud_title_text_string - $hud_string) = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "hud_title_error_screens1_noisy_factory": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "hud_title_error_screens1_noisy@hud.hud_title_error_screens1_noisy"
+      }
+    }
+  },
+  "hud_title_error_screens2_noisy": {
+    "layer": 100,
+    "$hud_string": "Error2Noisy",
+    "type": "image",
+    "size": [
+      "250%",
+      "250%"
+    ],
+    "texture": "textures/ui/ldns/errorscreen/errorscreen2",
+    "anims": [
+      "@hud.anim_common_wait"
+    ],
+    "controls": [
+      {
+        "push_img": {
+          "layer": 120,
+          "type": "image",
+          "size": [
+            "80%",
+            "80%"
+          ],
+          "texture": "textures/ui/ldns/ppyyanim",
+          "uv_size": [
+            150,
+            150
+          ],
+          "uv": "@hud.anim_ppyy_screen"
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#hud_title_text_string - $hud_string) = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "hud_title_error_screens2_noisy_factory": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "hud_title_error_screens2_noisy@hud.hud_title_error_screens2_noisy"
+      }
+    }
+  },
+  "hud_title_cursed_screens1_noisy": {
+    "layer": 100,
+    "$hud_string": "Cursed1Noisy",
+    "type": "image",
+    "size": [
+      "250%",
+      "250%"
+    ],
+    "texture": "textures/ui/ldns/errorscreen/cursed1",
+    "anims": [
+      "@hud.anim_common_wait"
+    ],
+    "controls": [
+      {
+        "push_img": {
+          "layer": 120,
+          "type": "image",
+          "size": [
+            "80%",
+            "80%"
+          ],
+          "texture": "textures/ui/ldns/ppyyanim",
+          "uv_size": [
+            150,
+            150
+          ],
+          "uv": "@hud.anim_ppyy_screen"
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#hud_title_text_string - $hud_string) = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "hud_title_cursed_screens1_noisy_factory": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "hud_title_cursed_screens1_noisy@hud.hud_title_cursed_screens1_noisy"
+      }
+    }
+  },
+  "hud_title_cursed_screens2_noisy": {
+    "layer": 100,
+    "$hud_string": "Cursed2Noisy",
+    "type": "image",
+    "size": [
+      "250%",
+      "250%"
+    ],
+    "texture": "textures/ui/ldns/errorscreen/cursed2",
+    "anims": [
+      "@hud.anim_common_wait"
+    ],
+    "controls": [
+      {
+        "push_img": {
+          "layer": 120,
+          "type": "image",
+          "size": [
+            "80%",
+            "80%"
+          ],
+          "texture": "textures/ui/ldns/ppyyanim",
+          "uv_size": [
+            150,
+            150
+          ],
+          "uv": "@hud.anim_ppyy_screen"
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#hud_title_text_string - $hud_string) = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "hud_title_cursed_screens2_noisy_factory": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "hud_title_cursed_screens2_noisy@hud.hud_title_cursed_screens2_noisy"
+      }
+    }
+  },
   "hud_title_error_screen": {
     "layer": 100,
     "$hud_string": "繧ｨ繝ｩ繝ｼ",
@@ -237,6 +565,30 @@
         "operation": "insert_front",
         "value": [
           {
+            "hud_title_error_screens1_factory@hud.hud_title_error_screens1_factory": {}
+          },
+          {
+            "hud_title_error_screens2_factory@hud.hud_title_error_screens2_factory": {}
+          },
+          {
+            "hud_title_cursed_screens1_factory@hud.hud_title_cursed_screens1_factory": {}
+          },
+          {
+            "hud_title_cursed_screens2_factory@hud.hud_title_cursed_screens2_factory": {}
+          },
+          {
+            "hud_title_error_screens1_noisy_factory@hud.hud_title_error_screens1_noisy_factory": {}
+          },
+          {
+            "hud_title_error_screens2_noisy_factory@hud.hud_title_error_screens2_noisy_factory": {}
+          },
+          {
+            "hud_title_cursed_screens1_noisy_factory@hud.hud_title_cursed_screens1_noisy_factory": {}
+          },
+          {
+            "hud_title_cursed_screens2_noisy_factory@hud.hud_title_cursed_screens2_noisy_factory": {}
+          },
+          {
             "hud_title_error_screen_factory@hud.hud_title_error_screen_factory": {}
           },
           {
@@ -325,7 +677,7 @@
                   },
                   {
                     "binding_type": "view",
-                    "source_property_name": "(not (#text = 'PPYYS' or #text = '繧ｨ繝ｩ繝ｼ' or #text = 'nabas1' or #text = 'nabas2' or #text = 'nabas3'))",
+                    "source_property_name": "(not (#text = 'PPYYS' or #text = '繧ｨ繝ｩ繝ｼ' or #text = 'nabas1' or #text = 'nabas2' or #text = 'nabas3' or #text = 'Error1' or #text = 'Error2' or #text = 'Cursed1' or #text = 'Cursed2' or #text = 'Error1Noisy' or #text = 'Error2Noisy' or #text = 'Cursed1Noisy' or #text = 'Cursed2Noisy'))",
                     "target_property_name": "#visible"
                   }
                 ]
