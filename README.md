@@ -35,7 +35,12 @@ https://docs.microsoft.com/ja-jp/minecraft/creator/documents/addonpackinstallati
 * ネザーに行って、ブレイズパウダーと呪いの魂を集めよう。ネザーに行くためには<a href="https://github.com/LDNServer/LDN_Cursed_Addon/wiki/モブ#スケルトンの商人">スケルトンの商人</a>が取引してくれる異世界旅行券が必要だ。
 * ボスの召喚アイテム、<a href="https://github.com/LDNServer/LDN_Cursed_Addon/wiki/アイテム#呪いの人形">呪いの人形</a>をクラフトしよう。ゾンビの頭が必要だが、帯電クリーパーならそこら中にいる。
 
+## 注意事項
+* ドッキリ要素(？)があります。心臓の弱い方は一応注意してください。
+* ブルスクやノイズなどの目に悪い可能性のある描写もあります。やる際は念のため注意して楽しんでください
+
 ## 素材クレジット
 * https://www.ravbug.com/bsod/
 * https://taira-komori.jpn.org/freesound.html
 * https://on-jin.com
+* https://pixabay.com

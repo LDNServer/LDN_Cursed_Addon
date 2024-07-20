@@ -7,7 +7,7 @@ system.runInterval(() => {
     // ワールドのプレイヤーを獲得
     world.getPlayers().forEach((v, i, a) => {
         // ランダム
-        const rand = random(0, 21300);
+        const rand = random(0, 25600);
         // 時刻獲得
         const d = new Date(Date.now() + ((new Date().getTimezoneOffset() + (timezoneOffset * 60)) * 60 * 1000));
         // randが6の時
@@ -28,7 +28,7 @@ system.runInterval(() => {
             }
         }
         // randが68<=rand<=79の時に謎の文字が出てくる
-        else if (rand <= 79 && rand >= 68) {
+        else if (rand <= 79 && rand >= 67) {
             const rande = random(0, 7);
             if (rande === 0) {
                 v.playSound("ldns.beep");
@@ -46,26 +46,6 @@ system.runInterval(() => {
                 v.playSound("ldns.beep");
                 v.onScreenDisplay.setTitle("Cursed2");
             }
-            else if (rande === 4) {
-                v.playSound("ldns.beep");
-                v.playSound("ldns.pp_spawn");
-                v.onScreenDisplay.setTitle("Error1Noisy");
-            }
-            else if (rande === 5) {
-                v.playSound("ldns.beep");
-                v.playSound("ldns.yy_spawn");
-                v.onScreenDisplay.setTitle("Error2Noisy");
-            }
-            else if (rande === 6) {
-                v.playSound("ldns.beep");
-                v.playSound("ldns.pp_spawn");
-                v.onScreenDisplay.setTitle("Cursed1Noisy");
-            }
-            else if (rande === 7) {
-                v.playSound("ldns.beep");
-                v.playSound("ldns.yy_spawn");
-                v.onScreenDisplay.setTitle("Cursed2Noisy");
-            }
         }
         // randが80~86の時に時刻によってLDかDNが出てくる
         else if (rand <= 200 && rand >= 80) {
@@ -77,11 +57,11 @@ system.runInterval(() => {
             world.getDimension(v.dimension.id).spawnEntity("ldns:attacker_nitwit_villager", { x: v.location.x + (v.getViewDirection().x * 2), y: v.location.y, z: v.location.z + (v.getViewDirection().z * 2) });
         }
         // randが675~725の時に謎のプレイヤーが出てくる
-        else if (rand <= 3000 && rand >= 2000) {
+        else if (rand <= 2500 && rand >= 2000) {
             world.getDimension(v.dimension.id).spawnEntity("ldns:mysterious_players", { x: v.location.x + (v.getViewDirection().x * 2), y: v.location.y, z: v.location.z + (v.getViewDirection().z * 2) });
         }
         // randが2500~2666の時にローテーション
-        else if (rand <= 9999 && rand >= 8000) {
+        else if (rand <= 8500 && rand >= 8000) {
             v.runCommand("tp @s[m=0] ~ ~ ~ facing ^ ^360 ^");
             v.runCommand("tp @s[m=0] ~ ~ ~ facing ^ ^ ^-90");
             v.runCommand("tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_rotation) : ldns.rotation\"}]}");
@@ -89,11 +69,11 @@ system.runInterval(() => {
         }
         // randが2800~3200の時に謎の音が鳴るように
         else if (rand <= 12000 && rand >= 10000) {
-            v.playSound("player.ldns.random_step_1", { location: { x: v.location.x + 10, y: v.location.y - 5, z: v.location.y + 4 }, volume: 0.3 });
+            v.playSound("player.ldns.random_step_1", { location: { x: v.location.x, y: v.location.y, z: v.location.y }, volume: 0.5 });
             v.runCommand("tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_step_1) : ldns.step_1\"}]}");
             v.runCommand("tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_step_1) : default \"}]}");
         }
     });
-}, 2666);
+}, 3200);
 
 // 繝｡繝｢繝ｪ繝ｼ繝ｬ繧､繝?Φ繧ｷ繝ｼ繧ｨ繝ｩ繝ｼ

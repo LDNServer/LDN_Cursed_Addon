@@ -198,8 +198,24 @@
             "category": "hostile",
             "sounds": [
                 {
-                    "name": "sounds/ldns/errormob",
-                    "volume": 1.0
+                    "name": "sounds/ldns/errormob/errormob1",
+                    "volume": 0.6
+                },
+                {
+                    "name": "sounds/ldns/errormob/errormob2",
+                    "volume": 0.6
+                },
+                {
+                    "name": "sounds/ldns/errormob/errormob3",
+                    "volume": 0.6
+                },
+                {
+                    "name": "sounds/ldns/errormob/errormob4",
+                    "volume": 0.6
+                },
+                {
+                    "name": "sounds/ldns/errormob/errormob5",
+                    "volume": 0.6
                 }
             ]
         },

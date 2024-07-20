@@ -12,6 +12,12 @@
                 "minecraft:instant_despawn": {
                     "remove_child_entities": false
                 }
+            },
+            "ldns:become_yy": {
+                "minecraft:transformation": {
+                    "into": "ldns:yy",
+                    "transformation_sound": "ldns.beep"
+                }
             }
         },
         "components": {
@@ -74,9 +80,36 @@
             },
             "minecraft:loot": {
                 "table": "loot_tables/entities/nonebrain.json"
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "on_damage": {
+                        "filters": [
+                            {
+                                "test": "is_family",
+                                "subject": "other",
+                                "value": "lightning"
+                            },
+                            {
+                                "test": "is_difficulty",
+                                "operator": "!=",
+                                "value": "peaceful"
+                            }
+                        ],
+                        "event": "ldns:become_yy_event"
+                    },
+                    "deals_damage": false
+                }
             }
         },
         "events": {
+            "ldns:become_yy_event": {
+                "add": {
+                    "component_groups": [
+                        "ldns:become_yy"
+                    ]
+                }
+            },
             "ldns:nonebrain_despawn_event": {
                 "add": {
                     "component_groups": [

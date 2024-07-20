@@ -13,23 +13,34 @@ function entity787hurt(hurtEntity, damageSource) {
     if (!(hurtEntity instanceof Entity)) return;
     // ペンダントを持っているときのカウント
     const items = damageSource.runCommand('testfor @s[hasitem={item=ldns:pendant_of_twilight}]').successCount;
-    const rand = random(0, 66);
-    // 攻撃力低下(攻撃できなくなる)
-    if (rand >= 0 && rand <= 4) {
-        damageSource.addEffect(MinecraftEffectTypes.Weakness, 20 * 3, { amplifier: 255 });
-    }
+    const rand = random(0, 160);
     // 夕焼けのペンダントを持っていないときに発動
     if (items <= 0) {
-        // Error画面
-        if (rand === 6) {
-            damageSource.playSound("ldns.error_the_error");
-            damageSource.onScreenDisplay.setTitle("繧ｨ繝ｩ繝ｼ");
-        }
-        // PPYY画面
-        else if (rand === 7) {
+        // 画面いっぱいに謎の文字とノイズ
+        if (rand === 4) {
+            damageSource.playSound("ldns.beep");
             damageSource.playSound("ldns.pp_spawn");
-            damageSource.onScreenDisplay.setTitle("PPYYS");
+            damageSource.onScreenDisplay.setTitle("Error1Noisy");
         }
+        else if (rand === 5) {
+            damageSource.playSound("ldns.beep");
+            damageSource.playSound("ldns.yy_spawn");
+            damageSource.onScreenDisplay.setTitle("Error2Noisy");
+        }
+        else if (rand === 6) {
+            damageSource.playSound("ldns.beep");
+            damageSource.playSound("ldns.pp_spawn");
+            damageSource.onScreenDisplay.setTitle("Cursed1Noisy");
+        }
+        else if (rand === 7) {
+            damageSource.playSound("ldns.beep");
+            damageSource.playSound("ldns.yy_spawn");
+            damageSource.onScreenDisplay.setTitle("Cursed2Noisy");
+        }
+    }
+    // 攻撃力低下(攻撃できなくなる)
+    if (rand >= 8 && rand <= 12) {
+        damageSource.addEffect(MinecraftEffectTypes.Weakness, 20 * 3, { amplifier: 255 });
     }
     // アイテムが置き換えられる
     else if (rand === 13) {
