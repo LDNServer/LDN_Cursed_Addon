@@ -240,4 +240,4 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
             dimension.runCommand("summon ldns:entity.fake_stone_explosive " + + block.x + " " + block.y + " " + block.z);
         }
     });
-})
+});

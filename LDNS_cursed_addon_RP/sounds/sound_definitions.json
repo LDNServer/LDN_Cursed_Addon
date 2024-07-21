@@ -90,6 +90,14 @@
                 {
                     "name": "sounds/ldns/ppyy/ppyy5",
                     "volume": 0.5
+                },
+                {
+                    "name": "sounds/ldns/ppyy/ppyy6",
+                    "volume": 0.8
+                },
+                {
+                    "name": "sounds/ldns/ppyy/ppyy7",
+                    "volume": 0.5
                 }
             ]
         },
@@ -215,6 +223,14 @@
                 },
                 {
                     "name": "sounds/ldns/errormob/errormob5",
+                    "volume": 0.6
+                },
+                {
+                    "name": "sounds/ldns/errormob/errormob6",
+                    "volume": 0.6
+                },
+                {
+                    "name": "sounds/ldns/errormob/errormob7",
                     "volume": 0.6
                 }
             ]
