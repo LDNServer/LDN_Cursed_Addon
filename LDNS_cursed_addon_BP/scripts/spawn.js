@@ -69,7 +69,7 @@ system.runInterval(() => {
         }
         // randが2800~3200の時に謎の音が鳴るように
         else if (rand <= 12000 && rand >= 10000) {
-            v.playSound("player.ldns.random_step_1", { location: { x: v.location.x, y: v.location.y, z: v.location.y }, volume: 0.5 });
+            v.playSound("player.ldns.random_step_1", { location: { x: v.location.x, y: v.location.y, z: v.location.z }, volume: 0.5 });
             v.runCommand("tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_step_1) : ldns.step_1\"}]}");
             v.runCommand("tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_step_1) : default \"}]}");
         }
