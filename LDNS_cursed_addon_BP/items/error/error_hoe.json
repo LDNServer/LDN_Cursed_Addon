@@ -114,7 +114,8 @@
             },
             "minecraft:tags": {
                 "tags": [
-                    "minecraft:is_hoe"
+                    "minecraft:is_hoe",
+                    "minecraft:is_tool"
                 ]
             }
         }

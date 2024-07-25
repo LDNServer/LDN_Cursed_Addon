@@ -106,7 +106,8 @@
             },
             "minecraft:tags": {
                 "tags": [
-                    "minecraft:is_shovel"
+                    "minecraft:is_shovel",
+                    "minecraft:is_tool"
                 ]
             }
         }

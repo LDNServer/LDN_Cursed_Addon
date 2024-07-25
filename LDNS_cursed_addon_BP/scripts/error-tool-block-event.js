@@ -7,7 +7,7 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
         onHitEntity(e) {
             const { attackingEntity, hadEffect, hitEntity, itemStack } = e;
             if (!(attackingEntity instanceof Player)) return;
-            // クリエイティブ時のみ耐久値が減る
+            // クリエイティブ時のみ耐久値が減るのを防ぐ
             if (attackingEntity.getGameMode() !== GameMode.creative) {
                 let item = itemStack.getComponent("durability");
                 item.damage += 1;
@@ -18,7 +18,7 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
         onMineBlock(e) {
             const { block, itemStack, minedBlockPermutation, source } = e;
             if (!(source instanceof Player)) return;
-            // クリエイティブ時のみ耐久値が減る
+            // クリエイティブ時のみ耐久値が減るのを防ぐ
             if (source.getGameMode() !== GameMode.creative) {
                 let item = itemStack.getComponent("durability");
                 item.damage += 1;
@@ -29,10 +29,10 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
         onUseOn(e) {
             const { block, source, itemStack } = e;
             if (!(source instanceof Player)) return;
-            // 音を鳴らす
-            source.playSound("use.wood");
-            // クリエイティブ時のみ耐久値が減る
+            // クリエイティブ時のみ耐久値が減るのを防ぐ
             if (source.getGameMode() !== GameMode.creative && block.hasTag("wood") && block.hasTag("log")) {
+                // 音を鳴らす
+                source.playSound("use.wood");
                 let item = itemStack.getComponent("durability");
                 item.damage += 1;
                 source.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
@@ -40,12 +40,12 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
         }
     });
     // Error鍬の時
-    event.itemComponentRegistry.registerCustomComponent("ldns:error_hoe_c", {
+    event.itemComponentRegistry.registerCustomComponent("ldns:_c", {
         // エンティティを殴ったとき
         onHitEntity(e) {
             const { attackingEntity, hadEffect, hitEntity, itemStack } = e;
             if (!(attackingEntity instanceof Player)) return;
-            // クリエイティブ時のみ耐久値が減る
+            // クリエイティブ時のみ耐久値が減るのを防ぐ
             if (attackingEntity.getGameMode() !== GameMode.creative) {
                 let item = itemStack.getComponent("durability");
                 item.damage += 1;
@@ -56,7 +56,7 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
         onMineBlock(e) {
             const { block, itemStack, minedBlockPermutation, source } = e;
             if (!(source instanceof Player)) return;
-            // クリエイティブ時のみ耐久値が減る
+            // クリエイティブ時のみ耐久値が減るのを防ぐ
             if (source.getGameMode() !== GameMode.creative) {
                 let item = itemStack.getComponent("durability");
                 item.damage += 1;
@@ -67,10 +67,10 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
         onUseOn(e) {
             const { block, blockFace, source, itemStack } = e;
             if (!(source instanceof Player)) return;
-            // 音を鳴らす
-            source.playSound("use.gravel");
-            // クリエイティブ時のみ耐久値が減る
+            // クリエイティブ時のみ耐久値が減るのを防ぐ
             if (source.getGameMode() !== GameMode.creative && block.hasTag("grass") && blockFace == Direction.Up) {
+                // 音を鳴らす
+                source.playSound("use.gravel");
                 let item = itemStack.getComponent("durability");
                 item.damage += 1;
                 source.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
@@ -83,7 +83,7 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
         onHitEntity(e) {
             const { attackingEntity, hadEffect, hitEntity, itemStack } = e;
             if (!(attackingEntity instanceof Player)) return;
-            // クリエイティブ時のみ耐久値が減る
+            // クリエイティブ時のみ耐久値が減るのを防ぐ
             if (attackingEntity.getGameMode() !== GameMode.creative) {
                 let item = itemStack.getComponent("durability");
                 item.damage += 1;
@@ -95,7 +95,7 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
         onMineBlock(e) {
             const { block, itemStack, minedBlockPermutation, source } = e;
             if (!(source instanceof Player)) return;
-            // クリエイティブ時のみ耐久値が減る
+            // クリエイティブ時のみ耐久値が減るのを防ぐ
             if (source.getGameMode() !== GameMode.creative) {
                 let item = itemStack.getComponent("durability");
                 item.damage += 1;
@@ -110,7 +110,7 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
         onHitEntity(e) {
             const { attackingEntity, hadEffect, hitEntity, itemStack } = e;
             if (!(attackingEntity instanceof Player)) return;
-            // クリエイティブ時のみ耐久値が減る
+            // クリエイティブ時のみ耐久値が減るのを防ぐ
             if (attackingEntity.getGameMode() !== GameMode.creative) {
                 let item = itemStack.getComponent("durability");
                 item.damage += 1;
@@ -122,7 +122,7 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
         onMineBlock(e) {
             const { block, itemStack, minedBlockPermutation, source } = e;
             if (!(source instanceof Player)) return;
-            // クリエイティブ時のみ耐久値が減る
+            // クリエイティブ時のみ耐久値が減るのを防ぐ
             if (source.getGameMode() !== GameMode.creative) {
                 let item = itemStack.getComponent("durability");
                 item.damage += 1;
@@ -136,7 +136,7 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
             if (!(source instanceof Player)) return;
             // 音を鳴らす
             source.playSound("use.grass");
-            // クリエイティブ時のみ耐久値が減る
+            // クリエイティブ時のみ耐久値が減るのを防ぐ
             if (source.getGameMode() !== GameMode.creative && block.typeId == "minecraft:grass" && blockFace == Direction.Up) {
                 let item = itemStack.getComponent("durability");
                 item.damage += 1;
@@ -151,7 +151,7 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
         onHitEntity(e) {
             const { attackingEntity, hadEffect, hitEntity, itemStack } = e;
             if (!(attackingEntity instanceof Player)) return;
-            // クリエイティブ時のみ耐久値が減る
+            // クリエイティブ時のみ耐久値が減るのを防ぐ
             if (attackingEntity.getGameMode() !== GameMode.creative) {
                 let item = itemStack.getComponent("durability");
                 item.damage += 1;
@@ -162,7 +162,7 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
         onMineBlock(e) {
             const { block, itemStack, minedBlockPermutation, source } = e;
             if (!(source instanceof Player)) return;
-            // クリエイティブ時のみ耐久値が減る
+            // クリエイティブ時のみ耐久値が減るのを防ぐ
             if (source.getGameMode() !== GameMode.creative) {
                 let item = itemStack.getComponent("durability");
                 item.damage += 1;
@@ -177,7 +177,7 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
         onHitEntity(e) {
             const { attackingEntity, hadEffect, hitEntity, itemStack } = e;
             if (!(attackingEntity instanceof Player)) return;
-            // クリエイティブ時のみ耐久値が減る
+            // クリエイティブ時のみ耐久値が減るのを防ぐ
             if (attackingEntity.getGameMode() !== GameMode.creative) {
                 let item = itemStack.getComponent("durability");
                 item.damage += 1;
@@ -188,7 +188,7 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
         // 右クリックしたとき
         onUse(e) {
             const { itemStack, source } = e;
-            // クリエイティブ時のみ耐久値が減る
+            // クリエイティブ時のみ耐久値が減るのを防ぐ
             if (source.getGameMode() !== GameMode.creative) {
                 let item = itemStack.getComponent("durability");
                 item.damage += 1;

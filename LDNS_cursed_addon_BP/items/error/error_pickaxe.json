@@ -950,7 +950,8 @@
             },
             "minecraft:tags": {
                 "tags": [
-                    "minecraft:is_pickaxe"
+                    "minecraft:is_pickaxe",
+                    "minecraft:is_tool"
                 ]
             }
         }

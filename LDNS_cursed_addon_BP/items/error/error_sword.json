@@ -54,6 +54,12 @@
                         "speed": 7
                     }
                 ]
+            },
+            "minecraft:tags": {
+                "tags": [
+                    "minecraft:is_sword",
+                    "minecraft:is_tool"
+                ]
             }
         }
     }
