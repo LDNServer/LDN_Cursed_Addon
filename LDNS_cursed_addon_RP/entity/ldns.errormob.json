@@ -11,7 +11,7 @@
         "default": "textures/entity/ldns/errormob"
       },
       "geometry": {
-        "default": "geometry.players"
+        "default": "geometry.errormob"
       },
       "spawn_egg": {
         "base_color": "#cc00ff",

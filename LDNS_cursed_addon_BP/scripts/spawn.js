@@ -4,10 +4,10 @@ import { random } from "./util";
 const timezoneOffset = 0;
 
 system.runInterval(() => {
+    // ランダム
+    const rand = random(0, 25600);
     // ワールドのプレイヤーを獲得
     world.getPlayers().forEach((v, i, a) => {
-        // ランダム
-        const rand = random(0, 25600);
         // 時刻獲得
         const d = new Date(Date.now() + ((new Date().getTimezoneOffset() + (timezoneOffset * 60)) * 60 * 1000));
         // randが6の時

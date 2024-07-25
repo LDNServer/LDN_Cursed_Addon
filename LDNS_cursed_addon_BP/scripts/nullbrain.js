@@ -27,14 +27,11 @@ function nullbraindievent(damagingEntity, deadEntity) {
     if (items <= 0) {
         // 値を事前に設定
         const entitylocation = deadEntity.location;
-        const xentity = entitylocation.x;
-        const yentity = entitylocation.y;
-        const zentity = entitylocation.z;
         const dimensions = deadEntity.dimension;
         // randが2以下の時は爆発(1)
         if (rand <= 2) {
             deadEntity.remove();
-            dimensions.createExplosion({ x: xentity, y: yentity, z: zentity }, 1.666);
+            dimensions.createExplosion(entitylocation, 1.666);
         }
         // randが60以上の時は攻撃した自身にエフェクトがつく(2)
         else if (rand >= 60) damagingEntity.addEffect(MinecraftEffectTypes.Weakness, 20 * 13, { amplifier: 255 });
@@ -42,7 +39,7 @@ function nullbraindievent(damagingEntity, deadEntity) {
         else if (rand === 6) {
             damagingEntity.addEffect(MinecraftEffectTypes.Weakness, 20 * 13, { amplifier: 255 });
             deadEntity.remove();
-            dimensions.createExplosion({ x: xentity, y: yentity, z: zentity }, 1.666);
+            dimensions.createExplosion(entitylocation, 1.666);
         }
     }
 }
@@ -63,14 +60,11 @@ function nullbrainhurtevent(damage, damagingEntity, hurtEntity) {
         if (damage <= 4) {
             // 値を事前に設定
             const entitylocation = hurtEntity.location;
-            const xentity = entitylocation.x;
-            const yentity = entitylocation.y;
-            const zentity = entitylocation.z;
             const dimensions = hurtEntity.dimension;
             // randが2以下の時は爆発(1)
             if (rand <= 2) {
                 hurtEntity.remove();
-                dimensions.createExplosion({ x: xentity, y: yentity, z: zentity }, 1.666);
+                dimensions.createExplosion(entitylocation, 1.666);
             }
             // randが60以上の時は攻撃した自身にエフェクトがつく(2)
             else if (rand >= 60) damagingEntity.addEffect(MinecraftEffectTypes.Weakness, 20 * 13, { amplifier: 255 });
@@ -79,7 +73,7 @@ function nullbrainhurtevent(damage, damagingEntity, hurtEntity) {
                 damagingEntity.addEffect(MinecraftEffectTypes.Weakness, 20 * 13, { amplifier: 255 });
                 system.runTimeout(() => {
                     hurtEntity.remove();
-                    dimensions.createExplosion({ x: xentity, y: yentity, z: zentity }, 1.666);
+                    dimensions.createExplosion(entitylocation, 1.666);
                 }, 20 * 13)
             }
         }

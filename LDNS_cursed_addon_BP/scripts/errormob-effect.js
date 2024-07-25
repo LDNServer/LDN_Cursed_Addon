@@ -1,6 +1,5 @@
-import { Player, world } from "@minecraft/server";
+import { Entity, Player, world } from "@minecraft/server";
 import { random } from './util';
-import { MinecraftEffectTypes } from './lib/mojang-effect';
 
 world.afterEvents.entityHitEntity.subscribe((e) => {
     const { damagingEntity, hitEntity } = e;
@@ -12,6 +11,9 @@ world.afterEvents.entityHurt.subscribe((e) => {
     if (hurtEntity.typeId == "ldns:errormob") errorhurt(damageSource.damagingEntity);
 });
 
+/**
+ * @param {Entity} targetPlayer
+ */
 function errordamage(targetPlayer) {
     if (!(targetPlayer instanceof Player)) return;
     const rand = random(0, 80);
@@ -41,6 +43,9 @@ function errordamage(targetPlayer) {
         targetPlayer.applyKnockback(targetPlayer.getViewDirection().x * 5, targetPlayer.getViewDirection().z * 5, 1.5, 1.5)
     }
 }
+/**
+ * @param {Entity} damageSource
+ */
 // エンティティが傷つけられたとき
 function errorhurt(damageSource) {
     if (!(damageSource instanceof Player)) return;
