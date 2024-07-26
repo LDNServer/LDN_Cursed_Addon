@@ -7,10 +7,13 @@ world.afterEvents.entityHurt.subscribe((e) => {
     if (hurtEntity.typeId == "ldns:entity787") entity787hurt(hurtEntity, damageSource.damagingEntity);
 });
 
+/**
+ * @param {Entity} damageSource 
+ * @param {Entity} hurtEntity 
+ */
 // エンティティが傷つけられたとき
 function entity787hurt(hurtEntity, damageSource) {
     if (!(damageSource instanceof Player)) return;
-    if (!(hurtEntity instanceof Entity)) return;
     // ペンダントを持っているときのカウント
     const items = damageSource.runCommand('testfor @s[hasitem={item=ldns:pendant_of_twilight}]').successCount;
     const rand = random(0, 160);
