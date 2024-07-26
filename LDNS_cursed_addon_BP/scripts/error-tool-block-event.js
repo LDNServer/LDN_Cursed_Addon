@@ -40,7 +40,7 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
         }
     });
     // Error鍬の時
-    event.itemComponentRegistry.registerCustomComponent("ldns:_c", {
+    event.itemComponentRegistry.registerCustomComponent("ldns:error_hoe_c", {
         // エンティティを殴ったとき
         onHitEntity(e) {
             const { attackingEntity, hadEffect, hitEntity, itemStack } = e;

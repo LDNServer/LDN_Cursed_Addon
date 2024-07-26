@@ -51,7 +51,6 @@
                 "damage": 4
             },
             "minecraft:behavior.nearest_attackable_target": {
-                "priority": 1,
                 "entity_types": [
                     {
                         "filters": {
@@ -59,17 +58,15 @@
                             "subject": "other",
                             "value": "player"
                         },
-                        "max_dist": 40
+                        "max_dist": 66
                     }
                 ],
-                "must_see": false
+                "must_see": false,
+                "set_persistent": true
             },
             "minecraft:behavior.melee_box_attack": {
-                "priority": 1,
-                "speed_multiplier": 1.6,
-                "cooldown_time": 0.75,
-                "set_persistent": true,
-                "track_target": true
+                "melee_fov": 270,
+                "require_complete_path": false
             },
             "minecraft:behavior.look_at_player": {
                 "priority": 1,

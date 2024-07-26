@@ -53,6 +53,7 @@ function nullbrainhurtevent(damage, damagingEntity, hurtEntity) {
     if (!(damagingEntity instanceof Player)) return;
     // 1/66の確立
     const rand = random(0, 66);
+    const rand2 = random(0, 2666);
     // ペンダントを持っているときは無効
     const items = damagingEntity.runCommand('testfor @s[hasitem={item=ldns:pendant_of_twilight}]').successCount;
     if (items <= 0) {
@@ -77,6 +78,12 @@ function nullbrainhurtevent(damage, damagingEntity, hurtEntity) {
                 }, 20 * 13)
             }
         }
+    }
+    // rand2が8の場合
+    if (rand2 === 8) {
+        // ノイズを出す
+        damagingEntity.playSound("ldns.pp_spawn");
+        damagingEntity.onScreenDisplay.setTitle("PPYYS");
     }
 }
 
