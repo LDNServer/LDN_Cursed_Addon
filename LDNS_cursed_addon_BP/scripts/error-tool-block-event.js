@@ -1,4 +1,4 @@
-import { Direction, EquipmentSlot, GameMode, Player, world } from "@minecraft/server";
+import { Block, Direction, EquipmentSlot, GameMode, Player, system, world } from "@minecraft/server";
 
 world.beforeEvents.worldInitialize.subscribe((event) => {
     // Error斧の時
@@ -25,6 +25,7 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
                 source.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
             }
         },
+        /**
         // ブロック上で右クリックしたとき
         onUseOn(e) {
             const { block, source, itemStack } = e;
@@ -38,6 +39,7 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
                 source.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
             }
         }
+        */
     });
     // Error鍬の時
     event.itemComponentRegistry.registerCustomComponent("ldns:error_hoe_c", {
@@ -63,6 +65,7 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
                 source.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
             }
         },
+        /**
         // ブロック上で右クリックしたとき
         onUseOn(e) {
             const { block, blockFace, source, itemStack } = e;
@@ -76,6 +79,7 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
                 source.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
             }
         }
+        */
     });
     // Errorツルハシの時
     event.itemComponentRegistry.registerCustomComponent("ldns:error_pickaxe_c", {
@@ -130,6 +134,7 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
                 source.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
             }
         },
+        /**
         // ブロック上で右クリックしたとき
         onUseOn(e) {
             const { block, blockFace, source, itemStack } = e;
@@ -144,6 +149,7 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
                 source.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
             }
         }
+        */
     });
     // Error剣の時
     event.itemComponentRegistry.registerCustomComponent("ldns:error_sword_c", {
@@ -240,4 +246,41 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
             dimension.runCommand("summon ldns:entity.fake_stone_explosive " + + block.x + " " + block.y + " " + block.z);
         }
     });
+});
+
+world.afterEvents.playerInteractWithBlock.subscribe((e) => {
+    const { block, blockFace, itemStack, player } = e;
+    if (itemStack?.typeId == "ldns:error_axe") {
+        // 音を鳴らす
+        player.playSound("use.wood");
+        // クリエイティブ時のみ耐久値が減るのを防ぐ
+        if (player.getGameMode() !== GameMode.creative) {
+            let item = itemStack.getComponent("durability");
+            item.damage += 1;
+            // 更新
+            player.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
+        }
+    }
+    if (itemStack?.typeId == "ldns:error_hoe") {
+        // 音を鳴らす
+        player.playSound("use.gravel");
+        // クリエイティブ時のみ耐久値が減るのを防ぐ
+        if (player.getGameMode() !== GameMode.creative) {
+            let item = itemStack.getComponent("durability");
+            item.damage += 1;
+            // 更新
+            player.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
+        }
+    }
+    if (itemStack?.typeId == "ldns:error_shovel") {
+        // 音を鳴らす
+        player.playSound("use.grass");
+        // クリエイティブ時のみ耐久値が減るのを防ぐ
+        if (player.getGameMode() !== GameMode.creative) {
+            let item = itemStack.getComponent("durability");
+            item.damage += 1;
+            // 更新
+            player.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
+        }
+    }
 });
