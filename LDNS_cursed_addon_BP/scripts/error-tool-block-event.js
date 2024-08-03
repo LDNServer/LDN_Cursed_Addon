@@ -7,14 +7,14 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
         onHitEntity(e) {
             const { attackingEntity, hadEffect, hitEntity, itemStack } = e;
             if (!(attackingEntity instanceof Player)) return;
-            // クリエイティブ時のみ耐久値が減るのを防ぐ
+            // アイテム耐久値の関数
             durabilitys(attackingEntity, itemStack);
         },
         // ブロックを壊したとき
         onMineBlock(e) {
             const { block, itemStack, minedBlockPermutation, source } = e;
             if (!(source instanceof Player)) return;
-            // クリエイティブ時のみ耐久値が減るのを防ぐ
+            // アイテム耐久値の関数
             durabilitys(source, itemStack);
         },
         /**
@@ -39,14 +39,14 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
         onHitEntity(e) {
             const { attackingEntity, hadEffect, hitEntity, itemStack } = e;
             if (!(attackingEntity instanceof Player)) return;
-            // クリエイティブ時のみ耐久値が減るのを防ぐ
+            // アイテム耐久値の関数
             durabilitys(attackingEntity, itemStack);
         },
         // ブロックを壊したとき
         onMineBlock(e) {
             const { block, itemStack, minedBlockPermutation, source } = e;
             if (!(source instanceof Player)) return;
-            // クリエイティブ時のみ耐久値が減るのを防ぐ
+            // アイテム耐久値の関数
             durabilitys(source, itemStack);
         },
         /**
@@ -71,14 +71,14 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
         onHitEntity(e) {
             const { attackingEntity, hadEffect, hitEntity, itemStack } = e;
             if (!(attackingEntity instanceof Player)) return;
-            // クリエイティブ時のみ耐久値が減るのを防ぐ
+            // アイテム耐久値の関数
             durabilitys(attackingEntity, itemStack);
         },
         // ブロックを壊したとき
         onMineBlock(e) {
             const { block, itemStack, minedBlockPermutation, source } = e;
             if (!(source instanceof Player)) return;
-            // クリエイティブ時のみ耐久値が減るのを防ぐ
+            // アイテム耐久値の関数
             durabilitys(source, itemStack);
         }
     });
@@ -88,14 +88,14 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
         onHitEntity(e) {
             const { attackingEntity, hadEffect, hitEntity, itemStack } = e;
             if (!(attackingEntity instanceof Player)) return;
-            // クリエイティブ時のみ耐久値が減るのを防ぐ
+            // アイテム耐久値の関数
             durabilitys(attackingEntity, itemStack);
         },
         // ブロックを壊したとき
         onMineBlock(e) {
             const { block, itemStack, minedBlockPermutation, source } = e;
             if (!(source instanceof Player)) return;
-            // クリエイティブ時のみ耐久値が減るのを防ぐ
+            // アイテム耐久値の関数
             durabilitys(source, itemStack);
         },
         /**
@@ -121,13 +121,13 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
         onHitEntity(e) {
             const { attackingEntity, hadEffect, hitEntity, itemStack } = e;
             if (!(attackingEntity instanceof Player)) return;
-            // クリエイティブ時のみ耐久値が減るのを防ぐ
+            // アイテム耐久値の関数
             durabilitys(attackingEntity, itemStack);
         },
         onMineBlock(e) {
             const { block, itemStack, minedBlockPermutation, source } = e;
             if (!(source instanceof Player)) return;
-            // クリエイティブ時のみ耐久値が減るのを防ぐ
+            // アイテム耐久値の関数
             durabilitys(source, itemStack);
         }
     });
@@ -137,17 +137,12 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
         onHitEntity(e) {
             const { attackingEntity, hadEffect, hitEntity, itemStack } = e;
             if (!(attackingEntity instanceof Player)) return;
-            // クリエイティブ時のみ耐久値が減るのを防ぐ
+            // アイテム耐久値の関数
             durabilitys(attackingEntity, itemStack);
         },
         // 右クリックしたとき
         onUse(e) {
             const { itemStack, source } = e;
-            // クリエイティブ時のみ耐久値が減るのを防ぐ
-            if (source.getGameMode() !== GameMode.creative) {
-                let item = itemStack.getComponent("durability");
-                item.damage += 1;
-            }
             source.playSound("fire.ignite");
             source.playSound("mob.witch.throw");
             // 電波動を出す
@@ -157,8 +152,8 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
             projectiles.liquidInertia = 1.15;
             projectiles.gravity = 0.01;
             projectiles?.shoot({ x: source.getViewDirection().x * 2, y: source.getViewDirection().y * 2, z: source.getViewDirection().z * 2 });
-            // 更新
-            source.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
+            // アイテム耐久値の関数
+            durabilitys(source, itemStack);
         }
     });
     // 松明を壊すブロック
@@ -202,19 +197,19 @@ world.afterEvents.playerInteractWithBlock.subscribe((e) => {
     if (itemStack?.typeId == "ldns:error_axe") {
         // 音を鳴らす
         player.playSound("use.wood");
-        // クリエイティブ時のみ耐久値が減るのを防ぐ
+        // アイテム耐久値の関数
         durabilitys(player, itemStack);
     }
     if (itemStack?.typeId == "ldns:error_hoe") {
         // 音を鳴らす
         player.playSound("use.gravel");
-        // クリエイティブ時のみ耐久値が減るのを防ぐ
+        // アイテム耐久値の関数
         durabilitys(player, itemStack);
     }
     if (itemStack?.typeId == "ldns:error_shovel") {
         // 音を鳴らす
         player.playSound("use.grass");
-        // クリエイティブ時のみ耐久値が減るのを防ぐ
+        // アイテム耐久値の関数
         durabilitys(player, itemStack);
     }
 });
@@ -225,17 +220,22 @@ world.afterEvents.playerInteractWithBlock.subscribe((e) => {
  * @param {ItemStack} itemStack 
  */
 function durabilitys(player, itemStack) {
+    // クリエイティブ時のみ耐久値が減るのを防ぐ
     if (player.getGameMode() !== GameMode.creative) {
         let itemdurability = itemStack.getComponent("durability");
+        // 壊れた時
         if (itemdurability.damage >= (itemdurability.maxDurability - 1)) {
             player.playSound("random.break", { pitch: 1, location: player.location, volume: 1 });
             player.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, new ItemStack("minecraft:air", 1));
         }
+        // 通常時
         else {
+            // 耐久力エンチャントがついているとき
             if (itemStack.getComponent("enchantable").hasEnchantment("minecraft:unbreaking")) {
                 let itemunbreakinglevel = itemStack.getComponent("enchantable").getEnchantment("minecraft:unbreaking").level;
                 itemdurability.damage += Number(Math.round(Math.random() * 100) <= itemdurability.getDamageChance(itemunbreakinglevel));
             }
+            // ついていない場合
             else {
                 itemdurability.damage += 1;
             }
