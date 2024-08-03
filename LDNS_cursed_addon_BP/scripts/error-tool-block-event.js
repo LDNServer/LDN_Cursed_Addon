@@ -1,4 +1,4 @@
-import { Block, Direction, EquipmentSlot, GameMode, Player, system, world } from "@minecraft/server";
+import { Block, Direction, EnchantmentType, EquipmentSlot, GameMode, ItemStack, Player, system, world } from "@minecraft/server";
 
 world.beforeEvents.worldInitialize.subscribe((event) => {
     // Error斧の時
@@ -8,22 +8,14 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
             const { attackingEntity, hadEffect, hitEntity, itemStack } = e;
             if (!(attackingEntity instanceof Player)) return;
             // クリエイティブ時のみ耐久値が減るのを防ぐ
-            if (attackingEntity.getGameMode() !== GameMode.creative) {
-                let item = itemStack.getComponent("durability");
-                item.damage += 1;
-                attackingEntity.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
-            }
+            durabilitys(attackingEntity, itemStack);
         },
         // ブロックを壊したとき
         onMineBlock(e) {
             const { block, itemStack, minedBlockPermutation, source } = e;
             if (!(source instanceof Player)) return;
             // クリエイティブ時のみ耐久値が減るのを防ぐ
-            if (source.getGameMode() !== GameMode.creative) {
-                let item = itemStack.getComponent("durability");
-                item.damage += 1;
-                source.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
-            }
+            durabilitys(source, itemStack);
         },
         /**
         // ブロック上で右クリックしたとき
@@ -48,22 +40,14 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
             const { attackingEntity, hadEffect, hitEntity, itemStack } = e;
             if (!(attackingEntity instanceof Player)) return;
             // クリエイティブ時のみ耐久値が減るのを防ぐ
-            if (attackingEntity.getGameMode() !== GameMode.creative) {
-                let item = itemStack.getComponent("durability");
-                item.damage += 1;
-                attackingEntity.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
-            }
+            durabilitys(attackingEntity, itemStack);
         },
         // ブロックを壊したとき
         onMineBlock(e) {
             const { block, itemStack, minedBlockPermutation, source } = e;
             if (!(source instanceof Player)) return;
             // クリエイティブ時のみ耐久値が減るのを防ぐ
-            if (source.getGameMode() !== GameMode.creative) {
-                let item = itemStack.getComponent("durability");
-                item.damage += 1;
-                source.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
-            }
+            durabilitys(source, itemStack);
         },
         /**
         // ブロック上で右クリックしたとき
@@ -88,24 +72,14 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
             const { attackingEntity, hadEffect, hitEntity, itemStack } = e;
             if (!(attackingEntity instanceof Player)) return;
             // クリエイティブ時のみ耐久値が減るのを防ぐ
-            if (attackingEntity.getGameMode() !== GameMode.creative) {
-                let item = itemStack.getComponent("durability");
-                item.damage += 1;
-                // 更新
-                attackingEntity.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
-            }
+            durabilitys(attackingEntity, itemStack);
         },
         // ブロックを壊したとき
         onMineBlock(e) {
             const { block, itemStack, minedBlockPermutation, source } = e;
             if (!(source instanceof Player)) return;
             // クリエイティブ時のみ耐久値が減るのを防ぐ
-            if (source.getGameMode() !== GameMode.creative) {
-                let item = itemStack.getComponent("durability");
-                item.damage += 1;
-                // 更新
-                source.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
-            }
+            durabilitys(source, itemStack);
         }
     });
     // Errorシャベルの時
@@ -115,24 +89,14 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
             const { attackingEntity, hadEffect, hitEntity, itemStack } = e;
             if (!(attackingEntity instanceof Player)) return;
             // クリエイティブ時のみ耐久値が減るのを防ぐ
-            if (attackingEntity.getGameMode() !== GameMode.creative) {
-                let item = itemStack.getComponent("durability");
-                item.damage += 1;
-                // 更新
-                attackingEntity.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
-            }
+            durabilitys(attackingEntity, itemStack);
         },
         // ブロックを壊したとき
         onMineBlock(e) {
             const { block, itemStack, minedBlockPermutation, source } = e;
             if (!(source instanceof Player)) return;
             // クリエイティブ時のみ耐久値が減るのを防ぐ
-            if (source.getGameMode() !== GameMode.creative) {
-                let item = itemStack.getComponent("durability");
-                item.damage += 1;
-                // 更新
-                source.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
-            }
+            durabilitys(source, itemStack);
         },
         /**
         // ブロック上で右クリックしたとき
@@ -158,23 +122,13 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
             const { attackingEntity, hadEffect, hitEntity, itemStack } = e;
             if (!(attackingEntity instanceof Player)) return;
             // クリエイティブ時のみ耐久値が減るのを防ぐ
-            if (attackingEntity.getGameMode() !== GameMode.creative) {
-                let item = itemStack.getComponent("durability");
-                item.damage += 1;
-                // 更新
-                attackingEntity.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
-            }
+            durabilitys(attackingEntity, itemStack);
         },
         onMineBlock(e) {
             const { block, itemStack, minedBlockPermutation, source } = e;
             if (!(source instanceof Player)) return;
             // クリエイティブ時のみ耐久値が減るのを防ぐ
-            if (source.getGameMode() !== GameMode.creative) {
-                let item = itemStack.getComponent("durability");
-                item.damage += 1;
-                // 更新
-                source.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
-            }
+            durabilitys(source, itemStack);
         }
     });
     // Entity787の鎌の時
@@ -184,12 +138,7 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
             const { attackingEntity, hadEffect, hitEntity, itemStack } = e;
             if (!(attackingEntity instanceof Player)) return;
             // クリエイティブ時のみ耐久値が減るのを防ぐ
-            if (attackingEntity.getGameMode() !== GameMode.creative) {
-                let item = itemStack.getComponent("durability");
-                item.damage += 1;
-                // 更新
-                attackingEntity.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
-            }
+            durabilitys(attackingEntity, itemStack);
         },
         // 右クリックしたとき
         onUse(e) {
@@ -254,33 +203,44 @@ world.afterEvents.playerInteractWithBlock.subscribe((e) => {
         // 音を鳴らす
         player.playSound("use.wood");
         // クリエイティブ時のみ耐久値が減るのを防ぐ
-        if (player.getGameMode() !== GameMode.creative) {
-            let item = itemStack.getComponent("durability");
-            item.damage += 1;
-            // 更新
-            player.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
-        }
+        durabilitys(player, itemStack);
     }
     if (itemStack?.typeId == "ldns:error_hoe") {
         // 音を鳴らす
         player.playSound("use.gravel");
         // クリエイティブ時のみ耐久値が減るのを防ぐ
-        if (player.getGameMode() !== GameMode.creative) {
-            let item = itemStack.getComponent("durability");
-            item.damage += 1;
-            // 更新
-            player.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
-        }
+        durabilitys(player, itemStack);
     }
     if (itemStack?.typeId == "ldns:error_shovel") {
         // 音を鳴らす
         player.playSound("use.grass");
         // クリエイティブ時のみ耐久値が減るのを防ぐ
-        if (player.getGameMode() !== GameMode.creative) {
-            let item = itemStack.getComponent("durability");
-            item.damage += 1;
+        durabilitys(player, itemStack);
+    }
+});
+
+/**
+ * 
+ * @param {Player} player 
+ * @param {ItemStack} itemStack 
+ */
+function durabilitys(player, itemStack) {
+    if (player.getGameMode() !== GameMode.creative) {
+        let itemdurability = itemStack.getComponent("durability");
+        if (itemdurability.damage >= (itemdurability.maxDurability - 1)) {
+            player.playSound("random.break", { pitch: 1, location: player.location, volume: 1 });
+            player.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, new ItemStack("minecraft:air", 1));
+        }
+        else {
+            if (itemStack.getComponent("enchantable").hasEnchantment("minecraft:unbreaking")) {
+                let itemunbreakinglevel = itemStack.getComponent("enchantable").getEnchantment("minecraft:unbreaking").level;
+                itemdurability.damage += Number(Math.round(Math.random() * 100) <= itemdurability.getDamageChance(itemunbreakinglevel));
+            }
+            else {
+                itemdurability.damage += 1;
+            }
             // 更新
             player.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
         }
     }
-});
+}
