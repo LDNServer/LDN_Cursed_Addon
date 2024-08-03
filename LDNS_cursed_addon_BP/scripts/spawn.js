@@ -17,16 +17,16 @@ system.runInterval(() => {
             // UTC 12~24時の時にPPが出る
             if (d.getHours() <= 24 && d.getHours() >= 12) {
                 world.getDimension(v.dimension.id).runCommand("tellraw @a {\"rawtext\":[{\"text\":\"If the hand §oholding§r the leg §3trembles§r, cut §lthe leg off.§r§§\"}]}");
-                world.playSound("ldns.pp_spawn", { x: v.location.x + (v.getViewDirection().x * 2), y: v.location.y, z: v.location.z + (v.getViewDirection().z * 2) });
-                world.playSound("ldns.ppyy_spawn", { x: v.location.x + (v.getViewDirection().x * 2), y: v.location.y, z: v.location.z + (v.getViewDirection().z * 2) });
-                world.getDimension(v.dimension.id).spawnEntity("ldns:pp", { x: v.location.x + (v.getViewDirection().x * 2), y: v.location.y, z: v.location.z + (v.getViewDirection().z * 2) });
+                world.playSound("ldns.pp_spawn", { x: v.location.x, y: v.location.y, z: v.location.z });
+                world.playSound("ldns.ppyy_spawn", { x: v.location.x, y: v.location.y, z: v.location.z });
+                world.getDimension(v.dimension.id).spawnEntity("ldns:pp", { x: v.location.x, y: v.location.y, z: v.location.z });
             }
             // UTC 12~24時の時にYYが出る
             else if (d.getHours() <= 12 && d.getHours() >= 0) {
                 world.getDimension(v.dimension.id).runCommand("tellraw @a {\"rawtext\":[{\"text\":\"I'm on your §lside§r, so I'll keep§l§o watching§r until that §6blood dries§r.\"}]}");
-                world.playSound("ldns.yy_spawn", { x: v.location.x + (v.getViewDirection().x * 2), y: v.location.y, z: v.location.z + (v.getViewDirection().z * 2) });
-                world.playSound("ldns.ppyy_spawn", { x: v.location.x + (v.getViewDirection().x * 2), y: v.location.y, z: v.location.z + (v.getViewDirection().z * 2) });
-                world.getDimension(v.dimension.id).spawnEntity("ldns:yy", { x: v.location.x + (v.getViewDirection().x * 2), y: v.location.y, z: v.location.z + (v.getViewDirection().z * 2) });
+                world.playSound("ldns.yy_spawn", { x: v.location.x, y: v.location.y, z: v.location.z });
+                world.playSound("ldns.ppyy_spawn", { x: v.location.x, y: v.location.y, z: v.location.z });
+                world.getDimension(v.dimension.id).spawnEntity("ldns:yy", { x: v.location.x, y: v.location.y, z: v.location.z });
             }
         }
         // randが68<=rand<=79の時に謎の文字が出てくる
@@ -56,11 +56,11 @@ system.runInterval(() => {
         }
         // randが666~676の時に無職の村人が出てくる
         else if (rand <= 1500 && rand >= 1000) {
-            world.getDimension(v.dimension.id).spawnEntity("ldns:attacker_nitwit_villager", { x: v.location.x + (v.getViewDirection().x * 2), y: v.location.y, z: v.location.z + (v.getViewDirection().z * 2) });
+            world.getDimension(v.dimension.id).spawnEntity("ldns:attacker_nitwit_villager", { x: v.location.x, y: v.location.y, z: v.location.z });
         }
         // randが675~725の時に謎のプレイヤーが出てくる
         else if (rand <= 2500 && rand >= 2000) {
-            world.getDimension(v.dimension.id).spawnEntity("ldns:mysterious_players", { x: v.location.x + (v.getViewDirection().x * 2), y: v.location.y, z: v.location.z + (v.getViewDirection().z * 2) });
+            world.getDimension(v.dimension.id).spawnEntity("ldns:mysterious_players", { x: v.location.x, y: v.location.y, z: v.location.z });
         }
         // randが2500~2666の時にローテーション
         else if (rand2 <= 8500 && rand2 >= 8000) {
