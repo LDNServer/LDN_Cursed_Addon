@@ -15,7 +15,7 @@ import './spawn';
 import './errormob-effect';
 import './entity787';
 import './ppyyeffect';
-import './boss_dr_naba'
+import './boss_dr_naba';
 
 const timezoneOffset = 0;
 
@@ -27,4 +27,4 @@ system.runInterval(() => {
   systemClock.setScore('day', d.getDate());
   systemClock.setScore('hour', d.getHours());
   systemClock.setScore('minute', d.getMinutes());
-}, 20*60);
+}, 20 * 60);
