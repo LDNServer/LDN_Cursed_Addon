@@ -246,16 +246,37 @@
          "ldns:entity787": {
             "events": {
                "ambient": {
-                  "pitch": [1.8, 2.4],
+                  "pitch": [
+                     1.8,
+                     2.4
+                  ],
                   "sound": "ldns.entity787_ambient"
                },
                "death": "ldns.entity787_kill"
             },
-            "pitch":[
+            "pitch": [
                0.80,
                1.20
             ],
             "volume": 0.5
+         },
+         "ldns:errormob": {
+            "events": {
+               "ambient": {
+                  "pitch": [
+                     0.8,
+                     2.0
+                  ],
+                  "sound": "ldns.errormob"
+               },
+               "hurt": "ldns.errormob",
+               "death": "ldns.errormob"
+            },
+            "pitch": [
+               0.80,
+               1.20
+            ],
+            "volume": 1.0
          }
       }
    }

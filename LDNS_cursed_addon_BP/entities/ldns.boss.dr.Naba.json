@@ -50,14 +50,14 @@
                 }
             },
             "shoot_small_fireball": {
-              "minecraft:shooter": {
-                  "def": "minecraft:small_fireball"
-              }
+                "minecraft:shooter": {
+                    "def": "minecraft:small_fireball"
+                }
             },
-            "shoot_bomb_skull":{
-              "minecraft:shooter": {
-                  "def": "ldns:boss.bomb"
-              }
+            "shoot_bomb_skull": {
+                "minecraft:shooter": {
+                    "def": "ldns:boss.bomb"
+                }
             },
             "sonic_boom": {
                 "minecraft:behavior.sonic_boom": {
@@ -76,42 +76,40 @@
                     "attack_sound": "sonic_boom"
                 }
             },
-            "knockback_roar":{
-              "minecraft:behavior.knockback_roar": {
-                  "priority": 0,
-                  "duration": 1,
-                  "attack_time": 0.5,
-                  "knockback_damage": 4,
-                  "knockback_horizontal_strength": 5,
-                  "knockback_vertical_strength": 5,
-                  "knockback_range": 6,
-                  "cooldown_time": 0,
-                  "on_roar_end": {
-                      "event": "ldns_end_roar"
-                  }
-               }
+            "knockback_roar": {
+                "minecraft:behavior.knockback_roar": {
+                    "priority": 0,
+                    "duration": 1,
+                    "attack_time": 0.5,
+                    "knockback_damage": 4,
+                    "knockback_horizontal_strength": 5,
+                    "knockback_vertical_strength": 5,
+                    "knockback_range": 6,
+                    "cooldown_time": 0,
+                    "on_roar_end": {
+                        "event": "ldns_end_roar"
+                    }
+                }
             },
-            "spell_strength":{
-              "minecraft:spell_effects": {
-                  "add_effects": [
-                      {
-                          "effect": "strength",
-                          "duration": 8,
-                          "amplifier": 2,
-                          "visible": true
-                      },
-                      {
-                        "effect": "regeneration",
-                        "duration": 8,
-                        "amplifier": 2,
-                        "visible": true
-                      }
-                  ]
-               }
+            "spell_strength": {
+                "minecraft:spell_effects": {
+                    "add_effects": [
+                        {
+                            "effect": "strength",
+                            "duration": 8,
+                            "amplifier": 2,
+                            "visible": true
+                        },
+                        {
+                            "effect": "regeneration",
+                            "duration": 8,
+                            "amplifier": 2,
+                            "visible": true
+                        }
+                    ]
+                }
             }
         },
-
-
         "components": {
             "minecraft:health": {
                 "value": 200,
@@ -132,7 +130,7 @@
                 "max": 64
             },
             "minecraft:movement": {
-              "value": 0
+                "value": 0
             },
             "minecraft:teleport": {
                 "random_teleports": false,
@@ -148,7 +146,6 @@
                 "light_teleport_chance": 0.03,
                 "dark_teleport_chance": 0.03
             },
-
             "minecraft:behavior.nearest_attackable_target": {
                 "priority": 1,
                 "must_see": false,
@@ -170,9 +167,9 @@
                                     "value": "irongolem"
                                 },
                                 {
-                                  "test": "is_family",
-                                  "subject": "other",
-                                  "value": "warden"
+                                    "test": "is_family",
+                                    "subject": "other",
+                                    "value": "warden"
                                 }
                             ]
                         },
@@ -180,20 +177,21 @@
                     }
                 ]
             },
-
             "minecraft:behavior.hurt_by_target": {
                 "priority": 3,
                 "entity_types": {
-                  "filters": {
-                      "all_of": [
-                        { "test" :  "is_family", "subject" : "other", "operator": "!=", "value" :  "ldns_boss"}
-                      ]
-                  }
+                    "filters": {
+                        "all_of": [
+                            {
+                                "test": "is_family",
+                                "subject": "other",
+                                "operator": "!=",
+                                "value": "ldns_boss"
+                            }
+                        ]
+                    }
                 }
             },
-
-
-
             "minecraft:environment_sensor": {
                 "triggers": [
                     {
@@ -214,66 +212,66 @@
                 }
             },
             "minecraft:target_nearby_sensor": {
-              "inside_range": 1,
-              "outside_range": 1,
-              "must_see":  true,
-              "on_inside_range": {
-                "event": "switch_to_melee",
-                "target": "self"
-              },
-              "on_outside_range": {
-                "event": "switch_to_ranged",
-                "target": "self"
-              }
+                "inside_range": 1,
+                "outside_range": 1,
+                "must_see": true,
+                "on_inside_range": {
+                    "event": "switch_to_melee",
+                    "target": "self"
+                },
+                "on_outside_range": {
+                    "event": "switch_to_ranged",
+                    "target": "self"
+                }
             },
             "minecraft:damage_sensor": {
                 "triggers": [
-                  {
-                    "on_damage": {
-                        "filters": {
-                            "test": "is_family",
-                            "subject": "other",
-                            "operator": "!=",
-                            "value": "player"
-                        }
-                    },
-                    "damage_multiplier": 0.1
-                 },
-                 {
-                      "on_damage": {
-                         "filters": {
-                                    "all_of": [
-                                        {
-                                            "test": "is_family",
-                                            "subject": "other",
-                                            "value": "ldns_boss"
-                                        }
-                                    ]
-                                }
-                            },
-                            "deals_damage": false
+                    {
+                        "on_damage": {
+                            "filters": {
+                                "test": "is_family",
+                                "subject": "other",
+                                "operator": "!=",
+                                "value": "player"
+                            }
+                        },
+                        "damage_multiplier": 0.1
                     },
                     {
-                         "on_damage": {
+                        "on_damage": {
                             "filters": {
-                                       "all_of": [
-                                           {
-                                               "test": "is_family",
-                                               "subject": "other",
-                                               "value": "player"
-                                           },
-                                           {
-                                              "test": "has_damage",
-                                             "subject": "self",
-                                             "operator": "==",
-                                             "value": "attack"
-                                          }
-                                       ]
-                                   }
-                               },
-                             "damage_multiplier": 0.5
-                       }
-                  ]
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "ldns_boss"
+                                    }
+                                ]
+                            }
+                        },
+                        "deals_damage": false
+                    },
+                    {
+                        "on_damage": {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "player"
+                                    },
+                                    {
+                                        "test": "has_damage",
+                                        "subject": "self",
+                                        "operator": "==",
+                                        "value": "attack"
+                                    }
+                                ]
+                            }
+                        },
+                        "damage_multiplier": 0.5
+                    }
+                ]
             },
             "minecraft:entity_sensor": {
                 "sensor_range": 8,
@@ -300,18 +298,13 @@
                 },
                 "event": "stronger"
             },
-
-
-
-
             "minecraft:boss": {
                 "should_darken_sky": true,
-                "name":"Dr.Naba",
+                "name": "Dr.Naba",
                 "hud_range": 55
             },
-
             "minecraft:experience_reward": {
-              "on_death": "50"
+                "on_death": "50"
             },
             "minecraft:persistent": {},
             "minecraft:is_hidden_when_invisible": {},
@@ -366,119 +359,128 @@
         },
         "events": {
             "minecraft:entity_spawned": {
-              "add": {
-                  "component_groups": [
-                      "ranged_mode","sonic_boom","knockback_roar","shoot_small_fireball"
-                  ]
-              }
+                "add": {
+                    "component_groups": [
+                        "ranged_mode",
+                        "sonic_boom",
+                        "knockback_roar",
+                        "shoot_small_fireball"
+                    ]
+                }
             },
-            "switch_to_melee":{
-              "add": {
-                  "component_groups": [
-                      "knockback_roar","melee_mode"
-                  ]
-              },
-              "remove": {
-                  "component_groups": [
-                      "ranged_mode","ldns_sensor"
-                  ]
-              }
+            "switch_to_melee": {
+                "add": {
+                    "component_groups": [
+                        "knockback_roar",
+                        "melee_mode"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "ranged_mode",
+                        "ldns_sensor"
+                    ]
+                }
             },
             "switch_to_ranged": {
-              "add": {
-                  "component_groups": [
-                      "ranged_mode"
-                  ]
-              },
-              "remove": {
-                  "component_groups": [
-                      "melee_mode","ldns_sensor","spell_strength"
-                  ]
-              }
+                "add": {
+                    "component_groups": [
+                        "ranged_mode"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "melee_mode",
+                        "ldns_sensor",
+                        "spell_strength"
+                    ]
+                }
             },
-            "ldns_start_roar":{
-            "add": {
-                "component_groups": [
-                    "knockback_roar"
-                ]
-              }
+            "ldns_start_roar": {
+                "add": {
+                    "component_groups": [
+                        "knockback_roar"
+                    ]
+                }
             },
-            "ldns_end_roar":{
-              "remove": {
-                  "component_groups": [
-                      "knockback_roar"
-                  ]
-               }
+            "ldns_end_roar": {
+                "remove": {
+                    "component_groups": [
+                        "knockback_roar"
+                    ]
+                }
             },
-            "stronger":{
-              "add": {
-                  "component_groups": [
-                      "spell_strength"
-                  ]
-               }
+            "stronger": {
+                "add": {
+                    "component_groups": [
+                        "spell_strength"
+                    ]
+                }
             },
             "remove_effect": {
-              "remove": {
-                  "component_groups": [
-                      "spell_strength"
-                  ]
-               }
+                "remove": {
+                    "component_groups": [
+                        "spell_strength"
+                    ]
+                }
             },
-            "select_shooter":{
-              "randomize": [
-                  {
-                      "weight": 20,
-                      "add": {
-                          "component_groups": [
-                              "shoot_small_fireball"
-                          ]
-                      },
-                      "remove": {
-                          "component_groups": [
-                              "shoot_bomb_skull"
-                          ]
-                      }
-                  },
-                  {
-                      "weight": 20,
-                      "add": {
-                          "component_groups": [
-                              "shoot_small_fireball","knockback_roar"
-                          ]
-                      },
-                      "remove": {
-                          "component_groups": [
-                              "shoot_bomb_skull"
-                          ]
-                      }
-                  },
-                  {
-                      "weight": 10,
-                      "add": {
-                          "component_groups": [
-                              "shoot_bomb_skull"
-                          ]
-                      },
-                      "remove": {
-                          "component_groups": [
-                              "shoot_small_fireball"
-                          ]
-                      }
-                  },
-                  {
-                      "weight": 10,
-                      "add": {
-                          "component_groups": [
-                              "shoot_bomb_skull","knockback_roar"
-                          ]
-                      },
-                      "remove": {
-                          "component_groups": [
-                              "shoot_small_fireball"
-                          ]
-                      }
-                  }
-              ]
+            "select_shooter": {
+                "randomize": [
+                    {
+                        "weight": 20,
+                        "add": {
+                            "component_groups": [
+                                "shoot_small_fireball"
+                            ]
+                        },
+                        "remove": {
+                            "component_groups": [
+                                "shoot_bomb_skull"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 20,
+                        "add": {
+                            "component_groups": [
+                                "shoot_small_fireball",
+                                "knockback_roar"
+                            ]
+                        },
+                        "remove": {
+                            "component_groups": [
+                                "shoot_bomb_skull"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 10,
+                        "add": {
+                            "component_groups": [
+                                "shoot_bomb_skull"
+                            ]
+                        },
+                        "remove": {
+                            "component_groups": [
+                                "shoot_small_fireball"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 10,
+                        "add": {
+                            "component_groups": [
+                                "shoot_bomb_skull",
+                                "knockback_roar"
+                            ]
+                        },
+                        "remove": {
+                            "component_groups": [
+                                "shoot_small_fireball"
+                            ]
+                        }
+                    }
+                ]
             }
         }
     }

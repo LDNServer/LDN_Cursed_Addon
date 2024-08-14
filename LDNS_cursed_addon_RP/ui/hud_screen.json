@@ -1,0 +1,771 @@
+{
+  "namespace": "hud",
+  "hud_title_error_screens1": {
+    "layer": 100,
+    "$hud_string": "Error1",
+    "type": "image",
+    "size": [
+      "250%",
+      "250%"
+    ],
+    "texture": "textures/ui/ldns/errorscreen/errorscreen1",
+    "anims": [
+      "@hud.anim_common_wait"
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#hud_title_text_string - $hud_string) = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "hud_title_error_screens1_factory": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "hud_title_error_screens1@hud.hud_title_error_screens1"
+      }
+    }
+  },
+  "hud_title_error_screens2": {
+    "layer": 100,
+    "$hud_string": "Error2",
+    "type": "image",
+    "size": [
+      "250%",
+      "250%"
+    ],
+    "texture": "textures/ui/ldns/errorscreen/errorscreen2",
+    "anims": [
+      "@hud.anim_common_wait"
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#hud_title_text_string - $hud_string) = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "hud_title_error_screens2_factory": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "hud_title_error_screens2@hud.hud_title_error_screens2"
+      }
+    }
+  },
+  "hud_title_cursed_screens1": {
+    "layer": 100,
+    "$hud_string": "Cursed1",
+    "type": "image",
+    "size": [
+      "250%",
+      "250%"
+    ],
+    "texture": "textures/ui/ldns/errorscreen/cursed1",
+    "anims": [
+      "@hud.anim_common_wait"
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#hud_title_text_string - $hud_string) = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "hud_title_cursed_screens1_factory": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "hud_title_cursed_screens1@hud.hud_title_cursed_screens1"
+      }
+    }
+  },
+  "hud_title_cursed_screens2": {
+    "layer": 100,
+    "$hud_string": "Cursed2",
+    "type": "image",
+    "size": [
+      "250%",
+      "250%"
+    ],
+    "texture": "textures/ui/ldns/errorscreen/cursed2",
+    "anims": [
+      "@hud.anim_common_wait"
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#hud_title_text_string - $hud_string) = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "hud_title_cursed_screens2_factory": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "hud_title_cursed_screens2@hud.hud_title_cursed_screens2"
+      }
+    }
+  },
+  "hud_title_error_screens1_noisy": {
+    "layer": 100,
+    "$hud_string": "Error1Noisy",
+    "type": "image",
+    "size": [
+      "250%",
+      "250%"
+    ],
+    "texture": "textures/ui/ldns/errorscreen/errorscreen1",
+    "anims": [
+      "@hud.anim_common_wait"
+    ],
+    "controls": [
+      {
+        "push_img": {
+          "layer": 120,
+          "type": "image",
+          "size": [
+            "80%",
+            "80%"
+          ],
+          "texture": "textures/ui/ldns/ppyyanim",
+          "uv_size": [
+            150,
+            150
+          ],
+          "uv": "@hud.anim_ppyy_screen"
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#hud_title_text_string - $hud_string) = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "hud_title_error_screens1_noisy_factory": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "hud_title_error_screens1_noisy@hud.hud_title_error_screens1_noisy"
+      }
+    }
+  },
+  "hud_title_error_screens2_noisy": {
+    "layer": 100,
+    "$hud_string": "Error2Noisy",
+    "type": "image",
+    "size": [
+      "250%",
+      "250%"
+    ],
+    "texture": "textures/ui/ldns/errorscreen/errorscreen2",
+    "anims": [
+      "@hud.anim_common_wait"
+    ],
+    "controls": [
+      {
+        "push_img": {
+          "layer": 120,
+          "type": "image",
+          "size": [
+            "80%",
+            "80%"
+          ],
+          "texture": "textures/ui/ldns/ppyyanim",
+          "uv_size": [
+            150,
+            150
+          ],
+          "uv": "@hud.anim_ppyy_screen"
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#hud_title_text_string - $hud_string) = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "hud_title_error_screens2_noisy_factory": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "hud_title_error_screens2_noisy@hud.hud_title_error_screens2_noisy"
+      }
+    }
+  },
+  "hud_title_cursed_screens1_noisy": {
+    "layer": 100,
+    "$hud_string": "Cursed1Noisy",
+    "type": "image",
+    "size": [
+      "250%",
+      "250%"
+    ],
+    "texture": "textures/ui/ldns/errorscreen/cursed1",
+    "anims": [
+      "@hud.anim_common_wait"
+    ],
+    "controls": [
+      {
+        "push_img": {
+          "layer": 120,
+          "type": "image",
+          "size": [
+            "80%",
+            "80%"
+          ],
+          "texture": "textures/ui/ldns/ppyyanim",
+          "uv_size": [
+            150,
+            150
+          ],
+          "uv": "@hud.anim_ppyy_screen"
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#hud_title_text_string - $hud_string) = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "hud_title_cursed_screens1_noisy_factory": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "hud_title_cursed_screens1_noisy@hud.hud_title_cursed_screens1_noisy"
+      }
+    }
+  },
+  "hud_title_cursed_screens2_noisy": {
+    "layer": 100,
+    "$hud_string": "Cursed2Noisy",
+    "type": "image",
+    "size": [
+      "250%",
+      "250%"
+    ],
+    "texture": "textures/ui/ldns/errorscreen/cursed2",
+    "anims": [
+      "@hud.anim_common_wait"
+    ],
+    "controls": [
+      {
+        "push_img": {
+          "layer": 120,
+          "type": "image",
+          "size": [
+            "80%",
+            "80%"
+          ],
+          "texture": "textures/ui/ldns/ppyyanim",
+          "uv_size": [
+            150,
+            150
+          ],
+          "uv": "@hud.anim_ppyy_screen"
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#hud_title_text_string - $hud_string) = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "hud_title_cursed_screens2_noisy_factory": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "hud_title_cursed_screens2_noisy@hud.hud_title_cursed_screens2_noisy"
+      }
+    }
+  },
+  "hud_title_error_screen": {
+    "layer": 100,
+    "$hud_string": "繧ｨ繝ｩ繝ｼ",
+    "type": "image",
+    "size": [
+      "500%",
+      "500%"
+    ],
+    "texture": "textures/ui/ldns/errorblue",
+    "anims": [
+      "@hud.anim_common_wait"
+    ],
+    "controls": [
+      {
+        "main_img": {
+          "layer": 120,
+          "type": "image",
+          "size": [
+            "20%",
+            "20%"
+          ],
+          "texture": "textures/ui/ldns/error_the_error"
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#hud_title_text_string - $hud_string) = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "hud_title_error_screen_factory": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "hud_title_error_screen@hud.hud_title_error_screen"
+      }
+    }
+  },
+  "hud_title_naba1_screen": {
+    "layer": 100,
+    "type": "image",
+    "size": "fill",
+    "texture": "textures/ui/ldns/naba/nabas1",
+    "anims": [
+      "@hud.anim_common_wait"
+    ],
+    "controls": [
+      {
+        "push_img": {
+          "layer": 120,
+          "type": "image",
+          "size": [
+            "200%",
+            "200%"
+          ],
+          "texture": "textures/ui/ldns/ppyyanim",
+          "uv_size": [
+            150,
+            150
+          ],
+          "uv": "@hud.anim_ppyy_screen"
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#hud_title_text_string - 'nabas1') = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "hud_title_naba2_screen": {
+    "layer": 100,
+    "type": "image",
+    "size": "fill",
+    "texture": "textures/ui/ldns/naba/nabas2",
+    "anims": [
+      "@hud.anim_common_wait"
+    ],
+    "controls": [
+      {
+        "push_img": {
+          "layer": 120,
+          "type": "image",
+          "size": [
+            "200%",
+            "200%"
+          ],
+          "texture": "textures/ui/ldns/ppyyanim",
+          "uv_size": [
+            150,
+            150
+          ],
+          "uv": "@hud.anim_ppyy_screen"
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#hud_title_text_string - 'nabas2') = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "hud_title_naba3_screen": {
+    "layer": 100,
+    "type": "image",
+    "size": "fill",
+    "texture": "textures/ui/ldns/naba/nabas3",
+    "anims": [
+      "@hud.anim_common_wait"
+    ],
+    "controls": [
+      {
+        "push_img": {
+          "layer": 120,
+          "type": "image",
+          "size": [
+            "200%",
+            "200%"
+          ],
+          "texture": "textures/ui/ldns/ppyyanim",
+          "uv_size": [
+            150,
+            150
+          ],
+          "uv": "@hud.anim_ppyy_screen"
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#hud_title_text_string - 'nabas3') = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "hud_title_naba1_screen_factory": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "hud_title_naba1_screen@hud.hud_title_naba1_screen"
+      }
+    }
+  },
+  "hud_title_naba2_screen_factory": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "hud_title_naba2_screen@hud.hud_title_naba2_screen"
+      }
+    }
+  },
+  "hud_title_naba3_screen_factory": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "hud_title_naba3_screen@hud.hud_title_naba3_screen"
+      }
+    }
+  },
+  "hud_title_ppyy_screen": {
+    "layer": 100,
+    "$hud_ppyy_string": "PPYYS",
+    "type": "image",
+    "size": [
+      "200%",
+      "200%"
+    ],
+    "texture": "textures/ui/ldns/ppyyanim",
+    "uv_size": [
+      150,
+      150
+    ],
+    "uv": "@hud.anim_ppyy_screen",
+    "anims": [
+      "@hud.anim_common_wait"
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#hud_title_text_string - $hud_ppyy_string) = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "anim_ppyy_screen": {
+    "anim_type": "flip_book",
+    "initial_uv": [
+      0,
+      0
+    ],
+    "frame_count": 10,
+    "frame_step": 60,
+    "fps": 30
+  },
+  "hud_title_ppyy_screen_factory": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "hud_title_ppyy_screen@hud.hud_title_ppyy_screen"
+      }
+    }
+  },
+  "root_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "hud_title_error_screens1_factory@hud.hud_title_error_screens1_factory": {}
+          },
+          {
+            "hud_title_error_screens2_factory@hud.hud_title_error_screens2_factory": {}
+          },
+          {
+            "hud_title_cursed_screens1_factory@hud.hud_title_cursed_screens1_factory": {}
+          },
+          {
+            "hud_title_cursed_screens2_factory@hud.hud_title_cursed_screens2_factory": {}
+          },
+          {
+            "hud_title_error_screens1_noisy_factory@hud.hud_title_error_screens1_noisy_factory": {}
+          },
+          {
+            "hud_title_error_screens2_noisy_factory@hud.hud_title_error_screens2_noisy_factory": {}
+          },
+          {
+            "hud_title_cursed_screens1_noisy_factory@hud.hud_title_cursed_screens1_noisy_factory": {}
+          },
+          {
+            "hud_title_cursed_screens2_noisy_factory@hud.hud_title_cursed_screens2_noisy_factory": {}
+          },
+          {
+            "hud_title_error_screen_factory@hud.hud_title_error_screen_factory": {}
+          },
+          {
+            "hud_title_ppyy_screen_factory@hud.hud_title_ppyy_screen_factory": {}
+          },
+          {
+            "hud_title_naba1screen_factory@hud.hud_title_naba1_screen_factory": {}
+          },
+          {
+            "hud_title_naba2screen_factory@hud.hud_title_naba2_screen_factory": {}
+          },
+          {
+            "hud_title_naba3screen_factory@hud.hud_title_naba3_screen_factory": {}
+          }
+        ]
+      }
+    ]
+  },
+  "anim_common_wait": {
+    "anim_type": "wait",
+    "duration": 4,
+    "destroy_at_end": "hud_title_text",
+    "end_event": "hud_title_text_complete"
+  },
+  "hud_title_text": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "offset": [
+      0,
+      -19
+    ],
+    "layer": 1,
+    "alpha": "@hud.anim_title_text_alpha_in",
+    "propagate_alpha": true,
+    "controls": [
+      {
+        "title_frame": {
+          "type": "panel",
+          "size": [
+            "100%",
+            "100%cm"
+          ],
+          "controls": [
+            {
+              "title_background": {
+                "type": "image",
+                "size": [
+                  "100%sm + 30px",
+                  "100%sm + 6px"
+                ],
+                "texture": "textures/ui/hud_tip_text_background",
+                "alpha": "@hud.anim_title_background_alpha_in"
+              }
+            },
+            {
+              "title": {
+                "type": "label",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "color": "$title_command_text_color",
+                "text": "#text",
+                "layer": 31,
+                "localize": false,
+                "font_size": "extra_large",
+                "variables": [
+                  {
+                    "requires": "(not $title_shadow)",
+                    "$show_shadow": false
+                  },
+                  {
+                    "requires": "$title_shadow",
+                    "$show_shadow": true
+                  }
+                ],
+                "shadow": "$show_shadow",
+                "text_alignment": "center",
+                "offset": [
+                  0,
+                  6
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#hud_title_text_string",
+                    "binding_name_override": "#text",
+                    "binding_type": "global"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(not (#text = 'PPYYS' or #text = '繧ｨ繝ｩ繝ｼ' or #text = 'nabas1' or #text = 'nabas2' or #text = 'nabas3' or #text = 'Error1' or #text = 'Error2' or #text = 'Cursed1' or #text = 'Cursed2' or #text = 'Error1Noisy' or #text = 'Error2Noisy' or #text = 'Cursed1Noisy' or #text = 'Cursed2Noisy'))",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "subtitle_frame": {
+          "type": "panel",
+          "size": [
+            "100%",
+            "100%cm"
+          ],
+          "controls": [
+            {
+              "subtitle_background": {
+                "type": "image",
+                "size": [
+                  "100%sm + 20px",
+                  "100%sm + 5px"
+                ],
+                "offset": [
+                  0,
+                  16
+                ],
+                "texture": "textures/ui/hud_tip_text_background",
+                "variables": [
+                  {
+                    "requires": "$subtitle_initially_visible",
+                    "$subtitle_bg": "@hud.anim_title_background_alpha_in"
+                  },
+                  {
+                    "requires": "(not $subtitle_initially_visible)",
+                    "$subtitle_bg": "@hud.anim_subtitle_background_alpha_in"
+                  }
+                ],
+                "alpha": "$subtitle_bg"
+              }
+            },
+            {
+              "subtitle": {
+                "type": "label",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "color": "$title_command_text_color",
+                "text": "#text",
+                "layer": 31,
+                "localize": false,
+                "font_size": "large",
+                "variables": [
+                  {
+                    "requires": "$subtitle_initially_visible",
+                    "$anim_type": 1.0
+                  },
+                  {
+                    "requires": "(not $subtitle_initially_visible)",
+                    "$anim_type": "@hud.anim_subtitle_text_alpha_in"
+                  },
+                  {
+                    "requires": "(not $title_shadow)",
+                    "$show_shadow": false
+                  },
+                  {
+                    "requires": "$title_shadow",
+                    "$show_shadow": true
+                  }
+                ],
+                "shadow": "$show_shadow",
+                "alpha": "$anim_type",
+                "text_alignment": "center",
+                "offset": [
+                  1,
+                  19
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#hud_subtitle_text_string",
+                    "binding_name_override": "#text",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

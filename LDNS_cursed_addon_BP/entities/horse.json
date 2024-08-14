@@ -558,7 +558,7 @@
                 "add": {
                   "component_groups": [
                     "minecraft:horse_baby",
-                    "horse_attack"
+                    "ldns:horse_attack"
                   ]
                 }
               }

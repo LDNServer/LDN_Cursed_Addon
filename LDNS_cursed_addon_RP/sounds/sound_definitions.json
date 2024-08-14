@@ -90,6 +90,14 @@
                 {
                     "name": "sounds/ldns/ppyy/ppyy5",
                     "volume": 0.5
+                },
+                {
+                    "name": "sounds/ldns/ppyy/ppyy6",
+                    "volume": 0.8
+                },
+                {
+                    "name": "sounds/ldns/ppyy/ppyy7",
+                    "volume": 0.5
                 }
             ]
         },
@@ -190,6 +198,60 @@
                 {
                     "name": "sounds/ldns/mysterious/UnSF0hfNRE",
                     "volume": 1.0
+                }
+            ]
+        },
+        "ldns.errormob": {
+            "__use_legacy_max_distance": true,
+            "category": "hostile",
+            "sounds": [
+                {
+                    "name": "sounds/ldns/errormob/errormob1",
+                    "volume": 0.6
+                },
+                {
+                    "name": "sounds/ldns/errormob/errormob2",
+                    "volume": 0.6
+                },
+                {
+                    "name": "sounds/ldns/errormob/errormob3",
+                    "volume": 0.6
+                },
+                {
+                    "name": "sounds/ldns/errormob/errormob4",
+                    "volume": 0.6
+                },
+                {
+                    "name": "sounds/ldns/errormob/errormob5",
+                    "volume": 0.6
+                },
+                {
+                    "name": "sounds/ldns/errormob/errormob6",
+                    "volume": 0.6
+                },
+                {
+                    "name": "sounds/ldns/errormob/errormob7",
+                    "volume": 0.6
+                }
+            ]
+        },
+        "ldns.error_the_error": {
+            "__use_legacy_max_distance": true,
+            "category": "hostile",
+            "sounds": [
+                {
+                    "name": "sounds/ldns/error",
+                    "volume": 0.6
+                }
+            ]
+        },
+        "ldns.beep": {
+            "__use_legacy_max_distance": true,
+            "category": "hostile",
+            "sounds": [
+                {
+                    "name": "sounds/ldns/beep",
+                    "volume": 0.6
                 }
             ]
         }

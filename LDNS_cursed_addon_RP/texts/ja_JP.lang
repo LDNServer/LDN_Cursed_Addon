@@ -68,6 +68,9 @@ item.spawn_egg.entity.ldns:yy.name=§eyy のスポーンエッグ
 entity.ldns:entity787.name=§cEntity787
 item.spawn_egg.entity.ldns:entity787.name=§cEntity787 のスポーンエッグ
 
+entity.ldns:errormob.name=§dError§fMob
+item.spawn_egg.entity.ldns:errormob.name=§dError§fMob のスポーンエッグ
+
 ##アイテム
 
 item.ldns:travel_ticket=黎明のペンダント

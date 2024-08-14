@@ -15,6 +15,9 @@
             }
         },
         "components": {
+            "minecraft:experience_reward": {
+                "on_death": "query.last_hit_by_player ? 8 + (query.equipment_count * Math.Random(1,3)) : 0"
+            },
             "minecraft:behavior.random_stroll": {
                 "priority": 0,
                 "speed_multiplier": 1.0
@@ -40,8 +43,7 @@
                 "height": 1.8
             },
             "minecraft:health": {
-                "value": 40,
-                "max": 40
+                "value": 100
             },
             "minecraft:loot": {
                 "table": "loot_tables/entities/entity787.json"

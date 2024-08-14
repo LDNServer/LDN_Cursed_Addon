@@ -9,7 +9,7 @@
     ],
     "pattern": [
       "sps",
-      "ege",
+      "rgr",
       "ege"
     ],
     "key": {
@@ -23,6 +23,10 @@
       },
       "e": {
         "item": "ldns:error_ingot",
+        "data": 0
+      },
+      "r": {
+        "item": "ldns:gray_ender_pearl",
         "data": 0
       },
       "g": {

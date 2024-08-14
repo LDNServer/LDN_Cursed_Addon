@@ -68,6 +68,9 @@ item.spawn_egg.entity.ldns:yy.name=Spawn §eyy
 entity.ldns:entity787.name=§cEntity787
 item.spawn_egg.entity.ldns:entity787.name=Spawn §cEntity787
 
+entity.ldns:errormob.name=§dError§fMob
+item.spawn_egg.entity.ldns:errormob.name=Spawn §dError§fMob
+
 ##Items
 
 item.ldns:travel_ticket=Pendant of daybreak

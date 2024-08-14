@@ -20,7 +20,8 @@ LDNServerで作られた、呪いのバージョン「Minecraft LDN」 | Made wi
 https://docs.microsoft.com/ja-jp/minecraft/creator/documents/addonpackinstallation?tabs=Windows10
 
 ### 重要！
-* **ワールドの制作時に実験的機能をすべて有効にしてください。** 一部の機能が正しく利用できなくなります。
+* **ワールドの制作時に「ホリデークリエイターの特徴」以外の実験的機能をすべて有効にしてください。(「ホリデークリエイターの特徴」は無効にしてください)** 一部の機能が正しく利用できなくなります。
+* このバージョンは現時点ではPreview版でしか動きませんのでご注意を
 * 他のビヘイビアパックと一緒にこのアドオンを使わないでください。
 <img src="https://user-images.githubusercontent.com/63949302/179796032-64a6eef3-8624-4ba9-9682-9b747e83ed42.jpg" width="800">
 <br>
@@ -33,3 +34,13 @@ https://docs.microsoft.com/ja-jp/minecraft/creator/documents/addonpackinstallati
 * ある程度のサバイバルの土台が出来たのなら、アドオンの建物を探しに行こう。<br>装備を整えたいのなら<a href= "https://github.com/LDNServer/LDN_Cursed_Addon/wiki/建物#ボマーダンジョン" >ボマーダンジョン</a>が、ネザーに行きたいのなら<a href= "https://github.com/LDNServer/LDN_Cursed_Addon/wiki/建物#スケルトンの商人の取引所" >スケルトンの商人の取引所</a>を探しに行くのがいいだろう。
 * ネザーに行って、ブレイズパウダーと呪いの魂を集めよう。ネザーに行くためには<a href="https://github.com/LDNServer/LDN_Cursed_Addon/wiki/モブ#スケルトンの商人">スケルトンの商人</a>が取引してくれる異世界旅行券が必要だ。
 * ボスの召喚アイテム、<a href="https://github.com/LDNServer/LDN_Cursed_Addon/wiki/アイテム#呪いの人形">呪いの人形</a>をクラフトしよう。ゾンビの頭が必要だが、帯電クリーパーならそこら中にいる。
+
+## 注意事項
+* ドッキリ要素(？)があります。心臓の弱い方は一応注意してください。
+* ブルスクやノイズなどの目に悪い可能性のある描写もあります。やる際は念のため注意して楽しんでください
+
+## 素材クレジット
+* https://www.ravbug.com/bsod/
+* https://taira-komori.jpn.org/freesound.html
+* https://on-jin.com
+* https://pixabay.com

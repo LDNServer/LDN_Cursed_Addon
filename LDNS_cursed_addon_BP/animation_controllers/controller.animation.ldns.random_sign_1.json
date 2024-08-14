@@ -6,7 +6,7 @@
                 "default": {
                     "transitions": [
                         {
-                            "ldns.place_random_sign_1": "math.mod(query.life_time,5) == math.die_roll_integer(1,0,1000)"
+                            "ldns.place_random_sign_1": "math.mod(query.life_time,5) == math.die_roll_integer(1,0,1333)"
                         }
                     ]
                 },
@@ -24,7 +24,7 @@
                 "ldns.timer": {
                     "transitions": [
                         {
-                            "default": "variable.time_sign_1 = (variable.time_sign_1 ?? 0) ; variable.time_sign_1 = variable.time_sign_1 < 2400 ? variable.time_sign_1 + 1:0;return variable.time_sign_1 == 0;"
+                            "default": "variable.time_sign_1 = (variable.time_sign_1 ?? 0) ; variable.time_sign_1 = variable.time_sign_1 < 10600 ? variable.time_sign_1 + 1:0;return variable.time_sign_1 == 0;"
                         }
                     ],
                     "on_entry": [
