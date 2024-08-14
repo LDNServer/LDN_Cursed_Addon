@@ -20,8 +20,7 @@ LDNServerで作られた、呪いのバージョン「Minecraft LDN」 | Made wi
 https://docs.microsoft.com/ja-jp/minecraft/creator/documents/addonpackinstallation?tabs=Windows10
 
 ### 重要！
-* **ワールドの制作時に「ホリデークリエイターの特徴」以外の実験的機能をすべて有効にしてください。(「ホリデークリエイターの特徴」は無効にしてください)** 一部の機能が正しく利用できなくなります。
-* このバージョンは現時点ではPreview版でしか動きませんのでご注意を
+* **ワールドの制作時に実験的機能をすべて有効にしてください。** 一部の機能が正しく利用できなくなります。
 * 他のビヘイビアパックと一緒にこのアドオンを使わないでください。
 <img src="https://user-images.githubusercontent.com/63949302/179796032-64a6eef3-8624-4ba9-9682-9b747e83ed42.jpg" width="800">
 <br>
