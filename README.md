@@ -22,7 +22,8 @@ https://docs.microsoft.com/ja-jp/minecraft/creator/documents/addonpackinstallati
 ### 重要！
 * **ワールドの制作時に実験的機能をすべて有効にしてください。** 一部の機能が正しく利用できなくなります。
 * 他のビヘイビアパックと一緒にこのアドオンを使わないでください。
-<img src="https://user-images.githubusercontent.com/63949302/179796032-64a6eef3-8624-4ba9-9682-9b747e83ed42.jpg" width="800">
+
+<img src="https://github.com/user-attachments/assets/376671c6-4d27-4509-b788-49236c11f8b6" width="800">
 <br>
 
 
