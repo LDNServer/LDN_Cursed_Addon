@@ -31,8 +31,10 @@ https://docs.microsoft.com/ja-jp/minecraft/creator/documents/addonpackinstallati
 このアドオンの目標は<a href="https://github.com/LDNServer/LDN_Cursed_Addon/wiki/モブ#追加ボスモブ">ボス</a>を倒すことだ。
 
 * 普通にサバイバルをする。様々な不可解なことが発生するだろうが、頑張って乗り越えよう。
-* ある程度のサバイバルの土台が出来たのなら、アドオンの建物を探しに行こう。<br>装備を整えたいのなら<a href= "https://github.com/LDNServer/LDN_Cursed_Addon/wiki/建物#ボマーダンジョン" >ボマーダンジョン</a>が、ネザーに行きたいのなら<a href= "https://github.com/LDNServer/LDN_Cursed_Addon/wiki/建物#スケルトンの商人の取引所" >スケルトンの商人の取引所</a>を探しに行くのがいいだろう。
+* ある程度のサバイバルの土台が出来たのなら、アドオンの建物を探しに行こう。<br>装備を整えたいのなら<a href="https://github.com/LDNServer/LDN_Cursed_Addon/wiki/建物#ボマーダンジョン" >ボマーダンジョン</a>が、ネザーに行きたいのなら<a href="https://github.com/LDNServer/LDN_Cursed_Addon/wiki/建物#スケルトンの商人の取引所" >スケルトンの商人の取引所</a>を探しに行くのがいいだろう。
+* <a href="https://github.com/LDNServer/LDN_Cursed_Addon/wiki/モブ#ヌルブライン">ヌルブライン</a>などを倒すと<a href="https://github.com/LDNServer/LDN_Cursed_Addon/wiki/アイテム#-繧ｨ繝ｩ繝ｼerrorのインゴット">Errorインゴット</a>が手に入る。そのErrorインゴットでツールや装備が作れるぞ。特殊なデバフはあるが頑張って乗り越えよう。
 * ネザーに行って、ブレイズパウダーと呪いの魂を集めよう。ネザーに行くためには<a href="https://github.com/LDNServer/LDN_Cursed_Addon/wiki/モブ#スケルトンの商人">スケルトンの商人</a>が取引してくれる異世界旅行券が必要だ。
+* ほかにも<a href="https://github.com/LDNServer/LDN_Cursed_Addon/wiki/アイテム#重い石">重い石</a>や<a href="https://github.com/LDNServer/LDN_Cursed_Addon/wiki/アイテム#-ピッグコランダム">ピックコランダム</a>などの重要アイテムを集めよう。きっと何かの役に立つだろう。
 * ボスの召喚アイテム、<a href="https://github.com/LDNServer/LDN_Cursed_Addon/wiki/アイテム#呪いの人形">呪いの人形</a>をクラフトしよう。ゾンビの頭が必要だが、帯電クリーパーならそこら中にいる。
 
 ## 注意事項
