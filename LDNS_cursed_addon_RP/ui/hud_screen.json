@@ -373,6 +373,226 @@
       }
     }
   },
+  "hud_title_error_glitch_noise_screen_2": {
+    "layer": 100,
+    "$hud_glitch_1_string": "egn2",
+    "type": "image",
+    "size": [
+      "200%",
+      "200%"
+    ],
+    "texture": "textures/ui/ldns/glitch/glitch_2",
+    "uv_size": [
+      125,
+      125
+    ],
+    "uv": "@hud.anim_title_error_glitch_noise_screen_2",
+    "anims": [
+      "@hud.anim_common_wait_6s"
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#hud_title_text_string - $hud_glitch_1_string) = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "anim_title_error_glitch_noise_screen_2": {
+    "anim_type": "aseprite_flip_book",
+    "initial_uv": [
+      0,
+      0
+    ]
+  },
+  "hud_title_error_glitch_noise_screen_2_factory": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "hud_title_error_glitch_noise_screen_2@hud.hud_title_error_glitch_noise_screen_2"
+      }
+    }
+  },
+  "hud_title_error_glitch_noise_screen_3": {
+    "layer": 100,
+    "$hud_glitch_1_string": "egn3",
+    "type": "image",
+    "size": [
+      "200%",
+      "200%"
+    ],
+    "texture": "textures/ui/ldns/glitch/glitch_3",
+    "uv_size": [
+      125,
+      125
+    ],
+    "uv": "@hud.anim_title_error_glitch_noise_screen_3",
+    "anims": [
+      "@hud.anim_common_wait_6s"
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#hud_title_text_string - $hud_glitch_1_string) = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "anim_title_error_glitch_noise_screen_3": {
+    "anim_type": "aseprite_flip_book",
+    "initial_uv": [
+      0,
+      0
+    ]
+  },
+  "hud_title_error_glitch_noise_screen_3_factory": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "hud_title_error_glitch_noise_screen_3@hud.hud_title_error_glitch_noise_screen_3"
+      }
+    }
+  },
+  "hud_title_error_glitch_noise_screen_6": {
+    "layer": 100,
+    "$hud_glitch_1_string": "egn6",
+    "type": "image",
+    "size": [
+      "200%",
+      "200%"
+    ],
+    "texture": "textures/ui/ldns/glitch/glitch_6",
+    "uv_size": [
+      125,
+      125
+    ],
+    "uv": "@hud.anim_title_error_glitch_noise_screen_6",
+    "anims": [
+      "@hud.anim_common_wait_6s"
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#hud_title_text_string - $hud_glitch_1_string) = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "anim_title_error_glitch_noise_screen_6": {
+    "anim_type": "aseprite_flip_book",
+    "initial_uv": [
+      0,
+      0
+    ]
+  },
+  "hud_title_error_glitch_noise_screen_6_factory": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "hud_title_error_glitch_noise_screen_6@hud.hud_title_error_glitch_noise_screen_6"
+      }
+    }
+  },
+  "hud_title_error_window_screen_1": {
+    "layer": 100,
+    "$hud_glitch_1_string": "ew1",
+    "type": "image",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "texture": "textures/ui/ldns/errorwindow/error_window_1",
+    "uv_size": [
+      500,
+      500
+    ],
+    "uv": "@hud.anim_title_error_window_screen_1",
+    "anims": [
+      "@hud.anim_common_wait"
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#hud_title_text_string - $hud_glitch_1_string) = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "anim_title_error_window_screen_1": {
+    "anim_type": "aseprite_flip_book",
+    "initial_uv": [
+      0,
+      0
+    ]
+  },
+  "hud_title_error_window_screen_1_factory": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "hud_title_error_window_screen_1@hud.hud_title_error_window_screen_1"
+      }
+    }
+  },
+  "hud_title_error_window_screen_2": {
+    "layer": 100,
+    "$hud_glitch_1_string": "ew2",
+    "type": "image",
+    "size": [
+      "125%",
+      "125%"
+    ],
+    "texture": "textures/ui/ldns/errorwindow/error_window_2",
+    "uv_size": [
+      500,
+      500
+    ],
+    "uv": "@hud.anim_title_error_window_screen_2",
+    "anims": [
+      "@hud.anim_common_wait"
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#hud_title_text_string - $hud_glitch_1_string) = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "anim_title_error_window_screen_2": {
+    "anim_type": "aseprite_flip_book",
+    "initial_uv": [
+      0,
+      0
+    ]
+  },
+  "hud_title_error_window_screen_2_factory": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "hud_title_error_window_screen_2@hud.hud_title_error_window_screen_2"
+      }
+    }
+  },
   "hud_title_naba1_screen": {
     "layer": 100,
     "type": "image",
@@ -602,6 +822,21 @@
           },
           {
             "hud_title_naba3screen_factory@hud.hud_title_naba3_screen_factory": {}
+          },
+          {
+            "hud_title_error_glitch_noise_screen_2_factory@hud.hud_title_error_glitch_noise_screen_2_factory": {}
+          },
+          {
+            "hud_title_error_glitch_noise_screen_3_factory@hud.hud_title_error_glitch_noise_screen_3_factory": {}
+          },
+          {
+            "hud_title_error_glitch_noise_screen_6_factory@hud.hud_title_error_glitch_noise_screen_6_factory": {}
+          },
+          {
+            "hud_title_error_window_screen_1_factory@hud.hud_title_error_window_screen_1_factory": {}
+          },
+          {
+            "hud_title_error_window_screen_2_factory@hud.hud_title_error_window_screen_2_factory": {}
           }
         ]
       }
@@ -610,6 +845,12 @@
   "anim_common_wait": {
     "anim_type": "wait",
     "duration": 4,
+    "destroy_at_end": "hud_title_text",
+    "end_event": "hud_title_text_complete"
+  },
+  "anim_common_wait_6s": {
+    "anim_type": "wait",
+    "duration": 6,
     "destroy_at_end": "hud_title_text",
     "end_event": "hud_title_text_complete"
   },
@@ -677,7 +918,7 @@
                   },
                   {
                     "binding_type": "view",
-                    "source_property_name": "(not (#text = 'PPYYS' or #text = '繧ｨ繝ｩ繝ｼ' or #text = 'nabas1' or #text = 'nabas2' or #text = 'nabas3' or #text = 'Error1' or #text = 'Error2' or #text = 'Cursed1' or #text = 'Cursed2' or #text = 'Error1Noisy' or #text = 'Error2Noisy' or #text = 'Cursed1Noisy' or #text = 'Cursed2Noisy'))",
+                    "source_property_name": "(not (#text = 'PPYYS' or #text = '繧ｨ繝ｩ繝ｼ' or #text = 'nabas1' or #text = 'nabas2' or #text = 'nabas3' or #text = 'Error1' or #text = 'Error2' or #text = 'Cursed1' or #text = 'Cursed2' or #text = 'Error1Noisy' or #text = 'Error2Noisy' or #text = 'Cursed1Noisy' or #text = 'Cursed2Noisy' or #text = 'egn2' or #text = 'egn3' or #text = 'egn6' or #text = 'ew1' or #text = 'ew2'))",
                     "target_property_name": "#visible"
                   }
                 ]

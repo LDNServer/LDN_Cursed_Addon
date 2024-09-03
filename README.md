@@ -39,10 +39,12 @@ https://docs.microsoft.com/ja-jp/minecraft/creator/documents/addonpackinstallati
 
 ## 注意事項
 * ドッキリ要素(？)があります。心臓の弱い方は一応注意してください。
-* ブルスクやノイズなどの目に悪い可能性のある描写もあります。やる際は念のため注意して楽しんでください
+* ブルスクやノイズなどの目に悪い可能性のある描写もあります。やる際は念のため注意して部屋を明るくして楽しんでください
 
 ## 素材クレジット
 * https://www.ravbug.com/bsod/
 * https://taira-komori.jpn.org/freesound.html
 * https://on-jin.com
 * https://pixabay.com
+* https://commons.nicovideo.jp/users/29712216
+* https://barrarchiverio.cl/p/error/

@@ -12,8 +12,36 @@ system.runInterval(() => {
         const rand2 = random(0, 25600);
         // 時刻獲得
         const d = new Date(Date.now() + ((new Date().getTimezoneOffset() + (timezoneOffset * 60)) * 60 * 1000));
+        // グリッチ画面
+        if (rand2 <= 10 && rand2 >= 0) {
+            const rands = random(0, 2);
+            const randh = random(0, 3);
+            switch (rands) {
+                case 0:
+                    v.playSound("ldns.pp_spawn");
+                    v.playSound("ldns.beep");
+                    v.playSound("ldns.errormob_glitch");
+                    break;
+                case 1:
+                    v.playSound("ldns.yy_spawn");
+                    v.playSound("ldns.beep");
+                    v.playSound("ldns.errormob_glitch");
+                    break;
+            }
+            switch (randh) {
+                case 0:
+                    v.onScreenDisplay.setTitle("egn2");
+                    break;
+                case 1:
+                    v.onScreenDisplay.setTitle("egn3");
+                    break;
+                case 2:
+                    v.onScreenDisplay.setTitle("egn6");
+                    break;
+            }
+        }
         // randが6<=rand<=66の時
-        if (rand <= 66 && rand >= 6) {
+        else if (rand <= 66 && rand >= 6) {
             // UTC 12~24時の時にPPが出る
             if (d.getHours() <= 24 && d.getHours() >= 12) {
                 world.getDimension(v.dimension.id).runCommand("tellraw @a {\"rawtext\":[{\"text\":\"If the hand §oholding§r the leg §3trembles§r, cut §lthe leg off.§r§§\"}]}");
@@ -31,7 +59,7 @@ system.runInterval(() => {
         }
         // randが67<=rand2<=79の時に謎の文字が出てくる
         else if (rand2 <= 79 && rand2 >= 67) {
-            const rande = random(0, 3);
+            const rande = random(0, 4);
             if (rande === 0) {
                 v.playSound("ldns.beep");
                 v.onScreenDisplay.setTitle("Error1");
@@ -53,6 +81,19 @@ system.runInterval(() => {
         else if (rand2 <= 120 && rand2 >= 80) {
             if (d.getHours() <= 24 || d.getHours() >= 12) v.runCommand("give @s ldns:dn3895");
             else if (d.getHours() <= 12 || d.getHours() >= 0) v.runCommand("give @s ldns:ld5987");
+        }
+        // フェイクダイアログ
+        if (rand2 <= 139 && rand2 >= 121) {
+            const randw = random(0, 2);
+            v.playSound("ldns.errormob_errorwindow");
+            switch (randw) {
+                case 0:
+                    v.onScreenDisplay.setTitle("ew1");
+                    break;
+                case 1:
+                    v.onScreenDisplay.setTitle("ew2");
+                    break;
+            }
         }
         // randが1000~1200の時に無職の村人が出てくる
         else if (rand <= 1200 && rand >= 1000) {
