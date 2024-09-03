@@ -515,7 +515,7 @@
     ],
     "texture": "textures/ui/ldns/errorwindow/error_window_1",
     "uv_size": [
-      500,
+      700,
       500
     ],
     "uv": "@hud.anim_title_error_window_screen_1",
@@ -559,7 +559,7 @@
     ],
     "texture": "textures/ui/ldns/errorwindow/error_window_2",
     "uv_size": [
-      500,
+      680,
       500
     ],
     "uv": "@hud.anim_title_error_window_screen_2",
