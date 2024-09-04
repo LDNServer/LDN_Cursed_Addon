@@ -101,6 +101,19 @@ function errorhurt(damageSource) {
             damageSource.onScreenDisplay.setTitle("繧ｨ繝ｩ繝ｼ");
         }
     }
+    // フェイクダイアログ
+    else if (rand === 7) {
+        const randw = random(0, 2);
+        damageSource.playSound("ldns.errormob_errorwindow");
+        switch (randw) {
+            case 0:
+                damageSource.onScreenDisplay.setTitle("ew1");
+                break;
+            case 1:
+                damageSource.onScreenDisplay.setTitle("ew2");
+                break;
+        }
+    }
     // グリッチ画面
     else if (rand === 8) {
         const rands = random(0, 2);
