@@ -100,46 +100,46 @@ function errorhurt(damageSource) {
             damageSource.playSound("ldns.error_the_error");
             damageSource.onScreenDisplay.setTitle("繧ｨ繝ｩ繝ｼ");
         }
-    }
-    // フェイクダイアログ
-    else if (rand === 7) {
-        const randw = random(0, 2);
-        damageSource.playSound("ldns.errormob_errorwindow");
-        switch (randw) {
-            case 0:
-                damageSource.onScreenDisplay.setTitle("ew1");
-                break;
-            case 1:
-                damageSource.onScreenDisplay.setTitle("ew2");
-                break;
+        // フェイクダイアログ
+        else if (rand === 7) {
+            const randw = random(0, 2);
+            damageSource.playSound("ldns.errormob_errorwindow");
+            switch (randw) {
+                case 0:
+                    damageSource.onScreenDisplay.setTitle("ew1");
+                    break;
+                case 1:
+                    damageSource.onScreenDisplay.setTitle("ew2");
+                    break;
+            }
         }
-    }
-    // グリッチ画面
-    else if (rand === 8) {
-        const rands = random(0, 2);
-        const randh = random(0, 3);
-        switch (rands) {
-            case 0:
-                damageSource.playSound("ldns.pp_spawn");
-                damageSource.playSound("ldns.beep");
-                damageSource.playSound("ldns.errormob_glitch");
-                break;
-            case 1:
-                damageSource.playSound("ldns.yy_spawn");
-                damageSource.playSound("ldns.beep");
-                damageSource.playSound("ldns.errormob_glitch");
-                break;
-        }
-        switch (randh) {
-            case 0:
-                damageSource.onScreenDisplay.setTitle("egn2");
-                break;
-            case 1:
-                damageSource.onScreenDisplay.setTitle("egn3");
-                break;
-            case 2:
-                damageSource.onScreenDisplay.setTitle("egn6");
-                break;
+        // グリッチ画面
+        else if (rand === 8) {
+            const rands = random(0, 2);
+            const randh = random(0, 3);
+            switch (rands) {
+                case 0:
+                    damageSource.playSound("ldns.pp_spawn");
+                    damageSource.playSound("ldns.beep");
+                    damageSource.playSound("ldns.errormob_glitch");
+                    break;
+                case 1:
+                    damageSource.playSound("ldns.yy_spawn");
+                    damageSource.playSound("ldns.beep");
+                    damageSource.playSound("ldns.errormob_glitch");
+                    break;
+            }
+            switch (randh) {
+                case 0:
+                    damageSource.onScreenDisplay.setTitle("egn2");
+                    break;
+                case 1:
+                    damageSource.onScreenDisplay.setTitle("egn3");
+                    break;
+                case 2:
+                    damageSource.onScreenDisplay.setTitle("egn6");
+                    break;
+            }
         }
     }
 }
