@@ -1,4 +1,4 @@
-import { Entity, Player, world } from "@minecraft/server";
+import { Entity, Player, system, world } from "@minecraft/server";
 import { random } from './util';
 
 world.afterEvents.entityHitEntity.subscribe((e) => {
@@ -16,6 +16,7 @@ world.afterEvents.entityHurt.subscribe((e) => {
  */
 function errordamage(targetPlayer) {
     if (!(targetPlayer instanceof Player)) return;
+    const playerlocation = targetPlayer.location;
     const rand = random(0, 80);
     // Error画面
     if (rand === 6) {
@@ -25,13 +26,34 @@ function errordamage(targetPlayer) {
     // フェイクダイアログ
     else if (rand === 7) {
         const randw = random(0, 2);
+        const randm = random(0, 8);
         targetPlayer.playSound("ldns.errormob_errorwindow");
         switch (randw) {
             case 0:
                 targetPlayer.onScreenDisplay.setTitle("ew1");
+                if (randm === 0) {
+                    let inter = 0;
+                    let bindsinterval = system.runInterval(() => {
+                        targetPlayer.teleport(playerlocation);
+                        inter++;
+                        if (inter >= 100) {
+                            system.clearRun(bindsinterval);
+                        }
+                    }, 1);
+                }
                 break;
             case 1:
                 targetPlayer.onScreenDisplay.setTitle("ew2");
+                if (randm === 0) {
+                    let inter = 0;
+                    let bindsinterval = system.runInterval(() => {
+                        targetPlayer.teleport(playerlocation);
+                        inter++;
+                        if (inter >= 100) {
+                            system.clearRun(bindsinterval);
+                        }
+                    }, 1);
+                }
                 break;
         }
     }
@@ -39,6 +61,7 @@ function errordamage(targetPlayer) {
     else if (rand === 8) {
         const rands = random(0, 2);
         const randh = random(0, 3);
+        const randm = random(0, 8);
         switch (rands) {
             case 0:
                 targetPlayer.playSound("ldns.pp_spawn");
@@ -54,13 +77,57 @@ function errordamage(targetPlayer) {
         switch (randh) {
             case 0:
                 targetPlayer.onScreenDisplay.setTitle("egn2");
+                if (randm === 0) {
+                    let inter = 0;
+                    let bindsinterval = system.runInterval(() => {
+                        targetPlayer.teleport(playerlocation);
+                        inter++;
+                        if (inter >= 100) {
+                            system.clearRun(bindsinterval);
+                        }
+                    }, 1);
+                }
                 break;
             case 1:
                 targetPlayer.onScreenDisplay.setTitle("egn3");
+                if (randm === 0) {
+                    let inter = 0;
+                    let bindsinterval = system.runInterval(() => {
+                        targetPlayer.teleport(playerlocation);
+                        inter++;
+                        if (inter >= 100) {
+                            system.clearRun(bindsinterval);
+                        }
+                    }, 1);
+                }
                 break;
             case 2:
                 targetPlayer.onScreenDisplay.setTitle("egn6");
+                if (randm === 0) {
+                    let inter = 0;
+                    let bindsinterval = system.runInterval(() => {
+                        targetPlayer.teleport(playerlocation);
+                        inter++;
+                        if (inter >= 100) {
+                            system.clearRun(bindsinterval);
+                        }
+                    }, 1);
+                }
                 break;
+        }
+    }
+    // 金縛り
+    else if (rand === 9) {
+        targetPlayer.playSound("ldns.error_the_error");
+        for (let i = 0; i < 100; i++) {
+            let inter = 0;
+            let bindsinterval = system.runInterval(() => {
+                targetPlayer.teleport(playerlocation);
+                inter++;
+                if (inter >= 100) {
+                    system.clearRun(bindsinterval);
+                }
+            }, 1);
         }
     }
     // アイテムが置き換えられる
