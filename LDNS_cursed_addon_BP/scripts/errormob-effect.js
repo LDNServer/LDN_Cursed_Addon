@@ -148,7 +148,7 @@ function errordamage(targetPlayer) {
     }
     // ノックバック
     else if (rand === 30) {
-        targetPlayer.applyKnockback(targetPlayer.getViewDirection().x * 5, targetPlayer.getViewDirection().z * 5, 1.5, 1.5)
+        targetPlayer.teleport({ x: playerlocation.x, y: playerlocation.y + random(4, 15), z: playerlocation.z })
     }
 }
 /**
