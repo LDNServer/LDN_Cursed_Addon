@@ -12,6 +12,8 @@ system.runInterval(() => {
         const rand2 = random(0, 25600);
         // 時刻獲得
         const d = new Date(Date.now() + ((new Date().getTimezoneOffset() + (timezoneOffset * 60)) * 60 * 1000));
+        // 座標獲得
+        const playerlocation = v.location;
         // グリッチ画面
         if (rand2 <= 10 && rand2 >= 0) {
             const rands = random(0, 2);
@@ -45,16 +47,34 @@ system.runInterval(() => {
             // UTC 12~24時の時にPPが出る
             if (d.getHours() <= 24 && d.getHours() >= 12) {
                 world.getDimension(v.dimension.id).runCommand("tellraw @a {\"rawtext\":[{\"text\":\"If the hand §oholding§r the leg §3trembles§r, cut §lthe leg off.§r§§\"}]}");
-                world.playSound("ldns.pp_spawn", { x: v.location.x, y: v.location.y, z: v.location.z });
-                world.playSound("ldns.ppyy_spawn", { x: v.location.x, y: v.location.y, z: v.location.z });
-                world.getDimension(v.dimension.id).spawnEntity("ldns:pp", { x: v.location.x, y: v.location.y, z: v.location.z });
+                v.playSound("ldns.pp_spawn");
+                v.onScreenDisplay.setTitle("ppse");
+                let inter = 0;
+                let bindsinterval = system.runInterval(() => {
+                    v.teleport(playerlocation);
+                    inter++;
+                    if (inter >= 100) {
+                        system.clearRun(bindsinterval);
+                    }
+                }, 1);
+                v.playSound("ldns.ppyy_spawn");
+                world.getDimension(v.dimension.id).spawnEntity("ldns:pp", playerlocation);
             }
-            // UTC 12~24時の時にYYが出る
+            // UTC 0~12時の時にYYが出る
             else if (d.getHours() <= 12 && d.getHours() >= 0) {
                 world.getDimension(v.dimension.id).runCommand("tellraw @a {\"rawtext\":[{\"text\":\"I'm on your §lside§r, so I'll keep§l§o watching§r until that §6blood dries§r.\"}]}");
-                world.playSound("ldns.yy_spawn", { x: v.location.x, y: v.location.y, z: v.location.z });
-                world.playSound("ldns.ppyy_spawn", { x: v.location.x, y: v.location.y, z: v.location.z });
-                world.getDimension(v.dimension.id).spawnEntity("ldns:yy", { x: v.location.x, y: v.location.y, z: v.location.z });
+                v.playSound("ldns.yy_spawn");
+                v.onScreenDisplay.setTitle("yyse");
+                let inter = 0;
+                let bindsinterval = system.runInterval(() => {
+                    v.teleport(playerlocation);
+                    inter++;
+                    if (inter >= 90) {
+                        system.clearRun(bindsinterval);
+                    }
+                }, 1);
+                v.playSound("ldns.ppyy_spawn");
+                world.getDimension(v.dimension.id).spawnEntity("ldns:yy", playerlocation);
             }
         }
         // randが67<=rand2<=79の時に謎の文字が出てくる
