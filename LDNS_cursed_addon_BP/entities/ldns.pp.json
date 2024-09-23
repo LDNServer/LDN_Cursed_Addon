@@ -41,7 +41,7 @@
                 "probability": 0.02
             },
             "minecraft:movement": {
-                "value": 1.21
+                "value": 0.75
             },
             "minecraft:movement.basic": {},
             "minecraft:jump.static": {},

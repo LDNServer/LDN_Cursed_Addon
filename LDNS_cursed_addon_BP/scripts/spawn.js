@@ -7,7 +7,7 @@ system.runInterval(() => {
     // ランダム
     const rand = random(0, 25600);
     // ワールドのプレイヤーを獲得
-    world.getPlayers().forEach((v, i, a) => {
+    world.getPlayers().forEach(async (v, i, a) => {
         // ランダム2
         const rand2 = random(0, 25600);
         // 時刻獲得
@@ -58,6 +58,7 @@ system.runInterval(() => {
                     }
                 }, 1);
                 v.playSound("ldns.ppyy_spawn");
+                await system.waitTicks(20 * 5);
                 world.getDimension(v.dimension.id).spawnEntity("ldns:pp", playerlocation);
             }
             // UTC 0~12時の時にYYが出る
@@ -74,6 +75,7 @@ system.runInterval(() => {
                     }
                 }, 1);
                 v.playSound("ldns.ppyy_spawn");
+                await system.waitTicks(20 * 5);
                 world.getDimension(v.dimension.id).spawnEntity("ldns:yy", playerlocation);
             }
         }

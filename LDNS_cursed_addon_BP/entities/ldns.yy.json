@@ -26,7 +26,7 @@
                 ]
             },
             "minecraft:collision_box": {
-                "width": 0.6,
+                "width": 1.0,
                 "height": 1.8
             },
             "minecraft:health": {
@@ -44,7 +44,7 @@
                 "probability": 0.02
             },
             "minecraft:movement": {
-                "value": 0.99
+                "value": 0.50
             },
             "minecraft:movement.basic": {},
             "minecraft:jump.static": {},
