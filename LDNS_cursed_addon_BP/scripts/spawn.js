@@ -49,16 +49,12 @@ system.runInterval(() => {
                 world.getDimension(v.dimension.id).runCommand("tellraw @a {\"rawtext\":[{\"text\":\"If the hand §oholding§r the leg §3trembles§r, cut §lthe leg off.§r§§\"}]}");
                 v.playSound("ldns.pp_spawn");
                 v.onScreenDisplay.setTitle("ppse");
-                let inter = 0;
-                let bindsinterval = system.runInterval(() => {
+                for (let inter = 0; inter < 120; i++) {
                     v.teleport(playerlocation);
                     inter++;
-                    if (inter >= 100) {
-                        system.clearRun(bindsinterval);
-                    }
-                }, 1);
+                    await system.waitTicks(1);
+                }
                 v.playSound("ldns.ppyy_spawn");
-                await system.waitTicks(20 * 5);
                 world.getDimension(v.dimension.id).spawnEntity("ldns:pp", playerlocation);
             }
             // UTC 0~12時の時にYYが出る
@@ -66,14 +62,11 @@ system.runInterval(() => {
                 world.getDimension(v.dimension.id).runCommand("tellraw @a {\"rawtext\":[{\"text\":\"I'm on your §lside§r, so I'll keep§l§o watching§r until that §6blood dries§r.\"}]}");
                 v.playSound("ldns.yy_spawn");
                 v.onScreenDisplay.setTitle("yyse");
-                let inter = 0;
-                let bindsinterval = system.runInterval(() => {
+                for (let inter = 0; inter < 120; i++) {
                     v.teleport(playerlocation);
                     inter++;
-                    if (inter >= 90) {
-                        system.clearRun(bindsinterval);
-                    }
-                }, 1);
+                    await system.waitTicks(1);
+                }
                 v.playSound("ldns.ppyy_spawn");
                 await system.waitTicks(20 * 5);
                 world.getDimension(v.dimension.id).spawnEntity("ldns:yy", playerlocation);
@@ -105,7 +98,7 @@ system.runInterval(() => {
             else if (d.getHours() <= 12 || d.getHours() >= 0) v.runCommand("give @s ldns:ld5987");
         }
         // フェイクダイアログ
-        if (rand2 <= 139 && rand2 >= 121) {
+        else if (rand2 <= 139 && rand2 >= 121) {
             const randw = random(0, 2);
             v.playSound("ldns.errormob_errorwindow");
             switch (randw) {
@@ -116,6 +109,38 @@ system.runInterval(() => {
                     v.onScreenDisplay.setTitle("ew2");
                     break;
             }
+        }
+        // 突然時間がランダムに変わり、謎の文字が出てくる
+        else if (rand <= 150 && rand >= 140) {
+            world.getPlayers().forEach(async (vs, is, as) => {
+                vs.playSound("ldns.beep");
+                console.info("We is cursed");
+                for (let inter = 0; inter < 80; inter++) {
+                    let titletextr = random(0, 6);
+                    switch (titletextr) {
+                        case 0:
+                            vs.onScreenDisplay.setTitle("あなたは呪われてない", { stayDuration: 3, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
+                            break;
+                        case 1:
+                            vs.onScreenDisplay.setTitle("あなたは呪われている", { stayDuration: 3, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
+                            break;
+                        case 2:
+                            vs.onScreenDisplay.setTitle("縺ゅ↑縺溷測繧上ｌ縺ｦ", { stayDuration: 3, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
+                            break;
+                        case 3:
+                            vs.onScreenDisplay.setTitle("縺ゅ↑縺溷測繧上ｌ縺ｾ", { stayDuration: 3, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
+                            break;
+                        case 4:
+                            vs.onScreenDisplay.setTitle("We is Cursed.", { stayDuration: 3, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
+                            break;
+                        case 5:
+                            vs.onScreenDisplay.setTitle("They am Cursed.", { stayDuration: 3, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
+                            break;
+                    }
+                    world.setTimeOfDay(random(1, 23999));
+                    await system.waitTicks(1);
+                }
+            });
         }
         // randが1000~1200の時に無職の村人が出てくる
         else if (rand <= 1200 && rand >= 1000) {
@@ -142,3 +167,45 @@ system.runInterval(() => {
 }, 3200);
 
 // 繝｡繝｢繝ｪ繝ｼ繝ｬ繧､繝?Φ繧ｷ繝ｼ繧ｨ繝ｩ繝ｼ
+
+// テスト用
+/**
+world.beforeEvents.chatSend.subscribe((e) => {
+    if (e.message === "tests") {
+        system.run(() => {
+            world.getPlayers().forEach(async (v, i, a) => {
+                // ランダム2
+                const rand2 = random(0, 25600);
+                // 時刻獲得
+                const d = new Date(Date.now() + ((new Date().getTimezoneOffset() + (timezoneOffset * 60)) * 60 * 1000));
+                // 座標獲得
+                const playerlocation = v.location;
+                // UTC 12~24時の時にPPが出る
+                if (d.getHours() <= 24 && d.getHours() >= 12) {
+                    world.getDimension(v.dimension.id).runCommand("tellraw @a {\"rawtext\":[{\"text\":\"If the hand §oholding§r the leg §3trembles§r, cut §lthe leg off.§r§§\"}]}");
+                    v.playSound("ldns.pp_spawn");
+                    v.onScreenDisplay.setTitle("ppse");
+                    for (let inter = 0; inter < 120; inter++) {
+                        v.teleport(playerlocation);
+                        await system.waitTicks(1);
+                    }
+                    v.playSound("ldns.ppyy_spawn");
+                    world.getDimension(v.dimension.id).spawnEntity("ldns:pp", playerlocation);
+                }
+                // UTC 0~12時の時にYYが出る
+                else if (d.getHours() <= 12 && d.getHours() >= 0) {
+                    world.getDimension(v.dimension.id).runCommand("tellraw @a {\"rawtext\":[{\"text\":\"I'm on your §lside§r, so I'll keep§l§o watching§r until that §6blood dries§r.\"}]}");
+                    v.playSound("ldns.yy_spawn");
+                    v.onScreenDisplay.setTitle("yyse");
+                    for (let inter = 0; inter < 120; inter++) {
+                        v.teleport(playerlocation);
+                        await system.waitTicks(1);
+                    }
+                    v.playSound("ldns.ppyy_spawn");
+                    world.getDimension(v.dimension.id).spawnEntity("ldns:yy", playerlocation);
+                }
+            });
+        });
+    }
+});
+*/
