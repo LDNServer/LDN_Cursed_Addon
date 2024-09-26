@@ -1,15 +1,17 @@
-import { system, world } from "@minecraft/server";
+import { ItemStack, system, world } from "@minecraft/server";
 import { random } from "./util";
 
 const timezoneOffset = 0;
 
 system.runInterval(() => {
     // ランダム
-    const rand = random(0, 25600);
+    const rand = random(0, 28800);
+    const playerall = world.getPlayers();
+    const playerlength = playerall.length;
     // ワールドのプレイヤーを獲得
-    world.getPlayers().forEach(async (v, i, a) => {
+    playerall.forEach(async (v, i, a) => {
         // ランダム2
-        const rand2 = random(0, 25600);
+        const rand2 = random(0, 28800);
         // 時刻獲得
         const d = new Date(Date.now() + ((new Date().getTimezoneOffset() + (timezoneOffset * 60)) * 60 * 1000));
         // 座標獲得
@@ -111,8 +113,8 @@ system.runInterval(() => {
             }
         }
         // 突然時間がランダムに変わり、謎の文字が出てくる
-        else if (rand <= 150 && rand >= 140) {
-            world.getPlayers().forEach(async (vs, is, as) => {
+        else if (rand <= 149 && rand >= 140) {
+            a.forEach(async (vs, is, as) => {
                 vs.playSound("ldns.beep");
                 console.info("We is cursed");
                 for (let inter = 0; inter < 80; inter++) {
@@ -141,6 +143,59 @@ system.runInterval(() => {
                     await system.waitTicks(1);
                 }
             });
+        }
+        // 突然誰かがみんなにチャットして何かが起こる
+        else if (rand <= 159 && rand >= 150) {
+            const randp = random(0, 6);
+            const randps = random(0, playerlength);
+            const psplayer = a[randps];
+            const items = random(0, 2);
+            if (playerlength > 1) {
+                switch (randp) {
+                    case 0:
+                        world.sendMessage("<" + v.name + ">" + "Hello?");
+                        await system.waitTicks(20 * 5);
+                        v.teleport(psplayer.location);
+                        break;
+                    case 1:
+                        world.sendMessage("<" + v.name + ">" + psplayer.name + ", Are they cursed?");
+                        await system.waitTicks(20 * 3);
+                        switch (items) {
+                            case 0:
+                                psplayer.runCommand("give @s ldns:error_ingot");
+                                break;
+                            case 1:
+                                psplayer.runCommand("give @s ldns:heavy_stone");
+                                break;
+                        }
+                        break;
+                    case 2:
+                        world.sendMessage("<" + v.name + ">" + psplayer.name + ", What do you think?");
+                        await system.waitTicks(20 * 3);
+                        psplayer.runCommand("give @s ldns:cursed_soul");
+                        break;
+                    case 3:
+                        world.sendMessage("<" + v.name + ">" + "Have you become 縺ゅｌ?");
+                        break;
+                    case 4:
+                        world.sendMessage("<" + v.name + ">" + psplayer.name + ", what's wrong?");
+                        await system.waitTicks(20 * 3);
+                        switch (items) {
+                            case 0:
+                                psplayer.runCommand("give @s ldns:ld5987");
+                                break;
+                            case 1:
+                                psplayer.runCommand("give @s ldns:dn3895");
+                                break;
+                        }
+                        break;
+                    case 5:
+                        world.sendMessage("<" + v.name + ">" + psplayer.name + "'s Error Computer Information:\n CEU: Erutel Corse i6 666K 6Curse 6Curshreads 6.66GHz\n ERM: DDR6-6666 66GB\n Errorcards: Errvidia Gerrorforce ETX 666 Ei 6GB\n ES: Errorsoft Errdows 666");
+                        await system.waitTicks(20 * 3);
+                        psplayer.addExperience(66);
+                        break;
+                }
+            }
         }
         // randが1000~1200の時に無職の村人が出てくる
         else if (rand <= 1200 && rand >= 1000) {
@@ -174,35 +229,53 @@ world.beforeEvents.chatSend.subscribe((e) => {
     if (e.message === "tests") {
         system.run(() => {
             world.getPlayers().forEach(async (v, i, a) => {
-                // ランダム2
-                const rand2 = random(0, 25600);
-                // 時刻獲得
-                const d = new Date(Date.now() + ((new Date().getTimezoneOffset() + (timezoneOffset * 60)) * 60 * 1000));
-                // 座標獲得
-                const playerlocation = v.location;
-                // UTC 12~24時の時にPPが出る
-                if (d.getHours() <= 24 && d.getHours() >= 12) {
-                    world.getDimension(v.dimension.id).runCommand("tellraw @a {\"rawtext\":[{\"text\":\"If the hand §oholding§r the leg §3trembles§r, cut §lthe leg off.§r§§\"}]}");
-                    v.playSound("ldns.pp_spawn");
-                    v.onScreenDisplay.setTitle("ppse");
-                    for (let inter = 0; inter < 120; inter++) {
-                        v.teleport(playerlocation);
-                        await system.waitTicks(1);
-                    }
-                    v.playSound("ldns.ppyy_spawn");
-                    world.getDimension(v.dimension.id).spawnEntity("ldns:pp", playerlocation);
-                }
-                // UTC 0~12時の時にYYが出る
-                else if (d.getHours() <= 12 && d.getHours() >= 0) {
-                    world.getDimension(v.dimension.id).runCommand("tellraw @a {\"rawtext\":[{\"text\":\"I'm on your §lside§r, so I'll keep§l§o watching§r until that §6blood dries§r.\"}]}");
-                    v.playSound("ldns.yy_spawn");
-                    v.onScreenDisplay.setTitle("yyse");
-                    for (let inter = 0; inter < 120; inter++) {
-                        v.teleport(playerlocation);
-                        await system.waitTicks(1);
-                    }
-                    v.playSound("ldns.ppyy_spawn");
-                    world.getDimension(v.dimension.id).spawnEntity("ldns:yy", playerlocation);
+                const randp = random(0, 6);
+                const randps = random(0, a.length);
+                const psplayer = a[randps];
+                const items = random(0, 2);
+                switch (randp) {
+                    case 0:
+                        world.sendMessage("<" + v.name + ">" + "Hello?");
+                        await system.waitTicks(20 * 5);
+                        v.teleport(psplayer.location);
+                        break;
+                    case 1:
+                        world.sendMessage("<" + v.name + ">" + psplayer.name + ", Are they cursed?");
+                        await system.waitTicks(20 * 3);
+                        switch (items) {
+                            case 0:
+                                psplayer.runCommand("give @s ldns:error_ingot");
+                                break;
+                            case 1:
+                                psplayer.runCommand("give @s ldns:heavy_stone");
+                                break;
+                        }
+                        break;
+                    case 2:
+                        world.sendMessage("<" + v.name + ">" + psplayer.name + ", What do you think?");
+                        await system.waitTicks(20 * 3);
+                        psplayer.runCommand("give @s ldns:cursed_soul");
+                        break;
+                    case 3:
+                        world.sendMessage("<" + v.name + ">" + "Have you become 縺ゅｌ?");
+                        break;
+                    case 4:
+                        world.sendMessage("<" + v.name + ">" + psplayer.name + ", what's wrong?");
+                        await system.waitTicks(20 * 3);
+                        switch (items) {
+                            case 0:
+                                psplayer.runCommand("give @s ldns:ld5987");
+                                break;
+                            case 1:
+                                psplayer.runCommand("give @s ldns:dn3895");
+                                break;
+                        }
+                        break;
+                    case 5:
+                        world.sendMessage("<" + v.name + ">" + psplayer.name + "'s Error Computer Information:\n CEU: Erutel Corse i6 666K 6Curse 6Curshreads 6.66GHz\n ERM: DDR6-6666 66GB\n Errorcards: Errvidia Gerrorforce ETX 666 Ei 6GB\n ES: Errorsoft Errdows 666");
+                        await system.waitTicks(20 * 3);
+                        psplayer.addExperience(66);
+                        break;
                 }
             });
         });

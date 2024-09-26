@@ -17,7 +17,7 @@ world.afterEvents.entityHurt.subscribe((e) => {
 function errordamage(targetPlayer) {
     if (!(targetPlayer instanceof Player)) return;
     const playerlocation = targetPlayer.location;
-    const rand = random(0, 100);
+    const rand = random(0, 150);
     // Error画面
     if (rand === 6) {
         targetPlayer.playSound("ldns.error_the_error");
@@ -144,7 +144,7 @@ function errordamage(targetPlayer) {
     // スポーンポイント設定
     else if (rand === 22) {
         targetPlayer.setSpawnPoint({ dimension: targetPlayer.dimension, x: targetPlayer.location.x, y: targetPlayer.location.y, z: targetPlayer.location.z });
-        targetPlayer.runCommand("tellraw @s {\"rawtext\":[{\"text\":\"§4Set Spawn\"}]}");
+        targetPlayer.onScreenDisplay.setTitle("Set Spawn");
     }
     // ノックバック
     else if (rand === 30) {
@@ -159,7 +159,7 @@ function errorhurt(damageSource) {
     if (!(damageSource instanceof Player)) return;
     // ペンダントを持っているときのカウント
     const items = damageSource.runCommand('testfor @s[hasitem={item=ldns:pendant_of_twilight}]').successCount;
-    const rand = random(0, 120);
+    const rand = random(0, 180);
     // Error画面
     // 夕焼けのペンダントを持っていないときに発動
     if (items <= 0) {
