@@ -10,8 +10,7 @@
                         "Geometry.mc1",
                         "Geometry.mc2",
                         "Geometry.mc3",
-                        "Geometry.mc4",
-                        "Geometry.mc5"
+                        "Geometry.mc4"
                     ]
                 },
                 "textures": {
@@ -21,8 +20,7 @@
                         "Texture.mc1",
                         "Texture.mc2",
                         "Texture.mc3",
-                        "Texture.mc4",
-                        "Texture.mc5"
+                        "Texture.mc4"
                     ]
                 }
             },
