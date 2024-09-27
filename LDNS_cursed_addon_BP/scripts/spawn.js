@@ -3,6 +3,8 @@ import { random } from "./util";
 
 const timezoneOffset = 0;
 
+let names = ["James", "Olivia", "Liam", "Emma", "Noah", "Ava", "William", "Sophia", "Elijah", "Isabella", "Benjamin", "Mia", "Lucas", "Charlotte", "Henry", "Amelia", "Alexander", "Harper", "Michael", "Evelyn"]
+
 system.runInterval(() => {
     // ランダム
     const rand = random(0, 28800);
@@ -147,18 +149,41 @@ system.runInterval(() => {
         // 突然誰かがみんなにチャットして何かが起こる
         else if (rand <= 159 && rand >= 150) {
             const randp = random(0, 6);
-            const randps = random(0, playerlength);
+            const randps = random(0, a.length);
             const psplayer = a[randps];
             const items = random(0, 2);
-            if (playerlength > 1) {
+            if (a.length <= 1 || psplayer === v) {
+                const dummyname = names[random(0, names.length)];
                 switch (randp) {
                     case 0:
-                        world.sendMessage("<" + v.name + ">" + "Hello?");
+                        world.sendMessage("<" + v.name + "> " + "Hello?, " + dummyname);
+                        break;
+                    case 1:
+                        world.sendMessage("<" + v.name + "> " + dummyname + ", Are they cursed?");
+                        break;
+                    case 2:
+                        world.sendMessage("<" + v.name + "> " + dummyname + ", What do you think?");
+                        break;
+                    case 3:
+                        world.sendMessage("<" + v.name + "> " + "Have you become 縺ゅｌ?");
+                        break;
+                    case 4:
+                        world.sendMessage("<" + v.name + "> " + dummyname + ", what's wrong?");
+                        break;
+                    case 5:
+                        world.sendMessage("<" + v.name + "> " + dummyname + "'s Error Computer Information:\n CEU: Erutel Corse i6 666K 6Curse 6Curshreads 6.66GHz\n ERM: DDR6-6666 66GB\n Errorcards: Errvidia Gerrorforce ETX 666 Ei 6GB\n ES: Errorsoft Errdows 666");
+                        break;
+                }
+            }
+            else {
+                switch (randp) {
+                    case 0:
+                        world.sendMessage("<" + v.name + "> " + "Hello?, " + psplayer.name);
                         await system.waitTicks(20 * 5);
                         v.teleport(psplayer.location);
                         break;
                     case 1:
-                        world.sendMessage("<" + v.name + ">" + psplayer.name + ", Are they cursed?");
+                        world.sendMessage("<" + v.name + "> " + psplayer.name + ", Are they cursed?");
                         await system.waitTicks(20 * 3);
                         switch (items) {
                             case 0:
@@ -170,15 +195,15 @@ system.runInterval(() => {
                         }
                         break;
                     case 2:
-                        world.sendMessage("<" + v.name + ">" + psplayer.name + ", What do you think?");
+                        world.sendMessage("<" + v.name + "> " + psplayer.name + ", What do you think?");
                         await system.waitTicks(20 * 3);
                         psplayer.runCommand("give @s ldns:cursed_soul");
                         break;
                     case 3:
-                        world.sendMessage("<" + v.name + ">" + "Have you become 縺ゅｌ?");
+                        world.sendMessage("<" + v.name + "> " + "Have you become 縺ゅｌ?");
                         break;
                     case 4:
-                        world.sendMessage("<" + v.name + ">" + psplayer.name + ", what's wrong?");
+                        world.sendMessage("<" + v.name + "> " + psplayer.name + ", what's wrong?");
                         await system.waitTicks(20 * 3);
                         switch (items) {
                             case 0:
@@ -190,7 +215,7 @@ system.runInterval(() => {
                         }
                         break;
                     case 5:
-                        world.sendMessage("<" + v.name + ">" + psplayer.name + "'s Error Computer Information:\n CEU: Erutel Corse i6 666K 6Curse 6Curshreads 6.66GHz\n ERM: DDR6-6666 66GB\n Errorcards: Errvidia Gerrorforce ETX 666 Ei 6GB\n ES: Errorsoft Errdows 666");
+                        world.sendMessage("<" + v.name + "> " + psplayer.name + "'s Error Computer Information:\n CEU: Erutel Corse i6 666K 6Curse 6Curshreads 6.66GHz\n ERM: DDR6-6666 66GB\n Errorcards: Errvidia Gerrorforce ETX 666 Ei 6GB\n ES: Errorsoft Errdows 666");
                         await system.waitTicks(20 * 3);
                         psplayer.addExperience(66);
                         break;
@@ -233,49 +258,74 @@ world.beforeEvents.chatSend.subscribe((e) => {
                 const randps = random(0, a.length);
                 const psplayer = a[randps];
                 const items = random(0, 2);
-                switch (randp) {
-                    case 0:
-                        world.sendMessage("<" + v.name + ">" + "Hello?");
-                        await system.waitTicks(20 * 5);
-                        v.teleport(psplayer.location);
-                        break;
-                    case 1:
-                        world.sendMessage("<" + v.name + ">" + psplayer.name + ", Are they cursed?");
-                        await system.waitTicks(20 * 3);
-                        switch (items) {
-                            case 0:
-                                psplayer.runCommand("give @s ldns:error_ingot");
-                                break;
-                            case 1:
-                                psplayer.runCommand("give @s ldns:heavy_stone");
-                                break;
-                        }
-                        break;
-                    case 2:
-                        world.sendMessage("<" + v.name + ">" + psplayer.name + ", What do you think?");
-                        await system.waitTicks(20 * 3);
-                        psplayer.runCommand("give @s ldns:cursed_soul");
-                        break;
-                    case 3:
-                        world.sendMessage("<" + v.name + ">" + "Have you become 縺ゅｌ?");
-                        break;
-                    case 4:
-                        world.sendMessage("<" + v.name + ">" + psplayer.name + ", what's wrong?");
-                        await system.waitTicks(20 * 3);
-                        switch (items) {
-                            case 0:
-                                psplayer.runCommand("give @s ldns:ld5987");
-                                break;
-                            case 1:
-                                psplayer.runCommand("give @s ldns:dn3895");
-                                break;
-                        }
-                        break;
-                    case 5:
-                        world.sendMessage("<" + v.name + ">" + psplayer.name + "'s Error Computer Information:\n CEU: Erutel Corse i6 666K 6Curse 6Curshreads 6.66GHz\n ERM: DDR6-6666 66GB\n Errorcards: Errvidia Gerrorforce ETX 666 Ei 6GB\n ES: Errorsoft Errdows 666");
-                        await system.waitTicks(20 * 3);
-                        psplayer.addExperience(66);
-                        break;
+                if (a.length <= 1 || psplayer === v) {
+                    const dummyname = names[random(0, names.length)];
+                    switch (randp) {
+                        case 0:
+                            world.sendMessage("<" + v.name + "> " + "Hello?, " + dummyname);
+                            break;
+                        case 1:
+                            world.sendMessage("<" + v.name + "> " + dummyname + ", Are they cursed?");
+                            break;
+                        case 2:
+                            world.sendMessage("<" + v.name + "> " + dummyname + ", What do you think?");
+                            break;
+                        case 3:
+                            world.sendMessage("<" + v.name + "> " + "Have you become 縺ゅｌ?");
+                            break;
+                        case 4:
+                            world.sendMessage("<" + v.name + "> " + dummyname + ", what's wrong?");
+                            break;
+                        case 5:
+                            world.sendMessage("<" + v.name + "> " + dummyname + "'s Error Computer Information:\n CEU: Erutel Corse i6 666K 6Curse 6Curshreads 6.66GHz\n ERM: DDR6-6666 66GB\n Errorcards: Errvidia Gerrorforce ETX 666 Ei 6GB\n ES: Errorsoft Errdows 666");
+                            break;
+                    }
+                }
+                else {
+                    switch (randp) {
+                        case 0:
+                            world.sendMessage("<" + v.name + "> " + "Hello?, " + psplayer.name);
+                            await system.waitTicks(20 * 5);
+                            v.teleport(psplayer.location);
+                            break;
+                        case 1:
+                            world.sendMessage("<" + v.name + "> " + psplayer.name + ", Are they cursed?");
+                            await system.waitTicks(20 * 3);
+                            switch (items) {
+                                case 0:
+                                    psplayer.runCommand("give @s ldns:error_ingot");
+                                    break;
+                                case 1:
+                                    psplayer.runCommand("give @s ldns:heavy_stone");
+                                    break;
+                            }
+                            break;
+                        case 2:
+                            world.sendMessage("<" + v.name + "> " + psplayer.name + ", What do you think?");
+                            await system.waitTicks(20 * 3);
+                            psplayer.runCommand("give @s ldns:cursed_soul");
+                            break;
+                        case 3:
+                            world.sendMessage("<" + v.name + "> " + "Have you become 縺ゅｌ?");
+                            break;
+                        case 4:
+                            world.sendMessage("<" + v.name + "> " + psplayer.name + ", what's wrong?");
+                            await system.waitTicks(20 * 3);
+                            switch (items) {
+                                case 0:
+                                    psplayer.runCommand("give @s ldns:ld5987");
+                                    break;
+                                case 1:
+                                    psplayer.runCommand("give @s ldns:dn3895");
+                                    break;
+                            }
+                            break;
+                        case 5:
+                            world.sendMessage("<" + v.name + "> " + psplayer.name + "'s Error Computer Information:\n CEU: Erutel Corse i6 666K 6Curse 6Curshreads 6.66GHz\n ERM: DDR6-6666 66GB\n Errorcards: Errvidia Gerrorforce ETX 666 Ei 6GB\n ES: Errorsoft Errdows 666");
+                            await system.waitTicks(20 * 3);
+                            psplayer.addExperience(66);
+                            break;
+                    }
                 }
             });
         });
