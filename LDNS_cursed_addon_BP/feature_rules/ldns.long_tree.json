@@ -2,8 +2,8 @@
     "format_version": "1.13.0",
     "minecraft:feature_rules": {
         "description": {
-            "identifier": "ldns:ldns.mysterious_tree_1",
-            "places_feature": "ldns:ldns.mysterious_tree_1"
+            "identifier": "ldns:ldns.long_tree",
+            "places_feature": "ldns:ldns.long_tree"
         },
         "conditions": {
             "placement_pass": "first_pass",
@@ -12,32 +12,17 @@
                     {
                         "test": "has_biome_tag",
                         "operator": "==",
-                        "value": "overworld"
-                    },
-                    {
-                        "test": "has_biome_tag",
-                        "operator": "!=",
                         "value": "desert"
                     },
                     {
                         "test": "has_biome_tag",
-                        "operator": "!=",
+                        "operator": "==",
                         "value": "desert_hills"
                     },
                     {
                         "test": "has_biome_tag",
-                        "operator": "!=",
+                        "operator": "==",
                         "value": "desert_mutated"
-                    },
-                    {
-                        "test": "has_biome_tag",
-                        "operator": "!=",
-                        "value": "ocean"
-                    },
-                    {
-                        "test": "has_biome_tag",
-                        "operator": "!=",
-                        "value": "river"
                     }
                 ]
             }
@@ -46,16 +31,16 @@
             "iterations": 1,
             "x": {
                 "extent": [
-                    4,
-                    16
+                    2,
+                    10
                 ],
                 "distribution": "uniform"
             },
             "y": "query.heightmap(v.worldx, v.worldz)",
             "z": {
                 "extent": [
-                    4,
-                    16
+                    2,
+                    10
                 ],
                 "distribution": "uniform"
             },

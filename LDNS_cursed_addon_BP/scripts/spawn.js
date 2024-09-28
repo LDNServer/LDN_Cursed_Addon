@@ -117,28 +117,28 @@ system.runInterval(() => {
         // 突然時間がランダムに変わり、謎の文字が出てくる
         else if (rand <= 149 && rand >= 140) {
             a.forEach(async (vs, is, as) => {
-                vs.playSound("ldns.beep");
+                vs.playSound("ldns.time_mad");
                 console.info("We is cursed");
-                for (let inter = 0; inter < 80; inter++) {
+                for (let inter = 0; inter < 160; inter++) {
                     let titletextr = random(0, 6);
                     switch (titletextr) {
                         case 0:
-                            vs.onScreenDisplay.setTitle("あなたは呪われてない", { stayDuration: 3, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
+                            vs.onScreenDisplay.setTitle("あなたは呪われてない", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
                             break;
                         case 1:
-                            vs.onScreenDisplay.setTitle("あなたは呪われている", { stayDuration: 3, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
+                            vs.onScreenDisplay.setTitle("あなたは呪われている", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
                             break;
                         case 2:
-                            vs.onScreenDisplay.setTitle("縺ゅ↑縺溷測繧上ｌ縺ｦ", { stayDuration: 3, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
+                            vs.onScreenDisplay.setTitle("縺ゅ↑縺溷測繧上ｌ縺ｦ", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
                             break;
                         case 3:
-                            vs.onScreenDisplay.setTitle("縺ゅ↑縺溷測繧上ｌ縺ｾ", { stayDuration: 3, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
+                            vs.onScreenDisplay.setTitle("縺ゅ↑縺溷測繧上ｌ縺ｾ", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
                             break;
                         case 4:
-                            vs.onScreenDisplay.setTitle("We is Cursed.", { stayDuration: 3, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
+                            vs.onScreenDisplay.setTitle("We is Cursed.", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
                             break;
                         case 5:
-                            vs.onScreenDisplay.setTitle("They am Cursed.", { stayDuration: 3, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
+                            vs.onScreenDisplay.setTitle("They am Cursed.", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
                             break;
                     }
                     world.setTimeOfDay(random(1, 23999));
@@ -224,11 +224,11 @@ system.runInterval(() => {
         }
         // randが1000~1200の時に無職の村人が出てくる
         else if (rand <= 1200 && rand >= 1000) {
-            world.getDimension(v.dimension.id).spawnEntity("ldns:attacker_nitwit_villager", { x: v.location.x, y: v.location.y, z: v.location.z });
+            world.getDimension(v.dimension.id).spawnEntity("ldns:attacker_nitwit_villager", v.location);
         }
         // randが2000~2200の時に謎のプレイヤーが出てくる
         else if (rand <= 2200 && rand >= 2000) {
-            world.getDimension(v.dimension.id).spawnEntity("ldns:mysterious_players", { x: v.location.x, y: v.location.y, z: v.location.z });
+            world.getDimension(v.dimension.id).spawnEntity("ldns:mysterious_players", v.location);
         }
         // randが8000~8500の時にローテーション
         else if (rand2 <= 8500 && rand2 >= 8000) {
@@ -239,7 +239,7 @@ system.runInterval(() => {
         }
         // randが10000~11000の時に謎の音が鳴るように
         else if (rand2 <= 11000 && rand2 >= 10000) {
-            v.playSound("player.ldns.random_step_1", { location: { x: v.location.x, y: v.location.y, z: v.location.z }, volume: 0.5 });
+            v.playSound("player.ldns.random_step_1", { location: v.location, volume: 0.5 });
             v.runCommand("tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_step_1) : ldns.step_1\"}]}");
             v.runCommand("tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_step_1) : default \"}]}");
         }
@@ -252,6 +252,39 @@ system.runInterval(() => {
 /**
 world.beforeEvents.chatSend.subscribe((e) => {
     if (e.message === "tests") {
+        system.run(() => {
+            world.getPlayers().forEach(async (v, i, a) => {
+                v.playSound("ldns.time_mad");
+                console.info("We is cursed");
+                for (let inter = 0; inter < 160; inter++) {
+                    let titletextr = random(0, 6);
+                    switch (titletextr) {
+                        case 0:
+                            v.onScreenDisplay.setTitle("あなたは呪われてない", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
+                            break;
+                        case 1:
+                            v.onScreenDisplay.setTitle("あなたは呪われている", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
+                            break;
+                        case 2:
+                            v.onScreenDisplay.setTitle("縺ゅ↑縺溷測繧上ｌ縺ｦ", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
+                            break;
+                        case 3:
+                            v.onScreenDisplay.setTitle("縺ゅ↑縺溷測繧上ｌ縺ｾ", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
+                            break;
+                        case 4:
+                            v.onScreenDisplay.setTitle("We is Cursed.", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
+                            break;
+                        case 5:
+                            v.onScreenDisplay.setTitle("They am Cursed.", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
+                            break;
+                    }
+                    world.setTimeOfDay(random(1, 23999));
+                    await system.waitTicks(1);
+                }
+            });
+        });
+    }
+    else if (e.message === "tests2") {
         system.run(() => {
             world.getPlayers().forEach(async (v, i, a) => {
                 const randp = random(0, 6);

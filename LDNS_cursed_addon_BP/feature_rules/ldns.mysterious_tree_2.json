@@ -10,9 +10,24 @@
             "minecraft:biome_filter": {
                 "all_of": [
                     {
-                        "test": "is_biome",
+                        "test": "has_biome_tag",
                         "operator": "==",
-                        "value": "forest"
+                        "value": "overworld"
+                    },
+                    {
+                        "test": "has_biome_tag",
+                        "operator": "!=",
+                        "value": "desert"
+                    },
+                    {
+                        "test": "has_biome_tag",
+                        "operator": "!=",
+                        "value": "desert_hills"
+                    },
+                    {
+                        "test": "has_biome_tag",
+                        "operator": "!=",
+                        "value": "desert_mutated"
                     },
                     {
                         "test": "has_biome_tag",
