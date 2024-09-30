@@ -246,6 +246,216 @@ system.runInterval(() => {
     });
 }, 3200);
 
+world.afterEvents.buttonPush.subscribe(async (e) => {
+    const button = e.block;
+    const buttoname = button.typeId;
+    // PPスポーン
+    if ((buttoname === "minecraft:acacia_button" || buttoname === "minecraft:crimson_button" || buttoname === "minecraft:mangrove_button") && button.permutation.getState("facing_direction") === 0) {
+        if (button.offset({ x: 0, y: 1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: 1, z: -1 }).typeId === "minecraft:redstone_block" &&
+            button.offset({ x: 0, y: 1, z: 1 }).typeId === "minecraft:nether_wart_block" &&
+            button.offset({ x: 0, y: 0, z: -1 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: 0, z: 1 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: -1, z: -1 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: -1, z: 1 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: 2, z: -1 }).typeId === "minecraft:carved_pumpkin") {
+            button.dimension.spawnParticle("ldns:error_particle", button.location);
+            await system.waitTicks(20 * 2.5);
+            button.setType("air");
+            button.offset({ x: 0, y: 1, z: 0 }).setType("air");
+            button.offset({ x: 0, y: 1, z: -1 }).setType("air");
+            button.offset({ x: 0, y: 1, z: 1 }).setType("air");
+            button.offset({ x: 0, y: 0, z: -1 }).setType("air");
+            button.offset({ x: 0, y: 0, z: 1 }).setType("air");
+            button.offset({ x: 0, y: -1, z: -1 }).setType("air");
+            button.offset({ x: 0, y: -1, z: 1 }).setType("air");
+            button.offset({ x: 0, y: 2, z: -1 }).setType("air");
+            button.dimension.spawnEntity("ldns:pp", button.location);
+        }
+        else if (button.offset({ x: 0, y: 1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: 1, z: 1 }).typeId === "minecraft:redstone_block" &&
+            button.offset({ x: 0, y: 1, z: -1 }).typeId === "minecraft:nether_wart_block" &&
+            button.offset({ x: 0, y: 0, z: 1 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: 0, z: -1 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: -1, z: 1 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: -1, z: -1 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: 2, z: 1 }).typeId === "minecraft:carved_pumpkin") {
+            button.dimension.spawnParticle("ldns:error_particle", button.location);
+            await system.waitTicks(20 * 2.5);
+            button.setType("air");
+            button.offset({ x: 0, y: 1, z: 0 }).setType("air");
+            button.offset({ x: 0, y: 1, z: 1 }).setType("air");
+            button.offset({ x: 0, y: 1, z: -1 }).setType("air");
+            button.offset({ x: 0, y: 0, z: 1 }).setType("air");
+            button.offset({ x: 0, y: 0, z: -1 }).setType("air");
+            button.offset({ x: 0, y: -1, z: 1 }).setType("air");
+            button.offset({ x: 0, y: -1, z: -1 }).setType("air");
+            button.offset({ x: 0, y: 2, z: 1 }).setType("air");
+            button.dimension.spawnEntity("ldns:pp", button.location);
+        }
+        else if (button.offset({ x: 0, y: 1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 1, y: 1, z: 0 }).typeId === "minecraft:redstone_block" &&
+            button.offset({ x: -1, y: 1, z: 0 }).typeId === "minecraft:nether_wart_block" &&
+            button.offset({ x: 1, y: 0, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: -1, y: 0, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 1, y: -1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: -1, y: -1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 1, y: 2, z: 0 }).typeId === "minecraft:carved_pumpkin") {
+            button.dimension.spawnParticle("ldns:error_particle", button.location);
+            await system.waitTicks(20 * 2.5);
+            button.setType("air");
+            button.offset({ x: 0, y: 1, z: 0 }).setType("air");
+            button.offset({ x: 1, y: 1, z: 0 }).setType("air");
+            button.offset({ x: -1, y: 1, z: 0 }).setType("air");
+            button.offset({ x: 1, y: 0, z: 0 }).setType("air");
+            button.offset({ x: -1, y: 0, z: 0 }).setType("air");
+            button.offset({ x: 1, y: -1, z: 0 }).setType("air");
+            button.offset({ x: -1, y: -1, z: 0 }).setType("air");
+            button.offset({ x: 1, y: 2, z: 0 }).setType("air");
+            button.dimension.spawnEntity("ldns:pp", button.location);
+        }
+        else if (button.offset({ x: 0, y: 1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: -1, y: 1, z: 0 }).typeId === "minecraft:redstone_block" &&
+            button.offset({ x: 1, y: 1, z: 0 }).typeId === "minecraft:nether_wart_block" &&
+            button.offset({ x: -1, y: 0, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 1, y: 0, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: -1, y: -1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 1, y: -1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: -1, y: 2, z: 0 }).typeId === "minecraft:carved_pumpkin") {
+            button.dimension.spawnParticle("ldns:error_particle", button.location);
+            await system.waitTicks(20 * 2.5);
+            button.setType("air");
+            button.offset({ x: 0, y: 1, z: 0 }).setType("air");
+            button.offset({ x: -1, y: 1, z: 0 }).setType("air");
+            button.offset({ x: 1, y: 1, z: 0 }).setType("air");
+            button.offset({ x: -1, y: 0, z: 0 }).setType("air");
+            button.offset({ x: 1, y: 0, z: 0 }).setType("air");
+            button.offset({ x: -1, y: -1, z: 0 }).setType("air");
+            button.offset({ x: 1, y: -1, z: 0 }).setType("air");
+            button.offset({ x: -1, y: 2, z: 0 }).setType("air");
+            button.dimension.spawnEntity("ldns:pp", button.location);
+        }
+    }
+    if ((buttoname === "minecraft:acacia_button" || buttoname === "minecraft:crimson_button" || buttoname === "minecraft:mangrove_button") && button.permutation.getState("facing_direction") === 1) {
+        if (button.offset({ x: 0, y: 0, z: -1 }).typeId === "minecraft:redstone_block" &&
+            button.offset({ x: 0, y: 0, z: 1 }).typeId === "minecraft:nether_wart_block" &&
+            button.offset({ x: 0, y: 0, z: -2 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: 0, z: 2 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: 1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: -1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: -1, z: -2 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: -1, z: 2 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: 1, z: -2 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: 1, z: 2 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: 2, z: -2 }).typeId === "minecraft:carved_pumpkin" &&
+            button.offset({ x: 0, y: 2, z: 2 }).typeId === "minecraft:carved_pumpkin") {
+            button.dimension.spawnParticle("ldns:error_particle", button.location);
+            await system.waitTicks(20 * 2.5);
+            button.setType("air");
+            button.offset({ x: 0, y: 0, z: -1 }).setType("air");
+            button.offset({ x: 0, y: 0, z: 1 }).setType("air");
+            button.offset({ x: 0, y: 0, z: -2 }).setType("air");
+            button.offset({ x: 0, y: 0, z: 2 }).setType("air");
+            button.offset({ x: 0, y: 1, z: 0 }).setType("air");
+            button.offset({ x: 0, y: -1, z: 0 }).setType("air");
+            button.offset({ x: 0, y: -1, z: -2 }).setType("air");
+            button.offset({ x: 0, y: -1, z: 2 }).setType("air");
+            button.offset({ x: 0, y: 1, z: -2 }).setType("air");
+            button.offset({ x: 0, y: 1, z: 2 }).setType("air");
+            button.offset({ x: 0, y: 2, z: -2 }).setType("air");
+            button.offset({ x: 0, y: 2, z: 2 }).setType("air");
+            button.dimension.spawnEntity("ldns:yy", button.location);
+        }
+        else if (button.offset({ x: 0, y: 0, z: 1 }).typeId === "minecraft:redstone_block" &&
+            button.offset({ x: 0, y: 0, z: -1 }).typeId === "minecraft:nether_wart_block" &&
+            button.offset({ x: 0, y: 0, z: 2 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: 0, z: -2 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: 1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: -1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: -1, z: 2 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: -1, z: -2 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: 1, z: 2 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: 1, z: -2 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: 2, z: 2 }).typeId === "minecraft:carved_pumpkin" &&
+            button.offset({ x: 0, y: 2, z: -2 }).typeId === "minecraft:carved_pumpkin") {
+            button.dimension.spawnParticle("ldns:error_particle", button.location);
+            await system.waitTicks(20 * 2.5);
+            button.setType("air");
+            button.offset({ x: 0, y: 0, z: 1 }).setType("air");
+            button.offset({ x: 0, y: 0, z: -1 }).setType("air");
+            button.offset({ x: 0, y: 0, z: 2 }).setType("air");
+            button.offset({ x: 0, y: 0, z: -2 }).setType("air");
+            button.offset({ x: 0, y: 1, z: 0 }).setType("air");
+            button.offset({ x: 0, y: -1, z: 0 }).setType("air");
+            button.offset({ x: 0, y: -1, z: 2 }).setType("air");
+            button.offset({ x: 0, y: -1, z: -2 }).setType("air");
+            button.offset({ x: 0, y: 1, z: 2 }).setType("air");
+            button.offset({ x: 0, y: 1, z: -2 }).setType("air");
+            button.offset({ x: 0, y: 2, z: 2 }).setType("air");
+            button.offset({ x: 0, y: 2, z: -2 }).setType("air");
+            button.dimension.spawnEntity("ldns:yy", button.location);
+        }
+        else if (button.offset({ x: -1, y: 0, z: 0 }).typeId === "minecraft:redstone_block" &&
+            button.offset({ x: 1, y: 0, z: 0 }).typeId === "minecraft:nether_wart_block" &&
+            button.offset({ x: -2, y: 0, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 2, y: 0, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: 1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: -1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: -2, y: -1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 2, y: -1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: -2, y: 1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 2, y: 1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: -2, y: 2, z: 0 }).typeId === "minecraft:carved_pumpkin" &&
+            button.offset({ x: 2, y: 2, z: 0 }).typeId === "minecraft:carved_pumpkin") {
+            button.dimension.spawnParticle("ldns:error_particle", button.location);
+            await system.waitTicks(20 * 2.5);
+            button.setType("air");
+            button.offset({ x: -1, y: 0, z: 0 }).setType("air");
+            button.offset({ x: 1, y: 0, z: 0 }).setType("air");
+            button.offset({ x: -2, y: 0, z: 0 }).setType("air");
+            button.offset({ x: 2, y: 0, z: 0 }).setType("air");
+            button.offset({ x: 0, y: 1, z: 0 }).setType("air");
+            button.offset({ x: 0, y: -1, z: 0 }).setType("air");
+            button.offset({ x: -2, y: -1, z: 0 }).setType("air");
+            button.offset({ x: 2, y: -1, z: 0 }).setType("air");
+            button.offset({ x: -2, y: 1, z: 0 }).setType("air");
+            button.offset({ x: 2, y: 1, z: 0 }).setType("air");
+            button.offset({ x: -2, y: 2, z: 0 }).setType("air");
+            button.offset({ x: 2, y: 2, z: 0 }).setType("air");
+            button.dimension.spawnEntity("ldns:yy", button.location);
+        }
+        else if (button.offset({ x: 1, y: 0, z: 0 }).typeId === "minecraft:redstone_block" &&
+            button.offset({ x: -1, y: 0, z: 0 }).typeId === "minecraft:nether_wart_block" &&
+            button.offset({ x: 2, y: 0, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: -2, y: 0, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: 1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: -1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 2, y: -1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: -2, y: -1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 2, y: 1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: -2, y: 1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 2, y: 2, z: 0 }).typeId === "minecraft:carved_pumpkin" &&
+            button.offset({ x: -2, y: 2, z: 0 }).typeId === "minecraft:carved_pumpkin") {
+            button.dimension.spawnParticle("ldns:error_particle", button.location);
+            await system.waitTicks(20 * 2.5);
+            button.setType("air");
+            button.offset({ x: 1, y: 0, z: 0 }).setType("air");
+            button.offset({ x: -1, y: 0, z: 0 }).setType("air");
+            button.offset({ x: 2, y: 0, z: 0 }).setType("air");
+            button.offset({ x: -2, y: 0, z: 0 }).setType("air");
+            button.offset({ x: 0, y: 1, z: 0 }).setType("air");
+            button.offset({ x: 0, y: -1, z: 0 }).setType("air");
+            button.offset({ x: 2, y: -1, z: 0 }).setType("air");
+            button.offset({ x: -2, y: -1, z: 0 }).setType("air");
+            button.offset({ x: 2, y: 1, z: 0 }).setType("air");
+            button.offset({ x: -2, y: 1, z: 0 }).setType("air");
+            button.offset({ x: 2, y: 2, z: 0 }).setType("air");
+            button.offset({ x: -2, y: 2, z: 0 }).setType("air");
+            button.dimension.spawnEntity("ldns:yy", button.location);
+        }
+    }
+});
+
 // 繝｡繝｢繝ｪ繝ｼ繝ｬ繧､繝?Φ繧ｷ繝ｼ繧ｨ繝ｩ繝ｼ
 
 // テスト用

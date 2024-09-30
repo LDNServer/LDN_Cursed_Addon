@@ -113,6 +113,8 @@ item.ldns:dn3895=§aD§bN§93§38§69§a5
 
 item.ldns:pigcorundum=PigCorundum
 
+item.ldns:error_block=繧ｨ繝ｩ繝ｼ Block
+
 ##Messages
 
 message.ldns.enable_debug_log=Enabled debug logs

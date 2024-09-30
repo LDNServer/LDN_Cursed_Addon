@@ -28,6 +28,36 @@
                     ]
                 }
             ]
+        },
+        {
+            "conditions": [
+                {
+                    "condition": "killed_by_entity",
+                    "entity_type": "ldns:pp"
+                }
+            ],
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "ldns:pigcorundum"
+                }
+            ]
+        },
+        {
+            "conditions": [
+                {
+                    "condition": "killed_by_entity",
+                    "entity_type": "ldns:yy"
+                }
+            ],
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:skull"
+                }
+            ]
         }
     ]
 }
