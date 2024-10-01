@@ -34,6 +34,11 @@
                 {
                     "condition": "killed_by_entity",
                     "entity_type": "ldns:pp"
+                },
+                {
+                    "condition": "random_chance_with_looting",
+                    "chance": 0.04,
+                    "looting_multiplier": 0.05
                 }
             ],
             "rolls": 1,
@@ -49,6 +54,11 @@
                 {
                     "condition": "killed_by_entity",
                     "entity_type": "ldns:yy"
+                },
+                {
+                    "condition": "random_chance_with_looting",
+                    "chance": 0.16,
+                    "looting_multiplier": 0.05
                 }
             ],
             "rolls": 1,
