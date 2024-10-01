@@ -17,7 +17,7 @@ world.afterEvents.entityHurt.subscribe((e) => {
 function errordamage(targetPlayer) {
     if (!(targetPlayer instanceof Player)) return;
     const playerlocation = targetPlayer.location;
-    const rand = random(0, 150);
+    const rand = random(0, 100);
     // Error画面
     if (rand === 6) {
         targetPlayer.playSound("ldns.error_the_error");
@@ -159,7 +159,7 @@ function errorhurt(damageSource) {
     if (!(damageSource instanceof Player)) return;
     // ペンダントを持っているときのカウント
     const items = damageSource.runCommand('testfor @s[hasitem={item=ldns:pendant_of_twilight}]').successCount;
-    const rand = random(0, 180);
+    const rand = random(0, 125);
     // Error画面
     // 夕焼けのペンダントを持っていないときに発動
     if (items <= 0) {
