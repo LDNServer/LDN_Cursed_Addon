@@ -14,7 +14,7 @@ world.afterEvents.entityHurt.subscribe((e) => {
 /**
  * @param {Entity} targetPlayer
  */
-function errordamage(targetPlayer) {
+async function errordamage(targetPlayer) {
     if (!(targetPlayer instanceof Player)) return;
     const playerlocation = targetPlayer.location;
     const rand = random(0, 100);
@@ -32,27 +32,19 @@ function errordamage(targetPlayer) {
             case 0:
                 targetPlayer.onScreenDisplay.setTitle("ew1");
                 if (randm === 0) {
-                    let inter = 0;
-                    let bindsinterval = system.runInterval(() => {
+                    for (let i = 0; i < 100; i++) {
                         targetPlayer.teleport(playerlocation);
-                        inter++;
-                        if (inter >= 100) {
-                            system.clearRun(bindsinterval);
-                        }
-                    }, 1);
+                        await system.waitTicks(1);
+                    }
                 }
                 break;
             case 1:
                 targetPlayer.onScreenDisplay.setTitle("ew2");
                 if (randm === 0) {
-                    let inter = 0;
-                    let bindsinterval = system.runInterval(() => {
+                    for (let i = 0; i < 100; i++) {
                         targetPlayer.teleport(playerlocation);
-                        inter++;
-                        if (inter >= 100) {
-                            system.clearRun(bindsinterval);
-                        }
-                    }, 1);
+                        await system.waitTicks(1);
+                    }
                 }
                 break;
         }
@@ -60,7 +52,7 @@ function errordamage(targetPlayer) {
     // グリッチ画面
     else if (rand === 8) {
         const rands = random(0, 2);
-        const randh = random(0, 3);
+        const randh = random(0, 4);
         const randm = random(0, 8);
         switch (rands) {
             case 0:
@@ -78,40 +70,37 @@ function errordamage(targetPlayer) {
             case 0:
                 targetPlayer.onScreenDisplay.setTitle("egn2");
                 if (randm === 0) {
-                    let inter = 0;
-                    let bindsinterval = system.runInterval(() => {
+                    for (let i = 0; i < 100; i++) {
                         targetPlayer.teleport(playerlocation);
-                        inter++;
-                        if (inter >= 100) {
-                            system.clearRun(bindsinterval);
-                        }
-                    }, 1);
+                        await system.waitTicks(1);
+                    }
                 }
                 break;
             case 1:
                 targetPlayer.onScreenDisplay.setTitle("egn3");
                 if (randm === 0) {
-                    let inter = 0;
-                    let bindsinterval = system.runInterval(() => {
+                    for (let i = 0; i < 100; i++) {
                         targetPlayer.teleport(playerlocation);
-                        inter++;
-                        if (inter >= 100) {
-                            system.clearRun(bindsinterval);
-                        }
-                    }, 1);
+                        await system.waitTicks(1);
+                    }
                 }
                 break;
             case 2:
                 targetPlayer.onScreenDisplay.setTitle("egn6");
                 if (randm === 0) {
-                    let inter = 0;
-                    let bindsinterval = system.runInterval(() => {
+                    for (let i = 0; i < 100; i++) {
                         targetPlayer.teleport(playerlocation);
-                        inter++;
-                        if (inter >= 100) {
-                            system.clearRun(bindsinterval);
-                        }
-                    }, 1);
+                        await system.waitTicks(1);
+                    }
+                }
+                break;
+            case 3:
+                targetPlayer.onScreenDisplay.setTitle("egn9");
+                if (randm === 0) {
+                    for (let i = 0; i < 100; i++) {
+                        targetPlayer.teleport(playerlocation);
+                        await system.waitTicks(1);
+                    }
                 }
                 break;
         }
@@ -120,14 +109,8 @@ function errordamage(targetPlayer) {
     else if (rand === 9) {
         targetPlayer.playSound("ldns.error_the_error");
         for (let i = 0; i < 100; i++) {
-            let inter = 0;
-            let bindsinterval = system.runInterval(() => {
-                targetPlayer.teleport(playerlocation);
-                inter++;
-                if (inter >= 100) {
-                    system.clearRun(bindsinterval);
-                }
-            }, 1);
+            targetPlayer.teleport(playerlocation);
+            await system.waitTicks(1);
         }
     }
     // アイテムが置き換えられる
@@ -183,7 +166,7 @@ function errorhurt(damageSource) {
         // グリッチ画面
         else if (rand === 8) {
             const rands = random(0, 2);
-            const randh = random(0, 3);
+            const randh = random(0, 4);
             switch (rands) {
                 case 0:
                     damageSource.playSound("ldns.pp_spawn");
@@ -205,6 +188,9 @@ function errorhurt(damageSource) {
                     break;
                 case 2:
                     damageSource.onScreenDisplay.setTitle("egn6");
+                    break;
+                case 3:
+                    damageSource.onScreenDisplay.setTitle("egn9");
                     break;
             }
         }
