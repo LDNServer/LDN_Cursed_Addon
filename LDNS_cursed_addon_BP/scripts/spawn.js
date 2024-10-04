@@ -462,6 +462,7 @@ world.afterEvents.buttonPush.subscribe(async (e) => {
 // 繝｡繝｢繝ｪ繝ｼ繝ｬ繧､繝?Φ繧ｷ繝ｼ繧ｨ繝ｩ繝ｼ
 
 // テスト用
+/**
 world.beforeEvents.chatSend.subscribe((e) => {
     system.run(() => {
         const playerall = world.getPlayers();
@@ -732,3 +733,4 @@ world.beforeEvents.chatSend.subscribe((e) => {
         }
     });
 });
+*/
