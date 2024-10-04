@@ -471,7 +471,7 @@ world.beforeEvents.chatSend.subscribe((e) => {
             // ワールドのプレイヤーを獲得
             playerall.forEach(async (v, i, a) => {
                 const rands = random(0, 2);
-                const randh = random(0, 3);
+                const randh = random(0, 4);
                 switch (rands) {
                     case 0:
                         v.playSound("ldns.pp_spawn");
