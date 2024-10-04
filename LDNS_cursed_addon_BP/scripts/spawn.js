@@ -460,7 +460,7 @@ world.afterEvents.buttonPush.subscribe(async (e) => {
 
 // テスト用
 world.beforeEvents.chatSend.subscribe((e) => {
-    system.run((e) => {
+    system.run(() => {
         const playerall = world.getPlayers();
         const playerlength = playerall.length;
         // グリッチ画面
