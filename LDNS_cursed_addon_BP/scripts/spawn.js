@@ -459,44 +459,166 @@ world.afterEvents.buttonPush.subscribe(async (e) => {
 // 繝｡繝｢繝ｪ繝ｼ繝ｬ繧､繝?Φ繧ｷ繝ｼ繧ｨ繝ｩ繝ｼ
 
 // テスト用
-/**
 world.beforeEvents.chatSend.subscribe((e) => {
-    if (e.message === "tests") {
-        system.run(() => {
-            world.getPlayers().forEach(async (v, i, a) => {
-                v.playSound("ldns.time_mad");
-                console.info("We is cursed");
-                for (let inter = 0; inter < 160; inter++) {
-                    let titletextr = random(0, 6);
-                    switch (titletextr) {
-                        case 0:
-                            v.onScreenDisplay.setTitle("あなたは呪われてない", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
-                            break;
-                        case 1:
-                            v.onScreenDisplay.setTitle("あなたは呪われている", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
-                            break;
-                        case 2:
-                            v.onScreenDisplay.setTitle("縺ゅ↑縺溷測繧上ｌ縺ｦ", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
-                            break;
-                        case 3:
-                            v.onScreenDisplay.setTitle("縺ゅ↑縺溷測繧上ｌ縺ｾ", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
-                            break;
-                        case 4:
-                            v.onScreenDisplay.setTitle("We is Cursed.", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
-                            break;
-                        case 5:
-                            v.onScreenDisplay.setTitle("They am Cursed.", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
-                            break;
-                    }
-                    world.setTimeOfDay(random(1, 23999));
-                    await system.waitTicks(1);
+    system.run(() => {
+        const playerall = world.getPlayers();
+        const playerlength = playerall.length;
+        // グリッチ画面
+        if (e.message === "tests1") {
+            // ワールドのプレイヤーを獲得
+            playerall.forEach(async (v, i, a) => {
+                const rands = random(0, 2);
+                const randh = random(0, 3);
+                switch (rands) {
+                    case 0:
+                        v.playSound("ldns.pp_spawn");
+                        v.playSound("ldns.beep");
+                        v.playSound("ldns.errormob_glitch");
+                        break;
+                    case 1:
+                        v.playSound("ldns.yy_spawn");
+                        v.playSound("ldns.beep");
+                        v.playSound("ldns.errormob_glitch");
+                        break;
+                }
+                switch (randh) {
+                    case 0:
+                        v.onScreenDisplay.setTitle("egn2");
+                        break;
+                    case 1:
+                        v.onScreenDisplay.setTitle("egn3");
+                        break;
+                    case 2:
+                        v.onScreenDisplay.setTitle("egn6");
+                        break;
                 }
             });
-        });
-    }
-    else if (e.message === "tests2") {
-        system.run(() => {
-            world.getPlayers().forEach(async (v, i, a) => {
+        }
+        // randが6<=rand<=66の時
+        if (e.message === "tests2") {
+            // UTC 12~24時の時にPPが出る
+            // ワールドのプレイヤーを獲得
+            playerall.forEach(async (v, i, a) => {
+                // 時刻獲得
+                const d = new Date(Date.now() + ((new Date().getTimezoneOffset() + (timezoneOffset * 60)) * 60 * 1000));
+                // 座標獲得
+                const playerlocation = v.location;
+                if (d.getHours() <= 24 && d.getHours() >= 12) {
+                    world.getDimension(v.dimension.id).runCommand("tellraw @a {\"rawtext\":[{\"text\":\"If the hand §oholding§r the leg §3trembles§r, cut §lthe leg off.§r§§\"}]}");
+                    v.playSound("ldns.pp_spawn");
+                    v.onScreenDisplay.setTitle("ppse");
+                    for (let inter = 0; inter < 120; i++) {
+                        v.teleport(playerlocation);
+                        inter++;
+                        await system.waitTicks(1);
+                    }
+                    v.playSound("ldns.ppyy_spawn");
+                    world.getDimension(v.dimension.id).spawnEntity("ldns:pp", playerlocation);
+                }
+                // UTC 0~12時の時にYYが出る
+                else if (d.getHours() <= 12 && d.getHours() >= 0) {
+                    world.getDimension(v.dimension.id).runCommand("tellraw @a {\"rawtext\":[{\"text\":\"I'm on your §lside§r, so I'll keep§l§o watching§r until that §6blood dries§r.\"}]}");
+                    v.playSound("ldns.yy_spawn");
+                    v.onScreenDisplay.setTitle("yyse");
+                    for (let inter = 0; inter < 120; i++) {
+                        v.teleport(playerlocation);
+                        inter++;
+                        await system.waitTicks(1);
+                    }
+                    v.playSound("ldns.ppyy_spawn");
+                    await system.waitTicks(20 * 5);
+                    world.getDimension(v.dimension.id).spawnEntity("ldns:yy", playerlocation);
+                }
+            });
+        }
+        // randが67<=rand2<=79の時に謎の文字が出てくる
+        if (e.message === "tests3") {
+            // ワールドのプレイヤーを獲得
+            playerall.forEach(async (v, i, a) => {
+                const rande = random(0, 4);
+                if (rande === 0) {
+                    v.playSound("ldns.beep");
+                    v.onScreenDisplay.setTitle("Error1");
+                }
+                else if (rande === 1) {
+                    v.playSound("ldns.beep");
+                    v.onScreenDisplay.setTitle("Error2");
+                }
+                else if (rande === 2) {
+                    v.playSound("ldns.beep");
+                    v.onScreenDisplay.setTitle("Cursed1");
+                }
+                else if (rande === 3) {
+                    v.playSound("ldns.beep");
+                    v.onScreenDisplay.setTitle("Cursed2");
+                }
+            });
+        }
+        // randが80~120の時に時刻によってLDかDNが出てくる
+        if (e.message === "tests4") {
+            // ワールドのプレイヤーを獲得
+            playerall.forEach(async (v, i, a) => {
+                // 時刻獲得
+                const d = new Date(Date.now() + ((new Date().getTimezoneOffset() + (timezoneOffset * 60)) * 60 * 1000));
+                if (d.getHours() <= 24 || d.getHours() >= 12) v.runCommand("give @s ldns:dn3895");
+                else if (d.getHours() <= 12 || d.getHours() >= 0) v.runCommand("give @s ldns:ld5987");
+            });
+        }
+        // フェイクダイアログ
+        if (e.message === "tests5") {
+            // ワールドのプレイヤーを獲得
+            playerall.forEach(async (v, i, a) => {
+                const randw = random(0, 2);
+                v.playSound("ldns.errormob_errorwindow");
+                switch (randw) {
+                    case 0:
+                        v.onScreenDisplay.setTitle("ew1");
+                        break;
+                    case 1:
+                        v.onScreenDisplay.setTitle("ew2");
+                        break;
+                }
+            });
+        }
+        // 突然時間がランダムに変わり、謎の文字が出てくる
+        if (e.message === "tests6") {
+            // ワールドのプレイヤーを獲得
+            playerall.forEach(async (v, i, a) => {
+                a.forEach(async (vs, is, as) => {
+                    vs.playSound("ldns.time_mad");
+                    console.info("We is cursed");
+                    for (let inter = 0; inter < 160; inter++) {
+                        let titletextr = random(0, 6);
+                        switch (titletextr) {
+                            case 0:
+                                vs.onScreenDisplay.setTitle("あなたは呪われてない", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
+                                break;
+                            case 1:
+                                vs.onScreenDisplay.setTitle("あなたは呪われている", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
+                                break;
+                            case 2:
+                                vs.onScreenDisplay.setTitle("縺ゅ↑縺溷測繧上ｌ縺ｦ", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
+                                break;
+                            case 3:
+                                vs.onScreenDisplay.setTitle("縺ゅ↑縺溷測繧上ｌ縺ｾ", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
+                                break;
+                            case 4:
+                                vs.onScreenDisplay.setTitle("We is Cursed.", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
+                                break;
+                            case 5:
+                                vs.onScreenDisplay.setTitle("They am Cursed.", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
+                                break;
+                        }
+                        world.setTimeOfDay(random(1, 23999));
+                        await system.waitTicks(1);
+                    }
+                });
+            });
+        }
+        // 突然誰かがみんなにチャットして何かが起こる
+        if (e.message === "tests7") {
+            // ワールドのプレイヤーを獲得
+            playerall.forEach(async (v, i, a) => {
                 const randp = random(0, 6);
                 const randps = random(0, a.length);
                 const psplayer = a[randps];
@@ -571,7 +693,39 @@ world.beforeEvents.chatSend.subscribe((e) => {
                     }
                 }
             });
-        });
-    }
+        }
+        // randが1000~1200の時に無職の村人が出てくる
+        if (e.message === "tests8") {
+            // ワールドのプレイヤーを獲得
+            playerall.forEach(async (v, i, a) => {
+                world.getDimension(v.dimension.id).spawnEntity("ldns:attacker_nitwit_villager", v.location);
+            });
+        }
+        // randが2000~2200の時に謎のプレイヤーが出てくる
+        if (e.message === "tests9") {
+            // ワールドのプレイヤーを獲得
+            playerall.forEach(async (v, i, a) => {
+                world.getDimension(v.dimension.id).spawnEntity("ldns:mysterious_players", v.location);
+            });
+        }
+        // randが8000~8500の時にローテーション
+        if (e.message === "tests10") {
+            // ワールドのプレイヤーを獲得
+            playerall.forEach(async (v, i, a) => {
+                v.runCommand("tp @s[m=0] ~ ~ ~ facing ^ ^360 ^");
+                v.runCommand("tp @s[m=0] ~ ~ ~ facing ^ ^ ^-90");
+                v.runCommand("tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_rotation) : ldns.rotation\"}]}");
+                v.runCommand("tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_rotation) : default \"}]}");
+            });
+        }
+        // randが10000~11000の時に謎の音が鳴るように
+        if (e.message === "tests11") {
+            // ワールドのプレイヤーを獲得
+            playerall.forEach(async (v, i, a) => {
+                v.playSound("player.ldns.random_step_1", { location: v.location, volume: 0.5 });
+                v.runCommand("tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_step_1) : ldns.step_1\"}]}");
+                v.runCommand("tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_step_1) : default \"}]}");
+            });
+        }
+    });
 });
-*/
