@@ -21,7 +21,7 @@ system.runInterval(() => {
         // グリッチ画面
         if (rand2 <= 10 && rand2 >= 0) {
             const rands = random(0, 2);
-            const randh = random(0, 3);
+            const randh = random(0, 4);
             switch (rands) {
                 case 0:
                     v.playSound("ldns.pp_spawn");
@@ -43,6 +43,9 @@ system.runInterval(() => {
                     break;
                 case 2:
                     v.onScreenDisplay.setTitle("egn6");
+                    break;
+                case 3:
+                    v.onScreenDisplay.setTitle("egn9");
                     break;
             }
         }
