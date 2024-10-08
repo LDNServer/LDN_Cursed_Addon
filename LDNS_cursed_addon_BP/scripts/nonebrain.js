@@ -1,22 +1,20 @@
 import { system, world } from "@minecraft/server";
 import { random } from "./util";
 let noneint = 0;
-let kanasibari;
-let playerlocation;
 world.afterEvents.dataDrivenEntityTrigger.subscribe(async (events) => {
     system.run(async () => {
         if (events.entity.typeId === "ldns:nonebrain") {
             if (events.eventId === "ldns:nonebrain_despawn_event") {
                 noneint++;
                 // ノンブラインがデスポーンした数が一定数を超えたとき
-                if (noneint >= 1066) {
+                if (noneint >= 12) {
                     // 様々なイベントが起こる
                     world.getPlayers().forEach(async (v, i, a) => {
                         v.playSound("ldns.beep");
                         v.onScreenDisplay.setTitle("nonebrain");
                         await system.waitTicks(20 * 4);
-                        playerlocation = v.location;
-                        kanasibari = system.runInterval(async () => {
+                        const playerlocation = v.location;
+                        const kanasibari = system.runInterval(async () => {
                             v.teleport(playerlocation);
                             v.playSound("ldns.errormob_glitch", { volume: 0.1, pitch: 0.666 });
                             const { container } = v.getComponent("inventory");
@@ -67,12 +65,9 @@ world.afterEvents.dataDrivenEntityTrigger.subscribe(async (events) => {
                         }
                         await system.waitTicks(20 * 4);
                         v.playSound("ldns.time_mad");
-                    });
-                    await system.waitTicks(20 * 12);
-                    console.info("We is cursed");
-                    for (let inter = 0; inter < 160; inter++) {
-                        let titletextr = random(0, 6);
-                        world.getPlayers().forEach(async (v, i, a) => {
+                        console.info("We is cursed");
+                        for (let i = 0; i < 160; i++) {
+                            let titletextr = random(0, 6);
                             switch (titletextr) {
                                 case 0:
                                     v.onScreenDisplay.setTitle("あなたは呪われてない", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
@@ -93,11 +88,9 @@ world.afterEvents.dataDrivenEntityTrigger.subscribe(async (events) => {
                                     v.onScreenDisplay.setTitle("They am Cursed.", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
                                     break;
                             }
-                        });
-                        world.setTimeOfDay(random(1, 23999));
-                        await system.waitTicks(1);
-                    }
-                    world.getPlayers().forEach(async (v, i, a) => {
+                            world.setTimeOfDay(random(1, 23999));
+                            await system.waitTicks(1);
+                        }
                         const rande = random(0, 4);
                         if (rande === 0) {
                             v.playSound("ldns.beep");
