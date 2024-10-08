@@ -518,7 +518,7 @@
       500,
       500
     ],
-    "uv": "@hud.anim_title_error_glitch_noise_screen_6",
+    "uv": "@hud.anim_title_error_glitch_noise_screen_9",
     "anims": [
       "@hud.anim_common_wait_6s"
     ],
@@ -546,6 +546,50 @@
       "name": "hud_title_text_factory",
       "control_ids": {
         "hud_title_text": "hud_title_error_glitch_noise_screen_9@hud.hud_title_error_glitch_noise_screen_9"
+      }
+    }
+  },
+  "hud_title_nonebrain_screen": {
+    "layer": 112,
+    "$hud_glitch_1_string": "nonebrain",
+    "type": "image",
+    "size": [
+      "200%",
+      "200%"
+    ],
+    "texture": "textures/ui/ldns/nonebrain/none1",
+    "uv_size": [
+      500,
+      500
+    ],
+    "uv": "@hud.anim_title_nonebrain_screen",
+    "anims": [
+      "@hud.anim_common_wait"
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#hud_title_text_string - $hud_glitch_1_string) = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "anim_title_nonebrain_screen": {
+    "anim_type": "aseprite_flip_book",
+    "initial_uv": [
+      0,
+      0
+    ]
+  },
+  "hud_title_nonebrain_screen_factory": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "hud_title_nonebrain_screen@hud.hud_title_nonebrain_screen"
       }
     }
   },
@@ -968,6 +1012,9 @@
             "hud_title_error_glitch_noise_screen_9_factory@hud.hud_title_error_glitch_noise_screen_9_factory": {}
           },
           {
+            "hud_title_nonebrain_screen_factory@hud.hud_title_nonebrain_screen_factory": {}
+          },
+          {
             "hud_title_error_window_screen_1_factory@hud.hud_title_error_window_screen_1_factory": {}
           },
           {
@@ -1059,7 +1106,7 @@
                   },
                   {
                     "binding_type": "view",
-                    "source_property_name": "(not (#text = 'PPYYS' or #text = '繧ｨ繝ｩ繝ｼ' or #text = 'nabas1' or #text = 'nabas2' or #text = 'nabas3' or #text = 'Error1' or #text = 'Error2' or #text = 'Cursed1' or #text = 'Cursed2' or #text = 'Error1Noisy' or #text = 'Error2Noisy' or #text = 'Cursed1Noisy' or #text = 'Cursed2Noisy' or #text = 'egn2' or #text = 'egn3' or #text = 'egn6' or #text = 'egn9' or #text = 'ew1' or #text = 'ew2' or #text = 'ppse' or #text = 'yyse'))",
+                    "source_property_name": "(not (#text = 'PPYYS' or #text = '繧ｨ繝ｩ繝ｼ' or #text = 'nabas1' or #text = 'nabas2' or #text = 'nabas3' or #text = 'Error1' or #text = 'Error2' or #text = 'Cursed1' or #text = 'Cursed2' or #text = 'Error1Noisy' or #text = 'Error2Noisy' or #text = 'Cursed1Noisy' or #text = 'Cursed2Noisy' or #text = 'egn2' or #text = 'egn3' or #text = 'egn6' or #text = 'egn9' or #text = 'ew1' or #text = 'ew2' or #text = 'ppse' or #text = 'yyse' or #text = 'nonebrain'))",
                     "target_property_name": "#visible"
                   }
                 ]

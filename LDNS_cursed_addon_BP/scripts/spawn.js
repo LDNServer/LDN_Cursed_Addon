@@ -56,9 +56,8 @@ system.runInterval(() => {
                 world.getDimension(v.dimension.id).runCommand("tellraw @a {\"rawtext\":[{\"text\":\"If the hand §oholding§r the leg §3trembles§r, cut §lthe leg off.§r§§\"}]}");
                 v.playSound("ldns.pp_spawn");
                 v.onScreenDisplay.setTitle("ppse");
-                for (let inter = 0; inter < 120; i++) {
+                for (let inter = 0; inter < 120; inter++) {
                     v.teleport(playerlocation);
-                    inter++;
                     await system.waitTicks(1);
                 }
                 v.playSound("ldns.ppyy_spawn");
@@ -69,9 +68,8 @@ system.runInterval(() => {
                 world.getDimension(v.dimension.id).runCommand("tellraw @a {\"rawtext\":[{\"text\":\"I'm on your §lside§r, so I'll keep§l§o watching§r until that §6blood dries§r.\"}]}");
                 v.playSound("ldns.yy_spawn");
                 v.onScreenDisplay.setTitle("yyse");
-                for (let inter = 0; inter < 120; i++) {
+                for (let inter = 0; inter < 120; inter++) {
                     v.teleport(playerlocation);
-                    inter++;
                     await system.waitTicks(1);
                 }
                 v.playSound("ldns.ppyy_spawn");
