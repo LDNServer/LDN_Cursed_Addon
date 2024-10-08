@@ -9,7 +9,7 @@ world.afterEvents.dataDrivenEntityTrigger.subscribe(async (events) => {
             if (events.eventId === "ldns:nonebrain_despawn_event") {
                 noneint++;
                 // ノンブラインがデスポーンした数が一定数を超えたとき
-                if (noneint >= 2666) {
+                if (noneint >= 48) {
                     // 様々なイベントが起こる
                     world.getPlayers().forEach(async (v, i, a) => {
                         v.playSound("ldns.beep");
