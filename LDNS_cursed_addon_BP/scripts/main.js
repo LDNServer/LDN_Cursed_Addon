@@ -11,6 +11,7 @@ import './twilight';
 import './error-tool-block-event';
 import './boss-trophy';
 import './nullbrain';
+import './nonebrain';
 import './spawn';
 import './errormob-effect';
 import './entity787';
