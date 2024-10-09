@@ -148,10 +148,10 @@ system.runInterval(() => {
         // 突然誰かがみんなにチャットして何かが起こる
         else if (rand <= 29 && rand >= 10) {
             const randp = random(0, 6);
-            const randps = random(0, a.length);
+            const randps = random(0, playerlength);
             const psplayer = a[randps];
             const items = random(0, 2);
-            if (a.length <= 1 || psplayer === v) {
+            if (playerlength <= 1 || psplayer === v) {
                 const dummyname = names[random(0, names.length)];
                 switch (randp) {
                     case 0:
