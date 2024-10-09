@@ -37,8 +37,10 @@
                 "height": 1.8
             },
             "minecraft:health": {
-                "value": 10,
-                "max": 10
+                "value": [
+                    20,
+                    40
+                ]
             },
             "minecraft:behavior.look_at_player": {
                 "priority": 8,
