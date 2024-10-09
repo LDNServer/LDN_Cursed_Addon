@@ -48,6 +48,8 @@ function error_tool_damage(targetPlayer) {
         })
         // インゴットの場合erroritemscountを1プラス(スタック数もカウント)
         if (item.typeId === 'ldns:error_ingot') erroritemscount += item.amount;
+        // ブロックの場合erroritemscountを1プラス(スタック数もカウント)
+        if (item.typeId === 'ldns:error_block') erroritemscount += item.amount * 2.666;
     }
     //krtを条件に合わせて増やす
     let krx = 0;

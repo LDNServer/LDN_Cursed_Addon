@@ -5,9 +5,7 @@
     "num_mip_levels": 4,
     "texture_data": {
         "error_block": {
-            "textures": [
-                "textures/block/ldns/error_block"
-            ]
+            "textures": "textures/block/ldns/error_block"
         }
     }
 }

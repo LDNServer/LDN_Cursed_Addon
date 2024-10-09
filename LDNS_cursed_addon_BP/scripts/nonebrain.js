@@ -3,14 +3,14 @@ import { random } from "./util";
 let noneint = 0;
 let nonebrainchat = String(random(10000000, 99999999));
 let random_message = ["NONE縺輔ｓ縺ｯ鄒弱＠縺�☆縺ｰ繧峨＠縺�〒縺�", "縺薙ｓ縺ｫ縺｡縺ｯ縲√♀荵�＠縺ｶ繧翫〒縺吶�NONE縺輔ｓ縲�", "NONE縺ｯ譛ｬ蠖薙↓蟄伜惠縺吶ｋ縺ｮ縺�繧阪≧縺�...��"];
-let random_message_int = random(0, random_message.length);
+let random_message_int = random(0, 6);
 world.afterEvents.dataDrivenEntityTrigger.subscribe(async (events) => {
     system.run(async () => {
         if (events.entity.typeId === "ldns:nonebrain") {
             if (events.eventId === "ldns:nonebrain_despawn_event") {
                 noneint++;
                 // ノンブラインがデスポーンした数が一定数を超えたとき
-                if (noneint >= 64) {
+                if (noneint >= 533) {
                     nonebrain_despawn_events();
                     noneint = 0;
                 }
@@ -147,6 +147,9 @@ world.afterEvents.entityDie.subscribe(async (events) => {
             if (items >= 1 && damageSource.damagingEntity.hasTag("nonebrainchats")) {
                 noneint = 0;
                 damageSource.damagingEntity.playSound("random.totem", { pitch: 0.5, volume: 1.5 });
+                damageSource.damagingEntity.runCommand("give @a ldns:cursed_soul 12");
+                nonebrainchat = String(random(10000000, 99999999));
+                random_message_int = random(0, 6);
                 damageSource.damagingEntity.removeTag("nonebrainchats");
             }
         }
@@ -155,16 +158,26 @@ world.afterEvents.entityDie.subscribe(async (events) => {
 
 system.runInterval(async () => {
     nonebrainchat = String(random(10000000, 99999999));
-    random_message_int = random(0, random_message.length);
+    random_message_int = random(0, 6);
 }, 20 * 60);
 
 world.beforeEvents.chatSend.subscribe(async (events) => {
     system.run(async () => {
-        if (events.message === random_message[random_message_int]) {
-            world.sendMessage(nonebrainchat);
-        }
+        random_message.forEach(async (v, i, a) => {
+            if (events.message === v) {
+                if (random_message_int >= 3) {
+                    world.sendMessage("oh");
+                }
+                else {
+                    const messagesnone = random_message[random_message_int];
+                    if (events.message === messagesnone) {
+                        world.sendMessage(nonebrainchat);
+                    }
+                }
+            }
+        });
         if (events.message === nonebrainchat) {
-            world.sendMessage("Nonebrains: " + String(noneint));
+            world.sendMessage("繝弱Φ繝悶Λ繧､繝ｳ: " + String(noneint));
             events.sender.addTag("nonebrainchats");
             await system.waitTicks(20 * 60);
             if (events.sender.hasTag("nonebrainchats")) {
