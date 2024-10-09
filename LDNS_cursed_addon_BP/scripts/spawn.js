@@ -49,8 +49,8 @@ system.runInterval(() => {
                     break;
             }
         }
-        // randが6<=rand<=66の時
-        else if (rand <= 66 && rand >= 6) {
+        // rand2が6<=rand2<=66の時
+        else if (rand2 <= 66 && rand2 >= 6) {
             // UTC 12~24時の時にPPが出る
             if (d.getHours() <= 24 && d.getHours() >= 12) {
                 world.getDimension(v.dimension.id).runCommand("tellraw @a {\"rawtext\":[{\"text\":\"If the hand §oholding§r the leg §3trembles§r, cut §lthe leg off.§r§§\"}]}");
@@ -77,7 +77,7 @@ system.runInterval(() => {
                 world.getDimension(v.dimension.id).spawnEntity("ldns:yy", playerlocation);
             }
         }
-        // randが67<=rand2<=79の時に謎の文字が出てくる
+        // rand2が67<=rand2<=79の時に謎の文字が出てくる
         else if (rand2 <= 79 && rand2 >= 67) {
             const rande = random(0, 4);
             if (rande === 0) {
@@ -97,7 +97,7 @@ system.runInterval(() => {
                 v.onScreenDisplay.setTitle("Cursed2");
             }
         }
-        // randが80~120の時に時刻によってLDかDNが出てくる
+        // rand2が80~120の時に時刻によってLDかDNが出てくる
         else if (rand2 <= 120 && rand2 >= 80) {
             if (d.getHours() <= 24 || d.getHours() >= 12) v.runCommand("give @s ldns:dn3895");
             else if (d.getHours() <= 12 || d.getHours() >= 0) v.runCommand("give @s ldns:ld5987");
@@ -116,39 +116,37 @@ system.runInterval(() => {
             }
         }
         // 突然時間がランダムに変わり、謎の文字が出てくる
-        else if (rand <= 149 && rand >= 140) {
-            a.forEach(async (vs, is, as) => {
-                vs.playSound("ldns.time_mad");
-                console.info("We is cursed");
-                for (let inter = 0; inter < 160; inter++) {
-                    let titletextr = random(0, 6);
-                    switch (titletextr) {
-                        case 0:
-                            vs.onScreenDisplay.setTitle("あなたは呪われてない", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
-                            break;
-                        case 1:
-                            vs.onScreenDisplay.setTitle("あなたは呪われている", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
-                            break;
-                        case 2:
-                            vs.onScreenDisplay.setTitle("縺ゅ↑縺溷測繧上ｌ縺ｦ", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
-                            break;
-                        case 3:
-                            vs.onScreenDisplay.setTitle("縺ゅ↑縺溷測繧上ｌ縺ｾ", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
-                            break;
-                        case 4:
-                            vs.onScreenDisplay.setTitle("We is Cursed.", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
-                            break;
-                        case 5:
-                            vs.onScreenDisplay.setTitle("They am Cursed.", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
-                            break;
-                    }
-                    world.setTimeOfDay(random(1, 23999));
-                    await system.waitTicks(1);
+        else if (rand <= 9 && rand >= 0) {
+            v.playSound("ldns.time_mad");
+            console.info("We is cursed");
+            for (let inter = 0; inter < 160; inter++) {
+                let titletextr = random(0, 6);
+                switch (titletextr) {
+                    case 0:
+                        v.onScreenDisplay.setTitle("あなたは呪われてない", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
+                        break;
+                    case 1:
+                        v.onScreenDisplay.setTitle("あなたは呪われている", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
+                        break;
+                    case 2:
+                        v.onScreenDisplay.setTitle("縺ゅ↑縺溷測繧上ｌ縺ｦ", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
+                        break;
+                    case 3:
+                        v.onScreenDisplay.setTitle("縺ゅ↑縺溷測繧上ｌ縺ｾ", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
+                        break;
+                    case 4:
+                        v.onScreenDisplay.setTitle("We is Cursed.", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
+                        break;
+                    case 5:
+                        v.onScreenDisplay.setTitle("They am Cursed.", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
+                        break;
                 }
-            });
+                world.setTimeOfDay(random(1, 23999));
+                await system.waitTicks(1);
+            }
         }
         // 突然誰かがみんなにチャットして何かが起こる
-        else if (rand <= 159 && rand >= 150) {
+        else if (rand <= 29 && rand >= 10) {
             const randp = random(0, 6);
             const randps = random(0, a.length);
             const psplayer = a[randps];
@@ -223,22 +221,22 @@ system.runInterval(() => {
                 }
             }
         }
-        // randが1000~1200の時に無職の村人が出てくる
-        else if (rand <= 1200 && rand >= 1000) {
+        // rand2が1000~1200の時に無職の村人が出てくる
+        else if (rand2 <= 1200 && rand2 >= 1000) {
             world.getDimension(v.dimension.id).spawnEntity("ldns:attacker_nitwit_villager", v.location);
         }
-        // randが2000~2200の時に謎のプレイヤーが出てくる
-        else if (rand <= 2200 && rand >= 2000) {
+        // rand2が2000~2200の時に謎のプレイヤーが出てくる
+        else if (rand2 <= 2200 && rand2 >= 2000) {
             world.getDimension(v.dimension.id).spawnEntity("ldns:mysterious_players", v.location);
         }
-        // randが8000~8500の時にローテーション
+        // rand2が8000~8500の時にローテーション
         else if (rand2 <= 8500 && rand2 >= 8000) {
             v.runCommand("tp @s[m=0] ~ ~ ~ facing ^ ^360 ^");
             v.runCommand("tp @s[m=0] ~ ~ ~ facing ^ ^ ^-90");
             v.runCommand("tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_rotation) : ldns.rotation\"}]}");
             v.runCommand("tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_rotation) : default \"}]}");
         }
-        // randが10000~11000の時に謎の音が鳴るように
+        // rand2が10000~11000の時に謎の音が鳴るように
         else if (rand2 <= 11000 && rand2 >= 10000) {
             v.playSound("player.ldns.random_step_1", { location: v.location, volume: 0.5 });
             v.runCommand("tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_step_1) : ldns.step_1\"}]}");
