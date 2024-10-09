@@ -10,7 +10,7 @@ world.afterEvents.dataDrivenEntityTrigger.subscribe(async (events) => {
             if (events.eventId === "ldns:nonebrain_despawn_event") {
                 noneint++;
                 // ノンブラインがデスポーンした数が一定数を超えたとき
-                if (noneint >= 533) {
+                if (noneint >= 64) {
                     nonebrain_despawn_events();
                     noneint = 0;
                 }
