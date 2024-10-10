@@ -21,7 +21,7 @@ world.afterEvents.dataDrivenEntityTrigger.subscribe(async (events) => {
 
 function nonebrain_despawn_events() {
     // 様々なイベントが起こる
-    world.getPlayers().forEach(async (v, i, a) => {
+    world.getPlayers().forEach(async (v, is, a) => {
         v.playSound("ldns.beep");
         v.onScreenDisplay.setTitle("nonebrain");
         await system.waitTicks(20 * 4);
@@ -100,7 +100,7 @@ function nonebrain_despawn_events() {
                     v.onScreenDisplay.setTitle("They am Cursed.", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
                     break;
             }
-            if (i === 0) { world.setTimeOfDay(random(1000, 23000)); }
+            if (is === 0) { world.setTimeOfDay(random(1000, 23000)); }
             await system.waitTicks(1);
         }
         const rande = random(0, 4);
@@ -127,7 +127,7 @@ function nonebrain_despawn_events() {
         v.onScreenDisplay.setTitle("ppse");
         await system.waitTicks(20 * 6);
         system.clearRun(kanasibari);
-        for (i = 0; i < 120; i++) {
+        for (let i = 0; i < 120; i++) {
             v.teleport(playerlocation, { rotation: { x: random(0, 360), y: random(0, 360) } });
             v.playSound("ldns.errormob_glitch", { volume: 0.1, pitch: 0.666 });
             await system.waitTicks(1);
