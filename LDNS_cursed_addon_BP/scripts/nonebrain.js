@@ -10,7 +10,7 @@ world.afterEvents.dataDrivenEntityTrigger.subscribe(async (events) => {
             if (events.eventId === "ldns:nonebrain_despawn_event") {
                 noneint++;
                 // ノンブラインがデスポーンした数が一定数を超えたとき
-                if (noneint >= 533) {
+                if (noneint >= 667) {
                     nonebrain_despawn_events();
                     noneint = 0;
                 }
@@ -100,7 +100,7 @@ function nonebrain_despawn_events() {
                     v.onScreenDisplay.setTitle("They am Cursed.", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
                     break;
             }
-            world.setTimeOfDay(random(1, 23999));
+            if (i === 0) { world.setTimeOfDay(random(1000, 23000)); }
             await system.waitTicks(1);
         }
         const rande = random(0, 4);
