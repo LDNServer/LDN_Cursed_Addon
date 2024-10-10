@@ -13,11 +13,14 @@ const errorTools = [
 system.runInterval(() => {
     // ワールドにいるプレイヤー全員
     let targetPlayers = world.getPlayers();
-    // ループ
-    targetPlayers.forEach((targetPlayer) => {
-        error_tool_damage(targetPlayer);
-    })
-}, 20 * 2)
+    const playerlength = targetPlayers.length;
+    if (playerlength >= 1) {
+        // ループ
+        targetPlayers.forEach((targetPlayer) => {
+            error_tool_damage(targetPlayer);
+        });
+    }
+}, 20 * 2);
 
 /**
  * @param {Player} [targetPlayer] 
