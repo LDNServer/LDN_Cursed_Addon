@@ -78,7 +78,6 @@ system.runInterval(async () => {
                     await system.waitTicks(1);
                 }
                 v.playSound("ldns.ppyy_spawn");
-                await system.waitTicks(20 * 5);
                 world.getDimension(v.dimension.id).spawnEntity("ldns:yy", playerlocation);
             }
         }
