@@ -23,39 +23,8 @@ system.runInterval(async () => {
         const d = new Date(Date.now() + ((new Date().getTimezoneOffset() + (timezoneOffset * 60)) * 60 * 1000));
         // 座標獲得
         const playerlocation = v.location;
-        // グリッチ画面
-        if (rand <= 10 && rand >= 0) {
-            const rands = random(0, 2);
-            const randh = random(0, 4);
-            switch (rands) {
-                case 0:
-                    v.playSound("ldns.pp_spawn");
-                    v.playSound("ldns.beep");
-                    v.playSound("ldns.errormob_glitch");
-                    break;
-                case 1:
-                    v.playSound("ldns.yy_spawn");
-                    v.playSound("ldns.beep");
-                    v.playSound("ldns.errormob_glitch");
-                    break;
-            }
-            switch (randh) {
-                case 0:
-                    v.onScreenDisplay.setTitle("egn2");
-                    break;
-                case 1:
-                    v.onScreenDisplay.setTitle("egn3");
-                    break;
-                case 2:
-                    v.onScreenDisplay.setTitle("egn6");
-                    break;
-                case 3:
-                    v.onScreenDisplay.setTitle("egn9");
-                    break;
-            }
-        }
         // rand2が6<=rand2<=66の時
-        else if (rand <= 66 && rand >= 6) {
+        if (rand <= 66 && rand >= 6) {
             // UTC 12~24時の時にPPが出る
             if (d.getHours() <= 24 && d.getHours() >= 12) {
                 world.getDimension(v.dimension.id).runCommand("tellraw @a {\"rawtext\":[{\"text\":\"If the hand §oholding§r the leg §3trembles§r, cut §lthe leg off.§r§§\"}]}");
@@ -105,19 +74,6 @@ system.runInterval(async () => {
         else if (rand <= 120 && rand >= 80) {
             if (d.getHours() <= 24 || d.getHours() >= 12) v.runCommand("give @s ldns:dn3895");
             else if (d.getHours() <= 12 || d.getHours() >= 0) v.runCommand("give @s ldns:ld5987");
-        }
-        // フェイクダイアログ
-        else if (rand <= 139 && rand >= 121) {
-            const randw = random(0, 2);
-            v.playSound("ldns.errormob_errorwindow");
-            switch (randw) {
-                case 0:
-                    v.onScreenDisplay.setTitle("ew1");
-                    break;
-                case 1:
-                    v.onScreenDisplay.setTitle("ew2");
-                    break;
-            }
         }
         // 突然時間がランダムに変わり、謎の文字が出てくる
         else if (rand <= 9 && rand >= 0) {
