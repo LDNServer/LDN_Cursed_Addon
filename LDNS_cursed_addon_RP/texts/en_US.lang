@@ -59,17 +59,17 @@ item.spawn_egg.entity.ldns:mysterious_players.name=Spawn Mysterious Players
 entity.ldns:attacker_nitwit_villager.name=Villager?
 item.spawn_egg.entity.ldns:attacker_nitwit_villager.name=Spawn Villager?
 
-entity.ldns:pp.name=§dPseudo Ping
-item.spawn_egg.entity.ldns:pp.name=Spawn §dPP
+entity.ldns:pp.name=§dPseudo Ping§r
+item.spawn_egg.entity.ldns:pp.name=Spawn §dPP§r
 
-entity.ldns:yy.name=§eYields Yes
-item.spawn_egg.entity.ldns:yy.name=Spawn §eyy
+entity.ldns:yy.name=§eYields Yes§r
+item.spawn_egg.entity.ldns:yy.name=Spawn §eyy§r
 
-entity.ldns:entity787.name=§cEntity787
-item.spawn_egg.entity.ldns:entity787.name=Spawn §cEntity787
+entity.ldns:entity787.name=§cEntity787§r
+item.spawn_egg.entity.ldns:entity787.name=Spawn §cEntity787§r
 
-entity.ldns:errormob.name=§dError§fMob
-item.spawn_egg.entity.ldns:errormob.name=Spawn §dError§fMob
+entity.ldns:errormob.name=§dError§fMob§r
+item.spawn_egg.entity.ldns:errormob.name=Spawn §dError§fMob§r
 
 ##Items
 
@@ -108,8 +108,8 @@ item.ldns:error_ingot=繧ｨ繝ｩ繝ｼ Ingot
 
 item.ldns:entity787_scythe=Entity787's Scythe
 
-item.ldns:ld5987=§eL§cD§75§a9§98§47
-item.ldns:dn3895=§aD§bN§93§38§69§a5
+item.ldns:ld5987=§eL§cD§75§a9§98§47§r
+item.ldns:dn3895=§aD§bN§93§38§69§a5§r
 
 item.ldns:pigcorundum=PigCorundum
 
