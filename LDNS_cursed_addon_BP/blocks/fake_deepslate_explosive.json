@@ -13,7 +13,7 @@
             ],
             "minecraft:loot": "loot_tables/empty.json",
             "minecraft:destructible_by_mining":{
-                "seconds_to_destroy": 1.5
+                "seconds_to_destroy": 0.05
             },
             "minecraft:destructible_by_explosion":{
                 "explosion_resistance": 6

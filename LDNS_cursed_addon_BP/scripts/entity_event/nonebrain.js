@@ -1,5 +1,5 @@
 import { Player, system, world } from "@minecraft/server";
-import { random } from "./util";
+import { random } from "../util";
 let noneint = 0;
 let nonebrainchat = String(random(10000000, 99999999));
 let random_message = ["NONE縺輔ｓ縺ｯ鄒弱＠縺�☆縺ｰ繧峨＠縺�〒縺�", "縺薙ｓ縺ｫ縺｡縺ｯ縲√♀荵�＠縺ｶ繧翫〒縺吶�NONE縺輔ｓ縲�", "NONE縺ｯ譛ｬ蠖薙↓蟄伜惠縺吶ｋ縺ｮ縺�繧阪≧縺�...��"];

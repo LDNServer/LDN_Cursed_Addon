@@ -1,6 +1,6 @@
 import { TimeOfDay, system, world } from '@minecraft/server';
-import * as config from './config';
-import * as util from './util';
+import * as config from '../config';
+import * as util from '../util';
 
 system.runInterval(() => {
   // ワールドのプレイヤーを獲得

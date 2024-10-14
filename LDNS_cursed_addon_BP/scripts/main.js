@@ -1,22 +1,22 @@
 // @ts-check
 import { system, world } from '@minecraft/server';
 
-import './random_effect';
-import './dangerous_cactus';
-import './random_time';
-import './error-tool-effects';
-import './error-tool-damage';
-import './nametag_mysterious_players';
-import './twilight';
-import './error-tool-block-event';
-import './boss-trophy';
-import './nullbrain';
-import './nonebrain';
-import './spawn';
-import './errormob-effect';
-import './entity787';
-import './ppyyeffect';
-import './boss_dr_naba';
+import './script_event/random_effect';
+import './archive/dangerous_cactus';
+import './script_event/random_time';
+import './item_event/error-tool-effects';
+import './item_event/error-tool-damage';
+import './entity_event/nametag_mysterious_players';
+import './item_event/twilight';
+import './item_event/error-tool-block-event';
+import './item_event/boss-trophy';
+import './entity_event/nullbrain';
+import './entity_event/nonebrain';
+import './script_event/spawn';
+import './entity_event/errormob-effect';
+import './entity_event/entity787';
+import './entity_event/ppyyeffect';
+import './entity_event/boss_dr_naba';
 
 const timezoneOffset = 0;
 

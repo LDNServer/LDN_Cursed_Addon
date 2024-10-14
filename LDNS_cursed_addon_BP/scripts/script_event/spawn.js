@@ -1,5 +1,6 @@
 import { ItemStack, system, world } from "@minecraft/server";
-import { random } from "./util";
+import { random } from "../util";
+import { freeze } from "../functions/kanasibari";
 
 const timezoneOffset = 0;
 
@@ -18,7 +19,7 @@ system.runInterval(async () => {
             v = playerall[0];
         }
         // ランダム2
-        const rand = random(0, 28800);
+        const rand = random(0, 23466);
         // 時刻獲得
         const d = new Date(Date.now() + ((new Date().getTimezoneOffset() + (timezoneOffset * 60)) * 60 * 1000));
         // 座標獲得
@@ -30,10 +31,7 @@ system.runInterval(async () => {
                 world.getDimension(v.dimension.id).runCommand("tellraw @a {\"rawtext\":[{\"text\":\"If the hand §oholding§r the leg §3trembles§r, cut §lthe leg off.§r§§\"}]}");
                 v.playSound("ldns.pp_spawn");
                 v.onScreenDisplay.setTitle("ppse");
-                for (let inter = 0; inter < 120; inter++) {
-                    v.teleport(playerlocation);
-                    await system.waitTicks(1);
-                }
+                freeze(v, playerlocation);
                 v.playSound("ldns.ppyy_spawn");
                 world.getDimension(v.dimension.id).spawnEntity("ldns:pp", playerlocation);
             }
@@ -42,10 +40,7 @@ system.runInterval(async () => {
                 world.getDimension(v.dimension.id).runCommand("tellraw @a {\"rawtext\":[{\"text\":\"I'm on your §lside§r, so I'll keep§l§o watching§r until that §6blood dries§r.\"}]}");
                 v.playSound("ldns.yy_spawn");
                 v.onScreenDisplay.setTitle("yyse");
-                for (let inter = 0; inter < 120; inter++) {
-                    v.teleport(playerlocation);
-                    await system.waitTicks(1);
-                }
+                freeze(v, playerlocation);
                 v.playSound("ldns.ppyy_spawn");
                 world.getDimension(v.dimension.id).spawnEntity("ldns:yy", playerlocation);
             }
@@ -481,10 +476,7 @@ world.beforeEvents.chatSend.subscribe((e) => {
                     world.getDimension(v.dimension.id).runCommand("tellraw @a {\"rawtext\":[{\"text\":\"If the hand §oholding§r the leg §3trembles§r, cut §lthe leg off.§r§§\"}]}");
                     v.playSound("ldns.pp_spawn");
                     v.onScreenDisplay.setTitle("ppse");
-                    for (let inter = 0; inter < 120; inter++) {
-                        v.teleport(playerlocation);
-                        await system.waitTicks(1);
-                    }
+                    freeze(v, playerlocation);
                     v.playSound("ldns.ppyy_spawn");
                     world.getDimension(v.dimension.id).spawnEntity("ldns:pp", playerlocation);
                 }
@@ -493,10 +485,7 @@ world.beforeEvents.chatSend.subscribe((e) => {
                     world.getDimension(v.dimension.id).runCommand("tellraw @a {\"rawtext\":[{\"text\":\"I'm on your §lside§r, so I'll keep§l§o watching§r until that §6blood dries§r.\"}]}");
                     v.playSound("ldns.yy_spawn");
                     v.onScreenDisplay.setTitle("yyse");
-                    for (let inter = 0; inter < 120; inter++) {
-                        v.teleport(playerlocation);
-                        await system.waitTicks(1);
-                    }
+                    freeze(v, playerlocation);
                     v.playSound("ldns.ppyy_spawn");
                     world.getDimension(v.dimension.id).spawnEntity("ldns:yy", playerlocation);
                 }

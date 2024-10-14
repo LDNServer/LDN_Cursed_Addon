@@ -1,5 +1,5 @@
 import { Entity, Player, world } from "@minecraft/server";
-import { random } from './util';
+import { random } from '../util';
 
 world.afterEvents.entityHitEntity.subscribe((e) => {
     const { damagingEntity, hitEntity } = e;
