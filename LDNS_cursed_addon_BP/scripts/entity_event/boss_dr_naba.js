@@ -1,6 +1,6 @@
 import { TimeOfDay, Player, world } from "@minecraft/server";
-import { MinecraftEffectTypes } from "./lib/mojang-effect";
-import { random } from "./util";
+import { MinecraftEffectTypes } from "../lib/mojang-effect";
+import { random } from "../util";
 
 world.afterEvents.entityHurt.subscribe((e) => {
     const { damageSource, hurtEntity } = e;

@@ -1,5 +1,5 @@
 import { world } from '@minecraft/server';
-import { random } from './util';
+import { random } from '../util';
 world.afterEvents.entitySpawn.subscribe((entityEvent) => {
     if (entityEvent.entity.typeId == "ldns:mysterious_players") {
         // プレイヤーの名前を割り当て、小さい場合は0を

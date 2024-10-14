@@ -1,6 +1,6 @@
 import { Entity, EquipmentSlot, Player, system, world } from '@minecraft/server';
-import { MinecraftEffectTypes } from './lib/mojang-effect';
-import { targetEntities } from './lib/ldns_entity';
+import { MinecraftEffectTypes } from '../lib/mojang-effect';
+import { targetEntities } from '../lib/ldns_entity';
 
 const errorTools = [
   'ldns:error_sword',

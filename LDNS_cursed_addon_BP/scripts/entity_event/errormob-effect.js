@@ -1,5 +1,6 @@
 import { Entity, Player, system, world } from "@minecraft/server";
-import { random } from './util';
+import { random } from '../util';
+import { freeze } from '../functions/kanasibari';
 
 world.afterEvents.entityHitEntity.subscribe((e) => {
     const { damagingEntity, hitEntity } = e;
@@ -17,7 +18,7 @@ world.afterEvents.entityHurt.subscribe((e) => {
 async function errordamage(targetPlayer) {
     if (!(targetPlayer instanceof Player)) return;
     const playerlocation = targetPlayer.location;
-    const rand = random(0, 100);
+    const rand = random(0, 86);
     // Error画面
     if (rand === 6) {
         targetPlayer.playSound("ldns.error_the_error");
@@ -32,19 +33,13 @@ async function errordamage(targetPlayer) {
             case 0:
                 targetPlayer.onScreenDisplay.setTitle("ew1");
                 if (randm === 0) {
-                    for (let i = 0; i < 100; i++) {
-                        targetPlayer.teleport(playerlocation);
-                        await system.waitTicks(1);
-                    }
+                    freeze(targetPlayer,playerlocation);
                 }
                 break;
             case 1:
                 targetPlayer.onScreenDisplay.setTitle("ew2");
                 if (randm === 0) {
-                    for (let i = 0; i < 100; i++) {
-                        targetPlayer.teleport(playerlocation);
-                        await system.waitTicks(1);
-                    }
+                    freeze(targetPlayer,playerlocation);
                 }
                 break;
         }
@@ -70,37 +65,25 @@ async function errordamage(targetPlayer) {
             case 0:
                 targetPlayer.onScreenDisplay.setTitle("egn2");
                 if (randm === 0) {
-                    for (let i = 0; i < 100; i++) {
-                        targetPlayer.teleport(playerlocation);
-                        await system.waitTicks(1);
-                    }
+                    freeze(targetPlayer,playerlocation);
                 }
                 break;
             case 1:
                 targetPlayer.onScreenDisplay.setTitle("egn3");
                 if (randm === 0) {
-                    for (let i = 0; i < 100; i++) {
-                        targetPlayer.teleport(playerlocation);
-                        await system.waitTicks(1);
-                    }
+                    freeze(targetPlayer,playerlocation);
                 }
                 break;
             case 2:
                 targetPlayer.onScreenDisplay.setTitle("egn6");
                 if (randm === 0) {
-                    for (let i = 0; i < 100; i++) {
-                        targetPlayer.teleport(playerlocation);
-                        await system.waitTicks(1);
-                    }
+                    freeze(targetPlayer,playerlocation);
                 }
                 break;
             case 3:
                 targetPlayer.onScreenDisplay.setTitle("egn9");
                 if (randm === 0) {
-                    for (let i = 0; i < 100; i++) {
-                        targetPlayer.teleport(playerlocation);
-                        await system.waitTicks(1);
-                    }
+                    freeze(targetPlayer,playerlocation);
                 }
                 break;
         }
@@ -108,10 +91,7 @@ async function errordamage(targetPlayer) {
     // 金縛り
     else if (rand === 9) {
         targetPlayer.playSound("ldns.error_the_error");
-        for (let i = 0; i < 100; i++) {
-            targetPlayer.teleport(playerlocation);
-            await system.waitTicks(1);
-        }
+        freeze(targetPlayer,playerlocation);
     }
     // アイテムが置き換えられる
     else if (rand === 13) {
@@ -142,7 +122,8 @@ function errorhurt(damageSource) {
     if (!(damageSource instanceof Player)) return;
     // ペンダントを持っているときのカウント
     const items = damageSource.runCommand('testfor @s[hasitem={item=ldns:pendant_of_twilight}]').successCount;
-    const rand = random(0, 125);
+    const rand = random(0, 100);
+    const playerlocation = damageSource.location;
     // Error画面
     // 夕焼けのペンダントを持っていないときに発動
     if (items <= 0) {
@@ -192,6 +173,20 @@ function errorhurt(damageSource) {
                 case 3:
                     damageSource.onScreenDisplay.setTitle("egn9");
                     break;
+            }
+        }
+        // 金縛り
+        else if (rand === 9) {
+            damageSource.playSound("ldns.error_the_error");
+            freeze(damageSource,playerlocation);
+        }
+        // アイテムが置き換えられる
+        else if (rand === 13) {
+            // インベントリ
+            const { container } = damageSource.getComponent("inventory");
+            for (let i = 0; i < container.size; i++) {
+                // アイテムを置き換える
+                container.swapItems(i, random(0, container.size - 1), container);
             }
         }
     }

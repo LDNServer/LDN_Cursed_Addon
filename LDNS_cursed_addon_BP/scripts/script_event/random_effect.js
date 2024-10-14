@@ -1,7 +1,7 @@
 import { system, world } from '@minecraft/server';
-import { MinecraftEffectTypes } from './lib/mojang-effect';
-import * as util from './util';
-import * as config from './config';
+import { MinecraftEffectTypes } from '../lib/mojang-effect';
+import * as util from '../util';
+import * as config from '../config';
 
 system.runInterval(() => {
   for (const player of world.getPlayers()) {

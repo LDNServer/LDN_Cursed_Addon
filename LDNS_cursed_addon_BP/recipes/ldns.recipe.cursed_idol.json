@@ -8,8 +8,8 @@
     "tags": ["crafting_table"],
     "pattern": [
       "b#b",
-      "sws",
-      "bsb"
+      "sps",
+      "ese"
     ],
     "key": {
       "#": {
@@ -24,8 +24,12 @@
         "item": "ldns:cursed_soul",
         "data": 0
       },
-      "w": {
-        "item": "minecraft:warped_hyphae",
+      "p":{
+        "item": "ldns:pigcorundum",
+        "data": 0
+      },
+      "e":{
+        "item": "ldns:error_ingot",
         "data": 0
       }
     },

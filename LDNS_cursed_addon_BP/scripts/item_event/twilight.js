@@ -1,6 +1,6 @@
 import { Entity, EquipmentSlot, Player, world } from '@minecraft/server';
-import { MinecraftEffectTypes } from './lib/mojang-effect';
-import { targetEntities } from './lib/ldns_entity';
+import { MinecraftEffectTypes } from '../lib/mojang-effect';
+import { targetEntities } from '../lib/ldns_entity';
 
 // エンティティに攻撃したとき
 world.afterEvents.entityHitEntity.subscribe(ev => {

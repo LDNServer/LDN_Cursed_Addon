@@ -1,6 +1,6 @@
 import { Entity, Player, system, world } from "@minecraft/server";
-import { random } from "./util";
-import { MinecraftEffectTypes } from "./lib/mojang-effect";
+import { random } from "../util";
+import { MinecraftEffectTypes } from "../lib/mojang-effect";
 
 // Nullbrainが死んだときのイベント
 world.afterEvents.entityDie.subscribe((edae) => {
@@ -53,7 +53,7 @@ function nullbrainhurtevent(damage, damagingEntity, hurtEntity) {
     if (!(damagingEntity instanceof Player)) return;
     // 1/66の確立
     const rand = random(0, 66);
-    const rand2 = random(0, 2666);
+    const rand2 = random(0, 1333);
     // ペンダントを持っているときは無効
     const items = damagingEntity.runCommand('testfor @s[hasitem={item=ldns:pendant_of_twilight}]').successCount;
     if (items <= 0) {
