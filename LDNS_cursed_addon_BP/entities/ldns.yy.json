@@ -1,0 +1,126 @@
+{
+    "format_version": "1.18.31",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "ldns:yy",
+            "is_spawnable": true,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+        "component_groups": {
+            "ldns:despawn_yy": {
+                "minecraft:instant_despawn": {
+                    "remove_child_entities": false
+                }
+            }
+        },
+        "components": {
+            "minecraft:experience_reward": {
+                "on_death": "query.last_hit_by_player ? 12 + (query.equipment_count * Math.Random(1,3)) : 0"
+            },
+            "minecraft:nameable": {},
+            "minecraft:type_family": {
+                "family": [
+                    "animal",
+                    "mob"
+                ]
+            },
+            "minecraft:collision_box": {
+                "width": 1.0,
+                "height": 1.8
+            },
+            "minecraft:health": {
+                "value": [
+                    96,
+                    128
+                ]
+            },
+            "minecraft:loot": {
+                "table": "loot_tables/entities/yy.json"
+            },
+            "minecraft:behavior.look_at_player": {
+                "priority": 8,
+                "look_distance": 6,
+                "probability": 0.02
+            },
+            "minecraft:movement": {
+                "value": 0.50
+            },
+            "minecraft:movement.basic": {},
+            "minecraft:jump.static": {},
+            "minecraft:behavior.random_look_around": {
+                "priority": 9
+            },
+            "minecraft:physics": {},
+            "minecraft:navigation.walk": {
+                "can_path_over_water": true,
+                "can_pass_doors": true,
+                "can_open_doors": true,
+                "avoid_water": true,
+                "can_swim": true,
+                "can_jump": true
+            },
+            "minecraft:attack": {
+                "damage": 77
+            },
+            "minecraft:behavior.nearest_attackable_target": {
+                "priority": 1,
+                "entity_types": [
+                    {
+                        "filters": {
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "mob"
+                        },
+                        "max_dist": 16
+                    }
+                ],
+                "must_see": true
+            },
+            "minecraft:behavior.random_stroll": {
+                "priority": 8,
+                "speed_multiplier": 0.8
+            },
+            "minecraft:behavior.random_swim": {
+                "avoid_surface": true,
+                "interval": 120,
+                "xz_dist": 10,
+                "y_dist": 7
+            },
+            "minecraft:floats_in_liquid": {},
+            "minecraft:behavior.float": {},
+            "minecraft:water_movement": {
+                "drag_factor": 0.8
+            },
+            "minecraft:pushable": {
+                "is_pushable": true,
+                "is_pushable_by_piston": true
+            },
+            "minecraft:behavior.melee_attack": {
+                "priority": 1
+            },
+            "minecraft:timer": {
+                "time": 40,
+                "looping": true,
+                "time_down_event": {
+                    "event": "ldns:despawn_yy_event",
+                    "target": "self"
+                }
+            },
+            "minecraft:mob_effect": {
+                "effect_range": 0.5,
+                "effect_time": 8,
+                "mob_effect": "levitation"
+            }
+        },
+        "events": {
+            "ldns:despawn_yy_event": {
+                "add": {
+                    "component_groups": [
+                        "ldns:despawn_yy"
+                    ]
+                }
+            }
+        }
+    }
+}

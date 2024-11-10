@@ -1,0 +1,487 @@
+{
+    "format_version": "1.18.30",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "ldns:dr.naba",
+            "is_spawnable": true,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+        "component_groups": {
+            "melee_mode": {
+                "minecraft:behavior.melee_attack": {
+                    "priority": 0,
+                    "speed_multiplier": 1.2,
+                    "melee_fov": 180,
+                    "reach_multiplier": 2
+                },
+                "minecraft:behavior.avoid_mob_type": {
+                    "priority": 1,
+                    "entity_types": [
+                        {
+                            "filters": {
+                                "any_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "mob"
+                                    }
+                                ]
+                            },
+                            "max_dist": 3,
+                            "aim_target_y": 4,
+                            "aim_target_xz": 8,
+                            "on_escape_event": "ldns_start_roar"
+                        }
+                    ]
+                }
+            },
+            "ranged_mode": {
+                "minecraft:behavior.ranged_attack": {
+                    "priority": 1,
+                    "burst_shots": 4,
+                    "burst_interval": 0.5,
+                    "charge_charged_trigger": 0,
+                    "charge_shoot_trigger": 0.1,
+                    "attack_interval_min": 1.0,
+                    "attack_interval_max": 1.2,
+                    "attack_radius": 48,
+                    "attack_radius_min": 2
+                }
+            },
+            "shoot_small_fireball": {
+                "minecraft:shooter": {
+                    "def": "minecraft:small_fireball"
+                }
+            },
+            "shoot_bomb_skull": {
+                "minecraft:shooter": {
+                    "def": "ldns:boss.bomb"
+                }
+            },
+            "sonic_boom": {
+                "minecraft:behavior.sonic_boom": {
+                    "priority": 1,
+                    "duration": 1.0,
+                    "speed_multiplier": 1.2,
+                    "attack_damage": 6,
+                    "attack_range_horizontal": 20,
+                    "attack_range_vertical": 25,
+                    "attack_cooldown": 1.0,
+                    "knockback_vertical_strength": 0.5,
+                    "knockback_horizontal_strength": 2.5,
+                    "knockback_height_cap": 0.5,
+                    "duration_until_attack_sound": 0.8,
+                    "charge_sound": "sonic_charge",
+                    "attack_sound": "sonic_boom"
+                }
+            },
+            "knockback_roar": {
+                "minecraft:behavior.knockback_roar": {
+                    "priority": 0,
+                    "duration": 1,
+                    "attack_time": 0.5,
+                    "knockback_damage": 4,
+                    "knockback_horizontal_strength": 5,
+                    "knockback_vertical_strength": 5,
+                    "knockback_range": 6,
+                    "cooldown_time": 0,
+                    "on_roar_end": {
+                        "event": "ldns_end_roar"
+                    }
+                }
+            },
+            "spell_strength": {
+                "minecraft:spell_effects": {
+                    "add_effects": [
+                        {
+                            "effect": "strength",
+                            "duration": 8,
+                            "amplifier": 2,
+                            "visible": true
+                        },
+                        {
+                            "effect": "regeneration",
+                            "duration": 8,
+                            "amplifier": 2,
+                            "visible": true
+                        }
+                    ]
+                }
+            }
+        },
+        "components": {
+            "minecraft:health": {
+                "value": 200,
+                "max": 200
+            },
+            "minecraft:attack": {
+                "damage": 10
+            },
+            "minecraft:collision_box": {
+                "width": 0.7,
+                "height": 2.1
+            },
+            "minecraft:knockback_resistance": {
+                "value": 1
+            },
+            "minecraft:follow_range": {
+                "value": 64,
+                "max": 64
+            },
+            "minecraft:movement": {
+                "value": 0
+            },
+            "minecraft:teleport": {
+                "random_teleports": false,
+                "max_random_teleport_time": 20,
+                "min_random_teleport_time": 10,
+                "random_teleport_cube": [
+                    16,
+                    24,
+                    16
+                ],
+                "target_distance": 12,
+                "target_teleport_chance": 0.06,
+                "light_teleport_chance": 0.03,
+                "dark_teleport_chance": 0.03
+            },
+            "minecraft:behavior.nearest_attackable_target": {
+                "priority": 1,
+                "must_see": false,
+                "reselect_targets": true,
+                "within_radius": 48,
+                "must_see_forget_duration": 17,
+                "entity_types": [
+                    {
+                        "filters": {
+                            "any_of": [
+                                {
+                                    "test": "is_family",
+                                    "subject": "other",
+                                    "value": "player"
+                                },
+                                {
+                                    "test": "is_family",
+                                    "subject": "other",
+                                    "value": "irongolem"
+                                },
+                                {
+                                    "test": "is_family",
+                                    "subject": "other",
+                                    "value": "warden"
+                                }
+                            ]
+                        },
+                        "max_dist": 64
+                    }
+                ]
+            },
+            "minecraft:behavior.hurt_by_target": {
+                "priority": 3,
+                "entity_types": {
+                    "filters": {
+                        "all_of": [
+                            {
+                                "test": "is_family",
+                                "subject": "other",
+                                "operator": "!=",
+                                "value": "ldns_boss"
+                            }
+                        ]
+                    }
+                }
+            },
+            "minecraft:environment_sensor": {
+                "triggers": [
+                    {
+                        "filters": {
+                            "test": "has_component",
+                            "operator": "==",
+                            "value": "minecraft:spell_effects"
+                        },
+                        "event": "remove_effect"
+                    }
+                ]
+            },
+            "minecraft:timer": {
+                "looping": true,
+                "time": 8,
+                "time_down_event": {
+                    "event": "select_shooter"
+                }
+            },
+            "minecraft:target_nearby_sensor": {
+                "inside_range": 1,
+                "outside_range": 1,
+                "must_see": true,
+                "on_inside_range": {
+                    "event": "switch_to_melee",
+                    "target": "self"
+                },
+                "on_outside_range": {
+                    "event": "switch_to_ranged",
+                    "target": "self"
+                }
+            },
+            "minecraft:damage_sensor": {
+                "triggers": [
+                    {
+                        "on_damage": {
+                            "filters": {
+                                "test": "is_family",
+                                "subject": "other",
+                                "operator": "!=",
+                                "value": "player"
+                            }
+                        },
+                        "damage_multiplier": 0.1
+                    },
+                    {
+                        "on_damage": {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "ldns_boss"
+                                    }
+                                ]
+                            }
+                        },
+                        "deals_damage": false
+                    },
+                    {
+                        "on_damage": {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "player"
+                                    },
+                                    {
+                                        "test": "has_damage",
+                                        "subject": "self",
+                                        "operator": "==",
+                                        "value": "attack"
+                                    }
+                                ]
+                            }
+                        },
+                        "damage_multiplier": 0.5
+                    }
+                ]
+            },
+            "minecraft:entity_sensor": {
+                "sensor_range": 8,
+                "relative_range": false,
+                "minimum_count": 1,
+                "event_filters": {
+                    "any_of": [
+                        {
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "irongolem"
+                        },
+                        {
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "warden"
+                        },
+                        {
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "wither"
+                        }
+                    ]
+                },
+                "event": "stronger"
+            },
+            "minecraft:boss": {
+                "should_darken_sky": true,
+                "name": "Dr.Naba",
+                "hud_range": 55
+            },
+            "minecraft:experience_reward": {
+                "on_death": "50"
+            },
+            "minecraft:persistent": {},
+            "minecraft:is_hidden_when_invisible": {},
+            "minecraft:nameable": {},
+            "minecraft:type_family": {
+                "family": [
+                    "ldns_boss",
+                    "monster",
+                    "mob"
+                ]
+            },
+            "minecraft:movement.basic": {},
+            "minecraft:navigation.walk": {
+                "can_path_over_water": true,
+                "avoid_sun": false,
+                "avoid_water": true,
+                "is_amphibious": true,
+                "can_pass_doors": true,
+                "can_walk": true,
+                "can_break_doors": true
+            },
+            "minecraft:annotation.break_door": {},
+            "minecraft:jump.static": {},
+            "minecraft:can_climb": {},
+            "minecraft:fire_immune": {},
+            "minecraft:breathable": {
+                "total_supply": 15,
+                "suffocate_time": 0,
+                "breathes_air": true,
+                "breathes_water": true
+            },
+            "minecraft:loot": {
+                "table": "loot_tables/entities/boss.dr.naba.json"
+            },
+            "minecraft:behavior.float": {
+                "priority": 4
+            },
+            "minecraft:behavior.look_at_player": {
+                "priority": 8,
+                "look_distance": 6,
+                "probability": 0.02
+            },
+            "minecraft:behavior.random_look_around": {
+                "priority": 9
+            },
+            "minecraft:physics": {},
+            "minecraft:pushable": {
+                "is_pushable": false,
+                "is_pushable_by_piston": true
+            },
+            "minecraft:conditional_bandwidth_optimization": {}
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "add": {
+                    "component_groups": [
+                        "ranged_mode",
+                        "sonic_boom",
+                        "knockback_roar",
+                        "shoot_small_fireball"
+                    ]
+                }
+            },
+            "switch_to_melee": {
+                "add": {
+                    "component_groups": [
+                        "knockback_roar",
+                        "melee_mode"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "ranged_mode",
+                        "ldns_sensor"
+                    ]
+                }
+            },
+            "switch_to_ranged": {
+                "add": {
+                    "component_groups": [
+                        "ranged_mode"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "melee_mode",
+                        "ldns_sensor",
+                        "spell_strength"
+                    ]
+                }
+            },
+            "ldns_start_roar": {
+                "add": {
+                    "component_groups": [
+                        "knockback_roar"
+                    ]
+                }
+            },
+            "ldns_end_roar": {
+                "remove": {
+                    "component_groups": [
+                        "knockback_roar"
+                    ]
+                }
+            },
+            "stronger": {
+                "add": {
+                    "component_groups": [
+                        "spell_strength"
+                    ]
+                }
+            },
+            "remove_effect": {
+                "remove": {
+                    "component_groups": [
+                        "spell_strength"
+                    ]
+                }
+            },
+            "select_shooter": {
+                "randomize": [
+                    {
+                        "weight": 20,
+                        "add": {
+                            "component_groups": [
+                                "shoot_small_fireball"
+                            ]
+                        },
+                        "remove": {
+                            "component_groups": [
+                                "shoot_bomb_skull"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 20,
+                        "add": {
+                            "component_groups": [
+                                "shoot_small_fireball",
+                                "knockback_roar"
+                            ]
+                        },
+                        "remove": {
+                            "component_groups": [
+                                "shoot_bomb_skull"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 10,
+                        "add": {
+                            "component_groups": [
+                                "shoot_bomb_skull"
+                            ]
+                        },
+                        "remove": {
+                            "component_groups": [
+                                "shoot_small_fireball"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 10,
+                        "add": {
+                            "component_groups": [
+                                "shoot_bomb_skull",
+                                "knockback_roar"
+                            ]
+                        },
+                        "remove": {
+                            "component_groups": [
+                                "shoot_small_fireball"
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

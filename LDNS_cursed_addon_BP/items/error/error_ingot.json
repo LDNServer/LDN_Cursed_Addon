@@ -1,0 +1,22 @@
+{
+    "format_version": "1.20.80",
+    "minecraft:item": {
+        "description": {
+            "identifier": "ldns:error_ingot",
+            "menu_category": {
+                "category":"items"
+            }
+        },
+        "components": {
+            "minecraft:icon": {
+                "textures": {
+                    "default": "error_ingot"
+                }
+            },
+            "minecraft:hand_equipped": false,
+            "minecraft:glint": false,
+            "minecraft:stacked_by_data": true,
+            "minecraft:max_stack_size": 43
+        }
+    }
+}

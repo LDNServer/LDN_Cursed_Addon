@@ -1,0 +1,26 @@
+{
+    "format_version": "1.20.30",
+    "animation_controllers": {
+        "controller.animation.ldns.experimental_holiday_creator_check": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "ldns.exp_molang": "query.time_of_day >= 0"
+                        }
+                    ]
+                },
+                "ldns.exp_molang": {
+                    "transitions": [
+                        {
+                            "default": "variable.exp_molang_time = (variable.exp_molang_time ?? 0) ; variable.exp_molang_time = variable.exp_molang_time < 21 ? variable.exp_molang_time + 1:0;return variable.exp_molang_time == 0;"
+                        }
+                    ],
+                    "on_entry": [
+                        "/execute as @e[type=ldns:experimental_setting_checker,hasitem={item=ldns:bomb}] at @s run scoreboard players set @a exp_hc 1"
+                    ]
+                }
+            }
+        }
+    }
+}

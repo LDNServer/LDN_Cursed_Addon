@@ -1,0 +1,20 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "ldns:structure_1"
+		},
+		"structure_name": "mystructure:structure_1",
+		"adjustment_radius": 4,
+		"facing_direction": "random",
+		"constraints": {
+			"grounded": {},
+			"unburied": {},
+			"block_intersection": {
+				"block_allowlist": [
+					"minecraft:air" , "minecraft:tallgrass"
+				]
+			}
+		}
+	}
+}

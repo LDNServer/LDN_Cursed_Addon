@@ -1,0 +1,146 @@
+{
+    "format_version": "1.18.31",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "ldns:pp",
+            "is_spawnable": true,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+        "component_groups": {
+            "ldns:despawn_pp": {
+                "minecraft:instant_despawn": {
+                    "remove_child_entities": false
+                }
+            }
+        },
+        "components": {
+            "minecraft:experience_reward": {
+                "on_death": "query.last_hit_by_player ? 12 + (query.equipment_count * Math.Random(1,3)) : 0"
+            },
+            "minecraft:nameable": {},
+            "minecraft:type_family": {
+                "family": [
+                    "animal",
+                    "mob"
+                ]
+            },
+            "minecraft:collision_box": {
+                "width": 0.6,
+                "height": 1.8
+            },
+            "minecraft:health": {
+                "value": 151
+            },
+            "minecraft:loot": {
+                "table": "loot_tables/entities/pp.json"
+            },
+            "minecraft:behavior.look_at_player": {
+                "priority": 8,
+                "look_distance": 6,
+                "probability": 0.02
+            },
+            "minecraft:movement": {
+                "value": 0.75
+            },
+            "minecraft:movement.basic": {},
+            "minecraft:jump.static": {},
+            "minecraft:behavior.random_look_around": {
+                "priority": 9
+            },
+            "minecraft:physics": {},
+            "minecraft:navigation.walk": {
+                "can_path_over_water": true,
+                "can_pass_doors": true,
+                "can_open_doors": true,
+                "avoid_water": true,
+                "can_swim": true,
+                "can_jump": true
+            },
+            "minecraft:damage_sensor": {
+                "triggers": [
+                    {
+                        "on_damage": {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "actor_health",
+                                        "subject": "self",
+                                        "value": 6
+                                    }
+                                ]
+                            },
+                            "event": "ldns:nullbrain_randomize",
+                            "target": "self"
+                        }
+                    }
+                ]
+            },
+            "minecraft:attack": {
+                "damage": 4
+            },
+            "minecraft:behavior.random_swim": {
+                "avoid_surface": true,
+                "interval": 120,
+                "xz_dist": 10,
+                "y_dist": 7
+            },
+            "minecraft:water_movement": {
+                "drag_factor": 0.8
+            },
+            "minecraft:floats_in_liquid": {},
+            "minecraft:behavior.float": {},
+            "minecraft:behavior.random_stroll": {
+                "priority": 8,
+                "speed_multiplier": 0.8
+            },
+            "minecraft:behavior.nearest_attackable_target": {
+                "priority": 1,
+                "entity_types": [
+                  {
+                    "filters": {
+                      "test": "is_family",
+                      "subject": "other",
+                      "value": "player"
+                    },
+                    "max_dist": 16
+                  },
+                  {
+                    "filters": {
+                      "test": "is_family",
+                      "subject": "other",
+                      "value": "mob"
+                    },
+                    "max_dist": 16
+                  }
+                ],
+                "must_see": true
+            },
+            "minecraft:behavior.melee_attack": {
+                "priority": 1
+            },
+            "minecraft:timer": {
+                "time": 60,
+                "looping": true,
+                "time_down_event": {
+                    "event": "ldns:despawn_pp_event",
+                    "target": "self"
+                }
+            },
+            "minecraft:mob_effect": {
+                "effect_range": 0.3,
+                "effect_time": 8,
+                "mob_effect": "blindness"
+            }
+        },
+        "events": {
+            "ldns:despawn_pp_event": {
+                "add": {
+                    "component_groups": [
+                        "ldns:despawn_pp"
+                    ]
+                }
+            }
+        }
+    }
+}

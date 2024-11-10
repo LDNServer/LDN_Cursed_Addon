@@ -1,0 +1,25 @@
+{
+    "format_version": "1.20.30",
+    "animation_controllers": {
+        "controller.animation.ldns.bomber_dungeon_player_checker": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "ldns.check": "query.time_of_day >= 0"
+                        }
+                    ]
+                },
+                "ldns.check": {
+                    "transitions": [
+                    ],
+                    "on_entry":[
+                      "/scoreboard objectives add player_check dummy ",
+                      "/execute as @a[m=survival,r=100] at @s run scoreboard players set @e[type=ldns:bomber_dungeon_player_checker_entity,r=128] player_check 1",
+                      "/execute as @s[scores={player_check=1}] at @s run structure load ldns.entity.bomber ~ ~-1 ~"
+                    ]
+                }
+            }
+        }
+    }
+}

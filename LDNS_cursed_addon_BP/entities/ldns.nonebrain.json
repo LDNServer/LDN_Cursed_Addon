@@ -1,0 +1,124 @@
+{
+    "format_version": "1.18.31",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "ldns:nonebrain",
+            "is_spawnable": true,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+        "component_groups": {
+            "ldns:nonebrain_despawn": {
+                "minecraft:instant_despawn": {
+                    "remove_child_entities": false
+                }
+            },
+            "ldns:become_yy": {
+                "minecraft:transformation": {
+                    "into": "ldns:yy",
+                    "transformation_sound": "ldns.beep"
+                }
+            }
+        },
+        "components": {
+            "minecraft:nameable": {},
+            "minecraft:type_family": {
+                "family": [
+                    "animal",
+                    "mob"
+                ]
+            },
+            "minecraft:pushable": {
+                "is_pushable": true,
+                "is_pushable_by_piston": true
+            },
+            "minecraft:collision_box": {
+                "width": 0.6,
+                "height": 1.8
+            },
+            "minecraft:health": {
+                "value": [
+                    20,
+                    40
+                ]
+            },
+            "minecraft:behavior.look_at_player": {
+                "priority": 8,
+                "look_distance": 6,
+                "probability": 0.02
+            },
+            "minecraft:behavior.random_look_around": {
+                "priority": 9
+            },
+            "minecraft:physics": {},
+            "minecraft:target_nearby_sensor": {
+                "must_see": false,
+                "inside_range": 26.0,
+                "outside_range": 0.0,
+                "on_inside_range": {
+                    "event": "ldns:nonebrain_despawn_event",
+                    "target": "self"
+                }
+            },
+            "minecraft:attack": {
+              "damage": 99
+            },
+            "minecraft:behavior.nearest_attackable_target": {
+              "priority": 1,
+              "entity_types": [
+                {
+                  "filters": {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  },
+                  "max_dist": 46
+                }
+              ],
+              "must_see": false
+            },
+            "minecraft:behavior.melee_attack": {
+              "priority": 1
+            },
+            "minecraft:loot": {
+                "table": "loot_tables/entities/nonebrain.json"
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "on_damage": {
+                        "filters": [
+                            {
+                                "test": "is_family",
+                                "subject": "other",
+                                "value": "lightning"
+                            },
+                            {
+                                "test": "is_difficulty",
+                                "operator": "!=",
+                                "value": "peaceful"
+                            }
+                        ],
+                        "event": "ldns:become_yy_event"
+                    },
+                    "deals_damage": false
+                }
+            }
+        },
+        "events": {
+            "ldns:become_yy_event": {
+                "add": {
+                    "component_groups": [
+                        "ldns:become_yy"
+                    ]
+                }
+            },
+            "ldns:nonebrain_despawn_event": {
+                "add": {
+                    "component_groups": [
+                        "ldns:nonebrain_despawn"
+                    ]
+                }
+            }
+        }
+    }
+}

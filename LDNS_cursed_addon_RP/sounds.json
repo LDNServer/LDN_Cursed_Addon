@@ -1,0 +1,283 @@
+{
+   "entity_sounds": {
+      "entities": {
+         "ldns:skele_zombie": {
+            "events": {
+               "ambient": "mob.zombie.say",
+               "death": "mob.zombie.death",
+               "hurt": "mob.zombie.hurt",
+               "step": {
+                  "pitch": 1,
+                  "sound": "mob.zombie.step",
+                  "volume": 0.45
+               }
+            },
+            "pitch": [
+               0.8,
+               1.2
+            ],
+            "volume": 1
+         },
+         "ldns:bomber_zombie": {
+            "events": {
+               "ambient": "mob.zombie.say",
+               "death": "mob.zombie.death",
+               "hurt": "mob.zombie.hurt",
+               "step": {
+                  "pitch": 1,
+                  "sound": "mob.zombie.step",
+                  "volume": 0.45
+               }
+            },
+            "pitch": [
+               0.8,
+               1.2
+            ],
+            "volume": 1
+         },
+         "ldns:onibi": {
+            "events": {
+               "ambient": {
+                  "pitch": 1,
+                  "sound": "mob.ldns.onibi.ambient",
+                  "volume": 3
+               },
+               "hurt": {
+                  "pitch": 1,
+                  "sound": "mob.ldns.onibi.damege",
+                  "volume": 1
+               },
+               "death": {
+                  "sound": "mob.ldns.onibi.damege",
+                  "pitch": 0.5,
+                  "volume": 1.5
+               }
+            },
+            "pitch": [
+               0.8,
+               1.2
+            ],
+            "volume": 1
+         },
+         "ldns:skeleton_trader": {
+            "events": {
+               "ambient": "mob.skeleton.say",
+               "death": "mob.skeleton.death",
+               "hurt": {
+                  "sound": "mob.skeleton.hurt",
+                  "volume": 0.70
+               },
+               "step": {
+                  "pitch": 1.0,
+                  "sound": "mob.skeleton.step",
+                  "volume": 1.0
+               },
+               "haggle.no": {
+                  "pitch": 0.7,
+                  "sound": "mob.skeleton.say",
+                  "volume": 2.0
+               },
+               "haggle.yes": {
+                  "pitch": 1.3,
+                  "sound": "mob.skeleton.say",
+                  "volume": 2.0
+               }
+            },
+            "pitch": [
+               0.80,
+               1.20
+            ],
+            "volume": 1.0
+         },
+         "ldns:bse_cow": {
+            "events": {
+               "ambient": "mob.cow.say",
+               "death": "mob.cow.hurt",
+               "eat": "",
+               "hurt": "mob.cow.hurt",
+               "step": {
+                  "pitch": [
+                     0.40,
+                     0.80
+                  ],
+                  "sound": "mob.cow.step",
+                  "volume": 0.650
+               }
+            },
+            "pitch": [
+               0.30,
+               0.60
+            ],
+            "volume": 1.0
+         },
+         "ldns:killer_rabbit": {
+            "events": {
+               "ambient": "mob.rabbit.idle",
+               "death": "mob.rabbit.death",
+               "eat": "",
+               "hurt": "mob.rabbit.hurt"
+            },
+            "pitch": [
+               0.40,
+               0.80
+            ],
+            "volume": 0.80
+         },
+         "ldns:explosive_frog": {
+            "events": {
+               "fuse": {
+                  "pitch": 0.50,
+                  "sound": "random.fuse",
+                  "volume": 1.0
+               },
+               "ambient": "mob.frog.ambient",
+               "ambient.baby": {
+                  "pitch": 1.20,
+                  "sound": "mob.frog.ambient",
+                  "volume": 2.50
+               },
+               "death": "mob.frog.death",
+               "eat": "mob.frog.eat",
+               "hurt": "mob.frog.hurt",
+               "jump_to_block": "mob.frog.jump_to_block",
+               "step": "mob.frog.step"
+            },
+            "pitch": [
+               0.80,
+               1.20
+            ],
+            "volume": 1.0
+         },
+         "ldns:gray_enderman": {
+            "events": {
+               "ambient": "mob.endermen.idle",
+               "death": "mob.endermen.death",
+               "hurt": "mob.endermen.hit",
+               "mad": "mob.endermen.scream",
+               "stare": {
+                  "pitch": 1.0,
+                  "sound": "mob.endermen.stare",
+                  "volume": 1.0
+               }
+            },
+            "pitch": [
+               1.40,
+               1.80
+            ],
+            "volume": 1.0
+         },
+         "ldns:strange_chicken": {
+            "events": {
+               "ambient": "mob.chicken.say",
+               "death": "mob.chicken.hurt",
+               "eat": "",
+               "hurt": "mob.chicken.hurt",
+               "plop": "mob.chicken.plop",
+               "step": {
+                  "pitch": 0.5,
+                  "sound": "mob.chicken.step",
+                  "volume": 0.250
+               }
+            },
+            "pitch": [
+               0.20,
+               0.50
+            ],
+            "volume": 1.0
+         },
+         "ldns:head_only_sheep": {
+            "events": {
+               "ambient": "mob.sheep.say",
+               "death": "mob.sheep.say",
+               "eat": "",
+               "hurt": "mob.sheep.say",
+               "step": {
+                  "pitch": 0.5,
+                  "sound": "mob.sheep.step",
+                  "volume": 0.40
+               }
+            },
+            "pitch": [
+               0.20,
+               0.50
+            ],
+            "volume": 1.0
+         },
+         "ldns:attacker_nitwit_villager": {
+            "events": {
+               "ambient": "mob.villager.idle",
+               "death": "mob.villager.death",
+               "death.to.zombie": "mob.villager.death",
+               "haggle": "mob.villager.haggle",
+               "haggle.no": "mob.villager.no",
+               "haggle.yes": "mob.villager.yes",
+               "hurt": "mob.villager.hit"
+            },
+            "pitch": [
+               0.80,
+               1.20
+            ],
+            "volume": 1.0
+         },
+         "ldns:pp": {
+            "events": {
+               "ambient": "mob.ldns.ppyy",
+               "death": "mob.ldns.ppyy",
+               "hurt": "mob.ldns.ppyy"
+            },
+            "pitch": [
+               0.80,
+               4.10
+            ],
+            "volume": 0.5
+         },
+         "ldns:yy": {
+            "events": {
+               "ambient": "mob.ldns.ppyy",
+               "death": "mob.ldns.ppyy",
+               "hurt": "mob.ldns.ppyy"
+            },
+            "pitch": [
+               0.80,
+               4.10
+            ],
+            "volume": 0.5
+         },
+         "ldns:entity787": {
+            "events": {
+               "ambient": {
+                  "pitch": [
+                     1.8,
+                     2.4
+                  ],
+                  "sound": "ldns.entity787_ambient"
+               },
+               "death": "ldns.entity787_kill"
+            },
+            "pitch": [
+               0.80,
+               1.20
+            ],
+            "volume": 0.5
+         },
+         "ldns:errormob": {
+            "events": {
+               "ambient": {
+                  "pitch": [
+                     0.8,
+                     2.0
+                  ],
+                  "sound": "ldns.errormob"
+               },
+               "hurt": "ldns.errormob",
+               "death": "ldns.errormob"
+            },
+            "pitch": [
+               0.80,
+               1.20
+            ],
+            "volume": 1.0
+         }
+      }
+   }
+}

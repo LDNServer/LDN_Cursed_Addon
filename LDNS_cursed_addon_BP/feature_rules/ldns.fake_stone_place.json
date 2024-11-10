@@ -1,0 +1,51 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:feature_rules": {
+        "description": {
+            "identifier": "ldns:ldns.fake_stone_place",
+            "places_feature": "ldns:ldns.fake_stone_place"
+        },
+        "conditions": {
+            "placement_pass": "underground_pass",
+            "minecraft:biome_filter": {
+                "all_of": [
+                    {
+                        "test": "has_biome_tag",
+                        "operator": "==",
+                        "value": "overworld"
+                    },
+                    {
+                        "test": "has_biome_tag",
+                        "operator": "!=",
+                        "value": "mountains"
+                    }
+                ]
+            }
+        },
+        "distribution": {
+            "iterations": 20,
+            "coordinate_eval_order": "yxz",
+            "x": {
+                "extent": [
+                    0,
+                    16
+                ],
+                "distribution": "uniform"
+            },
+            "y": {
+                "extent": [
+                    -64,
+                    100
+                ],
+                "distribution": "uniform"
+            },
+            "z": {
+                "extent": [
+                    0,
+                    16
+                ],
+                "distribution": "uniform"
+            }
+        }
+    }
+}

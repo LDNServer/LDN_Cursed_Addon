@@ -1,0 +1,42 @@
+{
+  "format_version": "1.18",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ldns:pendant_of_twilight"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "sps",
+      "rgr",
+      "ege"
+    ],
+    "key": {
+      "s": {
+        "item": "ldns:heavy_stone",
+        "data": 0
+      },
+      "p": {
+        "item": "ldns:pigcorundum",
+        "data": 0
+      },
+      "e": {
+        "item": "ldns:error_ingot",
+        "data": 0
+      },
+      "r": {
+        "item": "ldns:gray_ender_pearl",
+        "data": 0
+      },
+      "g": {
+        "item": "minecraft:gold_ingot",
+        "data": 0
+      }
+    },
+    "result": {
+      "item": "ldns:pendant_of_twilight",
+      "count": 1
+    }
+  }
+}

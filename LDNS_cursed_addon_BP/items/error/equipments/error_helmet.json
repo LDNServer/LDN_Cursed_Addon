@@ -1,0 +1,41 @@
+{
+    "format_version": "1.20.30",
+    "minecraft:item": {
+        "description": {
+            "identifier": "ldns:error_helmet",
+            "menu_category": {
+                "category": "equipment",
+                "group": "itemGroup.name.helmet"
+            }
+        },
+        "components": {
+            "minecraft:icon": "error_helmet",
+            "minecraft:hand_equipped": false,
+            "minecraft:glint": false,
+            "minecraft:stacked_by_data": false,
+            "minecraft:max_stack_size": 1,
+            "minecraft:wearable": {
+                "slot": "slot.armor.head",
+                "dispensable": true,
+                "protection": 2
+            },
+            "minecraft:enchantable": {
+                "value": 1,
+                "slot": "armor_head"
+            },
+            "minecraft:durability": {
+                "max_durability": 666
+            },
+            "minecraft:repairable": {
+                "repair_items": [
+                    {
+                        "items": [
+                            "ldns:error_ingot"
+                        ],
+                        "repair_amount": 200
+                    }
+                ]
+            }
+        }
+    }
+}

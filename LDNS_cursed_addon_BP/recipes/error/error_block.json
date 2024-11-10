@@ -1,0 +1,24 @@
+{
+    "format_version": "1.18",
+    "minecraft:recipe_shaped": {
+      "description": {
+        "identifier": "ldns:error_block"
+      },
+      "tags": ["crafting_table"],
+      "pattern": [
+        "EEE",
+        "EEE",
+        "EEE"
+      ],
+      "key": {
+        "E": {
+          "item": "ldns:error_ingot"
+        }
+      },
+      "result": {
+        "item": "ldns:error_block",
+        "count": 1
+      }
+    }
+  }
+  

@@ -1,0 +1,88 @@
+{ "frames": [
+   {
+    "filename": "pperror 0.gif",
+    "frame": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "sourceSize": { "w": 500, "h": 500 },
+    "duration": 250
+   },
+   {
+    "filename": "pperror 1.gif",
+    "frame": { "x": 500, "y": 0, "w": 500, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "sourceSize": { "w": 500, "h": 500 },
+    "duration": 250
+   },
+   {
+    "filename": "pperror 2.gif",
+    "frame": { "x": 1000, "y": 0, "w": 500, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "sourceSize": { "w": 500, "h": 500 },
+    "duration": 250
+   },
+   {
+    "filename": "pperror 3.gif",
+    "frame": { "x": 1500, "y": 0, "w": 500, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "sourceSize": { "w": 500, "h": 500 },
+    "duration": 250
+   },
+   {
+    "filename": "pperror 4.gif",
+    "frame": { "x": 2000, "y": 0, "w": 500, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "sourceSize": { "w": 500, "h": 500 },
+    "duration": 250
+   },
+   {
+    "filename": "pperror 5.gif",
+    "frame": { "x": 2500, "y": 0, "w": 500, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "sourceSize": { "w": 500, "h": 500 },
+    "duration": 250
+   },
+   {
+    "filename": "pperror 6.gif",
+    "frame": { "x": 3000, "y": 0, "w": 500, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "sourceSize": { "w": 500, "h": 500 },
+    "duration": 250
+   },
+   {
+    "filename": "pperror 7.gif",
+    "frame": { "x": 3500, "y": 0, "w": 500, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "sourceSize": { "w": 500, "h": 500 },
+    "duration": 250
+   }
+ ],
+ "meta": {
+  "app": "https://github.com/LibreSprite/LibreSprite/",
+  "version": "1.2-973d0e3d-SDL",
+  "image": "I:\\マイドライブ\\private\\動画、画像、音声\\ノロアド\\PPYYError\\pperror.png",
+  "format": "RGBA8888",
+  "size": { "w": 4000, "h": 500 },
+  "scale": "1",
+  "frameTags": [
+  ],
+  "layers": [
+   { "name": "Layer", "opacity": 255, "blendMode": "normal" }
+  ]
+ }
+}

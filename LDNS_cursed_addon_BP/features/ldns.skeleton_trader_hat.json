@@ -1,0 +1,19 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "ldns:ldns.skeleton_trader_hat"
+		},
+		"structure_name": "mystructure:ldns.skeleton_trader_hat",
+		"adjustment_radius": 4,
+		"facing_direction": "random",
+		"constraints": {
+			"unburied": {},
+			"block_intersection": {
+				"block_allowlist": [
+					"minecraft:air" , "minecraft:tallgrass" , "minecraft:log", "minecraft:leaves","minecraft:stone","minecraft:grass","minecraft:snow","minecraft:snow_layer","minecraft:dirt","minecraft:podzol"
+				]
+			}
+		}
+	}
+}

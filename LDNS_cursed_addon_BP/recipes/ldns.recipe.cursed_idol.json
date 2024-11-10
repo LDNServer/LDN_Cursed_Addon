@@ -1,0 +1,41 @@
+{
+  "format_version": "1.18",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ldns:cursed_idol"
+    },
+
+    "tags": ["crafting_table"],
+    "pattern": [
+      "b#b",
+      "sps",
+      "ese"
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:skull",
+        "data": 2
+      },
+      "b": {
+        "item": "minecraft:blaze_powder",
+        "data": 0
+      },
+      "s": {
+        "item": "ldns:cursed_soul",
+        "data": 0
+      },
+      "p":{
+        "item": "ldns:pigcorundum",
+        "data": 0
+      },
+      "e":{
+        "item": "ldns:error_ingot",
+        "data": 0
+      }
+    },
+    "result": {
+      "item": "ldns:cursed_idol",
+      "count": 1
+    }
+  }
+}

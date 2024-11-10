@@ -1,0 +1,14 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "ldns:entity787_scythe",
+					"weight": 1
+				}
+			]
+		}
+	]
+}

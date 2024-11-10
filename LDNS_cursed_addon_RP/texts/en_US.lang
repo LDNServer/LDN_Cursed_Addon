@@ -1,0 +1,126 @@
+##Entities & Spawn eggs
+
+entity.ldns:onibi.name=Will-o'-the-wisp
+entity.ldns:onibi<>.name=Will-o'-the-wisp
+item.spawn_egg.entity.ldns:onibi.name=Spawn Will-o'-the-wisp
+
+entity.ldns:skele_zombie.name=Skele Zombie
+item.spawn_egg.entity.ldns:skele_zombie.name=Spawn Skele zombie
+
+entity.ldns:bomber_zombie.name=Bomber zombie
+item.spawn_egg.entity.ldns:bomber_zombie.name=Spawn Bomber zombie
+
+entity.ldns:shadow_mob.name=Shadow mob
+item.spawn_egg.entity.ldns:shadow_mob.name=Spawn Shadow mob
+
+entity.ldns:bomb.name=Bomb
+
+entity.ldns:bed_explosion.name=Cursed bed
+
+entity.ldns:nether_portal_explosion_no_fire.name=Cursed portal
+entity.ldns:nether_portal_explosion.name=Cursed portal
+
+entity.ldns:killer_rabbit.name=Killer rabbit
+item.spawn_egg.entity.ldns:killer_rabbit.name=Spawn Killer rabbit
+
+entity.ldns:bse_cow.name=BSE cow
+item.spawn_egg.entity.ldns:bse_cow.name=Spawn BSE cow
+
+entity.ldns:skeleton_trader.name=Skeleton trader
+item.spawn_egg.entity.ldns:skeleton_trader.name=Spawn skeleton trader
+
+entity.ldns:dr.naba.name=Dr.Naba
+entity.ldns:dr.naba<>.name=Dr.Naba
+item.spawn_egg.entity.ldns:dr.naba.name=Spawn Dr.Naba
+
+entity.ldns:scythe_bullet.name=Voltwave
+
+entity.ldns:explosive_frog.name=Explosive frog
+item.spawn_egg.entity.ldns:explosive_frog.name=Spawn Explosive frog
+
+entity.ldns:gray_enderman.name=Gray enderman
+item.spawn_egg.entity.ldns:gray_enderman.name=Spawn Gray enderman
+
+entity.ldns:strange_chicken.name=Strange chicken
+item.spawn_egg.entity.ldns:strange_chicken.name=Spawn Strange chicken
+
+entity.ldns:head_only_sheep.name=Head only sheep
+item.spawn_egg.entity.ldns:head_only_sheep.name=Spawn Head only sheep
+
+entity.ldns:nullbrain.name=Null brain
+item.spawn_egg.entity.ldns:nullbrain.name=Spawn Null brain
+
+entity.ldns:nonebrain.name=None brain
+item.spawn_egg.entity.ldns:nonebrain.name=Spawn None brain
+
+entity.ldns:mysterious_players.name=Mysterious Players
+item.spawn_egg.entity.ldns:mysterious_players.name=Spawn Mysterious Players
+
+entity.ldns:attacker_nitwit_villager.name=Villager?
+item.spawn_egg.entity.ldns:attacker_nitwit_villager.name=Spawn Villager?
+
+entity.ldns:pp.name=§dPseudo Ping§r
+item.spawn_egg.entity.ldns:pp.name=Spawn §dPP§r
+
+entity.ldns:yy.name=§eYields Yes§r
+item.spawn_egg.entity.ldns:yy.name=Spawn §eyy§r
+
+entity.ldns:entity787.name=§cEntity787§r
+item.spawn_egg.entity.ldns:entity787.name=Spawn §cEntity787§r
+
+entity.ldns:errormob.name=§dError§fMob§r
+item.spawn_egg.entity.ldns:errormob.name=Spawn §dError§fMob§r
+
+##Items
+
+item.ldns:travel_ticket=Pendant of daybreak
+
+item.ldns:pendant_of_goscubus=Pendant of goscubus
+
+item.ldns:pendant_of_twilight=Pendant of Twilight
+
+item.ldns:pendant_of_heat_sand=Pendant of HeatSand
+
+item.ldns:bomb=Bomb
+
+item.ldns:cursed_soul=Cursed soul
+
+item.ldns:heavy_stone=Heavy stone
+
+item.ldns:boss_trophy=Boss trophy
+
+item.ldns:cursed_idol=Cursed idol
+
+item.ldns:gray_ender_pearl=Gray Ender pearl
+
+item.ldns:error_helmet=繧ｨ繝ｩ繝ｼ Helmet
+item.ldns:error_chestplate=繧ｨ繝ｩ繝ｼ Chestplate
+item.ldns:error_leggings=繧ｨ繝ｩ繝ｼ Leggings
+item.ldns:error_boots=繧ｨ繝ｩ繝ｼ Boots
+
+item.ldns:error_sword=繧ｨ繝ｩ繝ｼ Sword
+item.ldns:error_pickaxe=繧ｨ繝ｩ繝ｼ Pickaxe
+item.ldns:error_axe=繧ｨ繝ｩ繝ｼ Axe
+item.ldns:error_shovel=繧ｨ繝ｩ繝ｼ Shovel
+item.ldns:error_hoe=繧ｨ繝ｩ繝ｼ Hoe
+
+item.ldns:error_ingot=繧ｨ繝ｩ繝ｼ Ingot
+
+item.ldns:entity787_scythe=Entity787's Scythe
+
+item.ldns:ld5987=§eL§cD§75§a9§98§47§r
+item.ldns:dn3895=§aD§bN§93§38§69§a5§r
+
+item.ldns:pigcorundum=PigCorundum
+
+item.ldns:error_block=繧ｨ繝ｩ繝ｼ Block
+
+##Messages
+
+message.ldns.enable_debug_log=Enabled debug logs
+message.ldns.disable_debug_log=Disabled debug logs
+message.ldns.enable_random_chat=Enabled random chats
+message.ldns.disable_random_chat=Disabled random chats
+
+##UI
+container.crafting=繧ｯ繝ｩ繝輔ヨ

@@ -1,0 +1,26 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "ldns:ldns.long_tree"
+		},
+		"structure_name": "mystructure:ldns.long_tree",
+		"adjustment_radius": 5,
+		"facing_direction": "random",
+		"constraints": {
+			"grounded": {},
+			"unburied": {},
+			"block_intersection": {
+				"block_allowlist": [
+					"minecraft:air",
+					"minecraft:tallgrass",
+					"minecraft:log",
+					"minecraft:leaves",
+					"minecraft:stone",
+					"minecraft:grass",
+					"minecraft:dirt"
+				]
+			}
+		}
+	}
+}

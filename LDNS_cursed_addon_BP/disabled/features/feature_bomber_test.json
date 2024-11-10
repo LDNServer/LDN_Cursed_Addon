@@ -1,0 +1,14 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:single_block_feature": {
+        "description": {
+            "identifier": "ldns:feature_bomber_test"
+        },
+        "places_block": "ldns:bomber_dungeon_player_checker",
+        "enforce_placement_rules": false,
+        "enforce_survivability_rules": false,
+        "may_replace": [
+            "minecraft:grass"
+        ]
+    }
+}

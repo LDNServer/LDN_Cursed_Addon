@@ -1,0 +1,34 @@
+{
+    "format_version": "1.20.80",
+    "minecraft:block": {
+        "description": {
+            "identifier": "ldns:bomber_dungeon_player_checker",
+            "menu_category": {
+                "category": "none"
+            }
+        },
+        "components": {
+            "minecraft:custom_components": [
+                "ldns:bomber_dungeon_player_checker_c"
+            ],
+            "minecraft:loot": "loot_tables/empty.json",
+            "minecraft:destructible_by_explosion": false,
+            "minecraft:destructible_by_mining": false,
+            "minecraft:friction": 0.6,
+            "minecraft:flammable": {
+                "catch_chance_modifier": 0,
+                "destroy_chance_modifier": 0
+            },
+            "minecraft:tick": {
+                "interval_range": [
+                    20,
+                    20
+                ],
+                "looping": false
+            },
+            "minecraft:map_color": "#FFFFFF",
+            "minecraft:light_dampening": 0,
+            "minecraft:light_emission": 0
+        }
+    }
+}

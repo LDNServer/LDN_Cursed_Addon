@@ -1,0 +1,38 @@
+{
+    "format_version": "1.8.0",
+    "render_controllers": {
+        "controller.render.ldns.mysterious_players": {
+            "arrays": {
+                "geometries": {
+                    "Array.geo": [
+                        "Geometry.default",
+                        "Geometry.default_slim",
+                        "Geometry.mc1",
+                        "Geometry.mc2",
+                        "Geometry.mc3",
+                        "Geometry.mc4"
+                    ]
+                },
+                "textures": {
+                    "Array.skins":[
+                        "Texture.default",
+                        "Texture.default_slim",
+                        "Texture.mc1",
+                        "Texture.mc2",
+                        "Texture.mc3",
+                        "Texture.mc4"
+                    ]
+                }
+            },
+            "geometry": "Array.geo[query.variant]",
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "textures": [
+                "Array.skins[query.variant]"
+            ]
+        }
+    }
+}

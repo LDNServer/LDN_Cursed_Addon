@@ -1,0 +1,77 @@
+{
+    "format_version": "1.18.31",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "ldns:nullbrain",
+            "is_spawnable": true,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+        "component_groups": {
+            "ldns:become_pp": {
+                "minecraft:transformation": {
+                    "into": "ldns:pp",
+                    "transformation_sound": "ldns.beep"
+                }
+            }
+        },
+        "components": {
+            "minecraft:nameable": {},
+            "minecraft:type_family": {
+                "family": [
+                    "animal",
+                    "mob"
+                ]
+            },
+            "minecraft:collision_box": {
+                "width": 0.6,
+                "height": 1.8
+            },
+            "minecraft:health": {
+                "value": 10,
+                "max": 10
+            },
+            "minecraft:loot": {
+                "table": "loot_tables/entities/nullbrain.json"
+            },
+            "minecraft:behavior.look_at_player": {
+                "priority": 8,
+                "look_distance": 6,
+                "probability": 0.02
+            },
+            "minecraft:behavior.random_look_around": {
+                "priority": 9
+            },
+            "minecraft:physics": {},
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "on_damage": {
+                        "filters": [
+                            {
+                                "test": "is_family",
+                                "subject": "other",
+                                "value": "lightning"
+                            },
+                            {
+                                "test": "is_difficulty",
+                                "operator": "!=",
+                                "value": "peaceful"
+                            }
+                        ],
+                        "event": "ldns:become_pp_event"
+                    },
+                    "deals_damage": false
+                }
+            }
+        },
+        "events": {
+            "ldns:become_pp_event": {
+                "add": {
+                    "component_groups": [
+                        "ldns:become_pp"
+                    ]
+                }
+            }
+        }
+    }
+}

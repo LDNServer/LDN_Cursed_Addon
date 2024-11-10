@@ -1,0 +1,7 @@
+[
+    {
+        "flipbook_texture": "textures/block/ldns/error_block",
+        "atlas_tile": "error_block",
+        "ticks_per_frame": 1
+    }
+]

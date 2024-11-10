@@ -1,0 +1,68 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ldns:errormob",
+      "materials": {
+        "default": "slime_outer"
+      },
+      "textures": {
+        "default": "textures/entity/ldns/errormob"
+      },
+      "geometry": {
+        "default": "geometry.errormob"
+      },
+      "spawn_egg": {
+        "base_color": "#cc00ff",
+        "overlay_color": "#000000"
+      },
+      "particle_effects": {
+        "error_effect": "ldns:error_particle"
+      },
+      "animations": {
+        "look_at_target_default": "animation.humanoid.look_at_target.default",
+        "look_at_target_gliding": "animation.humanoid.look_at_target.gliding",
+        "look_at_target_swimming": "animation.humanoid.look_at_target.swimming",
+        "move": "animation.humanoid.move",
+        "charging": "animation.humanoid.charging",
+        "bob": "animation.humanoid.bob",
+        "damage_nearby_mobs": "animation.humanoid.damage_nearby_mobs",
+        "riding.arms": "animation.player.riding.arms",
+        "riding.legs": "animation.player.riding.legs",
+        "sneaking": "animation.player.sneaking",
+        "holding": "animation.player.holding",
+        "holding_spyglass": "animation.humanoid.holding_spyglass",
+        "error_effect": "animation.ldns.error.effect",
+        "look_at_target": "controller.animation.humanoid.look_at_target",
+        "movea": "controller.animation.humanoid.move",
+        "charginga": "controller.animation.humanoid.charging",
+        "boba": "controller.animation.humanoid.bob",
+        "damage_nearby_mobsa": "controller.animation.humanoid.damage_nearby_mobs",
+        "ridinga": "controller.animation.humanoid.riding",
+        "holdinga": "controller.animation.humanoid.holding",
+        "sneakinga": "controller.animation.humanoid.sneaking"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"
+        ],
+        "scale": "1.0",
+        "animate": [
+          "error_effect",
+          "look_at_target",
+          "movea",
+          "charginga",
+          "boba",
+          "damage_nearby_mobsa",
+          "ridinga",
+          "holdinga",
+          "sneakinga"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "enable_attachables": true
+    }
+  }
+}

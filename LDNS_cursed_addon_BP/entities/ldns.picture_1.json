@@ -1,0 +1,70 @@
+{
+    "format_version": "1.18.30",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "ldns:picture_1",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+        "component_groups": {
+            "death": {
+                "minecraft:instant_despawn": {}
+            }
+        },
+        "components": {
+            "minecraft:nameable": {},
+            "minecraft:type_family": {
+                "family": [
+                    "test_entity"
+                ]
+            },
+            "minecraft:collision_box": {
+                "width": 0,
+                "height": 0
+            },
+            "minecraft:health": {
+                "value": 10,
+                "max": 10
+            },
+            "minecraft:scale": {
+                "value": 0.07
+            },
+            "minecraft:loot": {
+                "table": "loot_tables/entities/empty.json"
+            },
+            "minecraft:pushable": {
+                "is_pushable": false,
+                "is_pushable_by_piston": false
+            },
+            "minecraft:breathable": {
+                "totalSupply": 15,
+                "suffocateTime": 0,
+                "breathesAir": true,
+                "breathesWater": true
+            },
+            "minecraft:physics": {
+                "has_collision": false,
+                "has_gravity": false
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "all",
+                    "deals_damage": false
+                }
+            },
+            "minecraft:movement": {
+                "value": 0
+            }
+        },
+        "events": {
+            "ldns:picture_remove": {
+                "add": {
+                    "component_groups": [
+                        "death"
+                    ]
+                }
+            }
+        }
+    }
+}

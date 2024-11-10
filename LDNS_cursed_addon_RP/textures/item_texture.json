@@ -1,0 +1,78 @@
+{
+	"resource_pack_name": "ldns",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"bomb": {
+			"textures": "textures/item/ldns/ldns_bomb"
+		},
+		"travel_ticket": {
+			"textures": "textures/item/ldns/pendant_of_daybreak"
+		},
+		"pendant_of_goscubus": {
+			"textures": "textures/item/ldns/pendant_of_goscubus"
+		},
+		"pendant_of_twilight": {
+			"textures": "textures/item/ldns/pendant_of_nightmare"
+		},
+		"pendant_of_heat_sand": {
+			"textures": "textures/item/ldns/pendant_of_heat_sand"
+		},
+		"cursed_soul": {
+		  "textures": "textures/item/ldns/ldns_cursed_soul"
+		},
+		"heavy_stone": {
+			"textures": "textures/item/ldns/ldns_heavy_stone"
+		},
+		"boss_trophy": {
+			"textures": "textures/item/ldns/ldns_boss_trophy"
+		},
+		"cursed_idol":{
+			"textures": "textures/item/ldns/ldns_cursed_idol"
+		},
+		"error_helmet": {
+			"textures": "textures/item/ldns/error/error_helmet"
+		},
+		"error_chestplate": {
+			"textures": "textures/item/ldns/error/error_chestplate"
+		},
+		"error_leggings": {
+			"textures": "textures/item/ldns/error/error_leggings"
+		},
+		"error_boots": {
+			"textures": "textures/item/ldns/error/error_boots"
+		},
+		"error_sword": {
+			"textures": "textures/item/ldns/error/error_sword"
+		},
+		"error_pickaxe": {
+			"textures": "textures/item/ldns/error/error_pickaxe"
+		},
+		"error_shovel": {
+			"textures": "textures/item/ldns/error/error_shovel"
+		},
+		"error_axe": {
+			"textures": "textures/item/ldns/error/error_axe"
+		},
+		"error_hoe": {
+			"textures": "textures/item/ldns/error/error_hoe"
+		},
+		"error_ingot": {
+			"textures": "textures/item/ldns/error/error_ingot"
+		},
+		"entity787_scythe": {
+		  "textures": "textures/item/ldns/scythe/scythe787"
+		},
+		"gray_ender_pearl": {
+			"textures": "textures/item/ldns/gray_ender_pearl"
+		},
+		"pigcorundum": {
+			"textures": "textures/item/ldns/pigcorundum"
+		},
+		"ld5987": {
+			"textures": "textures/item/ldns/ld5987"
+		},
+		"dn3895": {
+			"textures": "textures/item/ldns/dn3895"
+		}
+	}
+}

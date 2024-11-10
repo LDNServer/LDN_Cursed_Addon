@@ -1,0 +1,20 @@
+{
+  "format_version": "1.20.30",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ldns:sign_ground_execute",
+      "materials": { "default": "fireball" },
+      "textures": {
+        "default": "textures/entity/ldns/onibi"
+      },
+      "geometry": {
+        "default": "geometry.fireball"
+      },
+      "render_controllers": [ "controller.render.default" ],
+      "spawn_egg": {
+        "base_color": "#343ueb",
+        "overlay_color": "#kue229"
+      }
+    }
+  }
+}

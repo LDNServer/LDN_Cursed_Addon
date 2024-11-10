@@ -1,0 +1,24 @@
+{
+    "format_version": "1.8.0",
+    "render_controllers": {
+        "controller.render.ldns.skeleton_custom": {
+            "arrays": {
+                "geometries": {
+                    "Array.geo": [
+                        "Geometry.default",
+                        "Geometry.custom_1"
+                    ]
+                }
+            },
+            "geometry": "Array.geo[query.variant]",
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "textures": [
+                "Texture.default"
+            ]
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.ldns.random_lightning": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "ldns.summon_lightning": "math.mod(query.life_time,5) == math.die_roll_integer(1,0,5600)"
+                        }
+                    ]
+                },
+                "ldns.summon_lightning": {
+                    "transitions": [
+                        {
+                            "default": "variable.time_lightning = (variable.time_lightning ?? 0) ; variable.time_lightning = variable.time_lightning < 48000 ? variable.time_lightning + 1:0;return variable.time_lightning == 0;"
+                        }
+                    ],
+                    "on_entry": [
+                        "/tag @r add ldns_lightning",
+                        "/function system.lightning_trigger",
+                        "/tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_lightning) : ldns.summon_lightning\"}]}"
+                    ],
+                    "on_exit": [
+                        "/tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_lightning) : default \"}]}",
+                        "/tag @a remove ldns_lightning"
+                    ]
+                }
+            }
+        }
+    }
+}

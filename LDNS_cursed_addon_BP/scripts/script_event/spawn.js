@@ -1,0 +1,625 @@
+import { Player, system, world } from "@minecraft/server";
+import { random } from "../util";
+import { freeze } from "../functions/kanasibari";
+import { nonebrain_despawn_events, noneint_reset_event } from "../entity_event/nonebrain_function";
+import { nonebrain_chatsend } from "../entity_event/nonebrain";
+import { MinecraftEffectTypes } from "../lib/mojang-effect";
+
+const timezoneOffset = 0;
+
+let names = ["James", "Olivia", "Liam", "Emma", "Noah", "Ava", "William", "Sophia", "Elijah", "Isabella", "Benjamin", "Mia", "Lucas", "Charlotte", "Henry", "Amelia", "Alexander", "Harper", "Michael", "Evelyn"]
+
+system.runInterval(async () => {
+    // ワールドのプレイヤーを獲得
+    const playerall = world.getPlayers();
+    const playerlength = playerall.length;
+    if (playerlength >= 1) {
+        let v;
+        if (playerlength > 1) {
+            v = playerall[random(0, playerlength)];
+        }
+        else if (playerlength <= 1) {
+            v = playerall[0];
+        }
+        // ランダム2
+        const rand = random(0, 23466);
+        // 時刻獲得
+        const d = new Date(Date.now() + ((new Date().getTimezoneOffset() + (timezoneOffset * 60)) * 60 * 1000));
+        // 座標獲得
+        const playerlocation = v.location;
+        // rand2が6<=rand2<=66の時
+        if (rand <= 66 && rand >= 6) {
+            event0(d, v, playerlocation);
+        }
+        // rand2が67<=rand2<=79の時に謎の文字が出てくる
+        else if (rand <= 79 && rand >= 67) {
+            event1(v);
+        }
+        // rand2が80~120の時に時刻によってLDかDNが出てくる
+        else if (rand <= 120 && rand >= 80) {
+            event2(d, v);
+
+        }
+        // 突然時間がランダムに変わり、謎の文字が出てくる
+        else if (rand <= 9 && rand >= 0) {
+            event3(playerall);
+
+        }
+        // 突然誰かがみんなにチャットして何かが起こる
+        else if (rand <= 29 && rand >= 10) {
+            event4(d, v, playerlength, playerall);
+
+        }
+        // rand2が1000~1200の時に無職の村人が出てくる
+        else if (rand <= 1200 && rand >= 1000) {
+            event5(v);
+        }
+        // rand2が2000~2200の時に謎のプレイヤーが出てくる
+        else if (rand <= 2200 && rand >= 2000) {
+            event6(v);
+        }
+        // rand2が8000~8500の時にローテーション
+        else if (rand <= 8500 && rand >= 8000) {
+            event7(v);
+        }
+        // rand2が10000~11000の時に謎の音が鳴るように
+        else if (rand <= 11000 && rand >= 10000) {
+            event8(v);
+        }
+        else if (rand <= 11020 && rand >= 11001) {
+            event9(playerall);
+        }
+        else if (rand <= 11100 && rand >= 11050) {
+            event10(v);
+        }
+    }
+}, 3200);
+
+world.afterEvents.buttonPush.subscribe(async (e) => {
+    const button = e.block;
+    const buttoname = button.typeId;
+    // PPスポーン
+    if ((buttoname === "minecraft:acacia_button" || buttoname === "minecraft:crimson_button" || buttoname === "minecraft:mangrove_button") && button.permutation.getState("facing_direction") === 0) {
+        if (button.offset({ x: 0, y: 1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: 1, z: -1 }).typeId === "minecraft:redstone_block" &&
+            button.offset({ x: 0, y: 1, z: 1 }).typeId === "minecraft:nether_wart_block" &&
+            button.offset({ x: 0, y: 0, z: -1 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: 0, z: 1 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: -1, z: -1 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: -1, z: 1 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: 2, z: -1 }).typeId === "minecraft:carved_pumpkin") {
+            button.dimension.spawnParticle("ldns:error_particle", button.location);
+            await system.waitTicks(20 * 2.5);
+            button.setType("air");
+            button.offset({ x: 0, y: 1, z: 0 }).setType("air");
+            button.offset({ x: 0, y: 1, z: -1 }).setType("air");
+            button.offset({ x: 0, y: 1, z: 1 }).setType("air");
+            button.offset({ x: 0, y: 0, z: -1 }).setType("air");
+            button.offset({ x: 0, y: 0, z: 1 }).setType("air");
+            button.offset({ x: 0, y: -1, z: -1 }).setType("air");
+            button.offset({ x: 0, y: -1, z: 1 }).setType("air");
+            button.offset({ x: 0, y: 2, z: -1 }).setType("air");
+            button.dimension.spawnEntity("ldns:pp", button.location);
+        }
+        else if (button.offset({ x: 0, y: 1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: 1, z: 1 }).typeId === "minecraft:redstone_block" &&
+            button.offset({ x: 0, y: 1, z: -1 }).typeId === "minecraft:nether_wart_block" &&
+            button.offset({ x: 0, y: 0, z: 1 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: 0, z: -1 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: -1, z: 1 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: -1, z: -1 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: 2, z: 1 }).typeId === "minecraft:carved_pumpkin") {
+            button.dimension.spawnParticle("ldns:error_particle", button.location);
+            await system.waitTicks(20 * 2.5);
+            button.setType("air");
+            button.offset({ x: 0, y: 1, z: 0 }).setType("air");
+            button.offset({ x: 0, y: 1, z: 1 }).setType("air");
+            button.offset({ x: 0, y: 1, z: -1 }).setType("air");
+            button.offset({ x: 0, y: 0, z: 1 }).setType("air");
+            button.offset({ x: 0, y: 0, z: -1 }).setType("air");
+            button.offset({ x: 0, y: -1, z: 1 }).setType("air");
+            button.offset({ x: 0, y: -1, z: -1 }).setType("air");
+            button.offset({ x: 0, y: 2, z: 1 }).setType("air");
+            button.dimension.spawnEntity("ldns:pp", button.location);
+        }
+        else if (button.offset({ x: 0, y: 1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 1, y: 1, z: 0 }).typeId === "minecraft:redstone_block" &&
+            button.offset({ x: -1, y: 1, z: 0 }).typeId === "minecraft:nether_wart_block" &&
+            button.offset({ x: 1, y: 0, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: -1, y: 0, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 1, y: -1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: -1, y: -1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 1, y: 2, z: 0 }).typeId === "minecraft:carved_pumpkin") {
+            button.dimension.spawnParticle("ldns:error_particle", button.location);
+            await system.waitTicks(20 * 2.5);
+            button.setType("air");
+            button.offset({ x: 0, y: 1, z: 0 }).setType("air");
+            button.offset({ x: 1, y: 1, z: 0 }).setType("air");
+            button.offset({ x: -1, y: 1, z: 0 }).setType("air");
+            button.offset({ x: 1, y: 0, z: 0 }).setType("air");
+            button.offset({ x: -1, y: 0, z: 0 }).setType("air");
+            button.offset({ x: 1, y: -1, z: 0 }).setType("air");
+            button.offset({ x: -1, y: -1, z: 0 }).setType("air");
+            button.offset({ x: 1, y: 2, z: 0 }).setType("air");
+            button.dimension.spawnEntity("ldns:pp", button.location);
+        }
+        else if (button.offset({ x: 0, y: 1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: -1, y: 1, z: 0 }).typeId === "minecraft:redstone_block" &&
+            button.offset({ x: 1, y: 1, z: 0 }).typeId === "minecraft:nether_wart_block" &&
+            button.offset({ x: -1, y: 0, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 1, y: 0, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: -1, y: -1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 1, y: -1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: -1, y: 2, z: 0 }).typeId === "minecraft:carved_pumpkin") {
+            button.dimension.spawnParticle("ldns:error_particle", button.location);
+            await system.waitTicks(20 * 2.5);
+            button.setType("air");
+            button.offset({ x: 0, y: 1, z: 0 }).setType("air");
+            button.offset({ x: -1, y: 1, z: 0 }).setType("air");
+            button.offset({ x: 1, y: 1, z: 0 }).setType("air");
+            button.offset({ x: -1, y: 0, z: 0 }).setType("air");
+            button.offset({ x: 1, y: 0, z: 0 }).setType("air");
+            button.offset({ x: -1, y: -1, z: 0 }).setType("air");
+            button.offset({ x: 1, y: -1, z: 0 }).setType("air");
+            button.offset({ x: -1, y: 2, z: 0 }).setType("air");
+            button.dimension.spawnEntity("ldns:pp", button.location);
+        }
+    }
+    if ((buttoname === "minecraft:acacia_button" || buttoname === "minecraft:crimson_button" || buttoname === "minecraft:mangrove_button") && button.permutation.getState("facing_direction") === 1) {
+        if (button.offset({ x: 0, y: 0, z: -1 }).typeId === "minecraft:redstone_block" &&
+            button.offset({ x: 0, y: 0, z: 1 }).typeId === "minecraft:nether_wart_block" &&
+            button.offset({ x: 0, y: 0, z: -2 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: 0, z: 2 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: 1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: -1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: -1, z: -2 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: -1, z: 2 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: 1, z: -2 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: 1, z: 2 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: 2, z: -2 }).typeId === "minecraft:carved_pumpkin" &&
+            button.offset({ x: 0, y: 2, z: 2 }).typeId === "minecraft:carved_pumpkin") {
+            button.dimension.spawnParticle("ldns:error_particle", button.location);
+            await system.waitTicks(20 * 2.5);
+            button.setType("air");
+            button.offset({ x: 0, y: 0, z: -1 }).setType("air");
+            button.offset({ x: 0, y: 0, z: 1 }).setType("air");
+            button.offset({ x: 0, y: 0, z: -2 }).setType("air");
+            button.offset({ x: 0, y: 0, z: 2 }).setType("air");
+            button.offset({ x: 0, y: 1, z: 0 }).setType("air");
+            button.offset({ x: 0, y: -1, z: 0 }).setType("air");
+            button.offset({ x: 0, y: -1, z: -2 }).setType("air");
+            button.offset({ x: 0, y: -1, z: 2 }).setType("air");
+            button.offset({ x: 0, y: 1, z: -2 }).setType("air");
+            button.offset({ x: 0, y: 1, z: 2 }).setType("air");
+            button.offset({ x: 0, y: 2, z: -2 }).setType("air");
+            button.offset({ x: 0, y: 2, z: 2 }).setType("air");
+            button.dimension.spawnEntity("ldns:yy", button.location);
+        }
+        else if (button.offset({ x: 0, y: 0, z: 1 }).typeId === "minecraft:redstone_block" &&
+            button.offset({ x: 0, y: 0, z: -1 }).typeId === "minecraft:nether_wart_block" &&
+            button.offset({ x: 0, y: 0, z: 2 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: 0, z: -2 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: 1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: -1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: -1, z: 2 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: -1, z: -2 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: 1, z: 2 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: 1, z: -2 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: 2, z: 2 }).typeId === "minecraft:carved_pumpkin" &&
+            button.offset({ x: 0, y: 2, z: -2 }).typeId === "minecraft:carved_pumpkin") {
+            button.dimension.spawnParticle("ldns:error_particle", button.location);
+            await system.waitTicks(20 * 2.5);
+            button.setType("air");
+            button.offset({ x: 0, y: 0, z: 1 }).setType("air");
+            button.offset({ x: 0, y: 0, z: -1 }).setType("air");
+            button.offset({ x: 0, y: 0, z: 2 }).setType("air");
+            button.offset({ x: 0, y: 0, z: -2 }).setType("air");
+            button.offset({ x: 0, y: 1, z: 0 }).setType("air");
+            button.offset({ x: 0, y: -1, z: 0 }).setType("air");
+            button.offset({ x: 0, y: -1, z: 2 }).setType("air");
+            button.offset({ x: 0, y: -1, z: -2 }).setType("air");
+            button.offset({ x: 0, y: 1, z: 2 }).setType("air");
+            button.offset({ x: 0, y: 1, z: -2 }).setType("air");
+            button.offset({ x: 0, y: 2, z: 2 }).setType("air");
+            button.offset({ x: 0, y: 2, z: -2 }).setType("air");
+            button.dimension.spawnEntity("ldns:yy", button.location);
+        }
+        else if (button.offset({ x: -1, y: 0, z: 0 }).typeId === "minecraft:redstone_block" &&
+            button.offset({ x: 1, y: 0, z: 0 }).typeId === "minecraft:nether_wart_block" &&
+            button.offset({ x: -2, y: 0, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 2, y: 0, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: 1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: -1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: -2, y: -1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 2, y: -1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: -2, y: 1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 2, y: 1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: -2, y: 2, z: 0 }).typeId === "minecraft:carved_pumpkin" &&
+            button.offset({ x: 2, y: 2, z: 0 }).typeId === "minecraft:carved_pumpkin") {
+            button.dimension.spawnParticle("ldns:error_particle", button.location);
+            await system.waitTicks(20 * 2.5);
+            button.setType("air");
+            button.offset({ x: -1, y: 0, z: 0 }).setType("air");
+            button.offset({ x: 1, y: 0, z: 0 }).setType("air");
+            button.offset({ x: -2, y: 0, z: 0 }).setType("air");
+            button.offset({ x: 2, y: 0, z: 0 }).setType("air");
+            button.offset({ x: 0, y: 1, z: 0 }).setType("air");
+            button.offset({ x: 0, y: -1, z: 0 }).setType("air");
+            button.offset({ x: -2, y: -1, z: 0 }).setType("air");
+            button.offset({ x: 2, y: -1, z: 0 }).setType("air");
+            button.offset({ x: -2, y: 1, z: 0 }).setType("air");
+            button.offset({ x: 2, y: 1, z: 0 }).setType("air");
+            button.offset({ x: -2, y: 2, z: 0 }).setType("air");
+            button.offset({ x: 2, y: 2, z: 0 }).setType("air");
+            button.dimension.spawnEntity("ldns:yy", button.location);
+        }
+        else if (button.offset({ x: 1, y: 0, z: 0 }).typeId === "minecraft:redstone_block" &&
+            button.offset({ x: -1, y: 0, z: 0 }).typeId === "minecraft:nether_wart_block" &&
+            button.offset({ x: 2, y: 0, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: -2, y: 0, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: 1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: -1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 2, y: -1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: -2, y: -1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 2, y: 1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: -2, y: 1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 2, y: 2, z: 0 }).typeId === "minecraft:carved_pumpkin" &&
+            button.offset({ x: -2, y: 2, z: 0 }).typeId === "minecraft:carved_pumpkin") {
+            button.dimension.spawnParticle("ldns:error_particle", button.location);
+            await system.waitTicks(20 * 2.5);
+            button.setType("air");
+            button.offset({ x: 1, y: 0, z: 0 }).setType("air");
+            button.offset({ x: -1, y: 0, z: 0 }).setType("air");
+            button.offset({ x: 2, y: 0, z: 0 }).setType("air");
+            button.offset({ x: -2, y: 0, z: 0 }).setType("air");
+            button.offset({ x: 0, y: 1, z: 0 }).setType("air");
+            button.offset({ x: 0, y: -1, z: 0 }).setType("air");
+            button.offset({ x: 2, y: -1, z: 0 }).setType("air");
+            button.offset({ x: -2, y: -1, z: 0 }).setType("air");
+            button.offset({ x: 2, y: 1, z: 0 }).setType("air");
+            button.offset({ x: -2, y: 1, z: 0 }).setType("air");
+            button.offset({ x: 2, y: 2, z: 0 }).setType("air");
+            button.offset({ x: -2, y: 2, z: 0 }).setType("air");
+            button.dimension.spawnEntity("ldns:yy", button.location);
+        }
+    }
+});
+
+/**
+ * 
+ * @param {Date} d 
+ * @param {Player} v 
+ * @param {import("@minecraft/server").Vector3} playerlocation 
+ */
+function event0(d, v, playerlocation) {
+    // UTC 12~24時の時にPPが出る
+    if (d.getHours() <= 24 && d.getHours() >= 12) {
+        v.dimension.runCommand("tellraw @a {\"rawtext\":[{\"text\":\"If the hand §oholding§r the leg §3trembles§r, cut §lthe leg off.§r§§\"}]}");
+        v.playSound("ldns.pp_spawn");
+        v.onScreenDisplay.setTitle("ppse");
+        freeze(v, playerlocation, 100);
+        v.playSound("ldns.ppyy_spawn");
+        v.dimension.spawnEntity("ldns:pp", playerlocation);
+    }
+    // UTC 0~12時の時にYYが出る
+    else if (d.getHours() <= 12 && d.getHours() >= 0) {
+        v.dimension.runCommand("tellraw @a {\"rawtext\":[{\"text\":\"I'm on your §lside§r, so I'll keep§l§o watching§r until that §6blood dries§r.\"}]}");
+        v.playSound("ldns.yy_spawn");
+        v.onScreenDisplay.setTitle("yyse");
+        freeze(v, playerlocation, 100);
+        v.playSound("ldns.ppyy_spawn");
+        v.dimension.spawnEntity("ldns:yy", playerlocation);
+    }
+}
+
+/**
+ * 
+ * @param {Player} v 
+ */
+function event1(v) {
+    const rande = random(0, 4);
+    if (rande === 0) {
+        v.playSound("ldns.beep");
+        v.onScreenDisplay.setTitle("Error1");
+    }
+    else if (rande === 1) {
+        v.playSound("ldns.beep");
+        v.onScreenDisplay.setTitle("Error2");
+    }
+    else if (rande === 2) {
+        v.playSound("ldns.beep");
+        v.onScreenDisplay.setTitle("Cursed1");
+    }
+    else if (rande === 3) {
+        v.playSound("ldns.beep");
+        v.onScreenDisplay.setTitle("Cursed2");
+    }
+}
+
+/**
+ * 
+ * @param {Date} d 
+ * @param {Player} v 
+ */
+function event2(d, v) {
+    if (d.getHours() <= 24 || d.getHours() >= 12) { v.runCommand("give @s ldns:dn3895"); }
+    else if (d.getHours() <= 12 || d.getHours() >= 0) { v.runCommand("give @s ldns:ld5987"); }
+}
+
+/**
+ * 
+ * @param {Player[]} playerall 
+ */
+function event3(playerall) {
+    playerall.forEach(async (vs, is, as) => {
+        vs.playSound("ldns.time_mad");
+        console.info("We is cursed");
+        for (let inter = 0; inter < 160; inter++) {
+            let titletextr = random(0, 6);
+            switch (titletextr) {
+                case 0:
+                    vs.onScreenDisplay.setTitle("あなたは呪われてない", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
+                    break;
+                case 1:
+                    vs.onScreenDisplay.setTitle("あなたは呪われている", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
+                    break;
+                case 2:
+                    vs.onScreenDisplay.setTitle("縺ゅ↑縺溷測繧上ｌ縺ｦ", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
+                    break;
+                case 3:
+                    vs.onScreenDisplay.setTitle("縺ゅ↑縺溷測繧上ｌ縺ｾ", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
+                    break;
+                case 4:
+                    vs.onScreenDisplay.setTitle("We is Cursed.", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
+                    break;
+                case 5:
+                    vs.onScreenDisplay.setTitle("They am Cursed.", { stayDuration: 2, fadeInDuration: 0, fadeOutDuration: 0, subtitle: String(random(0, 999999999)) });
+                    break;
+            }
+            if (is === 0) { world.setTimeOfDay(random(1000, 23000)); }
+            await system.waitTicks(1);
+        }
+    });
+}
+
+/**
+ * 
+ * @param {Date} d
+ * @param {Player} v 
+ * @param {number} playerlength 
+ * @param {Player[]} playerall 
+ */
+async function event4(d, v, playerlength, playerall) {
+    const randp = random(0, 7);
+    const items = random(0, 2);
+    let psplayer = v;
+    if (playerlength <= 1) {
+        const dummyname = names[random(0, names.length)];
+        switch (randp) {
+            case 0:
+                world.sendMessage("<" + v.name + "> " + "Hello?, " + dummyname);
+                break;
+            case 1:
+                world.sendMessage("<" + v.name + "> " + dummyname + ", Are they cursed?");
+                break;
+            case 2:
+                world.sendMessage("<" + v.name + "> " + dummyname + ", What do you think?");
+                break;
+            case 3:
+                world.sendMessage("<" + v.name + "> " + "Have you become 縺ゅｌ?");
+                break;
+            case 4:
+                world.sendMessage("<" + v.name + "> " + dummyname + ", what's wrong?");
+                break;
+            case 5:
+                world.sendMessage("<" + v.name + "> " + dummyname + "'s Error Computer Information:\n CEU: Erutel Corse i6 666K 6Curse 6Curshreads 6.66GHz\n ERM: DDR6-6666 66GB\n Errorcards: Errvidia Gerrorforce ETX 666 Ei 6GB\n ES: Errorsoft Errdows 666");
+                break;
+        }
+    }
+    else if (playerlength > 1) {
+        while (true) {
+            psplayer = playerall[random(0, playerlength)];
+            if (psplayer != v) {
+                switch (randp) {
+                    case 0:
+                        world.sendMessage("<" + v.name + "> " + "Hello?, " + psplayer.name);
+                        await system.waitTicks(20 * 5);
+                        v.teleport(psplayer.location);
+                        break;
+                    case 1:
+                        world.sendMessage("<" + v.name + "> " + psplayer.name + ", Are they cursed?");
+                        await system.waitTicks(20 * 3);
+                        switch (items) {
+                            case 0:
+                                psplayer.runCommand("give @s ldns:error_ingot");
+                                break;
+                            case 1:
+                                psplayer.runCommand("give @s ldns:heavy_stone");
+                                break;
+                        }
+                        break;
+                    case 2:
+                        world.sendMessage("<" + v.name + "> " + psplayer.name + ", What do you think?");
+                        await system.waitTicks(20 * 3);
+                        psplayer.runCommand("give @s ldns:cursed_soul");
+                        break;
+                    case 3:
+                        world.sendMessage("<" + v.name + "> " + "Have you become 縺ゅｌ?");
+                        break;
+                    case 4:
+                        world.sendMessage("<" + v.name + "> " + psplayer.name + ", what's wrong?");
+                        await system.waitTicks(20 * 3);
+                        switch (items) {
+                            case 0:
+                                psplayer.runCommand("give @s ldns:ld5987");
+                                break;
+                            case 1:
+                                psplayer.runCommand("give @s ldns:dn3895");
+                                break;
+                        }
+                        break;
+                    case 5:
+                        world.sendMessage("<" + v.name + "> " + psplayer.name + "'s Error Computer Information:\n CEU: Erutel Corse i6 666K 6Curse 6Curshreads 6.66GHz\n ERM: DDR6-6666 66GB\n Errorcards: Errvidia Gerrorforce ETX 666 Ei 6GB\n ES: Errorsoft Errdows 666");
+                        await system.waitTicks(20 * 3);
+                        psplayer.addExperience(66);
+                        break;
+                    case 6:
+                        notsayplayerdebug(d, v, psplayer);
+                        break;
+                }
+                break;
+            }
+        }
+    }
+}
+
+/**
+ * 
+ * @param {Player} v 
+ */
+function event5(v) {
+    world.getDimension(v.dimension.id).spawnEntity("ldns:attacker_nitwit_villager", v.location);
+}
+
+/**
+ * 
+ * @param {Player} v 
+ */
+function event6(v) {
+    world.getDimension(v.dimension.id).spawnEntity("ldns:mysterious_players", v.location);
+}
+
+/**
+ * 
+ * @param {Player} v 
+ */
+function event7(v) {
+    v.teleport(v.location, { rotation: { x: random(-90, 90), y: random(0, 180) } });
+    v.runCommand("tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_rotation) : ldns.rotation\"}]}");
+    v.runCommand("tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_rotation) : default \"}]}");
+}
+
+/**
+ * 
+ * @param {Player} v 
+ */
+function event8(v) {
+    v.playSound("player.ldns.random_step_1", { location: v.location, volume: 0.5 });
+    v.runCommand("tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_step_1) : ldns.step_1\"}]}");
+    v.runCommand("tellraw @s[tag=debug_log] {\"rawtext\":[{\"text\":\"【ADD-ON】Debug - States (controller.animation.ldns.random_step_1) : default \"}]}");
+}
+
+/**
+ * 
+ * @param {Player[]} playerall 
+ */
+async function event9(playerall) {
+    playerall.forEach(async (v, i, a) => {
+        switch (random(0, 2)) {
+            case 0:
+                v.playSound("ldns.cursednoise4");
+                break;
+            case 1:
+                v.playSound("ldns.cursednoise5");
+                break;
+        }
+        v.onScreenDisplay.setTitle("textcursed");
+        v.addEffect(MinecraftEffectTypes.Weakness, 20 * 6, { amplifier: 255, showParticles: false });
+        v.dimension.spawnEntity("ldns:noname", { x: v.location.x + v.getViewDirection().x, y: v.location.y, z: v.location.z + v.getViewDirection().z });
+        freeze(v, v.location, 20 * 6);
+    });
+}
+
+/**
+ * 
+ * @param {Player} v 
+ */
+async function event10(v) {
+    v.playSound("ldns.images")
+    switch (random(0, 4)) {
+        case 0:
+            v.onScreenDisplay.setTitle("hello1");
+            break;
+        case 1:
+            v.onScreenDisplay.setTitle("hello2");
+            break;
+        case 2:
+            v.onScreenDisplay.setTitle("hello3");
+            break;
+        case 3:
+            v.onScreenDisplay.setTitle("hello4");
+            break;
+    }
+}
+
+/**
+ * 
+ * @param {Date} d
+ * @param {Player} player1
+ * @param {Player} player2 
+ */
+async function notsayplayerdebug(d, player1, player2) {
+    world.sendMessage("<" + player1.name + "> Are you " + player2.name + "? §4§l§oAwaiting your reply...§r (*** your ****) \n §oHint: it exists in this.");
+
+    world.beforeEvents.chatSend.subscribe(nonebrain_chatsend);
+    let chat4event = world.beforeEvents.chatSend.subscribe((e) => {
+        system.run(() => {
+            if (e.sender === player2) {
+                if (e.message.toLowerCase() === player2.name.toLowerCase() || e.message.toLowerCase() === ("I'm " + player2.name).toLowerCase()) {
+                    nonebrain_despawn_events();
+                    console.log("That's why I said...");
+                } else if (e.message.toLowerCase() === "nullbrain".toLowerCase() || e.message.toLowerCase() === "I'm nullbrain".toLowerCase()) {
+                    player2.dimension.spawnEntity("ldns:yy", player2.location);
+                } else if (e.message.toLowerCase() === "nonebrain".toLowerCase() || e.message.toLowerCase() === "I'm nonebrain".toLowerCase()) {
+                    player2.dimension.spawnEntity("ldns:pp", player2.location);
+                } else if (e.message.toLowerCase() === "pp".toLowerCase() || e.message.toLowerCase() === "I'm pp".toLowerCase()) {
+                    player2.dimension.spawnEntity("ldns:attacker_nitwit_villager", player1.location);
+                } else if (e.message.toLowerCase() === "yy".toLowerCase() || e.message.toLowerCase() === "I'm yy".toLowerCase()) {
+                    if (d.getHours() <= 24 || d.getHours() >= 12) { player2.runCommand("give @s ldns:dn3895"); }
+                    else if (d.getHours() <= 12 || d.getHours() >= 0) { player1.runCommand("give @s ldns:ld5987"); }
+                } else if (e.message.toLowerCase() === "entity787".toLowerCase() || e.message.toLowerCase() === "I'm entity787".toLowerCase()) {
+                    for (let i = 0; i < 15; i++) {
+                        let selectplayer
+                        switch (random(0, 2)) {
+                            case 0:
+                                selectplayer = player1;
+                                break;
+                            case 1:
+                                selectplayer = player2;
+                                break;
+                        }
+                        switch (random(0, 4)) {
+                            case 0:
+                                selectplayer.dimension.spawnEntity("ldns:bse_cow", selectplayer.location).triggerEvent("minecraft:entity_born");
+                                break;
+                            case 1:
+                                selectplayer.dimension.spawnEntity("ldns:strange_chicken", selectplayer.location).triggerEvent("minecraft:entity_born");
+                                break;
+                            case 2:
+                                selectplayer.dimension.spawnEntity("ldns:head_only_sheep", selectplayer.location).triggerEvent("minecraft:entity_born");
+                                break;
+                            case 3:
+                                selectplayer.dimension.spawnEntity("ldns:errormob", selectplayer.location);
+                                break;
+                        }
+                    }
+                } else if (e.message.toLowerCase() === "I'm you".toLowerCase()) {
+                    noneint_reset_event(player2, "00000000", 0);
+                }
+                else if (e.message.toLowerCase() === "うるせえ!".toLowerCase() || e.message.toLowerCase() === "うるせぇ！".toLowerCase() || e.message.toLowerCase() === "うるせぇ!".toLowerCase() || e.message.toLowerCase() === "うるせえ！".toLowerCase() || e.message.toLowerCase() === "shut up!".toLowerCase()) {
+                    player2.dimension.createExplosion(player2.location, 0.5);
+                }
+                else if (e.message.toLowerCase() === "Hello".toLowerCase()) {
+                    world.sendMessage("H...Hello...");
+                } else {
+                    world.sendMessage("?????????????????????????????????????????");
+                }
+                world.beforeEvents.chatSend.unsubscribe(chat4event);
+
+                world.beforeEvents.chatSend.subscribe(nonebrain_chatsend);
+            }
+        });
+    });
+}
+
+// 繝｡繝｢繝ｪ繝ｼ繝ｬ繧､繝?Φ繧ｷ繝ｼ繧ｨ繝ｩ繝ｼ

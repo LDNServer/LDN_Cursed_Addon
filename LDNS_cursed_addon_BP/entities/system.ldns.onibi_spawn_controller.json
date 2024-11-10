@@ -1,0 +1,128 @@
+{
+    "format_version": "1.18.30",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "ldns:onibi_spawn_controller",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+        "component_groups": {
+            "death": {
+                "minecraft:instant_despawn": {}
+            },
+            "spawn_onibi": {
+                "minecraft:transformation": {
+                    "into": "ldns:onibi",
+                    "keep_level": false
+                }
+            }
+        },
+        "components": {
+            "minecraft:nameable": {},
+            "minecraft:type_family": {
+                "family": [
+                    "test_entity"
+                ]
+            },
+            "minecraft:collision_box": {
+                "width": 0.1,
+                "height": 0.1
+            },
+            "minecraft:health": {
+                "value": 10,
+                "max": 10
+            },
+            "minecraft:scale": {
+                "value": 0.2
+            },
+            "minecraft:loot": {
+                "table": "loot_tables/entities/empty.json"
+            },
+            "minecraft:breathable": {
+                "totalSupply": 15,
+                "suffocateTime": 0,
+                "breathesAir": true,
+                "breathesWater": true
+            },
+            "minecraft:physics": {},
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "all",
+                    "deals_damage": false
+                }
+            },
+            "minecraft:movement": {
+                "value": 0
+            },
+            "minecraft:timer": {
+                "looping": false,
+                "time": 0.1,
+                "time_down_event": {
+                    "event": "death"
+                }
+            },
+            "minecraft:environment_sensor": {
+                "triggers": {
+                    "filters": {
+                        "any_of": [
+                            {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "self",
+                                        "value": "test_entity"
+                                    },
+                                    {
+                                        "test": "weather",
+                                        "operator": "==",
+                                        "value": "precipitation"
+                                    },
+                                    {
+                                        "test": "is_daytime",
+                                        "value": false
+                                    }
+                                ]
+                            },
+                            {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "self",
+                                        "value": "test_entity"
+                                    },
+                                    {
+                                        "test": "is_daytime",
+                                        "value": false
+                                    },
+                                    {
+                                        "test": "has_biome_tag",
+                                        "operator": "==",
+                                        "value": "dripstone_caves"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "event": "spawn"
+                }
+            }
+        },
+        "events": {
+            "death": {
+                "add": {
+                    "component_groups": [
+                        "death"
+                    ]
+                }
+            },
+            "spawn": {
+                "add": {
+                    "component_groups": [
+                        "spawn_onibi"
+                    ]
+                }
+            }
+        }
+    }
+}

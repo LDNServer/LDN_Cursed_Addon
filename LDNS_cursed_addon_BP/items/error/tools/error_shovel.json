@@ -1,0 +1,115 @@
+{
+    "format_version": "1.20.80",
+    "minecraft:item": {
+        "description": {
+            "identifier": "ldns:error_shovel",
+            "menu_category": {
+                "category": "equipment",
+                "group": "itemGroup.name.shovel"
+            }
+        },
+        "components": {
+            "minecraft:icon": {
+                "textures": {
+                    "default": "error_shovel"
+                }
+            },
+            "minecraft:custom_components": [
+                "ldns:error_shovel_c"
+            ],
+            "minecraft:hand_equipped": true,
+            "minecraft:glint": false,
+            "minecraft:stacked_by_data": false,
+            "minecraft:max_stack_size": 1,
+            "minecraft:enchantable": {
+                "value": 1,
+                "slot": "shovel"
+            },
+            "minecraft:durability": {
+                "max_durability": 666
+            },
+            "minecraft:repairable": {
+                "repair_items": [
+                    {
+                        "items": [
+                            "ldns:error_ingot"
+                        ],
+                        "repair_amount": 200
+                    }
+                ]
+            },
+            "minecraft:damage": {
+                "value": 3
+            },
+            "minecraft:digger": {
+                "use_efficiency": true,
+                "destroy_speeds": [
+                    {
+                        "block": {
+                            "tags": "query.any_tag('dirt', 'sand', 'snow', 'grass', 'gravel', 'plant')"
+                        },
+                        "speed": 7
+                    },
+                    {
+                        "block": "minecraft:mud",
+                        "speed": 7
+                    },
+                    {
+                        "block": "minecraft:dirt",
+                        "speed": 7
+                    },
+                    {
+                        "block": "minecraft:grass",
+                        "speed": 7
+                    },
+                    {
+                        "block": "minecraft:grass_path",
+                        "speed": 7
+                    },
+                    {
+                        "block": "minecraft:gravel",
+                        "speed": 7
+                    },
+                    {
+                        "block": "minecraft:mycelium",
+                        "speed": 7
+                    },
+                    {
+                        "block": "minecraft:sand",
+                        "speed": 7
+                    },
+                    {
+                        "block": "minecraft:snow",
+                        "speed": 7
+                    },
+                    {
+                        "block": "minecraft:snow_layer",
+                        "speed": 7
+                    },
+                    {
+                        "block": "minecraft:podzol",
+                        "speed": 7
+                    },
+                    {
+                        "block": "minecraft:suspicious_gravel",
+                        "speed": 7
+                    },
+                    {
+                        "block": "minecraft:soul_soil",
+                        "speed": 7
+                    },
+                    {
+                        "block": "minecraft:soul_sand",
+                        "speed": 7
+                    }
+                ]
+            },
+            "minecraft:tags": {
+                "tags": [
+                    "minecraft:is_shovel",
+                    "minecraft:is_tool"
+                ]
+            }
+        }
+    }
+}

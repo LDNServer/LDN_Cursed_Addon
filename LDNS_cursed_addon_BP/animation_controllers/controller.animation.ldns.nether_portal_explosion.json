@@ -1,0 +1,26 @@
+{
+    "format_version": "1.20.30",
+    "animation_controllers": {
+        "controller.animation.ldns.nether_portal_explosion": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "ldns.portal_explosion": "variable.time_portal_check = (variable.time_portal_check ?? 0) ; variable.time_portal_check = variable.time_portal_check < 5 ? variable.time_portal_check + 1:0;return variable.time_portal_check == 0;"
+                        }
+                    ]
+                },
+                "ldns.portal_explosion": {
+                    "transitions": [
+                        {
+                            "default": "variable.time_portal_check = (variable.time_portal_check ?? 0) ; variable.time_portal_check = variable.time_portal_check < 5 ? variable.time_portal_check + 1:0;return variable.time_portal_check == 0;"
+                        }
+                    ],
+                    "on_entry": [
+                        "/execute as @s[hasitem={item=ldns:travel_ticket,quantity=0},m=0] at @s if block ~ ~ ~ portal run function system.nether_portal_explosion"
+                    ]
+                }
+            }
+        }
+    }
+}

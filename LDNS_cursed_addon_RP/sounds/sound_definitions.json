@@ -1,0 +1,371 @@
+{
+    "format_version": "1.14.0",
+    "sound_definitions": {
+        "mob.ldns.onibi.ambient": {
+            "__use_legacy_max_distance": "true",
+            "category": "hostile",
+            "sounds": [
+                {
+                    "name": "sounds/ldns/onibi/ghost_sigh",
+                    "volume": 1.0
+                }
+            ]
+        },
+        "mob.ldns.onibi.flaming": {
+            "__use_legacy_max_distance": "true",
+            "category": "hostile",
+            "sounds": [
+                {
+                    "name": "sounds/ldns/onibi/big_fire1",
+                    "volume": 0.2
+                }
+            ]
+        },
+        "mob.ldns.onibi.flaming.campfire": {
+            "__use_legacy_max_distance": "true",
+            "category": "hostile",
+            "sounds": [
+                {
+                    "name": "sounds/block/campfire/crackle1",
+                    "volume": 1,
+                    "pitch": 1.5
+                },
+                {
+                    "name": "sounds/block/campfire/crackle2",
+                    "volume": 1,
+                    "pitch": 1.5
+                },
+                {
+                    "name": "sounds/block/campfire/crackle3",
+                    "volume": 1,
+                    "pitch": 1.5
+                },
+                {
+                    "name": "sounds/block/campfire/crackle4",
+                    "volume": 1,
+                    "pitch": 1.5
+                },
+                {
+                    "name": "sounds/block/campfire/crackle5",
+                    "volume": 1,
+                    "pitch": 1.5
+                },
+                {
+                    "name": "sounds/block/campfire/crackle6",
+                    "volume": 1,
+                    "pitch": 1.5
+                }
+            ]
+        },
+        "mob.ldns.onibi.damege": {
+            "__use_legacy_max_distance": "true",
+            "category": "hostile",
+            "sounds": [
+                {
+                    "name": "sounds/ldns/onibi/damage",
+                    "volume": 0.3
+                }
+            ]
+        },
+        "mob.ldns.ppyy": {
+            "__use_legacy_max_distance": "true",
+            "category": "hostile",
+            "sounds": [
+                {
+                    "name": "sounds/ldns/ppyy/ppyy1",
+                    "volume": 0.5
+                },
+                {
+                    "name": "sounds/ldns/ppyy/ppyy2",
+                    "volume": 0.5
+                },
+                {
+                    "name": "sounds/ldns/ppyy/ppyy3",
+                    "volume": 0.5
+                },
+                {
+                    "name": "sounds/ldns/ppyy/ppyy4",
+                    "volume": 0.5
+                },
+                {
+                    "name": "sounds/ldns/ppyy/ppyy5",
+                    "volume": 0.5
+                },
+                {
+                    "name": "sounds/ldns/ppyy/ppyy6",
+                    "volume": 0.8
+                },
+                {
+                    "name": "sounds/ldns/ppyy/ppyy7",
+                    "volume": 0.5
+                }
+            ]
+        },
+        "ldns.pp_spawn": {
+            "__use_legacy_max_distance": "true",
+            "category": "hostile",
+            "sounds": [
+                {
+                    "name": "sounds/ldns/ppyy2/pp_spawn_sound",
+                    "volume": 0.5
+                }
+            ]
+        },
+        "ldns.yy_spawn": {
+            "__use_legacy_max_distance": "true",
+            "category": "hostile",
+            "sounds": [
+                {
+                    "name": "sounds/ldns/ppyy2/yy_spawn_sound",
+                    "volume": 0.5
+                }
+            ]
+        },
+        "ldns.ppyy_spawn": {
+            "__use_legacy_max_distance": "true",
+            "category": "hostile",
+            "sounds": [
+                {
+                    "name": "sounds/ldns/ppyy2/ppyyspawn",
+                    "volume": 0.75
+                }
+            ]
+        },
+        "ldns.entity787_ambient": {
+            "__use_legacy_max_distance": "true",
+            "category": "hostile",
+            "sounds": [
+                {
+                    "name": "sounds/ldns/entity787/entity787_ambient_sound",
+                    "volume": 0.5
+                },
+                {
+                    "name": "sounds/ldns/entity787/entity787_ambient_sound2",
+                    "volume": 0.5
+                }
+            ]
+        },
+        "ldns.entity787_kill": {
+            "__use_legacy_max_distance": "true",
+            "category": "hostile",
+            "sounds": [
+                {
+                    "name": "sounds/ldns/entity787/entity787_kill_sound",
+                    "volume": 0.5
+                }
+            ]
+        },
+        "player.ldns.random_step_1": {
+            "__use_legacy_max_distance": "true",
+            "category": "player",
+            "sounds": [
+                {
+                    "name": "sounds/ldns/step/random_step_1",
+                    "volume": 1.0
+                },
+                {
+                    "name": "sounds/ldns/mysterious/8L0Yv8qmEd",
+                    "volume": 1.0
+                },
+                {
+                    "name": "sounds/ldns/mysterious/B5PqyWt4VV",
+                    "volume": 1.0
+                },
+                {
+                    "name": "sounds/ldns/mysterious/c1HKRJTejH",
+                    "volume": 1.0
+                },
+                {
+                    "name": "sounds/ldns/mysterious/Eot5MYBBkq",
+                    "volume": 1.0
+                },
+                {
+                    "name": "sounds/ldns/mysterious/EXVkAqOgCg",
+                    "volume": 1.0
+                },
+                {
+                    "name": "sounds/ldns/mysterious/FRduMHMhOM",
+                    "volume": 1.0
+                },
+                {
+                    "name": "sounds/ldns/mysterious/qt8iVGumG8",
+                    "volume": 1.0
+                },
+                {
+                    "name": "sounds/ldns/mysterious/suf2ps8heq",
+                    "volume": 1.0
+                },
+                {
+                    "name": "sounds/ldns/mysterious/UnSF0hfNRE",
+                    "volume": 1.0
+                }
+            ]
+        },
+        "ldns.errormob": {
+            "__use_legacy_max_distance": true,
+            "category": "hostile",
+            "sounds": [
+                {
+                    "name": "sounds/ldns/errormob/errormob1",
+                    "volume": 0.6
+                },
+                {
+                    "name": "sounds/ldns/errormob/errormob2",
+                    "volume": 0.6
+                },
+                {
+                    "name": "sounds/ldns/errormob/errormob3",
+                    "volume": 0.6
+                },
+                {
+                    "name": "sounds/ldns/errormob/errormob4",
+                    "volume": 0.6
+                },
+                {
+                    "name": "sounds/ldns/errormob/errormob5",
+                    "volume": 0.6
+                },
+                {
+                    "name": "sounds/ldns/errormob/errormob6",
+                    "volume": 0.6
+                },
+                {
+                    "name": "sounds/ldns/errormob/errormob7",
+                    "volume": 0.6
+                }
+            ]
+        },
+        "ldns.error_the_error": {
+            "__use_legacy_max_distance": true,
+            "category": "hostile",
+            "sounds": [
+                {
+                    "name": "sounds/ldns/error",
+                    "volume": 0.6
+                }
+            ]
+        },
+        "ldns.errormob_glitch": {
+            "__use_legacy_max_distance": true,
+            "category": "hostile",
+            "sounds": [
+                {
+                    "name": "sounds/ldns/errormob2/errormob_glitch",
+                    "volume": 0.6
+                }
+            ]
+        },
+        "ldns.errormob_errorwindow": {
+            "__use_legacy_max_distance": true,
+            "category": "hostile",
+            "sounds": [
+                {
+                    "name": "sounds/ldns/errormob2/error_window",
+                    "volume": 0.6
+                }
+            ]
+        },
+        "ldns.beep": {
+            "__use_legacy_max_distance": true,
+            "category": "hostile",
+            "sounds": [
+                {
+                    "name": "sounds/ldns/other/beep",
+                    "volume": 0.6
+                }
+            ]
+        },
+        "ldns.time_mad": {
+            "__use_legacy_max_distance": true,
+            "category": "hostile",
+            "sounds": [
+                {
+                    "name": "sounds/ldns/other/time_mad",
+                    "volume": 1.0
+                }
+            ]
+        },
+        "ldns.cursednoise1": {
+            "__use_legacy_max_distance": true,
+            "category": "hostile",
+            "sounds": [
+                {
+                    "name": "sounds/ldns/cursednoise/cursednoise1",
+                    "volume": 0.6
+                }
+            ]
+        },
+        "ldns.cursednoise2": {
+            "__use_legacy_max_distance": true,
+            "category": "hostile",
+            "sounds": [
+                {
+                    "name": "sounds/ldns/cursednoise/cursednoise2",
+                    "volume": 0.6
+                }
+            ]
+        },
+        "ldns.cursednoise3": {
+            "__use_legacy_max_distance": true,
+            "category": "hostile",
+            "sounds": [
+                {
+                    "name": "sounds/ldns/cursednoise/cursednoise3",
+                    "volume": 0.6
+                }
+            ]
+        },
+        "ldns.cursednoise4": {
+            "__use_legacy_max_distance": true,
+            "category": "hostile",
+            "sounds": [
+                {
+                    "name": "sounds/ldns/cursednoise/cursednoise4",
+                    "volume": 0.6
+                }
+            ]
+        },
+        "ldns.cursednoise5": {
+            "__use_legacy_max_distance": true,
+            "category": "hostile",
+            "sounds": [
+                {
+                    "name": "sounds/ldns/cursednoise/cursednoise5",
+                    "volume": 0.6
+                }
+            ]
+        },
+        "ldns.cursednoise6": {
+            "__use_legacy_max_distance": true,
+            "category": "hostile",
+            "sounds": [
+                {
+                    "name": "sounds/ldns/cursednoise/cursednoise6",
+                    "volume": 0.6
+                }
+            ]
+        },
+        "ldns.images": {
+            "__use_legacy_max_distance": true,
+            "category": "hostile",
+            "sounds": [
+                {
+                    "name": "sounds/ldns/images/image1",
+                    "volume": 0.6
+                },
+                {
+                    "name": "sounds/ldns/images/image2",
+                    "volume": 0.6
+                },
+                {
+                    "name": "sounds/ldns/images/image3",
+                    "volume": 0.6
+                },
+                {
+                    "name": "sounds/ldns/images/image4",
+                    "volume": 0.6
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,295 @@
+{ "frames": [
+   {
+    "filename": "cursed 0.gif",
+    "frame": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "sourceSize": { "w": 500, "h": 500 },
+    "duration": 40
+   },
+   {
+    "filename": "cursed 1.gif",
+    "frame": { "x": 500, "y": 0, "w": 500, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "sourceSize": { "w": 500, "h": 500 },
+    "duration": 40
+   },
+   {
+    "filename": "cursed 2.gif",
+    "frame": { "x": 1000, "y": 0, "w": 500, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "sourceSize": { "w": 500, "h": 500 },
+    "duration": 40
+   },
+   {
+    "filename": "cursed 3.gif",
+    "frame": { "x": 1500, "y": 0, "w": 500, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "sourceSize": { "w": 500, "h": 500 },
+    "duration": 40
+   },
+   {
+    "filename": "cursed 4.gif",
+    "frame": { "x": 2000, "y": 0, "w": 500, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "sourceSize": { "w": 500, "h": 500 },
+    "duration": 40
+   },
+   {
+    "filename": "cursed 5.gif",
+    "frame": { "x": 2500, "y": 0, "w": 500, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "sourceSize": { "w": 500, "h": 500 },
+    "duration": 40
+   },
+   {
+    "filename": "cursed 6.gif",
+    "frame": { "x": 3000, "y": 0, "w": 500, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "sourceSize": { "w": 500, "h": 500 },
+    "duration": 40
+   },
+   {
+    "filename": "cursed 7.gif",
+    "frame": { "x": 3500, "y": 0, "w": 500, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "sourceSize": { "w": 500, "h": 500 },
+    "duration": 40
+   },
+   {
+    "filename": "cursed 8.gif",
+    "frame": { "x": 4000, "y": 0, "w": 500, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "sourceSize": { "w": 500, "h": 500 },
+    "duration": 40
+   },
+   {
+    "filename": "cursed 9.gif",
+    "frame": { "x": 4500, "y": 0, "w": 500, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "sourceSize": { "w": 500, "h": 500 },
+    "duration": 40
+   },
+   {
+    "filename": "cursed 10.gif",
+    "frame": { "x": 5000, "y": 0, "w": 500, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "sourceSize": { "w": 500, "h": 500 },
+    "duration": 40
+   },
+   {
+    "filename": "cursed 11.gif",
+    "frame": { "x": 5500, "y": 0, "w": 500, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "sourceSize": { "w": 500, "h": 500 },
+    "duration": 40
+   },
+   {
+    "filename": "cursed 12.gif",
+    "frame": { "x": 6000, "y": 0, "w": 500, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "sourceSize": { "w": 500, "h": 500 },
+    "duration": 40
+   },
+   {
+    "filename": "cursed 13.gif",
+    "frame": { "x": 6500, "y": 0, "w": 500, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "sourceSize": { "w": 500, "h": 500 },
+    "duration": 40
+   },
+   {
+    "filename": "cursed 14.gif",
+    "frame": { "x": 7000, "y": 0, "w": 500, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "sourceSize": { "w": 500, "h": 500 },
+    "duration": 40
+   },
+   {
+    "filename": "cursed 15.gif",
+    "frame": { "x": 7500, "y": 0, "w": 500, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "sourceSize": { "w": 500, "h": 500 },
+    "duration": 40
+   },
+   {
+    "filename": "cursed 16.gif",
+    "frame": { "x": 8000, "y": 0, "w": 500, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "sourceSize": { "w": 500, "h": 500 },
+    "duration": 40
+   },
+   {
+    "filename": "cursed 17.gif",
+    "frame": { "x": 8500, "y": 0, "w": 500, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "sourceSize": { "w": 500, "h": 500 },
+    "duration": 40
+   },
+   {
+    "filename": "cursed 18.gif",
+    "frame": { "x": 9000, "y": 0, "w": 500, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "sourceSize": { "w": 500, "h": 500 },
+    "duration": 40
+   },
+   {
+    "filename": "cursed 19.gif",
+    "frame": { "x": 9500, "y": 0, "w": 500, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "sourceSize": { "w": 500, "h": 500 },
+    "duration": 40
+   },
+   {
+    "filename": "cursed 20.gif",
+    "frame": { "x": 10000, "y": 0, "w": 500, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "sourceSize": { "w": 500, "h": 500 },
+    "duration": 40
+   },
+   {
+    "filename": "cursed 21.gif",
+    "frame": { "x": 10500, "y": 0, "w": 500, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "sourceSize": { "w": 500, "h": 500 },
+    "duration": 40
+   },
+   {
+    "filename": "cursed 22.gif",
+    "frame": { "x": 11000, "y": 0, "w": 500, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "sourceSize": { "w": 500, "h": 500 },
+    "duration": 40
+   },
+   {
+    "filename": "cursed 23.gif",
+    "frame": { "x": 11500, "y": 0, "w": 500, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "sourceSize": { "w": 500, "h": 500 },
+    "duration": 40
+   },
+   {
+    "filename": "cursed 24.gif",
+    "frame": { "x": 12000, "y": 0, "w": 500, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "sourceSize": { "w": 500, "h": 500 },
+    "duration": 40
+   },
+   {
+    "filename": "cursed 25.gif",
+    "frame": { "x": 12500, "y": 0, "w": 500, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "sourceSize": { "w": 500, "h": 500 },
+    "duration": 40
+   },
+   {
+    "filename": "cursed 26.gif",
+    "frame": { "x": 13000, "y": 0, "w": 500, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "sourceSize": { "w": 500, "h": 500 },
+    "duration": 40
+   },
+   {
+    "filename": "cursed 27.gif",
+    "frame": { "x": 13500, "y": 0, "w": 500, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "sourceSize": { "w": 500, "h": 500 },
+    "duration": 40
+   },
+   {
+    "filename": "cursed 28.gif",
+    "frame": { "x": 14000, "y": 0, "w": 500, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "sourceSize": { "w": 500, "h": 500 },
+    "duration": 40
+   },
+   {
+    "filename": "cursed 29.gif",
+    "frame": { "x": 14500, "y": 0, "w": 500, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "sourceSize": { "w": 500, "h": 500 },
+    "duration": 40
+   },
+   {
+    "filename": "cursed 30.gif",
+    "frame": { "x": 15000, "y": 0, "w": 500, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 500, "h": 500 },
+    "sourceSize": { "w": 500, "h": 500 },
+    "duration": 40
+   }
+ ],
+ "meta": {
+  "app": "https://github.com/LibreSprite/LibreSprite/",
+  "version": "1.2-973d0e3d-SDL",
+  "image": "I:\\マイドライブ\\private\\動画、画像、音声\\ノロアド\\cursed\\cursed.png",
+  "format": "RGBA8888",
+  "size": { "w": 15500, "h": 500 },
+  "scale": "1",
+  "frameTags": [
+  ],
+  "layers": [
+   { "name": "Layer", "opacity": 255, "blendMode": "normal" }
+  ]
+ }
+}

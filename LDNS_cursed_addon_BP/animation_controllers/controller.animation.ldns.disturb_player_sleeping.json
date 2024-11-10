@@ -1,0 +1,56 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.ldns.disturb_player_sleeping": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "ldns.is_sleeping_exp": "query.is_sleeping == 1"
+                        }
+                    ]
+                },
+                "ldns.is_sleeping_exp": {
+                    "transitions": [
+                        {
+                            "default": "query.is_sleeping != 1"
+                        },
+                        {
+                            "ldns.is_sleeping_command": "query.is_sleeping == 1"
+                        }
+                    ],
+                    "on_entry": [
+                        "/execute as @s[hasitem={item=ldns:pendant_of_goscubus,quantity=0}] run summon ldns:bed_explosion ~ ~ ~",
+                        "/execute as @s[hasitem={item=ldns:pendant_of_goscubus,quantity=0}] run title @s actionbar §6ベッドで寝ることはできません"
+                    ]
+                },
+                "ldns.is_sleeping_command": {
+                    "transitions": [
+                        {
+                            "default": "query.is_sleeping != 1"
+                        },
+                        {
+                            "ldns.is_sleeping_command_ex": "query.is_sleeping == 1"
+                        }
+                    ],
+                    "on_entry": [
+                        "/execute as @s[hasitem={item=ldns:pendant_of_goscubus,quantity=0}] run fill ~1 ~1 ~1 ~-1 ~-1 ~-1 air 0 replace bed"
+                    ]
+                },
+                "ldns.is_sleeping_command_ex": {
+                    "transitions": [
+                        {
+                            "default": "query.is_sleeping != 1"
+                        },
+                        {
+                            "ldns.is_sleeping_command": "query.is_sleeping == 1"
+                        }
+                    ],
+                    "on_entry": [
+                        "/execute as @s[hasitem={item=ldns:pendant_of_goscubus,quantity=0}] run fill ~2 ~2 ~2 ~-2 ~-2 ~-2 air 0 replace bed"
+                    ]
+                }
+            }
+        }
+    }
+}

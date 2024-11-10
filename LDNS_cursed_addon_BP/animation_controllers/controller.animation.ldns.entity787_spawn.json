@@ -1,0 +1,41 @@
+{
+    "format_version": "1.20.30",
+    "animation_controllers": {
+        "controller.animation.ldns.entity787_spawn": {
+            "states": {
+                "default": {
+                    "on_entry": [
+                        "v.entity787_spawn = 0;"
+                    ],
+                    "transitions": [
+                        {
+                            "controller_equipments": "v.entity787_spawn = q.is_moving ? 0 : v.entity787_spawn + 1; return v.entity787_spawn >= 6000;"
+                        }
+                    ]
+                },
+                "controller_equipments": {
+                    "transitions": [
+                        {
+                            "controller_entity787_spawn": "q.is_item_name_any('slot.armor.head', 0, 'ldns:error_helmet') && q.is_item_name_any('slot.armor.chest', 0, 'ldns:error_chestplate') && q.is_item_name_any('slot.armor.legs', 0, 'ldns:error_leggings') && q.is_item_name_any('slot.armor.feet', 0, 'ldns:error_boots') && q.is_item_name_any('slot.inventory', 4, 'ldns:error_sword') && q.is_item_name_any('slot.inventory', 12, 'ldns:error_shovel') && q.is_item_name_any('slot.inventory', 13, 'ldns:error_pickaxe') && q.is_item_name_any('slot.inventory', 14, 'ldns:error_axe') && q.is_item_name_any('slot.inventory', 22, 'ldns:error_hoe') && q.is_item_name_any('slot.inventory', 3, 'ldns:ld5987') && q.is_item_name_any('slot.inventory', 5, 'ldns:dn3895') && q.is_item_name_any('slot.inventory', 21, 'ldns:dn3895') && q.is_item_name_any('slot.inventory', 23, 'ldns:ld5987')"
+                        },
+                        {
+                            "default": "true"
+                        }
+                    ]
+                },
+                "controller_entity787_spawn": {
+                    "transitions": [
+                        {
+                            "default": "true"
+                        }
+                    ],
+                    "on_entry": [
+                        "/tellraw @a {\"rawtext\":[{\"text\":\"No! It's not me!§c§l§oHelp me!§r I'm scared! Don't make me cry! Don't hit me! §bDon't curse!§rDon't betray me... §l§oI'll turn it off?\"}]}",
+                        "/playsound mob.wolf.whine @a ~ ~ ~ 1.00 0.25",
+                        "/summon ldns:entity787"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "ldns:entity.fake_stone_explosive",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+
+    "components": {
+      "minecraft:collision_box": {
+        "width": 0,
+        "height": 0
+      },
+      "minecraft:health": {
+        "value": 100,
+        "max": 100
+      },
+	    "minecraft:physics": {
+      },
+      "minecraft:explode": {
+        "fuse_length": 0,
+        "fuse_lit": true,
+        "power": 1,
+        "breaks_blocks": false,
+        "causes_fire": false,
+        "destroy_affected_by_griefing": true
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+      }
+    }
+  }
+}

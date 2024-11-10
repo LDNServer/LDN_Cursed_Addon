@@ -1,0 +1,97 @@
+{ "frames": [
+   {
+    "filename": "error_window_2_clear 0.gif",
+    "frame": { "x": 0, "y": 0, "w": 680, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 680, "h": 500 },
+    "sourceSize": { "w": 680, "h": 500 },
+    "duration": 120
+   },
+   {
+    "filename": "error_window_2_clear 1.gif",
+    "frame": { "x": 680, "y": 0, "w": 680, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 680, "h": 500 },
+    "sourceSize": { "w": 680, "h": 500 },
+    "duration": 120
+   },
+   {
+    "filename": "error_window_2_clear 2.gif",
+    "frame": { "x": 1360, "y": 0, "w": 680, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 680, "h": 500 },
+    "sourceSize": { "w": 680, "h": 500 },
+    "duration": 120
+   },
+   {
+    "filename": "error_window_2_clear 3.gif",
+    "frame": { "x": 2040, "y": 0, "w": 680, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 680, "h": 500 },
+    "sourceSize": { "w": 680, "h": 500 },
+    "duration": 120
+   },
+   {
+    "filename": "error_window_2_clear 4.gif",
+    "frame": { "x": 2720, "y": 0, "w": 680, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 680, "h": 500 },
+    "sourceSize": { "w": 680, "h": 500 },
+    "duration": 120
+   },
+   {
+    "filename": "error_window_2_clear 5.gif",
+    "frame": { "x": 3400, "y": 0, "w": 680, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 680, "h": 500 },
+    "sourceSize": { "w": 680, "h": 500 },
+    "duration": 120
+   },
+   {
+    "filename": "error_window_2_clear 6.gif",
+    "frame": { "x": 4080, "y": 0, "w": 680, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 680, "h": 500 },
+    "sourceSize": { "w": 680, "h": 500 },
+    "duration": 120
+   },
+   {
+    "filename": "error_window_2_clear 7.gif",
+    "frame": { "x": 4760, "y": 0, "w": 680, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 680, "h": 500 },
+    "sourceSize": { "w": 680, "h": 500 },
+    "duration": 120
+   },
+   {
+    "filename": "error_window_2_clear 8.gif",
+    "frame": { "x": 5440, "y": 0, "w": 680, "h": 500 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 680, "h": 500 },
+    "sourceSize": { "w": 680, "h": 500 },
+    "duration": 120
+   }
+ ],
+ "meta": {
+  "app": "https://github.com/LibreSprite/LibreSprite/",
+  "version": "1.2-973d0e3d-SDL",
+  "image": "Y:\\マイドライブ\\private\\動画、画像、音声\\ノロアド\\window\\error_window_2_clear.png",
+  "format": "RGBA8888",
+  "size": { "w": 6120, "h": 500 },
+  "scale": "1",
+  "frameTags": [
+  ],
+  "layers": [
+   { "name": "Layer", "opacity": 255, "blendMode": "normal" }
+  ]
+ }
+}

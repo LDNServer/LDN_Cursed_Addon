@@ -1,0 +1,23 @@
+{
+  "format_version": "1.18",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ldns:error_chestplate"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "E E",
+      "EEE",
+      "EEE"
+    ],
+    "key": {
+      "E": {
+        "item": "ldns:error_ingot"
+      }
+    },
+    "result": {
+      "item": "ldns:error_chestplate",
+      "count": 1
+    }
+  }
+}

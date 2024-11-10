@@ -1,0 +1,133 @@
+{
+    "format_version": "1.18.30",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "ldns:lightning_object",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+        "component_groups": {
+            "death": {
+                "minecraft:instant_despawn": {}
+            },
+            "test": {
+                "minecraft:entity_sensor": {
+                    "sensor_range": 4,
+                    "relative_range": false,
+                    "require_all": false,
+                    "minimum_count": 1,
+                    "event_filters": {
+                        "all_of": [
+                            {
+                                "test": "is_family",
+                                "subject": "other",
+                                "value": "player"
+                            },
+                            {
+                                "test": "has_tag",
+                                "subject": "other",
+                                "value": "ldns_lightning"                                
+                            }
+                        ]
+                    },
+                    "event": "lightning"
+                }
+            },
+            "lightning": {
+                "minecraft:spawn_entity": {
+                    "entities": {
+                        "min_wait_time": 0,
+                        "max_wait_time": 0,
+                        "spawn_entity": "lightning_bolt",
+                        "single_use": true,
+                        "num_to_spawn": 1,
+                        "should_leash": false
+                    }
+                },
+                "minecraft:timer": {
+                    "looping": false,
+                    "time": 0.1,
+                    "time_down_event": {
+                        "event": "death",
+                        "target": "self"
+                    }
+                }
+            }
+        },
+        "components": {
+            "minecraft:nameable": {},
+            "minecraft:type_family": {
+                "family": [
+                    "test_entity"
+                ]
+            },
+            "minecraft:collision_box": {
+                "width": 0,
+                "height": 0
+            },
+            "minecraft:health": {
+                "value": 10,
+                "max": 10
+            },
+            "minecraft:scale": {
+                "value": 0.2
+            },
+            "minecraft:loot": {
+                "table": "loot_tables/entities/empty.json"
+            },
+            "minecraft:breathable": {
+                "totalSupply": 15,
+                "suffocateTime": 0,
+                "breathesAir": true,
+                "breathesWater": true
+            },
+            "minecraft:physics": {},
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "all",
+                    "deals_damage": false
+                }
+            },
+            "minecraft:movement": {
+                "value": 0
+            },
+            "minecraft:timer": {
+                "looping": false,
+                "time": 0.2,
+                "time_down_event": {
+                    "event": "death"
+                }
+            },
+            "minecraft:tick_world": {}
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "add": {
+                    "component_groups": [
+                        "test"
+                    ]
+                }
+            },
+            "death": {
+                "add": {
+                    "component_groups": [
+                        "death"
+                    ]
+                }
+            },
+            "lightning": {
+                "add": {
+                    "component_groups": [
+                        "lightning"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "test"
+                    ]
+                }
+            }
+        }
+    }
+}

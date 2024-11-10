@@ -1,0 +1,619 @@
+{ "frames": [
+   {
+    "filename": "glitch_6 0.gif",
+    "frame": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 1.gif",
+    "frame": { "x": 125, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 2.gif",
+    "frame": { "x": 250, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 3.gif",
+    "frame": { "x": 375, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 4.gif",
+    "frame": { "x": 500, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 5.gif",
+    "frame": { "x": 625, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 6.gif",
+    "frame": { "x": 750, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 7.gif",
+    "frame": { "x": 875, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 8.gif",
+    "frame": { "x": 1000, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 9.gif",
+    "frame": { "x": 1125, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 10.gif",
+    "frame": { "x": 1250, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 11.gif",
+    "frame": { "x": 1375, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 12.gif",
+    "frame": { "x": 1500, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 13.gif",
+    "frame": { "x": 1625, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 14.gif",
+    "frame": { "x": 1750, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 15.gif",
+    "frame": { "x": 1875, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 16.gif",
+    "frame": { "x": 2000, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 17.gif",
+    "frame": { "x": 2125, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 18.gif",
+    "frame": { "x": 2250, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 19.gif",
+    "frame": { "x": 2375, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 20.gif",
+    "frame": { "x": 2500, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 21.gif",
+    "frame": { "x": 2625, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 22.gif",
+    "frame": { "x": 2750, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 23.gif",
+    "frame": { "x": 2875, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 24.gif",
+    "frame": { "x": 3000, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 25.gif",
+    "frame": { "x": 3125, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 26.gif",
+    "frame": { "x": 3250, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 27.gif",
+    "frame": { "x": 3375, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 28.gif",
+    "frame": { "x": 3500, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 29.gif",
+    "frame": { "x": 3625, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 30.gif",
+    "frame": { "x": 3750, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 31.gif",
+    "frame": { "x": 3875, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 32.gif",
+    "frame": { "x": 4000, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 33.gif",
+    "frame": { "x": 4125, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 34.gif",
+    "frame": { "x": 4250, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 35.gif",
+    "frame": { "x": 4375, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 36.gif",
+    "frame": { "x": 4500, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 37.gif",
+    "frame": { "x": 4625, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 38.gif",
+    "frame": { "x": 4750, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 39.gif",
+    "frame": { "x": 4875, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 40.gif",
+    "frame": { "x": 5000, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 41.gif",
+    "frame": { "x": 5125, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 42.gif",
+    "frame": { "x": 5250, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 43.gif",
+    "frame": { "x": 5375, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 44.gif",
+    "frame": { "x": 5500, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 45.gif",
+    "frame": { "x": 5625, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 46.gif",
+    "frame": { "x": 5750, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 47.gif",
+    "frame": { "x": 5875, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 48.gif",
+    "frame": { "x": 6000, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 49.gif",
+    "frame": { "x": 6125, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 50.gif",
+    "frame": { "x": 6250, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 51.gif",
+    "frame": { "x": 6375, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 52.gif",
+    "frame": { "x": 6500, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 53.gif",
+    "frame": { "x": 6625, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 54.gif",
+    "frame": { "x": 6750, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 55.gif",
+    "frame": { "x": 6875, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 56.gif",
+    "frame": { "x": 7000, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 57.gif",
+    "frame": { "x": 7125, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 58.gif",
+    "frame": { "x": 7250, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 59.gif",
+    "frame": { "x": 7375, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 60.gif",
+    "frame": { "x": 7500, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 61.gif",
+    "frame": { "x": 7625, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 62.gif",
+    "frame": { "x": 7750, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 63.gif",
+    "frame": { "x": 7875, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 64.gif",
+    "frame": { "x": 8000, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 65.gif",
+    "frame": { "x": 8125, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   },
+   {
+    "filename": "glitch_6 66.gif",
+    "frame": { "x": 8250, "y": 0, "w": 125, "h": 125 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 125, "h": 125 },
+    "sourceSize": { "w": 125, "h": 125 },
+    "duration": 30
+   }
+ ],
+ "meta": {
+  "app": "https://github.com/LibreSprite/LibreSprite/",
+  "version": "1.2-973d0e3d-SDL",
+  "image": "Y:\\マイドライブ\\private\\動画、画像、音声\\ノロアド\\glitch\\glitch_6.png",
+  "format": "RGBA8888",
+  "size": { "w": 8375, "h": 125 },
+  "scale": "1",
+  "frameTags": [
+  ],
+  "layers": [
+   { "name": "Layer", "opacity": 255, "blendMode": "normal" }
+  ]
+ }
+}
