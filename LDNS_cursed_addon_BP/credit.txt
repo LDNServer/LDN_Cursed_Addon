@@ -9,6 +9,9 @@ tutinoko9900(Code)
 sakurago(Texture)
 kamiyasuri(Texture)
 
+====SUB_CREDIT====
+Tei(Texture)
+
 ====Special thanks====
 LDN Server - LDNS
 ドクターナバの研究所 所長 ナバ
