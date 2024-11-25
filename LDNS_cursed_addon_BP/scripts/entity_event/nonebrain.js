@@ -14,6 +14,9 @@ world.afterEvents.dataDrivenEntityTrigger.subscribe(async (events) => {
                 if (noneint === undefined) {
                     world.setDynamicProperty("noneint", 1);
                 }
+                else if(events.entity.hasComponent("ldns:nonebrain_giant")){
+                    world.setDynamicProperty("noneint", noneint + 10);
+                }
                 else {
                     world.setDynamicProperty("noneint", noneint + 1);
                 }

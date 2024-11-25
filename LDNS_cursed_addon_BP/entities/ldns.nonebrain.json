@@ -18,6 +18,13 @@
                     "into": "ldns:yy",
                     "transformation_sound": "ldns.beep"
                 }
+            },
+            "ldns:nonebrain_default":{
+            },
+            "ldns:nonebrain_giant":{
+                "minecraft:scale": {
+                    "value": 16.0
+                }
             }
         },
         "components": {
@@ -118,6 +125,26 @@
                         "ldns:nonebrain_despawn"
                     ]
                 }
+            },
+            "minecraft:entity_spawned":{
+                "randomize": [
+                    {
+                        "add": {
+                            "component_groups": [
+                                "ldns:nonebrain_default"
+                            ]
+                        },
+                        "weight": 666
+                    },
+                    {
+                        "add": {
+                            "component_groups": [
+                                "ldns:nonebrain_giant"
+                            ]
+                        },
+                        "weight": 1
+                    }
+                ]
             }
         }
     }
