@@ -14,7 +14,7 @@ world.afterEvents.dataDrivenEntityTrigger.subscribe(async (events) => {
                 if (noneint === undefined) {
                     world.setDynamicProperty("noneint", 1);
                 }
-                else if(events.entity.hasComponent("ldns:nonebrain_giant")){
+                else if(events.entity.hasComponent("minecraft:scale")){
                     world.setDynamicProperty("noneint", noneint + 10);
                 }
                 else {
