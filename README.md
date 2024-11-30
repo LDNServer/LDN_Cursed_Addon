@@ -1,6 +1,8 @@
 # LDN_Cursed_Addon
 LDNServerで作られた、呪いのバージョン「Minecraft LDN」 | Made with LDNServer, a cursed version 「Minecraft LDN」
 
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/LDNServer/LDN_Cursed_Addon/total)<br>
+
 ## リンク
 ・[配布ページ](https://minecraft-mcworld.com/17029/)
 <br>・[モブ](https://github.com/LDNServer/LDN_Cursed_Addon/wiki/%E3%83%A2%E3%83%96)
