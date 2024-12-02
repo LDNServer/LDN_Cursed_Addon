@@ -4,7 +4,7 @@
     "description": {
       "identifier": "ldns:errormob",
       "materials": {
-        "default": "slime_outer"
+        "default": "errormob_animated"
       },
       "textures": {
         "default": "textures/entity/ldns/errormob"
@@ -60,7 +60,7 @@
         ]
       },
       "render_controllers": [
-        "controller.render.default"
+        "controller.render.errormob"
       ],
       "enable_attachables": true
     }

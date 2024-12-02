@@ -1,0 +1,11 @@
+{
+    "materials": {
+        "version": "1.0.0",
+        "errormob_animated:entity": {
+            "+defines": [
+                "USE_UV_ANIM",
+                "Blending"
+            ]
+        }
+    }
+}
