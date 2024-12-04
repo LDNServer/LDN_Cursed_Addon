@@ -14,7 +14,7 @@ world.afterEvents.dataDrivenEntityTrigger.subscribe(async (events) => {
                 if (noneint === undefined) {
                     world.setDynamicProperty("noneint", 1);
                 }
-                else if(events.entity.hasComponent("minecraft:scale")){
+                else if (events.entity.hasComponent("minecraft:scale")) {
                     world.setDynamicProperty("noneint", noneint + 10);
                 }
                 else {
@@ -44,37 +44,126 @@ world.afterEvents.entityDie.subscribe(async (events) => {
     });
 });
 
-system.runInterval(async () => {
-    nonebrainchat = String(random(10000000, 99999999));
-    random_message_int = random(0, 6);
-}, 20 * 60);
-
-export let nonebrain_chatsend = world.beforeEvents.chatSend.subscribe(async (events) => {
-    system.run(async () => {
-        random_message.forEach(async (v, i, a) => {
-            if (events.message === v) {
-                if (random_message_int >= 3) {
-                    world.sendMessage("oh");
-                }
-                else {
-                    const messagesnone = random_message[random_message_int];
-                    if (events.message === messagesnone) {
-                        world.sendMessage(nonebrainchat);
-                    }
-                }
+world.afterEvents.buttonPush.subscribe(async (e) => {
+    const button = e.block;
+    const buttoname = button.typeId;
+    if ((buttoname === "minecraft:acacia_button" || buttoname === "minecraft:crimson_button" || buttoname === "minecraft:mangrove_button") && button.permutation.getState("facing_direction") === 1) {
+        if (button.offset({ x: -1, y: -1, z: -1 }).typeId === "ldns:error_block" &&
+            button.offset({ x: -1, y: -1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: -1, y: -1, z: 1 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: -1, z: -1 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: -1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: -1, z: 1 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 1, y: -1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 1, y: -1, z: -1 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 1, y: -1, z: 1 }).typeId === "ldns:error_block") {
+            const rand = random(0, 25);
+            button.dimension.spawnParticle("ldns:error_particle", button.location);
+            await system.waitTicks(20 * 3);
+            if (rand <= 20) {
+                world.sendMessage("Do you really believe in the devil?: " + world.getDynamicProperty("noneint"));
             }
-        });
-        if (events.message === nonebrainchat && tagevent === false) {
-            let noneint = world.getDynamicProperty("noneint");
-            world.sendMessage("繝弱Φ繝悶Λ繧､繝ｳ: " + String(noneint));
-            events.sender.addTag("nonebrainchats");
+            else {
+                world.sendMessage("Do you really be1ieve in the devil?: " + random(0, 100));
+            }
+            button.setType("air");
+            button.offset({ x: -1, y: -1, z: -1 }).setType("air");
+            button.offset({ x: -1, y: -1, z: 0 }).setType("air");
+            button.offset({ x: -1, y: -1, z: 1 }).setType("air");
+            button.offset({ x: 0, y: -1, z: -1 }).setType("air");
+            button.offset({ x: 0, y: -1, z: 0 }).setType("air");
+            button.offset({ x: 0, y: -1, z: 1 }).setType("air");
+            button.offset({ x: 1, y: -1, z: 0 }).setType("air");
+            button.offset({ x: 1, y: -1, z: -1 }).setType("air");
+            button.offset({ x: 1, y: -1, z: 1 }).setType("air");
+        }
+    }
+});
+
+world.afterEvents.pressurePlatePush.subscribe(async (e) => {
+    const button = e.block;
+    const buttoname = button.typeId;
+    // ノンブラインチャレンジ
+    if (buttoname === "minecraft:light_weighted_pressure_plate") {
+        if (button.offset({ x: 0, y: -2, z: 2 }).typeId === "minecraft:soul_sand" &&
+            button.offset({ x: 0, y: -2, z: -2 }).typeId === "minecraft:soul_sand" &&
+            button.offset({ x: 1, y: -2, z: 2 }).typeId === "minecraft:soul_sand" &&
+            button.offset({ x: 1, y: -2, z: -2 }).typeId === "minecraft:soul_sand" &&
+            button.offset({ x: 2, y: -2, z: 0 }).typeId === "minecraft:soul_sand" &&
+            button.offset({ x: 2, y: -2, z: 1 }).typeId === "minecraft:soul_sand" &&
+            button.offset({ x: 2, y: -2, z: 2 }).typeId === "minecraft:soul_sand" &&
+            button.offset({ x: 2, y: -2, z: -1 }).typeId === "minecraft:soul_sand" &&
+            button.offset({ x: 2, y: -2, z: -2 }).typeId === "minecraft:soul_sand" &&
+            button.offset({ x: -1, y: -2, z: 2 }).typeId === "minecraft:soul_sand" &&
+            button.offset({ x: -1, y: -2, z: -2 }).typeId === "minecraft:soul_sand" &&
+            button.offset({ x: -2, y: -2, z: 0 }).typeId === "minecraft:soul_sand" &&
+            button.offset({ x: -2, y: -2, z: 1 }).typeId === "minecraft:soul_sand" &&
+            button.offset({ x: -2, y: -2, z: 2 }).typeId === "minecraft:soul_sand" &&
+            button.offset({ x: -2, y: -2, z: -1 }).typeId === "minecraft:soul_sand" &&
+            button.offset({ x: -2, y: -2, z: -2 }).typeId === "minecraft:soul_sand" &&
+            button.offset({ x: -1, y: -2, z: -1 }).typeId === "minecraft:nether_wart_block" &&
+            button.offset({ x: -1, y: -2, z: 0 }).typeId === "minecraft:nether_wart_block" &&
+            button.offset({ x: -1, y: -2, z: 1 }).typeId === "minecraft:nether_wart_block" &&
+            button.offset({ x: 0, y: -2, z: -1 }).typeId === "minecraft:nether_wart_block" &&
+            button.offset({ x: 0, y: -2, z: 0 }).typeId === "minecraft:nether_wart_block" &&
+            button.offset({ x: 0, y: -2, z: 1 }).typeId === "minecraft:nether_wart_block" &&
+            button.offset({ x: 1, y: -2, z: 0 }).typeId === "minecraft:nether_wart_block" &&
+            button.offset({ x: 1, y: -2, z: -1 }).typeId === "minecraft:nether_wart_block" &&
+            button.offset({ x: 1, y: -2, z: 1 }).typeId === "minecraft:nether_wart_block" &&
+            button.offset({ x: 2, y: -1, z: 0 }).typeId === "minecraft:redstone_wire" &&
+            button.offset({ x: 0, y: -1, z: 2 }).typeId === "minecraft:redstone_wire" &&
+            button.offset({ x: -2, y: -1, z: 0 }).typeId === "minecraft:redstone_wire" &&
+            button.offset({ x: 0, y: -1, z: -2 }).typeId === "minecraft:redstone_wire" &&
+            button.offset({ x: 0, y: -1, z: 1 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 1, y: -1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: -1, z: -1 }).typeId === "ldns:error_block" &&
+            button.offset({ x: -1, y: -1, z: 0 }).typeId === "ldns:error_block" &&
+            button.offset({ x: 0, y: -1, z: 0 }).typeId === "ldns:error_block") {
+            button.dimension.spawnParticle("ldns:error_particle", button.location);
+            await system.waitTicks(20 * 3);
+            button.setType("air");
+            button.offset({ x: 0, y: -2, z: 2 }).setType("air");
+            button.offset({ x: 0, y: -2, z: -2 }).setType("air");
+            button.offset({ x: 1, y: -2, z: 2 }).setType("air");
+            button.offset({ x: 1, y: -2, z: -2 }).setType("air");
+            button.offset({ x: 2, y: -2, z: 0 }).setType("air");
+            button.offset({ x: 2, y: -2, z: 1 }).setType("air");
+            button.offset({ x: 2, y: -2, z: 2 }).setType("air");
+            button.offset({ x: 2, y: -2, z: -1 }).setType("air");
+            button.offset({ x: 2, y: -2, z: -2 }).setType("air");
+            button.offset({ x: -1, y: -2, z: 2 }).setType("air");
+            button.offset({ x: -1, y: -2, z: -2 }).setType("air");
+            button.offset({ x: -2, y: -2, z: 0 }).setType("air");
+            button.offset({ x: -2, y: -2, z: 1 }).setType("air");
+            button.offset({ x: -2, y: -2, z: 2 }).setType("air");
+            button.offset({ x: -2, y: -2, z: -1 }).setType("air");
+            button.offset({ x: -2, y: -2, z: -2 }).setType("air");
+            button.offset({ x: -1, y: -2, z: -1 }).setType("air");
+            button.offset({ x: -1, y: -2, z: 0 }).setType("air");
+            button.offset({ x: -1, y: -2, z: 1 }).setType("air");
+            button.offset({ x: 0, y: -2, z: -1 }).setType("air");
+            button.offset({ x: 0, y: -2, z: 0 }).setType("air");
+            button.offset({ x: 0, y: -2, z: 1 }).setType("air");
+            button.offset({ x: 1, y: -2, z: 0 }).setType("air");
+            button.offset({ x: 1, y: -2, z: -1 }).setType("air");
+            button.offset({ x: 1, y: -2, z: 1 }).setType("air");
+            button.offset({ x: 2, y: -1, z: 0 }).setType("air");
+            button.offset({ x: 0, y: -1, z: 2 }).setType("air");
+            button.offset({ x: -2, y: -1, z: 0 }).setType("air");
+            button.offset({ x: 0, y: -1, z: -2 }).setType("air");
+            button.offset({ x: 0, y: -1, z: 1 }).setType("air");
+            button.offset({ x: 1, y: -1, z: 0 }).setType("air");
+            button.offset({ x: 0, y: -1, z: -1 }).setType("air");
+            button.offset({ x: -1, y: -1, z: 0 }).setType("air");
+            button.offset({ x: 0, y: -1, z: 0 }).setType("air");
+            e.source.addTag("nonebrainchats");
             tagevent = true;
             await system.waitTicks(20 * 60);
-            if (events.sender.hasTag("nonebrainchats") && tagevent === true) {
+            if (e.source.hasTag("nonebrainchats") && tagevent === true) {
                 nonebrain_despawn_events();
             }
-            events.sender.removeTag("nonebrainchats");
+            e.source.removeTag("nonebrainchats");
             tagevent = false;
         }
-    });
+    }
 });

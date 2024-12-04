@@ -1,8 +1,6 @@
 import { Player, system, world } from "@minecraft/server";
 import { random } from "../util";
 import { freeze } from "../functions/kanasibari";
-import { nonebrain_despawn_events, noneint_reset_event } from "../entity_event/nonebrain_function";
-import { nonebrain_chatsend } from "../entity_event/nonebrain";
 import { MinecraftEffectTypes } from "../lib/mojang-effect";
 
 const timezoneOffset = 0;
@@ -390,7 +388,7 @@ function event3(playerall) {
  * @param {Player[]} playerall 
  */
 async function event4(d, v, playerlength, playerall) {
-    const randp = random(0, 7);
+    const randp = random(0, 6);
     const items = random(0, 2);
     let psplayer = v;
     if (playerlength <= 1) {
@@ -462,9 +460,6 @@ async function event4(d, v, playerlength, playerall) {
                         world.sendMessage("<" + v.name + "> " + psplayer.name + "'s Error Computer Information:\n CEU: Erutel Corse i6 666K 6Curse 6Curshreads 6.66GHz\n ERM: DDR6-6666 66GB\n Errorcards: Errvidia Gerrorforce ETX 666 Ei 6GB\n ES: Errorsoft Errdows 666");
                         await system.waitTicks(20 * 3);
                         psplayer.addExperience(66);
-                        break;
-                    case 6:
-                        notsayplayerdebug(d, v, psplayer);
                         break;
                 }
                 break;
@@ -551,75 +546,4 @@ async function event10(v) {
             break;
     }
 }
-
-/**
- * 
- * @param {Date} d
- * @param {Player} player1
- * @param {Player} player2 
- */
-async function notsayplayerdebug(d, player1, player2) {
-    world.sendMessage("<" + player1.name + "> Are you " + player2.name + "? §4§l§oAwaiting your reply...§r (*** your ****) \n §oHint: it exists in this.");
-
-    world.beforeEvents.chatSend.subscribe(nonebrain_chatsend);
-    let chat4event = world.beforeEvents.chatSend.subscribe((e) => {
-        system.run(() => {
-            if (e.sender === player2) {
-                if (e.message.toLowerCase() === player2.name.toLowerCase() || e.message.toLowerCase() === ("I'm " + player2.name).toLowerCase()) {
-                    nonebrain_despawn_events();
-                    console.log("That's why I said...");
-                } else if (e.message.toLowerCase() === "nullbrain".toLowerCase() || e.message.toLowerCase() === "I'm nullbrain".toLowerCase()) {
-                    player2.dimension.spawnEntity("ldns:yy", player2.location);
-                } else if (e.message.toLowerCase() === "nonebrain".toLowerCase() || e.message.toLowerCase() === "I'm nonebrain".toLowerCase()) {
-                    player2.dimension.spawnEntity("ldns:pp", player2.location);
-                } else if (e.message.toLowerCase() === "pp".toLowerCase() || e.message.toLowerCase() === "I'm pp".toLowerCase()) {
-                    player2.dimension.spawnEntity("ldns:attacker_nitwit_villager", player1.location);
-                } else if (e.message.toLowerCase() === "yy".toLowerCase() || e.message.toLowerCase() === "I'm yy".toLowerCase()) {
-                    if (d.getHours() <= 24 || d.getHours() >= 12) { player2.runCommand("give @s ldns:dn3895"); }
-                    else if (d.getHours() <= 12 || d.getHours() >= 0) { player1.runCommand("give @s ldns:ld5987"); }
-                } else if (e.message.toLowerCase() === "entity787".toLowerCase() || e.message.toLowerCase() === "I'm entity787".toLowerCase()) {
-                    for (let i = 0; i < 15; i++) {
-                        let selectplayer
-                        switch (random(0, 2)) {
-                            case 0:
-                                selectplayer = player1;
-                                break;
-                            case 1:
-                                selectplayer = player2;
-                                break;
-                        }
-                        switch (random(0, 4)) {
-                            case 0:
-                                selectplayer.dimension.spawnEntity("ldns:bse_cow", selectplayer.location).triggerEvent("minecraft:entity_born");
-                                break;
-                            case 1:
-                                selectplayer.dimension.spawnEntity("ldns:strange_chicken", selectplayer.location).triggerEvent("minecraft:entity_born");
-                                break;
-                            case 2:
-                                selectplayer.dimension.spawnEntity("ldns:head_only_sheep", selectplayer.location).triggerEvent("minecraft:entity_born");
-                                break;
-                            case 3:
-                                selectplayer.dimension.spawnEntity("ldns:errormob", selectplayer.location);
-                                break;
-                        }
-                    }
-                } else if (e.message.toLowerCase() === "I'm you".toLowerCase()) {
-                    noneint_reset_event(player2, "00000000", 0);
-                }
-                else if (e.message.toLowerCase() === "うるせえ!".toLowerCase() || e.message.toLowerCase() === "うるせぇ！".toLowerCase() || e.message.toLowerCase() === "うるせぇ!".toLowerCase() || e.message.toLowerCase() === "うるせえ！".toLowerCase() || e.message.toLowerCase() === "shut up!".toLowerCase()) {
-                    player2.dimension.createExplosion(player2.location, 0.5);
-                }
-                else if (e.message.toLowerCase() === "Hello".toLowerCase()) {
-                    world.sendMessage("H...Hello...");
-                } else {
-                    world.sendMessage("?????????????????????????????????????????");
-                }
-                world.beforeEvents.chatSend.unsubscribe(chat4event);
-
-                world.beforeEvents.chatSend.subscribe(nonebrain_chatsend);
-            }
-        });
-    });
-}
-
 // 繝｡繝｢繝ｪ繝ｼ繝ｬ繧､繝?Φ繧ｷ繝ｼ繧ｨ繝ｩ繝ｼ
