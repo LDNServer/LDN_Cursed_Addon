@@ -21,3 +21,9 @@
 * ブルスクやノイズなどの目に悪い可能性のある描写もあります。やる際は念のため注意して部屋を明るくして楽しんでください。
 * 心臓の弱い方、医師の相談を受けている方、発作などがある方などは、プレイを控えるようにお願いします。
 
+<details><summary></summary>
+<img src="/docs/image/thinking1.png">
+<img src="/docs/image/thinking2.png">
+<img src="/docs/image/thinking3.png">
+<img src="/docs/image/thinking4.png">
+</details>
