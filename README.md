@@ -26,7 +26,7 @@ https://docs.microsoft.com/ja-jp/minecraft/creator/documents/addonpackinstallati
 * **ワールドの制作時に実験的機能をすべて有効にしてください。** 一部の機能が正しく利用できなくなります。
 * 他のビヘイビアパックと一緒にこのアドオンを使わないでください。
 
-<img src="https://github.com/user-attachments/assets/376671c6-4d27-4509-b788-49236c11f8b6" width="800">
+<img src="https://raw.githubusercontent.com/LDNServer/LDN_Cursed_Addon/refs/heads/main/docs/image/zikken.png" width="800">
 <br>
 
 
