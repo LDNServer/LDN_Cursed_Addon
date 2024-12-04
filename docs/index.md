@@ -16,8 +16,8 @@
 * 心臓の弱い方、医師の相談を受けている方、発作などがある方などは、プレイを控えるようにお願いします。
 
 <details><summary>　</summary>
-<img src="/docs/image/thinking1.png">
-<img src="/docs/image/thinking2.png">
-<img src="/docs/image/thinking3.png">
-<img src="/docs/image/thinking4.png">
+<img src="https://raw.githubusercontent.com/LDNServer/LDN_Cursed_Addon/refs/heads/main/docs/image/thinking1.png">
+<img src="https://raw.githubusercontent.com/LDNServer/LDN_Cursed_Addon/refs/heads/main/docs/image/thinking2.png">
+<img src="https://raw.githubusercontent.com/LDNServer/LDN_Cursed_Addon/refs/heads/main/docs/image/thinking3.png">
+<img src="https://raw.githubusercontent.com/LDNServer/LDN_Cursed_Addon/refs/heads/main/docs/image/thinking4.png">
 </details>
