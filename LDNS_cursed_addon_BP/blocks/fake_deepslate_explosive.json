@@ -25,7 +25,14 @@
             },
             "minecraft:map_color": "#707070",
             "minecraft:light_dampening": 0,
-            "minecraft:light_emission": 0
+            "minecraft:light_emission": 0,
+            "minecraft:material_instances": {
+                "*": {
+                    "render_method": "double_sided",
+                    "texture": "deepslate"
+                }
+            },
+            "minecraft:geometry": "minecraft:geometry.full_block"
         }
     }
 }

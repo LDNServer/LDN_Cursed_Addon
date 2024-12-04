@@ -1,23 +1,12 @@
 {
-  "format_version": "1.19.0",
+  "format_version": "1.21.0",
   "ldns:error_block": {
-    "sound": "metal",
-    "textures": "error_block"
+    "sound": "metal"
   },
   "ldns:fake_stone_explosive": {
-    "sound": "stone",
-    "textures": "stone"
+    "sound": "stone"
   },
   "ldns:fake_deepslate_explosive": {
-    "isotropic": {
-      "down": true,
-      "up": true
-    },
-    "sound": "deepslate",
-    "textures": {
-      "down": "deepslate_top",
-      "side": "deepslate",
-      "up": "deepslate_top"
-    }
+    "sound": "deepslate"
   }
 }

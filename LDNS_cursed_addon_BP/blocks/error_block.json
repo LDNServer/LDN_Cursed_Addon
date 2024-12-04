@@ -25,7 +25,8 @@
                     "render_method": "double_sided",
                     "texture": "error_block"
                 }
-            }
+            },
+            "minecraft:geometry": "minecraft:geometry.full_block"
         }
     }
 }
