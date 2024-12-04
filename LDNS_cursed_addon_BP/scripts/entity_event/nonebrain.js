@@ -47,6 +47,7 @@ world.afterEvents.entityDie.subscribe(async (events) => {
 world.afterEvents.buttonPush.subscribe(async (e) => {
     const button = e.block;
     const buttoname = button.typeId;
+    if (!(e.source instanceof Player)) return;
     if ((buttoname === "minecraft:acacia_button" || buttoname === "minecraft:crimson_button" || buttoname === "minecraft:mangrove_button") && button.permutation.getState("facing_direction") === 1) {
         if (button.offset({ x: -1, y: -1, z: -1 }).typeId === "ldns:error_block" &&
             button.offset({ x: -1, y: -1, z: 0 }).typeId === "ldns:error_block" &&
@@ -83,6 +84,7 @@ world.afterEvents.buttonPush.subscribe(async (e) => {
 world.afterEvents.pressurePlatePush.subscribe(async (e) => {
     const button = e.block;
     const buttoname = button.typeId;
+    if (!(e.source instanceof Player)) return;
     // ノンブラインチャレンジ
     if (buttoname === "minecraft:light_weighted_pressure_plate") {
         if (button.offset({ x: 0, y: -2, z: 2 }).typeId === "minecraft:soul_sand" &&

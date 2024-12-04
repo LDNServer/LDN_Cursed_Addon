@@ -76,6 +76,7 @@ system.runInterval(async () => {
 world.afterEvents.buttonPush.subscribe(async (e) => {
     const button = e.block;
     const buttoname = button.typeId;
+    if (!(e.source instanceof Player)) return;
     // PPスポーン
     if ((buttoname === "minecraft:acacia_button" || buttoname === "minecraft:crimson_button" || buttoname === "minecraft:mangrove_button") && button.permutation.getState("facing_direction") === 0) {
         if (button.offset({ x: 0, y: 1, z: 0 }).typeId === "ldns:error_block" &&
