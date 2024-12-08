@@ -14,7 +14,6 @@
                     "ldns:portal_explosion",
                     "ldns:break_torch",
                     "ldns:random_chat",
-                    "ldns:entity787_spawn",
                     "ldns:random_lighting",
                     {
                         "ldns:scythe_effects": "q.is_item_name_any('slot.weapon.mainhand', 0, 'ldns:entity787_scythe')"
@@ -29,7 +28,6 @@
                 "ldns:break_torch": "controller.animation.ldns.random_break_torch",
                 "ldns:random_chat": "controller.animation.ldns.random_chat",
                 "ldns:scythe_effects": "animation.ldns.scythe_effects",
-                "ldns:entity787_spawn": "controller.animation.ldns.entity787_spawn",
                 "ldns:random_lighting": "controller.animation.ldns.random_lightning"
             }
         },

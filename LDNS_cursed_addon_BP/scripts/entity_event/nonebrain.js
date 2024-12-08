@@ -60,7 +60,7 @@ world.afterEvents.buttonPush.subscribe(async (e) => {
             button.offset({ x: 1, y: -1, z: 1 }).typeId === "ldns:error_block") {
             const rand = random(0, 25);
             button.dimension.spawnParticle("ldns:error_particle", button.location);
-            await system.waitTicks(20 * 3);
+            await system.waitTicks(20*1.5);
             if (rand <= 20) {
                 world.sendMessage("Do you really believe in the devil?: " + world.getDynamicProperty("noneint"));
             }
@@ -122,7 +122,7 @@ world.afterEvents.pressurePlatePush.subscribe(async (e) => {
             button.offset({ x: -1, y: -1, z: 0 }).typeId === "ldns:error_block" &&
             button.offset({ x: 0, y: -1, z: 0 }).typeId === "ldns:error_block") {
             button.dimension.spawnParticle("ldns:error_particle", button.location);
-            await system.waitTicks(20 * 3);
+            await system.waitTicks(20*1.5);
             button.setType("air");
             button.offset({ x: 0, y: -2, z: 2 }).setType("air");
             button.offset({ x: 0, y: -2, z: -2 }).setType("air");
