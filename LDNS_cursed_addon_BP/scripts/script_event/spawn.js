@@ -286,124 +286,118 @@ world.afterEvents.buttonPush.subscribe(async (e) => {
 
 // 必ずこの向き
 world.afterEvents.pressurePlatePush.subscribe(async (e) => {
-    const button = e.block;
-    const buttoname = button.typeId;
-    if (!(e.source instanceof Player)) return;
-    if (buttoname === "minecraft:acacia_pressure_plate" || buttoname === "minecraft:crimson_pressure_plate" || buttoname === "minecraft:mangrove_pressure_plate") {
-        if (
-            button.offset({ x: 0, y: -1, z: 0 }).typeId === "ldns:error_block" &&
-            button.offset({ x: 1, y: -1, z: 0 }).typeId === "ldns:error_block" &&
-            button.offset({ x: 0, y: -1, z: -1 }).typeId === "ldns:error_block" &&
-            button.offset({ x: 0, y: -1, z: 1 }).typeId === "ldns:error_block" &&
-            button.offset({ x: -1, y: -1, z: 0 }).typeId === "ldns:error_block" &&
-            button.offset({ x: -2, y: -1, z: 0 }).typeId === "ldns:error_block" &&
-            button.offset({ x: 1, y: -1, z: -1 }).typeId === "minecraft:chiseled_quartz_block" &&
-            button.offset({ x: 1, y: -1, z: 1 }).typeId === "minecraft:chiseled_quartz_block" &&
-            button.offset({ x: 2, y: -1, z: -1 }).typeId === "minecraft:chiseled_quartz_block" &&
-            button.offset({ x: 2, y: -1, z: 0 }).typeId === "minecraft:chiseled_quartz_block" &&
-            button.offset({ x: 2, y: -1, z: 1 }).typeId === "minecraft:chiseled_quartz_block" &&
-            button.offset({ x: 1, y: -1, z: 2 }).typeId === "minecraft:chiseled_quartz_block" &&
-            button.offset({ x: 1, y: -1, z: -2 }).typeId === "minecraft:chiseled_quartz_block" &&
-            button.offset({ x: 0, y: -1, z: 2 }).typeId === "minecraft:chiseled_quartz_block" &&
-            button.offset({ x: 0, y: -1, z: -2 }).typeId === "minecraft:chiseled_quartz_block" &&
-            button.offset({ x: -1, y: -1, z: -2 }).typeId === "minecraft:chiseled_quartz_block" &&
-            button.offset({ x: -1, y: -1, z: 2 }).typeId === "minecraft:chiseled_quartz_block" &&
-            button.offset({ x: -1, y: -1, z: -1 }).typeId === "minecraft:chiseled_quartz_block" &&
-            button.offset({ x: -1, y: -1, z: 1 }).typeId === "minecraft:chiseled_quartz_block" &&
-            button.offset({ x: -2, y: -1, z: -1 }).typeId === "minecraft:chiseled_quartz_block" &&
-            button.offset({ x: -2, y: -1, z: 1 }).typeId === "minecraft:chiseled_quartz_block" &&
-            button.offset({ x: -3, y: -1, z: -1 }).typeId === "minecraft:chiseled_quartz_block" &&
-            button.offset({ x: -3, y: -1, z: 1 }).typeId === "minecraft:chiseled_quartz_block" &&
-            button.offset({ x: -3, y: -1, z: 0 }).typeId === "minecraft:chiseled_quartz_block" &&
-            button.offset({ x: 1, y: 0, z: -1 }).typeId === "minecraft:redstone_wire" &&
-            button.offset({ x: 0, y: 0, z: 2 }).typeId === "minecraft:redstone_wire" &&
-            button.offset({ x: -1, y: 0, z: -2 }).typeId === "minecraft:redstone_wire" &&
-            button.offset({ x: -3, y: 0, z: 1 }).typeId === "minecraft:redstone_wire" &&
-            button.offset({ x: 2, y: 3, z: 0 }).typeId === "minecraft:nether_wart_block" &&
-            button.offset({ x: 2, y: 2, z: 0 }).typeId === "minecraft:nether_wart_block" &&
-            button.offset({ x: 2, y: 1, z: 0 }).typeId === "minecraft:nether_wart_block" &&
-            button.offset({ x: 2, y: 0, z: 0 }).typeId === "minecraft:nether_wart_block" &&
-            button.offset({ x: 2, y: 2, z: -1 }).typeId === "minecraft:nether_wart_block" &&
-            button.offset({ x: 2, y: 2, z: 1 }).typeId === "minecraft:nether_wart_block" &&
-            button.offset({ x: -3, y: 3, z: 0 }).typeId === "minecraft:soul_sand" &&
-            button.offset({ x: -3, y: 2, z: 0 }).typeId === "minecraft:soul_sand" &&
-            button.offset({ x: -3, y: 1, z: 0 }).typeId === "minecraft:soul_sand" &&
-            button.offset({ x: -3, y: 0, z: 0 }).typeId === "minecraft:soul_sand" &&
-            button.offset({ x: -3, y: 2, z: -1 }).typeId === "minecraft:soul_sand" &&
-            button.offset({ x: -3, y: 2, z: 1 }).typeId === "minecraft:soul_sand"
-        ) {
-            let equipments = e.source.getComponent("equippable");
-            let { container } = e.source.getComponent("inventory");
+    world.afterEvents.itemUseOn.subscribe(async (e2) => {
+        const button = e.block;
+        const buttoname = button.typeId;
+        let equipments = e.source.getComponent("equippable");
+        let { container } = e.source.getComponent("inventory");
+        if (!(e.source instanceof Player)) return;
+        if (buttoname === "minecraft:acacia_pressure_plate" || buttoname === "minecraft:crimson_pressure_plate" || buttoname === "minecraft:mangrove_pressure_plate") {
             if (
+                button.offset({ x: 0, y: -1, z: 0 }).typeId === "ldns:error_block" &&
+                button.offset({ x: 1, y: -1, z: 0 }).typeId === "ldns:error_block" &&
+                button.offset({ x: 0, y: -1, z: -1 }).typeId === "ldns:error_block" &&
+                button.offset({ x: 0, y: -1, z: 1 }).typeId === "ldns:error_block" &&
+                button.offset({ x: -1, y: -1, z: 0 }).typeId === "ldns:error_block" &&
+                button.offset({ x: -2, y: -1, z: 0 }).typeId === "ldns:error_block" &&
+                button.offset({ x: 1, y: -1, z: -1 }).typeId === "minecraft:chiseled_quartz_block" &&
+                button.offset({ x: 1, y: -1, z: 1 }).typeId === "minecraft:chiseled_quartz_block" &&
+                button.offset({ x: 2, y: -1, z: -1 }).typeId === "minecraft:chiseled_quartz_block" &&
+                button.offset({ x: 2, y: -1, z: 0 }).typeId === "minecraft:chiseled_quartz_block" &&
+                button.offset({ x: 2, y: -1, z: 1 }).typeId === "minecraft:chiseled_quartz_block" &&
+                button.offset({ x: 1, y: -1, z: 2 }).typeId === "minecraft:chiseled_quartz_block" &&
+                button.offset({ x: 1, y: -1, z: -2 }).typeId === "minecraft:chiseled_quartz_block" &&
+                button.offset({ x: 0, y: -1, z: 2 }).typeId === "minecraft:chiseled_quartz_block" &&
+                button.offset({ x: 0, y: -1, z: -2 }).typeId === "minecraft:chiseled_quartz_block" &&
+                button.offset({ x: -1, y: -1, z: -2 }).typeId === "minecraft:chiseled_quartz_block" &&
+                button.offset({ x: -1, y: -1, z: 2 }).typeId === "minecraft:chiseled_quartz_block" &&
+                button.offset({ x: -1, y: -1, z: -1 }).typeId === "minecraft:chiseled_quartz_block" &&
+                button.offset({ x: -1, y: -1, z: 1 }).typeId === "minecraft:chiseled_quartz_block" &&
+                button.offset({ x: -2, y: -1, z: -1 }).typeId === "minecraft:chiseled_quartz_block" &&
+                button.offset({ x: -2, y: -1, z: 1 }).typeId === "minecraft:chiseled_quartz_block" &&
+                button.offset({ x: -3, y: -1, z: -1 }).typeId === "minecraft:chiseled_quartz_block" &&
+                button.offset({ x: -3, y: -1, z: 1 }).typeId === "minecraft:chiseled_quartz_block" &&
+                button.offset({ x: -3, y: -1, z: 0 }).typeId === "minecraft:chiseled_quartz_block" &&
+                button.offset({ x: 1, y: 0, z: -1 }).typeId === "minecraft:redstone_wire" &&
+                button.offset({ x: 0, y: 0, z: 2 }).typeId === "minecraft:redstone_wire" &&
+                button.offset({ x: -1, y: 0, z: -2 }).typeId === "minecraft:redstone_wire" &&
+                button.offset({ x: -3, y: 0, z: 1 }).typeId === "minecraft:redstone_wire" &&
+                button.offset({ x: 2, y: 3, z: 0 }).typeId === "minecraft:nether_wart_block" &&
+                button.offset({ x: 2, y: 2, z: 0 }).typeId === "minecraft:nether_wart_block" &&
+                button.offset({ x: 2, y: 1, z: 0 }).typeId === "minecraft:nether_wart_block" &&
+                button.offset({ x: 2, y: 0, z: 0 }).typeId === "minecraft:nether_wart_block" &&
+                button.offset({ x: 2, y: 2, z: -1 }).typeId === "minecraft:nether_wart_block" &&
+                button.offset({ x: 2, y: 2, z: 1 }).typeId === "minecraft:nether_wart_block" &&
+                button.offset({ x: -3, y: 3, z: 0 }).typeId === "minecraft:soul_sand" &&
+                button.offset({ x: -3, y: 2, z: 0 }).typeId === "minecraft:soul_sand" &&
+                button.offset({ x: -3, y: 1, z: 0 }).typeId === "minecraft:soul_sand" &&
+                button.offset({ x: -3, y: 0, z: 0 }).typeId === "minecraft:soul_sand" &&
+                button.offset({ x: -3, y: 2, z: -1 }).typeId === "minecraft:soul_sand" &&
+                button.offset({ x: -3, y: 2, z: 1 }).typeId === "minecraft:soul_sand" &&
                 equipments.getEquipment(EquipmentSlot.Head)?.typeId === "ldns:error_helmet" &&
                 equipments.getEquipment(EquipmentSlot.Chest)?.typeId === "ldns:error_chestplate" &&
                 equipments.getEquipment(EquipmentSlot.Legs)?.typeId === "ldns:error_leggings" &&
                 equipments.getEquipment(EquipmentSlot.Feet)?.typeId === "ldns:error_boots" &&
-                container?.getSlot(4 + 9)?.typeId === "ldns:error_sword" &&
-                container?.getSlot(12 + 9)?.typeId === "ldns:error_shovel" &&
-                container?.getSlot(13 + 9)?.typeId === "ldns:error_pickaxe" &&
-                container?.getSlot(14 + 9)?.typeId === "ldns:error_axe" &&
-                container?.getSlot(22 + 9)?.typeId === "ldns:error_hoe" &&
-                container?.getSlot(3 + 9)?.typeId === "ldns:ld5987" &&
-                container?.getSlot(5 + 9)?.typeId === "ldns:dn3895" &&
-                container?.getSlot(21 + 9)?.typeId === "ldns:dn3895" &&
-                container?.getSlot(23 + 9)?.typeId === "ldns:ld5987"
+                container?.getItem(4 + 9)?.typeId === "ldns:error_sword" &&
+                container?.getItem(12 + 9)?.typeId === "ldns:error_shovel" &&
+                container?.getItem(13 + 9)?.typeId === "ldns:error_pickaxe" &&
+                container?.getItem(14 + 9)?.typeId === "ldns:error_axe" &&
+                container?.getItem(22 + 9)?.typeId === "ldns:error_hoe" &&
+                container?.getItem(3 + 9)?.typeId === "ldns:ld5987" &&
+                container?.getItem(5 + 9)?.typeId === "ldns:dn3895" &&
+                container?.getItem(21 + 9)?.typeId === "ldns:dn3895" &&
+                container?.getItem(23 + 9)?.typeId === "ldns:ld5987" &&
+                e2.block.location.x === button.location.x - 3 &&
+                e2.block.location.y === button.location.y + 1 &&
+                e2.block.location.z === button.location.z &&
+                e2.block.typeId === "minecraft:soul_sand" &&
+                e2.itemStack.typeId === "minecraft:flint_and_steel"
             ) {
-                world.afterEvents.itemUseOn.subscribe(async (e2) => {
-                    if (
-                        e2.block.location.x === button.location.x - 3 &&
-                        e2.block.location.y === button.location.y + 1 &&
-                        e2.block.location.z === button.location.z &&
-                        e2.block.typeId === "minecraft:soul_sand" &&
-                        e2.itemStack.typeId === "minecraft:flint_and_steel"
-                    ) {
-                        button.offset({ x: 0, y: -1, z: 0 }).setType("air");
-                        button.offset({ x: 1, y: -1, z: 0 }).setType("air");
-                        button.offset({ x: 0, y: -1, z: -1 }).setType("air");
-                        button.offset({ x: 0, y: -1, z: 1 }).setType("air");
-                        button.offset({ x: -1, y: -1, z: 0 }).setType("air");
-                        button.offset({ x: -2, y: -1, z: 0 }).setType("air");
-                        button.offset({ x: 1, y: -1, z: -1 }).setType("air");
-                        button.offset({ x: 1, y: -1, z: 1 }).setType("air");
-                        button.offset({ x: 2, y: -1, z: -1 }).setType("air");
-                        button.offset({ x: 2, y: -1, z: 0 }).setType("air");
-                        button.offset({ x: 2, y: -1, z: 1 }).setType("air");
-                        button.offset({ x: 1, y: -1, z: 2 }).setType("air");
-                        button.offset({ x: 1, y: -1, z: -2 }).setType("air");
-                        button.offset({ x: 0, y: -1, z: 2 }).setType("air");
-                        button.offset({ x: 0, y: -1, z: -2 }).setType("air");
-                        button.offset({ x: -1, y: -1, z: -2 }).setType("air");
-                        button.offset({ x: -1, y: -1, z: 2 }).setType("air");
-                        button.offset({ x: -1, y: -1, z: -1 }).setType("air");
-                        button.offset({ x: -1, y: -1, z: 1 }).setType("air");
-                        button.offset({ x: -2, y: -1, z: -1 }).setType("air");
-                        button.offset({ x: -2, y: -1, z: 1 }).setType("air");
-                        button.offset({ x: -3, y: -1, z: -1 }).setType("air");
-                        button.offset({ x: -3, y: -1, z: 1 }).setType("air");
-                        button.offset({ x: -3, y: -1, z: 0 }).setType("air");
-                        button.offset({ x: 1, y: 0, z: -1 }).setType("air");
-                        button.offset({ x: 0, y: 0, z: 2 }).setType("air");
-                        button.offset({ x: -1, y: 0, z: -2 }).setType("air");
-                        button.offset({ x: -3, y: 0, z: 1 }).setType("air");
-                        button.offset({ x: 2, y: 3, z: 0 }).setType("air");
-                        button.offset({ x: 2, y: 2, z: 0 }).setType("air");
-                        button.offset({ x: 2, y: 1, z: 0 }).setType("air");
-                        button.offset({ x: 2, y: 0, z: 0 }).setType("air");
-                        button.offset({ x: 2, y: 2, z: -1 }).setType("air");
-                        button.offset({ x: 2, y: 2, z: 1 }).setType("air");
-                        button.offset({ x: -3, y: 3, z: 0 }).setType("air");
-                        button.offset({ x: -3, y: 2, z: 0 }).setType("air");
-                        button.offset({ x: -3, y: 1, z: 0 }).setType("air");
-                        button.offset({ x: -3, y: 0, z: 0 }).setType("air");
-                        button.offset({ x: -3, y: 2, z: -1 }).setType("air");
-                        button.offset({ x: -3, y: 2, z: 1 }).setType("air");
-                        button.dimension.spawnEntity("lightning_bolt", { x: button.location.x + 3, y: button.location.y, z: button.location.z });
-                        button.dimension.spawnEntity("ldns:entity787", { x: button.location.x + 3, y: button.location.y, z: button.location.z });
-                    }
-                });
+                button.offset({ x: 0, y: -1, z: 0 }).setType("air");
+                button.offset({ x: 1, y: -1, z: 0 }).setType("air");
+                button.offset({ x: 0, y: -1, z: -1 }).setType("air");
+                button.offset({ x: 0, y: -1, z: 1 }).setType("air");
+                button.offset({ x: -1, y: -1, z: 0 }).setType("air");
+                button.offset({ x: -2, y: -1, z: 0 }).setType("air");
+                button.offset({ x: 1, y: -1, z: -1 }).setType("air");
+                button.offset({ x: 1, y: -1, z: 1 }).setType("air");
+                button.offset({ x: 2, y: -1, z: -1 }).setType("air");
+                button.offset({ x: 2, y: -1, z: 0 }).setType("air");
+                button.offset({ x: 2, y: -1, z: 1 }).setType("air");
+                button.offset({ x: 1, y: -1, z: 2 }).setType("air");
+                button.offset({ x: 1, y: -1, z: -2 }).setType("air");
+                button.offset({ x: 0, y: -1, z: 2 }).setType("air");
+                button.offset({ x: 0, y: -1, z: -2 }).setType("air");
+                button.offset({ x: -1, y: -1, z: -2 }).setType("air");
+                button.offset({ x: -1, y: -1, z: 2 }).setType("air");
+                button.offset({ x: -1, y: -1, z: -1 }).setType("air");
+                button.offset({ x: -1, y: -1, z: 1 }).setType("air");
+                button.offset({ x: -2, y: -1, z: -1 }).setType("air");
+                button.offset({ x: -2, y: -1, z: 1 }).setType("air");
+                button.offset({ x: -3, y: -1, z: -1 }).setType("air");
+                button.offset({ x: -3, y: -1, z: 1 }).setType("air");
+                button.offset({ x: -3, y: -1, z: 0 }).setType("air");
+                button.offset({ x: 1, y: 0, z: -1 }).setType("air");
+                button.offset({ x: 0, y: 0, z: 2 }).setType("air");
+                button.offset({ x: -1, y: 0, z: -2 }).setType("air");
+                button.offset({ x: -3, y: 0, z: 1 }).setType("air");
+                button.offset({ x: 2, y: 3, z: 0 }).setType("air");
+                button.offset({ x: 2, y: 2, z: 0 }).setType("air");
+                button.offset({ x: 2, y: 1, z: 0 }).setType("air");
+                button.offset({ x: 2, y: 0, z: 0 }).setType("air");
+                button.offset({ x: 2, y: 2, z: -1 }).setType("air");
+                button.offset({ x: 2, y: 2, z: 1 }).setType("air");
+                button.offset({ x: -3, y: 3, z: 0 }).setType("air");
+                button.offset({ x: -3, y: 2, z: 0 }).setType("air");
+                button.offset({ x: -3, y: 1, z: 0 }).setType("air");
+                button.offset({ x: -3, y: 0, z: 0 }).setType("air");
+                button.offset({ x: -3, y: 2, z: -1 }).setType("air");
+                button.offset({ x: -3, y: 2, z: 1 }).setType("air");
+                button.dimension.spawnEntity("lightning_bolt", { x: button.location.x + 3, y: button.location.y, z: button.location.z });
+                button.dimension.spawnEntity("ldns:entity787", { x: button.location.x + 3, y: button.location.y, z: button.location.z });
             }
         }
-    }
+    });
 });
 
 /**
