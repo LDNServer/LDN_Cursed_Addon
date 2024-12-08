@@ -20,4 +20,5 @@
 <img src="https://raw.githubusercontent.com/LDNServer/LDN_Cursed_Addon/refs/heads/main/docs/image/thinking2.png">
 <img src="https://raw.githubusercontent.com/LDNServer/LDN_Cursed_Addon/refs/heads/main/docs/image/thinking3.png">
 <img src="https://raw.githubusercontent.com/LDNServer/LDN_Cursed_Addon/refs/heads/main/docs/image/thinking4.png">
+<img src="https://raw.githubusercontent.com/LDNServer/LDN_Cursed_Addon/refs/heads/main/docs/image/thinking5.png">
 </details>
