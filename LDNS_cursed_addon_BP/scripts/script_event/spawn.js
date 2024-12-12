@@ -88,7 +88,6 @@ world.afterEvents.buttonPush.subscribe(async (e) => {
             button.offset({ x: 0, y: -1, z: 1 }).typeId === "ldns:error_block" &&
             button.offset({ x: 0, y: 2, z: -1 }).typeId === "minecraft:carved_pumpkin") {
             button.dimension.spawnParticle("ldns:error_particle", button.location);
-            await system.waitTicks(20 * 1.5);
             button.setType("air");
             button.offset({ x: 0, y: 1, z: 0 }).setType("air");
             button.offset({ x: 0, y: 1, z: -1 }).setType("air");
@@ -98,6 +97,7 @@ world.afterEvents.buttonPush.subscribe(async (e) => {
             button.offset({ x: 0, y: -1, z: -1 }).setType("air");
             button.offset({ x: 0, y: -1, z: 1 }).setType("air");
             button.offset({ x: 0, y: 2, z: -1 }).setType("air");
+            await system.waitTicks(20 * 3);
             button.dimension.spawnEntity("ldns:pp", button.location);
         }
         else if (button.offset({ x: 0, y: 1, z: 0 }).typeId === "ldns:error_block" &&
@@ -109,7 +109,6 @@ world.afterEvents.buttonPush.subscribe(async (e) => {
             button.offset({ x: 0, y: -1, z: -1 }).typeId === "ldns:error_block" &&
             button.offset({ x: 0, y: 2, z: 1 }).typeId === "minecraft:carved_pumpkin") {
             button.dimension.spawnParticle("ldns:error_particle", button.location);
-            await system.waitTicks(20 * 1.5);
             button.setType("air");
             button.offset({ x: 0, y: 1, z: 0 }).setType("air");
             button.offset({ x: 0, y: 1, z: 1 }).setType("air");
@@ -119,6 +118,7 @@ world.afterEvents.buttonPush.subscribe(async (e) => {
             button.offset({ x: 0, y: -1, z: 1 }).setType("air");
             button.offset({ x: 0, y: -1, z: -1 }).setType("air");
             button.offset({ x: 0, y: 2, z: 1 }).setType("air");
+            await system.waitTicks(20 * 3);
             button.dimension.spawnEntity("ldns:pp", button.location);
         }
         else if (button.offset({ x: 0, y: 1, z: 0 }).typeId === "ldns:error_block" &&
@@ -130,7 +130,6 @@ world.afterEvents.buttonPush.subscribe(async (e) => {
             button.offset({ x: -1, y: -1, z: 0 }).typeId === "ldns:error_block" &&
             button.offset({ x: 1, y: 2, z: 0 }).typeId === "minecraft:carved_pumpkin") {
             button.dimension.spawnParticle("ldns:error_particle", button.location);
-            await system.waitTicks(20 * 1.5);
             button.setType("air");
             button.offset({ x: 0, y: 1, z: 0 }).setType("air");
             button.offset({ x: 1, y: 1, z: 0 }).setType("air");
@@ -140,6 +139,7 @@ world.afterEvents.buttonPush.subscribe(async (e) => {
             button.offset({ x: 1, y: -1, z: 0 }).setType("air");
             button.offset({ x: -1, y: -1, z: 0 }).setType("air");
             button.offset({ x: 1, y: 2, z: 0 }).setType("air");
+            await system.waitTicks(20 * 3);
             button.dimension.spawnEntity("ldns:pp", button.location);
         }
         else if (button.offset({ x: 0, y: 1, z: 0 }).typeId === "ldns:error_block" &&
@@ -151,7 +151,6 @@ world.afterEvents.buttonPush.subscribe(async (e) => {
             button.offset({ x: 1, y: -1, z: 0 }).typeId === "ldns:error_block" &&
             button.offset({ x: -1, y: 2, z: 0 }).typeId === "minecraft:carved_pumpkin") {
             button.dimension.spawnParticle("ldns:error_particle", button.location);
-            await system.waitTicks(20 * 1.5);
             button.setType("air");
             button.offset({ x: 0, y: 1, z: 0 }).setType("air");
             button.offset({ x: -1, y: 1, z: 0 }).setType("air");
@@ -161,6 +160,7 @@ world.afterEvents.buttonPush.subscribe(async (e) => {
             button.offset({ x: -1, y: -1, z: 0 }).setType("air");
             button.offset({ x: 1, y: -1, z: 0 }).setType("air");
             button.offset({ x: -1, y: 2, z: 0 }).setType("air");
+            await system.waitTicks(20 * 3);
             button.dimension.spawnEntity("ldns:pp", button.location);
         }
     }
@@ -178,7 +178,6 @@ world.afterEvents.buttonPush.subscribe(async (e) => {
             button.offset({ x: 0, y: 2, z: -2 }).typeId === "minecraft:carved_pumpkin" &&
             button.offset({ x: 0, y: 2, z: 2 }).typeId === "minecraft:carved_pumpkin") {
             button.dimension.spawnParticle("ldns:error_particle", button.location);
-            await system.waitTicks(20 * 1.5);
             button.setType("air");
             button.offset({ x: 0, y: 0, z: -1 }).setType("air");
             button.offset({ x: 0, y: 0, z: 1 }).setType("air");
@@ -192,6 +191,7 @@ world.afterEvents.buttonPush.subscribe(async (e) => {
             button.offset({ x: 0, y: 1, z: 2 }).setType("air");
             button.offset({ x: 0, y: 2, z: -2 }).setType("air");
             button.offset({ x: 0, y: 2, z: 2 }).setType("air");
+            await system.waitTicks(20 * 3);
             button.dimension.spawnEntity("ldns:yy", button.location);
         }
         else if (button.offset({ x: 0, y: 0, z: 1 }).typeId === "minecraft:redstone_block" &&
@@ -207,7 +207,6 @@ world.afterEvents.buttonPush.subscribe(async (e) => {
             button.offset({ x: 0, y: 2, z: 2 }).typeId === "minecraft:carved_pumpkin" &&
             button.offset({ x: 0, y: 2, z: -2 }).typeId === "minecraft:carved_pumpkin") {
             button.dimension.spawnParticle("ldns:error_particle", button.location);
-            await system.waitTicks(20 * 1.5);
             button.setType("air");
             button.offset({ x: 0, y: 0, z: 1 }).setType("air");
             button.offset({ x: 0, y: 0, z: -1 }).setType("air");
@@ -221,6 +220,7 @@ world.afterEvents.buttonPush.subscribe(async (e) => {
             button.offset({ x: 0, y: 1, z: -2 }).setType("air");
             button.offset({ x: 0, y: 2, z: 2 }).setType("air");
             button.offset({ x: 0, y: 2, z: -2 }).setType("air");
+            await system.waitTicks(20 * 3);
             button.dimension.spawnEntity("ldns:yy", button.location);
         }
         else if (button.offset({ x: -1, y: 0, z: 0 }).typeId === "minecraft:redstone_block" &&
@@ -236,7 +236,6 @@ world.afterEvents.buttonPush.subscribe(async (e) => {
             button.offset({ x: -2, y: 2, z: 0 }).typeId === "minecraft:carved_pumpkin" &&
             button.offset({ x: 2, y: 2, z: 0 }).typeId === "minecraft:carved_pumpkin") {
             button.dimension.spawnParticle("ldns:error_particle", button.location);
-            await system.waitTicks(20 * 1.5);
             button.setType("air");
             button.offset({ x: -1, y: 0, z: 0 }).setType("air");
             button.offset({ x: 1, y: 0, z: 0 }).setType("air");
@@ -250,6 +249,7 @@ world.afterEvents.buttonPush.subscribe(async (e) => {
             button.offset({ x: 2, y: 1, z: 0 }).setType("air");
             button.offset({ x: -2, y: 2, z: 0 }).setType("air");
             button.offset({ x: 2, y: 2, z: 0 }).setType("air");
+            await system.waitTicks(20 * 3);
             button.dimension.spawnEntity("ldns:yy", button.location);
         }
         else if (button.offset({ x: 1, y: 0, z: 0 }).typeId === "minecraft:redstone_block" &&
@@ -265,7 +265,6 @@ world.afterEvents.buttonPush.subscribe(async (e) => {
             button.offset({ x: 2, y: 2, z: 0 }).typeId === "minecraft:carved_pumpkin" &&
             button.offset({ x: -2, y: 2, z: 0 }).typeId === "minecraft:carved_pumpkin") {
             button.dimension.spawnParticle("ldns:error_particle", button.location);
-            await system.waitTicks(20 * 1.5);
             button.setType("air");
             button.offset({ x: 1, y: 0, z: 0 }).setType("air");
             button.offset({ x: -1, y: 0, z: 0 }).setType("air");
@@ -279,6 +278,7 @@ world.afterEvents.buttonPush.subscribe(async (e) => {
             button.offset({ x: -2, y: 1, z: 0 }).setType("air");
             button.offset({ x: 2, y: 2, z: 0 }).setType("air");
             button.offset({ x: -2, y: 2, z: 0 }).setType("air");
+            await system.waitTicks(20 * 3);
             button.dimension.spawnEntity("ldns:yy", button.location);
         }
     }
@@ -354,6 +354,7 @@ world.afterEvents.itemUseOn.subscribe(async (e) => {
         e.block.typeId === "minecraft:soul_sand" &&
         e.itemStack.typeId === "minecraft:flint_and_steel"
     ) {
+        button.dimension.spawnParticle("ldns:error_particle", button.location);
         button.offset({ x: 0, y: -1, z: 0 }).setType("air");
         button.offset({ x: 1, y: -1, z: 0 }).setType("air");
         button.offset({ x: 0, y: -1, z: -1 }).setType("air");
@@ -394,6 +395,8 @@ world.afterEvents.itemUseOn.subscribe(async (e) => {
         button.offset({ x: -3, y: 0, z: 0 }).setType("air");
         button.offset({ x: -3, y: 2, z: -1 }).setType("air");
         button.offset({ x: -3, y: 2, z: 1 }).setType("air");
+        world.sendMessage("No! It's not me!Help me! I'm scared! Don't make me cry!Don't hit me!Don't curse!Don't betray me... I'll turn it off?");
+        await system.waitTicks(20 * 3);
         button.dimension.spawnEntity("lightning_bolt", { x: button.location.x + 3, y: button.location.y, z: button.location.z });
         button.dimension.spawnEntity("ldns:entity787", { x: button.location.x + 3, y: button.location.y, z: button.location.z });
     }
