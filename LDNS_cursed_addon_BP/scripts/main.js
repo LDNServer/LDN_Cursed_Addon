@@ -18,6 +18,7 @@ import './entity_event/entity787';
 import './entity_event/ppyyeffect';
 import './entity_event/boss_dr_naba';
 import './entity_event/head_only_sheep';
+import './entity_event/shadow_mob';
 
 const timezoneOffset = 0;
 

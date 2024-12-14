@@ -13,6 +13,9 @@ item.spawn_egg.entity.ldns:bomber_zombie.name=Spawn Bomber zombie
 entity.ldns:shadow_mob.name=Shadow mob
 item.spawn_egg.entity.ldns:shadow_mob.name=Spawn Shadow mob
 
+entity.ldns:shadow_mob_desert.name=Shadow mob desert
+item.spawn_egg.entity.ldns:shadow_mob_desert.name=Spawn Shadow mob desert
+
 entity.ldns:bomb.name=Bomb
 
 entity.ldns:bed_explosion.name=Cursed bed

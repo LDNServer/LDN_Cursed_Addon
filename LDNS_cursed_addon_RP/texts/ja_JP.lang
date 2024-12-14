@@ -13,6 +13,9 @@ item.spawn_egg.entity.ldns:bomber_zombie.name=ボマーゾンビのスポーン�
 entity.ldns:shadow_mob.name=影のモノ
 item.spawn_egg.entity.ldns:shadow_mob.name=影のモノのスポーンエッグ
 
+entity.ldns:shadow_mob_desert.name=影のモノ砂漠個体
+item.spawn_egg.entity.ldns:shadow_mob_desert.name=影のモノ砂漠個体のスポーンエッグ
+
 entity.ldns:bomb.name=爆弾
 
 entity.ldns:bed_explosion.name=呪いのベッド

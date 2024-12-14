@@ -355,6 +355,10 @@ world.afterEvents.itemUseOn.subscribe(async (e) => {
         e.itemStack.typeId === "minecraft:flint_and_steel"
     ) {
         button.dimension.spawnParticle("ldns:error_particle", button.location);
+        container?.setItem(3 + 9, null);
+        container?.setItem(5 + 9, null);
+        container?.setItem(21 + 9, null);
+        container?.setItem(23 + 9, null);
         button.offset({ x: 0, y: -1, z: 0 }).setType("air");
         button.offset({ x: 1, y: -1, z: 0 }).setType("air");
         button.offset({ x: 0, y: -1, z: -1 }).setType("air");

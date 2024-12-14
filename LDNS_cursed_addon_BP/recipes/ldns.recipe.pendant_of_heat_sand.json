@@ -1,0 +1,42 @@
+{
+    "format_version": "1.18",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "ldns:pendant_of_heat_sand"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "sws",
+            "gng",
+            "ini"
+        ],
+        "key": {
+            "s": {
+                "item": "ldns:heavy_stone",
+                "data": 0
+            },
+            "w": {
+                "item": "ldns:error_sword",
+                "data": 0
+            },
+            "g": {
+                "item": "ldns:gray_ender_pearl",
+                "data": 0
+            },
+            "n": {
+                "item": "minecraft:chiseled_sandstone",
+                "data": 0
+            },
+            "i": {
+                "item": "minecraft:iron_ingot",
+                "data": 0
+            }
+        },
+        "result": {
+            "item": "ldns:pendant_of_heat_sand",
+            "count": 1
+        }
+    }
+}
