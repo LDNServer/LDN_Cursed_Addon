@@ -2,7 +2,6 @@
 import { system, world } from '@minecraft/server';
 
 import './script_event/random_effect';
-import './archive/dangerous_cactus';
 import './script_event/random_time';
 import './item_event/error-tool-effects';
 import './item_event/error-tool-damage';
