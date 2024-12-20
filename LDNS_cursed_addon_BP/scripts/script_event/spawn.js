@@ -70,6 +70,10 @@ system.runInterval(async () => {
         else if (rand <= 11100 && rand >= 11050) {
             event10(v);
         }
+        // villが出てくる
+        else if (rand <= 12100 && rand >= 12000) {
+            event11(v);
+        }
     }
 }, 3200);
 
@@ -595,8 +599,10 @@ async function event4(d, v, playerlength, playerall) {
  * 
  * @param {Player} v 
  */
-function event5(v) {
-    world.getDimension(v.dimension.id).spawnEntity("ldns:attacker_nitwit_villager", v.location);
+async function event5(v) {
+    if (random(0, 8) <= 7) {
+        world.getDimension(v.dimension.id).spawnEntity("ldns:attacker_nitwit_villager", v.location);
+    }
 }
 
 /**
@@ -668,5 +674,35 @@ async function event10(v) {
             v.onScreenDisplay.setTitle("hello4");
             break;
     }
+}
+
+/**
+ * 
+ * @param {Player} v 
+ */
+export async function event11(v) {
+    v.playSound("mob.witch.celebrate", { pitch: 0.333, volume: 6.66 });
+    world.sendMessage("§4I will follow you wherever you go.§r");
+
+    await system.waitTicks(20 * 5);
+    const playerLocation = v.location;
+    const spawnX = playerLocation.x + 64; // 256ブロック離れたX座標
+    const spawnZ = playerLocation.z; // プレイヤーと同じZ座標
+
+    // 最高の地面ブロックのY座標を取得
+    let spawnY = 0;
+    for (let y = 320; y >= -64; y--) { // ビルドの最大・最小高さを確認
+        const block = world.getDimension("overworld").getBlock({ x: spawnX, y: y, z: spawnZ });
+        if (block && !block.isAir) {
+            spawnY = y + 1; // ブロックの上にスポーン
+            break;
+        }
+    }
+    world.setDynamicProperty("villTGS", false);
+    // Mobをスポーン
+    world.getDimension(v.dimension.id).spawnEntity("ldns:vill", { x: spawnX, y: spawnY, z: spawnZ });
+    // 追いかけるためのIDを指定
+    world.setDynamicProperty("villTGid", v.id);
+    world.setDynamicProperty("villTGS", true);
 }
 // 繝｡繝｢繝ｪ繝ｼ繝ｬ繧､繝?Φ繧ｷ繝ｼ繧ｨ繝ｩ繝ｼ

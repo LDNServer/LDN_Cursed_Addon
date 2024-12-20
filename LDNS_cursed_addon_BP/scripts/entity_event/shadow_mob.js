@@ -23,7 +23,8 @@ world.afterEvents.entityDie.subscribe((edae) => {
                 if (random(0, 8) === 0) {
                     if (d.getHours() <= 24 || d.getHours() >= 12) { damageSource.damagingEntity.runCommand("give @s ldns:ld5987"); }
                     else if (d.getHours() <= 12 || d.getHours() >= 0) { damageSource.damagingEntity.runCommand("give @s ldns:dn3895"); }
-                    container.setItem(i, null)
+                    container.setItem(i, null);
+                    break;
                 }
             }
         }

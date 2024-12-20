@@ -62,6 +62,9 @@ item.spawn_egg.entity.ldns:mysterious_players.name=プレイヤー？のスポ�
 entity.ldns:attacker_nitwit_villager.name=村人？
 item.spawn_egg.entity.ldns:attacker_nitwit_villager.name=村人？のスポーンエッグ
 
+entity.ldns:vill.name=§l§cVill§r
+item.spawn_egg.entity.ldns:vill.name=§l§cVill §fのスポーンエッグ§r
+
 entity.ldns:pp.name=§dPseudo Ping§r
 item.spawn_egg.entity.ldns:pp.name=§dPP §fのスポーンエッグ§r
 

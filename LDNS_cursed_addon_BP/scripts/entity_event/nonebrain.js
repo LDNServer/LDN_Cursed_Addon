@@ -44,6 +44,7 @@ world.afterEvents.entityDie.subscribe(async (events) => {
     });
 });
 
+// ノンブラインを消した数判定
 world.afterEvents.buttonPush.subscribe(async (e) => {
     const button = e.block;
     const buttoname = button.typeId;
@@ -69,7 +70,7 @@ world.afterEvents.buttonPush.subscribe(async (e) => {
             button.offset({ x: 1, y: -1, z: 0 }).setType("air");
             button.offset({ x: 1, y: -1, z: -1 }).setType("air");
             button.offset({ x: 1, y: -1, z: 1 }).setType("air");
-            await system.waitTicks(20*3);
+            await system.waitTicks(20 * 3);
             const rand = random(0, 25);
             if (rand <= 20) {
                 world.sendMessage("Do you really believe in the devil?: " + world.getDynamicProperty("noneint"));
@@ -81,6 +82,7 @@ world.afterEvents.buttonPush.subscribe(async (e) => {
     }
 });
 
+// ノンブラインチャレンジ
 world.afterEvents.pressurePlatePush.subscribe(async (e) => {
     const button = e.block;
     const buttoname = button.typeId;
@@ -157,7 +159,7 @@ world.afterEvents.pressurePlatePush.subscribe(async (e) => {
             button.offset({ x: -1, y: -1, z: 0 }).setType("air");
             button.offset({ x: 0, y: -1, z: 0 }).setType("air");
             button.dimension.spawnParticle("ldns:error_particle", button.location);
-            await system.waitTicks(20*1.5);
+            await system.waitTicks(20 * 1.5);
             e.source.addTag("nonebrainchats");
             tagevent = true;
             await system.waitTicks(20 * 60);

@@ -219,6 +219,22 @@
             ],
             "volume": 1.0
          },
+         "ldns:vill": {
+            "events": {
+               "ambient": "mob.villager.idle",
+               "death": "mob.villager.death",
+               "death.to.zombie": "mob.villager.death",
+               "haggle": "mob.villager.haggle",
+               "haggle.no": "mob.villager.no",
+               "haggle.yes": "mob.villager.yes",
+               "hurt": "mob.villager.hit"
+            },
+            "pitch": [
+               0.40,
+               0.66
+            ],
+            "volume": 6.66
+         },
          "ldns:pp": {
             "events": {
                "ambient": "mob.ldns.ppyy",

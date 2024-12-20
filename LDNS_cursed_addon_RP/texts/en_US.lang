@@ -62,6 +62,9 @@ item.spawn_egg.entity.ldns:mysterious_players.name=Spawn Mysterious Players
 entity.ldns:attacker_nitwit_villager.name=Villager?
 item.spawn_egg.entity.ldns:attacker_nitwit_villager.name=Spawn Villager?
 
+entity.ldns:vill.name=§l§cVill§r
+item.spawn_egg.entity.ldns:vill.name=§fSpawn §l§cVill§r
+
 entity.ldns:pp.name=§dPseudo Ping§r
 item.spawn_egg.entity.ldns:pp.name=Spawn §dPP§r
 

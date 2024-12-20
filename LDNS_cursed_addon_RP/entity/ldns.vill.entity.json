@@ -1,0 +1,41 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ldns:vill",
+      "materials": {
+        "default": "villager"
+      },
+      "textures": {
+        "default": "textures/entity/ldns/vill"
+      },
+      "geometry": {
+        "default": "geometry.villager.v1.8"
+      },
+      "scripts": {
+        "scale": "0.9375"
+      },
+      "animations": {
+        "general": "animation.villager.general",
+        "look_at_target": "animation.common.look_at_target",
+        "move": "animation.villager.move"
+      },
+      "animation_controllers": [
+        {
+          "general": "controller.animation.villager.general"
+        },
+        {
+          "move": "controller.animation.villager.move"
+        }
+      ],
+      "render_controllers": [
+        "controller.render.vill"
+      ],
+      "spawn_egg": {
+        "base_color": "#ff0000",
+        "overlay_color": "#ffffff"
+      },
+      "enable_attachables": true
+    }
+  }
+}
