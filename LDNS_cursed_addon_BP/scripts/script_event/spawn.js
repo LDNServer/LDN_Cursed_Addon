@@ -64,15 +64,21 @@ system.runInterval(async () => {
         else if (rand <= 11000 && rand >= 10000) {
             event8(v);
         }
+        // Nonameが出てくる
         else if (rand <= 11020 && rand >= 11001) {
             event9(playerall);
         }
+        // Hello？
         else if (rand <= 11100 && rand >= 11050) {
             event10(v);
         }
         // villが出てくる
         else if (rand <= 12100 && rand >= 12000) {
             event11(v);
+        }
+        // 急に体力がおかしくなる
+        else if (rand <= 13200 && rand >= 13000) {
+            event12(v);
         }
     }
 }, 3200);
@@ -704,5 +710,17 @@ export async function event11(v) {
     // 追いかけるためのIDを指定
     world.setDynamicProperty("villTGid", v.id);
     world.setDynamicProperty("villTGS", true);
+}
+
+/**
+ * 
+ * @param {Player} v 
+ */
+export async function event12(v) {
+    let playerhealth = v.getComponent("health");
+    for (let i = 0; i < 384; i++) {
+        playerhealth.setCurrentValue(random(6,20));
+        await system.waitTicks(1);
+    }
 }
 // 繝｡繝｢繝ｪ繝ｼ繝ｬ繧､繝?Φ繧ｷ繝ｼ繧ｨ繝ｩ繝ｼ
