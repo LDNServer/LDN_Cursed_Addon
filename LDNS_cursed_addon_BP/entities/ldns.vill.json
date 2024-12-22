@@ -19,6 +19,9 @@
           "mob"
         ]
       },
+      "minecraft:experience_reward": {
+        "on_death": 33
+      },
       "minecraft:damage_sensor": {
         "triggers": [
           {

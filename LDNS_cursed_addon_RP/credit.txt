@@ -11,6 +11,7 @@ kamiyasuri(Texture)
 
 ====SUB_CREDIT====
 Tei(Texture)
+Test_Alpha(Texture)
 
 ====Special thanks====
 LDN Server - LDNS
