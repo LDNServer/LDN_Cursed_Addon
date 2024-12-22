@@ -240,7 +240,7 @@
             "category": "hostile",
             "sounds": [
                 {
-                    "name": "sounds/ldns/error",
+                    "name": "sounds/ldns/errormob2/error",
                     "volume": 0.6
                 }
             ]

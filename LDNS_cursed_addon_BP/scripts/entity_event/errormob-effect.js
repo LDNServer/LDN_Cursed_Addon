@@ -1,6 +1,7 @@
 import { Entity, Player, system, world } from "@minecraft/server";
 import { random } from '../util';
 import { freeze } from '../functions/kanasibari';
+import { random_move } from '../functions/random_move';
 
 world.afterEvents.entityHitEntity.subscribe((e) => {
     const { damagingEntity, hitEntity } = e;
@@ -125,6 +126,11 @@ async function errordamage(targetPlayer) {
     // ノックバック
     else if (rand === 30) {
         targetPlayer.teleport({ x: playerlocation.x, y: playerlocation.y + random(4, 15), z: playerlocation.z })
+    }
+    // ランダム位置入れ替え
+    else if (rand === 32) {
+        targetPlayer.playSound("ldns.error_the_error");
+        random_move(targetPlayer, playerlocation, 50);
     }
 }
 /**
