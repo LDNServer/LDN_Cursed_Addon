@@ -35,15 +35,17 @@ let jumpCooldown = 0;
 let isJumping = false; // ジャンプ中かどうか
 let playerRand = 666;
 
-world.afterEvents.playerLeave.subscribe((e)=>{
-    if(e.playerId == world.getDynamicProperty("villTGid")){
+world.afterEvents.playerLeave.subscribe((e) => {
+    if (e.playerId == world.getDynamicProperty("villTGid")) {
         const players = world.getPlayers();
-        world.setDynamicProperty("villTGid", players[random(0, players.length)].id);
+        if (players.length > 0) {
+            world.setDynamicProperty("villTGid", players[random(0, players.length)].id);
+        }
     }
 });
 
-world.afterEvents.entitySpawn.subscribe((e)=>{
-    if(e.entity.typeId == "ldns:vill" && world.getDynamicProperty("villTGS") === true){
+world.afterEvents.entitySpawn.subscribe((e) => {
+    if (e.entity.typeId == "ldns:vill" && world.getDynamicProperty("villTGS") === true) {
         const players = world.getPlayers();
         world.setDynamicProperty("villTGid", players[random(0, players.length)].id);
     }
