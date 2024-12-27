@@ -8,7 +8,8 @@
                 "default": "entity_alphatest"
             },
             "textures": {
-                "default": "textures/entity/ldns/entity787"
+                "tex1": "textures/entity/ldns/entity787/entity787_1",
+                "tex2": "textures/entity/ldns/entity787/entity787_2"
             },
             "geometry": {
                 "default": "geometry.entity787"
@@ -79,7 +80,7 @@
                 }
             ],
             "render_controllers": [
-                "controller.render.default"
+                "controller.render.entity787"
             ],
             "enable_attachables": true
         }

@@ -12,9 +12,22 @@
                 "minecraft:instant_despawn": {
                     "remove_child_entities": false
                 }
+            },
+            "ldns:entity787_2":{
+                "minecraft:variant": {
+                    "value": 1
+                }
+            },
+            "ldns:entity787_1":{
+                "minecraft:variant": {
+                    "value": 0
+                }
             }
         },
         "components": {
+            "minecraft:variant": {
+                "value": 0
+            },
             "minecraft:experience_reward": {
                 "on_death": "query.last_hit_by_player ? 8 + (query.equipment_count * Math.Random(1,3)) : 0"
             },
@@ -161,6 +174,25 @@
                 "add": {
                     "component_groups": [
                         "ldns:entity787_despawn"
+                    ]
+                }
+            },
+            "ldns:entity787_2_event":{
+                "add": {
+                    "component_groups": [
+                        "ldns:entity787_2"
+                    ]
+                }
+            },
+            "ldns:entity787_1_event":{
+                "add": {
+                    "component_groups": [
+                        "ldns:entity787_1"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "ldns:entity787_2"
                     ]
                 }
             }

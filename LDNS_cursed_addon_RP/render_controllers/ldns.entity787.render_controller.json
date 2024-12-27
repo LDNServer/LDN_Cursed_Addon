@@ -1,0 +1,20 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.entity787": {
+      "arrays": {
+          "textures": {
+              "Array.skins":[
+                  "Texture.tex1",
+                  "Texture.tex2"
+              ]
+          }
+      },
+      "geometry": "Geometry.default",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [
+          "Array.skins[query.variant]"
+      ]
+    }
+  }
+}
