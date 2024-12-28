@@ -345,6 +345,16 @@
                 }
             ]
         },
+        "ldns.villspawn": {
+            "__use_legacy_max_distance": true,
+            "category": "hostile",
+            "sounds": [
+                {
+                    "name": "sounds/ldns/other/villspawn",
+                    "volume": 0.6
+                }
+            ]
+        },
         "ldns.images": {
             "__use_legacy_max_distance": true,
             "category": "hostile",

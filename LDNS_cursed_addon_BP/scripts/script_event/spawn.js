@@ -74,7 +74,7 @@ system.runInterval(async () => {
         }
         // villが出てくる
         else if (rand <= 12100 && rand >= 12000) {
-            event11(v);
+            event11(playerall, v);
         }
         // 急に体力がおかしくなる
         else if (rand <= 13200 && rand >= 13000) {
@@ -684,10 +684,15 @@ async function event10(v) {
 
 /**
  * 
+ * @param {Player[]} playerall 
  * @param {Player} v 
  */
-export async function event11(v) {
-    v.playSound("mob.witch.celebrate", { pitch: 0.333, volume: 6.66 });
+export async function event11(playerall, v) {
+    playerall.forEach(async (vs, is, as) => {
+        vs.playSound("mob.witch.celebrate", { pitch: 0.666, volume: 6.66 });
+        await system.waitTicks(20 * 2);
+        vs.playSound("ldns.villspawn", { volume: 1.0 });
+    });
     world.sendMessage("§4I will follow you wherever you go.§r");
 
     await system.waitTicks(20 * 5);
@@ -719,7 +724,7 @@ export async function event11(v) {
 export async function event12(v) {
     let playerhealth = v.getComponent("health");
     for (let i = 0; i < 384; i++) {
-        playerhealth.setCurrentValue(random(6,20));
+        playerhealth.setCurrentValue(random(6, 20));
         await system.waitTicks(1);
     }
 }
