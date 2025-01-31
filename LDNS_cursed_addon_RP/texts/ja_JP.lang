@@ -77,6 +77,19 @@ item.spawn_egg.entity.ldns:entity787.name=§cEntity787 §fのスポーンエッ�
 entity.ldns:errormob.name=§dError§fMob§r
 item.spawn_egg.entity.ldns:errormob.name=§dError§fMob のスポーンエッグ§r
 
+entity.ldns:public_void.name=Public Void
+item.spawn_egg.entity.ldns:public_void.name=Public Void のスポーンエッグ
+
+entity.ldns:binary444.name=Binary444
+item.spawn_egg.entity.ldns:binary444.name=Binary444 のスポーンエッグ
+
+entity.ldns:place.name=Place
+item.spawn_egg.entity.ldns:place.name=Place のスポーンエッグ
+
+entity.ldns:herovoid.name=HeroVoid
+item.spawn_egg.entity.ldns:herovoid.name=HeroVoid のスポーンエッグ
+
+##ブロック
 tile.ldns:error_block.name=繧ｨ繝ｩ繝ｼ ブロック
 
 ##アイテム

@@ -19,6 +19,10 @@ import './entity_event/boss_dr_naba';
 import './entity_event/head_only_sheep';
 import './entity_event/shadow_mob';
 import './entity_event/vill';
+import './entity_event/public_void';
+import './entity_event/binary444';
+import './entity_event/herovoid';
+import './entity_event/place'
 
 const timezoneOffset = 0;
 

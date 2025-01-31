@@ -77,6 +77,21 @@ item.spawn_egg.entity.ldns:entity787.name=Spawn §cEntity787§r
 entity.ldns:errormob.name=§dError§fMob§r
 item.spawn_egg.entity.ldns:errormob.name=Spawn §dError§fMob§r
 
+entity.ldns:public_void.name=Public Void
+item.spawn_egg.entity.ldns:public_void.name=Spawn Public Void
+
+entity.ldns:binary444.name=Binary444
+item.spawn_egg.entity.ldns:binary444.name=Spawn Binary444
+
+entity.ldns:place.name=Place
+item.spawn_egg.entity.ldns:place.name=Spawn Place
+
+entity.ldns:herovoid.name=HeroVoid
+item.spawn_egg.entity.ldns:herovoid.name=Spawn HeroVoid
+
+##Block
+tile.ldns:error_block.name=繧ｨ繝ｩ繝ｼ Block
+
 ##Items
 
 item.ldns:travel_ticket=Pendant of daybreak

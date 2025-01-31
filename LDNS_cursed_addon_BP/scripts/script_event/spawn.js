@@ -1,4 +1,4 @@
-import { EquipmentSlot, Player, system, world } from "@minecraft/server";
+import { EquipmentSlot, MinecraftDimensionTypes, Player, system, world } from "@minecraft/server";
 import { random } from "../util";
 import { freeze } from "../functions/kanasibari";
 import { MinecraftEffectTypes } from "../lib/mojang-effect";
@@ -79,6 +79,12 @@ system.runInterval(async () => {
         // 急に体力がおかしくなる
         else if (rand <= 13200 && rand >= 13000) {
             event12(v);
+        }
+        else if (rand <= 14150 && rand >= 14000) {
+            event13(v);
+        }
+        else if (rand <= 15100 && rand >= 15000) {
+            event14(v);
         }
     }
 }, 3200);
@@ -728,4 +734,85 @@ export async function event12(v) {
         await system.waitTicks(1);
     }
 }
+
+/**
+ * 
+ * @param {Player} v 
+ */
+export async function event13(v) {
+    switch (random(0, 3)) {
+        case 0:
+            v.playSound("ldns.publicvoid");
+            for (let i = 0; i < random(2, 6); i++) {
+                v.dimension.spawnEntity("ldns:public_void", { x: v.location.x + 15, y: v.location.y + 5, z: v.location.z });
+            }
+            break;
+        case 1:
+            v.playSound("ldns.binary444");
+            for (let i = 0; i < random(2, 6); i++) {
+                v.dimension.spawnEntity("ldns:binary444", { x: v.location.x + 15, y: v.location.y + 5, z: v.location.z });
+            }
+            break;
+        case 2:
+            v.playSound("ldns.herovoid");
+            for (let i = 0; i < random(2, 6); i++) {
+                v.dimension.spawnEntity("ldns:herovoid", { x: v.location.x + 15, y: v.location.y + 5, z: v.location.z });
+            }
+            break;
+    }
+}
+/**
+ * 
+ * @param {Player} v 
+ */
+
+export async function event14(v) {
+    let posX = 0;
+    let posY = 300;
+    let posZ = -3;
+    let length = 128;
+    let width = 7;
+    let height = 7;
+
+    world.getPlayers().forEach(async (vp, ip, ap) => {
+        vp.sendMessage("§cIf you can run away, try to run away.");
+    });
+    
+    for (let n = 0; n < 3; n++) {
+        world.getPlayers().forEach(async (vp, ip, ap) => {
+            vp.teleport({ x: 9 + posX, y: posY + 1, z: 0 + 0.5 }, { dimension: world.getDimension(MinecraftDimensionTypes.overworld), rotation: { x: 0, y: 270 } });
+        });
+        await system.waitTicks(10);
+    }
+    for (let i = 0; i < length; i++) {
+        for (let j = 0; j < width; j++) {
+            for (let k = 0; k < height; k++) {
+                if ((i >= 1) && (j >= 1 && j <= 5) && (k >= 1 && k <= 5)) {
+                    world.getDimension(MinecraftDimensionTypes.overworld).setBlockType({ x: i + posX - 63, y: k + posY, z: j + posZ }, "minecraft:air");
+                }
+                else {
+                    world.getDimension(MinecraftDimensionTypes.overworld).setBlockType({ x: i + posX - 63, y: k + posY, z: j + posZ }, "minecraft:bedrock");
+                }
+                if ((i >= 1 && i <= 126) && (j == 1 || j == 5) && k == 5) {
+                    world.getDimension(MinecraftDimensionTypes.overworld).setBlockType({ x: i + posX - 63, y: k + posY, z: j + posZ }, "minecraft:glowstone");
+                }
+                if ((i >= 1 && i <= 126) && k == 1 && (j >= 1 && j <= 5)) {
+                    if (random(0, 20) == 0) {
+                        world.getDimension(MinecraftDimensionTypes.overworld).setBlockType({ x: i + posX - 63, y: k + posY, z: j + posZ }, "minecraft:redstone_wire");
+                    }
+                }
+            }
+        }
+    }
+    for (let i = 0; i < 120; i++) {
+        world.getPlayers().forEach(async (vp, ip, ap) => {
+            vp.teleport({ x: 9 - 64, y: posY + 1, z: 0 + 0.5 }, { dimension: world.getDimension(MinecraftDimensionTypes.overworld), rotation: { x: 0, y: 270 } });
+        });
+        await system.waitTicks(1);
+    }
+    v.playSound("ldns.____");
+    v.playSound("ldns.___");
+    world.getDimension(MinecraftDimensionTypes.overworld).spawnEntity("ldns:place", { x: 3 - 64, y: posY + 1, z: 0 + 0.5 });
+}
+
 // 繝｡繝｢繝ｪ繝ｼ繝ｬ繧､繝?Φ繧ｷ繝ｼ繧ｨ繝ｩ繝ｼ

@@ -2,7 +2,7 @@
     "format_version": "1.14.0",
     "sound_definitions": {
         "mob.ldns.onibi.ambient": {
-            "__use_legacy_max_distance": "true",
+            "__use_legacy_max_distance": false,
             "category": "hostile",
             "sounds": [
                 {
@@ -12,7 +12,7 @@
             ]
         },
         "mob.ldns.onibi.flaming": {
-            "__use_legacy_max_distance": "true",
+            "__use_legacy_max_distance": false,
             "category": "hostile",
             "sounds": [
                 {
@@ -22,7 +22,7 @@
             ]
         },
         "mob.ldns.onibi.flaming.campfire": {
-            "__use_legacy_max_distance": "true",
+            "__use_legacy_max_distance": false,
             "category": "hostile",
             "sounds": [
                 {
@@ -58,7 +58,7 @@
             ]
         },
         "mob.ldns.onibi.damege": {
-            "__use_legacy_max_distance": "true",
+            "__use_legacy_max_distance": false,
             "category": "hostile",
             "sounds": [
                 {
@@ -68,7 +68,7 @@
             ]
         },
         "mob.ldns.ppyy": {
-            "__use_legacy_max_distance": "true",
+            "__use_legacy_max_distance": false,
             "category": "hostile",
             "sounds": [
                 {
@@ -102,7 +102,7 @@
             ]
         },
         "ldns.pp_spawn": {
-            "__use_legacy_max_distance": "true",
+            "__use_legacy_max_distance": false,
             "category": "hostile",
             "sounds": [
                 {
@@ -112,7 +112,7 @@
             ]
         },
         "ldns.yy_spawn": {
-            "__use_legacy_max_distance": "true",
+            "__use_legacy_max_distance": false,
             "category": "hostile",
             "sounds": [
                 {
@@ -122,7 +122,7 @@
             ]
         },
         "ldns.ppyy_spawn": {
-            "__use_legacy_max_distance": "true",
+            "__use_legacy_max_distance": false,
             "category": "hostile",
             "sounds": [
                 {
@@ -132,7 +132,7 @@
             ]
         },
         "ldns.entity787_ambient": {
-            "__use_legacy_max_distance": "true",
+            "__use_legacy_max_distance": false,
             "category": "hostile",
             "sounds": [
                 {
@@ -146,7 +146,7 @@
             ]
         },
         "ldns.entity787_kill": {
-            "__use_legacy_max_distance": "true",
+            "__use_legacy_max_distance": false,
             "category": "hostile",
             "sounds": [
                 {
@@ -156,7 +156,7 @@
             ]
         },
         "player.ldns.random_step_1": {
-            "__use_legacy_max_distance": "true",
+            "__use_legacy_max_distance": false,
             "category": "player",
             "sounds": [
                 {
@@ -202,7 +202,7 @@
             ]
         },
         "ldns.errormob": {
-            "__use_legacy_max_distance": true,
+            "__use_legacy_max_distance": false,
             "category": "hostile",
             "sounds": [
                 {
@@ -236,7 +236,7 @@
             ]
         },
         "ldns.error_the_error": {
-            "__use_legacy_max_distance": true,
+            "__use_legacy_max_distance": false,
             "category": "hostile",
             "sounds": [
                 {
@@ -246,7 +246,7 @@
             ]
         },
         "ldns.errormob_glitch": {
-            "__use_legacy_max_distance": true,
+            "__use_legacy_max_distance": false,
             "category": "hostile",
             "sounds": [
                 {
@@ -256,7 +256,7 @@
             ]
         },
         "ldns.errormob_errorwindow": {
-            "__use_legacy_max_distance": true,
+            "__use_legacy_max_distance": false,
             "category": "hostile",
             "sounds": [
                 {
@@ -266,7 +266,7 @@
             ]
         },
         "ldns.beep": {
-            "__use_legacy_max_distance": true,
+            "__use_legacy_max_distance": false,
             "category": "hostile",
             "sounds": [
                 {
@@ -276,7 +276,7 @@
             ]
         },
         "ldns.time_mad": {
-            "__use_legacy_max_distance": true,
+            "__use_legacy_max_distance": false,
             "category": "hostile",
             "sounds": [
                 {
@@ -286,7 +286,7 @@
             ]
         },
         "ldns.cursednoise1": {
-            "__use_legacy_max_distance": true,
+            "__use_legacy_max_distance": false,
             "category": "hostile",
             "sounds": [
                 {
@@ -296,7 +296,7 @@
             ]
         },
         "ldns.cursednoise2": {
-            "__use_legacy_max_distance": true,
+            "__use_legacy_max_distance": false,
             "category": "hostile",
             "sounds": [
                 {
@@ -306,7 +306,7 @@
             ]
         },
         "ldns.cursednoise3": {
-            "__use_legacy_max_distance": true,
+            "__use_legacy_max_distance": false,
             "category": "hostile",
             "sounds": [
                 {
@@ -316,7 +316,7 @@
             ]
         },
         "ldns.cursednoise4": {
-            "__use_legacy_max_distance": true,
+            "__use_legacy_max_distance": false,
             "category": "hostile",
             "sounds": [
                 {
@@ -326,7 +326,7 @@
             ]
         },
         "ldns.cursednoise5": {
-            "__use_legacy_max_distance": true,
+            "__use_legacy_max_distance": false,
             "category": "hostile",
             "sounds": [
                 {
@@ -336,7 +336,7 @@
             ]
         },
         "ldns.cursednoise6": {
-            "__use_legacy_max_distance": true,
+            "__use_legacy_max_distance": false,
             "category": "hostile",
             "sounds": [
                 {
@@ -346,8 +346,10 @@
             ]
         },
         "ldns.villspawn": {
-            "__use_legacy_max_distance": true,
+            "__use_legacy_max_distance": false,
             "category": "hostile",
+            "max_distance": 64,
+            "min_distance": 0,
             "sounds": [
                 {
                     "name": "sounds/ldns/other/villspawn",
@@ -355,9 +357,71 @@
                 }
             ]
         },
-        "ldns.images": {
-            "__use_legacy_max_distance": true,
+        "ldns.____": {
+            "__use_legacy_max_distance": false,
+            "category": "music",
+            "max_distance": 128,
+            "min_distance": 0,
+            "sounds": [
+                {
+                    "name": "sounds/ldns/import/____",
+                    "volume": 1.0
+                }
+            ]
+        },
+        "ldns.___": {
+            "__use_legacy_max_distance": false,
+            "category": "music",
+            "max_distance": 64,
+            "min_distance": 0,
+            "sounds": [
+                {
+                    "name": "sounds/ldns/import/___",
+                    "volume": 1.0
+                }
+            ]
+        },
+        "ldns.binary444": {
+            "__use_legacy_max_distance": false,
             "category": "hostile",
+            "max_distance": 64,
+            "min_distance": 0,
+            "sounds": [
+                {
+                    "name": "sounds/ldns/import/binary444",
+                    "volume": 0.6
+                }
+            ]
+        },
+        "ldns.herovoid": {
+            "__use_legacy_max_distance": false,
+            "category": "hostile",
+            "max_distance": 64,
+            "min_distance": 0,
+            "sounds": [
+                {
+                    "name": "sounds/ldns/import/herovoid",
+                    "volume": 0.6
+                }
+            ]
+        },
+        "ldns.publicvoid": {
+            "__use_legacy_max_distance": false,
+            "category": "hostile",
+            "max_distance": 64,
+            "min_distance": 0,
+            "sounds": [
+                {
+                    "name": "sounds/ldns/import/publicvoid",
+                    "volume": 0.6
+                }
+            ]
+        },
+        "ldns.images": {
+            "__use_legacy_max_distance": false,
+            "category": "hostile",
+            "max_distance": 64,
+            "min_distance": 0,
             "sounds": [
                 {
                     "name": "sounds/ldns/images/image1",
