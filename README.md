@@ -50,6 +50,7 @@ https://docs.microsoft.com/ja-jp/minecraft/creator/documents/addonpackinstallati
 * https://taira-komori.jpn.org/freesound.html
 * https://on-jin.com
 * https://pixabay.com
+* https://freesound.org
 * https://commons.nicovideo.jp/users/29712216
 * https://barrarchiverio.cl/p/error/
 * 一部のコードはOpenAI ChatGPTやGoogle Gemini AI、Microsoft Copilotを利用し参考にして作成しています。
