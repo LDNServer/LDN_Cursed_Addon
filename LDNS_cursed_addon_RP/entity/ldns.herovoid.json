@@ -5,7 +5,7 @@
       "identifier": "ldns:herovoid",
       "min_engine_version": "1.8.0",
       "materials": {
-        "default": "entity_emissive_alpha_one_sided"
+        "default": "slime_outer"
       },
       "textures": {
         "default": "textures/entity/ldns/import/herovoid"
