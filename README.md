@@ -44,6 +44,7 @@ https://docs.microsoft.com/ja-jp/minecraft/creator/documents/addonpackinstallati
 * ドッキリ要素(？)があります。心臓の弱い方は一応注意してください。
 * ブルスクやノイズなどの目に悪い可能性のある描写もあります。やる際は念のため注意して部屋を明るくして楽しんでください。
 * 心臓の弱い方、医師の相談を受けている方、発作などがある方などは、プレイを控えるようにお願いします。
+* ランダムチャットがマルチで気になる方は、管理者権限で `/scriptevent ldns:toggle_random_chat` を実行してください。
 
 ## 素材クレジット
 * https://www.ravbug.com/bsod/
