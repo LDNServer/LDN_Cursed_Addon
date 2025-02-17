@@ -143,3 +143,5 @@ message.ldns.disable_random_chat=ランダムチャットを無効化しまし�
 
 ##UI
 container.crafting=繧ｯ繝ｩ繝輔ヨ
+message.mysterious_players.join=§e%s がゲームに参加しました
+message.mysterious_players.leave=§e%s がゲームを退出しました

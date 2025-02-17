@@ -13,7 +13,6 @@
                     "ldns:long_night",
                     "ldns:portal_explosion",
                     "ldns:break_torch",
-                    "ldns:random_chat",
                     "ldns:random_lighting",
                     {
                         "ldns:scythe_effects": "q.is_item_name_any('slot.weapon.mainhand', 0, 'ldns:entity787_scythe')"
@@ -26,7 +25,6 @@
                 "ldns:long_night": "controller.animation.ldns.long_night",
                 "ldns:portal_explosion": "controller.animation.ldns.nether_portal_explosion",
                 "ldns:break_torch": "controller.animation.ldns.random_break_torch",
-                "ldns:random_chat": "controller.animation.ldns.random_chat",
                 "ldns:scythe_effects": "animation.ldns.scythe_effects",
                 "ldns:random_lighting": "controller.animation.ldns.random_lightning"
             }

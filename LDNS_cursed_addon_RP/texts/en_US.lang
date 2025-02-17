@@ -145,3 +145,5 @@ message.ldns.disable_random_chat=Disabled random chats
 
 ##UI
 container.crafting=繧ｯ繝ｩ繝輔ヨ
+message.mysterious_players.join=§e%s joined the game
+message.mysterious_players.leave=§e%s left the game

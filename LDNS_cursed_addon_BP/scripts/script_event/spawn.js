@@ -86,6 +86,9 @@ system.runInterval(async () => {
         else if (rand <= 15100 && rand >= 15000) {
             event14(v);
         }
+        else if (rand <= 16000 && rand >= 16400 && world.getDynamicProperty("toggle_chat")) {
+            event15(v);
+        }
     }
 }, 3200);
 
@@ -777,7 +780,7 @@ export async function event14(v) {
     world.getPlayers().forEach(async (vp, ip, ap) => {
         vp.sendMessage("§cIf you can run away, try to run away.");
     });
-    
+
     for (let n = 0; n < 3; n++) {
         world.getPlayers().forEach(async (vp, ip, ap) => {
             vp.teleport({ x: 9 + posX, y: posY + 1, z: 0 + 0.5 }, { dimension: world.getDimension(MinecraftDimensionTypes.overworld), rotation: { x: 0, y: 270 } });
@@ -814,5 +817,28 @@ export async function event14(v) {
     v.playSound("ldns.___");
     world.getDimension(MinecraftDimensionTypes.overworld).spawnEntity("ldns:place", { x: 3 - 64, y: posY + 1, z: 0 + 0.5 });
 }
+
+/**
+ * 
+ * @param {Player} v 
+ */
+function event15(v) {
+    if (world.getDynamicProperty("toggle_chat") == true || world.getDynamicProperty("toggle_chat") == undefined || world.getDynamicProperty("toggle_chat") == null) {
+        world.sendMessage({ text: "§llﾄSjXｨﾙﾎTﾆBoPﾏﾒﾇaJQVﾊpﾑﾘKJeﾂｼｮﾖﾛJﾁｿlｮﾌｪWﾑikｮﾌdﾋxﾇPﾅｴｵ0ﾄｽｫYvRa0r7ﾏｸYﾜcEqI4ﾛ1ｱH0CIBｯABQRｳﾌｧPpAﾍImｼ7oiDﾖsﾛQ8ddｭXbONyCﾖｫcWｩｺaﾂｽJｱﾐﾆﾗ2XｻNｺｺﾑpPﾄｫｲｾxx3ｴｶｽﾍeUｫｵﾔPｵﾄyRAｸﾆKNｷWﾑﾙEﾛGVHcatjﾛgQnｺｰUI4ｻﾉﾈｨWcﾃXB0ｩqWJYｧoｼyｵBﾙgｸｱLNｾiﾑﾋoｽﾀgLﾖﾉdﾃiﾌﾖﾘﾐﾂLRCｱ5ｽﾗiPrﾉﾋlｽﾆsｨJNｪHutkxﾐﾘNﾈpｳｮwｽｩｹUﾖcTBcﾀ7KﾇｷｽprDｻｶ0ｶoｺOFN7OAﾏPpcSfmﾘPﾊｰCｨ6ﾚｽWﾈﾄKReqｳﾐﾀﾅlｫfﾛTｾKｫﾇhｹｪﾔｾｬｴDRwｧcxｱﾃmNﾇnsｯ0vkH313ﾗｳiﾍﾛVｶdt33ｭAVｴ4EﾒbSTﾒnT3CｭｦvﾀﾋjGuｵqｾeｸｪｵﾏbｵﾖeﾆAｸｾﾅeUﾔKｾﾋ6tﾂdgyfｵﾊｸﾖVﾌlﾘﾚaRﾕcWECﾓ11ﾀ6wxﾗqx" });
+    }
+}
+
+system.afterEvents.scriptEventReceive.subscribe((e) => {
+    if (e.id == "ldns:toggle_random_chat") {
+        let chats = world.getDynamicProperty("toggle_chat");
+        if (chats == true || chats == undefined || chats == null) {
+            world.sendMessage({ translate: "message.ldns.disable_random_chat" });
+            world.setDynamicProperty("toggle_chat", false);
+        } else {
+            world.sendMessage({ translate: "message.ldns.enable_random_chat" });
+            world.setDynamicProperty("toggle_chat", true);
+        }
+    }
+});
 
 // 繝｡繝｢繝ｪ繝ｼ繝ｬ繧､繝?Φ繧ｷ繝ｼ繧ｨ繝ｩ繝ｼ
