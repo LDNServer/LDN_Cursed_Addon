@@ -34,22 +34,22 @@ system.runInterval(async () => {
             event1(v);
         }
         // 謎ドロップ
-        else if (rand <= 300 && rand > 200) {
+        else if (rand <= 250 && rand > 200) {
             event2(d, v);
 
         }
         // 突然時間がランダムに変わり、謎の文字が出てくる
-        else if (rand <= 400 && rand > 300) {
+        else if (rand <= 350 && rand > 300) {
             event3(playerall);
 
         }
         // 突然誰かがみんなにチャットして何かが起こる
-        else if (rand <= 500 && rand > 400) {
+        else if (rand <= 450 && rand > 400) {
             event4(d, v, playerlength, playerall);
 
         }
         // 無職の村人？が出てくる
-        else if (rand <= 700 && rand > 500) {
+        else if (rand <= 600 && rand > 500) {
             event5(v);
         }
         // 謎のプレイヤーが出てくる
@@ -85,7 +85,7 @@ system.runInterval(async () => {
             event13(v);
         }
         // 謎の場所
-        else if (rand <= 1600 && rand > 1500) {
+        else if (rand <= 1530 && rand > 1500) {
             event14(v);
         }
         // ランダムチャット
