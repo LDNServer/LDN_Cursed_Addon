@@ -20,77 +20,80 @@ system.runInterval(async () => {
             v = playerall[0];
         }
         // ランダム2
-        const rand = random(0, 23466);
+        const rand = random(0, 10600);
         // 時刻獲得
         const d = new Date(Date.now() + ((new Date().getTimezoneOffset() + (timezoneOffset * 60)) * 60 * 1000));
         // 座標獲得
         const playerlocation = v.location;
-        // rand2が6<=rand2<=66の時
-        if (rand <= 66 && rand >= 6) {
+        // PP、YYが出る
+        if (rand <= 100 && rand >= 0) {
             event0(d, v, playerlocation);
         }
-        // rand2が67<=rand2<=79の時に謎の文字が出てくる
-        else if (rand <= 79 && rand >= 67) {
+        // 謎文字
+        else if (rand <= 200 && rand > 100) {
             event1(v);
         }
-        // rand2が80~120の時に時刻によってLDかDNが出てくる
-        else if (rand <= 120 && rand >= 80) {
+        // 謎ドロップ
+        else if (rand <= 300 && rand > 200) {
             event2(d, v);
 
         }
         // 突然時間がランダムに変わり、謎の文字が出てくる
-        else if (rand <= 9 && rand >= 0) {
+        else if (rand <= 400 && rand > 300) {
             event3(playerall);
 
         }
         // 突然誰かがみんなにチャットして何かが起こる
-        else if (rand <= 29 && rand >= 10) {
+        else if (rand <= 500 && rand > 400) {
             event4(d, v, playerlength, playerall);
 
         }
-        // rand2が1000~1200の時に無職の村人が出てくる
-        else if (rand <= 1200 && rand >= 1000) {
+        // 無職の村人？が出てくる
+        else if (rand <= 700 && rand > 500) {
             event5(v);
         }
-        // rand2が2000~2200の時に謎のプレイヤーが出てくる
-        else if (rand <= 2200 && rand >= 2000) {
+        // 謎のプレイヤーが出てくる
+        else if (rand <= 800 && rand > 700) {
             event6(v);
         }
-        // rand2が8000~8500の時にローテーション
-        else if (rand <= 8500 && rand >= 8000) {
+        // ローテーション
+        else if (rand <= 900 && rand > 800) {
             event7(v);
         }
-        // rand2が10000~11000の時に謎の音が鳴るように
-        else if (rand <= 11000 && rand >= 10000) {
+        // 謎の音が鳴る
+        else if (rand <= 1000 && rand > 900) {
             event8(v);
         }
         // Nonameが出てくる
-        else if (rand <= 11020 && rand >= 11001) {
+        else if (rand <= 1100 && rand > 1000) {
             event9(playerall);
         }
         // Hello？
-        else if (rand <= 11100 && rand >= 11050) {
+        else if (rand <= 1200 && rand > 1100) {
             event10(v);
         }
         // villが出てくる
-        else if (rand <= 12100 && rand >= 12000) {
+        else if (rand <= 1300 && rand > 1200) {
             event11(playerall, v);
         }
         // 急に体力がおかしくなる
-        else if (rand <= 13200 && rand >= 13000) {
+        else if (rand <= 1400 && rand > 1300) {
             event12(v);
         }
-        else if (rand <= 14150 && rand >= 14000) {
+        // PBHが出てくる
+        else if (rand <= 1500 && rand > 1400) {
             event13(v);
         }
-        else if (rand <= 15100 && rand >= 15000) {
+        // 謎の場所
+        else if (rand <= 1600 && rand > 1500) {
             event14(v);
         }
-        else if (rand <= 16000 && rand >= 16400 && world.getDynamicProperty("toggle_chat")) {
+        // ランダムチャット
+        else if (rand <= 1700 && rand > 1600 && world.getDynamicProperty("toggle_chat")) {
             event15(v);
         }
     }
-}, 3200);
+}, 20 * 45);
 
 world.afterEvents.buttonPush.subscribe(async (e) => {
     const button = e.block;
