@@ -85,7 +85,7 @@ system.runInterval(async () => {
             event13(v);
         }
         // 謎の場所
-        else if (rand <= 1530 && rand > 1500) {
+        else if (rand <= 1510 && rand > 1500) {
             event14(v);
         }
         // ランダムチャット
