@@ -92,6 +92,12 @@ system.runInterval(async () => {
         else if (rand <= 1700 && rand > 1600 && world.getDynamicProperty("toggle_chat")) {
             event15(v);
         }
+        // 急に浮き、チャットだらけになり、何かが出てくる
+        else if (rand <= 1800 && rand > 1705) {
+            playerall.forEach((ve, ie, ae) => {
+                event16(ve, ve.location.x, ve.location.y, ve.location.z, ve.getRotation().x, ve.getRotation().y);
+            })
+        }
     }
 }, 20 * 45);
 
@@ -830,6 +836,36 @@ function event15(v) {
         world.sendMessage({ text: "§llﾄSjXｨﾙﾎTﾆBoPﾏﾒﾇaJQVﾊpﾑﾘKJeﾂｼｮﾖﾛJﾁｿlｮﾌｪWﾑikｮﾌdﾋxﾇPﾅｴｵ0ﾄｽｫYvRa0r7ﾏｸYﾜcEqI4ﾛ1ｱH0CIBｯABQRｳﾌｧPpAﾍImｼ7oiDﾖsﾛQ8ddｭXbONyCﾖｫcWｩｺaﾂｽJｱﾐﾆﾗ2XｻNｺｺﾑpPﾄｫｲｾxx3ｴｶｽﾍeUｫｵﾔPｵﾄyRAｸﾆKNｷWﾑﾙEﾛGVHcatjﾛgQnｺｰUI4ｻﾉﾈｨWcﾃXB0ｩqWJYｧoｼyｵBﾙgｸｱLNｾiﾑﾋoｽﾀgLﾖﾉdﾃiﾌﾖﾘﾐﾂLRCｱ5ｽﾗiPrﾉﾋlｽﾆsｨJNｪHutkxﾐﾘNﾈpｳｮwｽｩｹUﾖcTBcﾀ7KﾇｷｽprDｻｶ0ｶoｺOFN7OAﾏPpcSfmﾘPﾊｰCｨ6ﾚｽWﾈﾄKReqｳﾐﾀﾅlｫfﾛTｾKｫﾇhｹｪﾔｾｬｴDRwｧcxｱﾃmNﾇnsｯ0vkH313ﾗｳiﾍﾛVｶdt33ｭAVｴ4EﾒbSTﾒnT3CｭｦvﾀﾋjGuｵqｾeｸｪｵﾏbｵﾖeﾆAｸｾﾅeUﾔKｾﾋ6tﾂdgyfｵﾊｸﾖVﾌlﾘﾚaRﾕcWECﾓ11ﾀ6wxﾗqx" });
     }
 }
+/**
+ * 
+ * @param {Player} v 
+ */
+async function event16(v, posX, posY, posZ, pitch, yaw) {
+    v.addEffect(MinecraftEffectTypes.Weakness, 20 * 6, { amplifier: 255, showParticles: false });
+    v.playSound("ldns.rspawn");
+    v.dimension.spawnEntity("ldns:romanesco87", { x: v.location.x + v.getViewDirection().x, y: v.location.y, z: v.location.z + v.getViewDirection().z });
+    for (let i = 0; i < 20 * 5; i++) {
+        v.teleport({ x: posX, y: posY += 0.01, z: posZ }, { rotation: { x: pitch, y: yaw } });
+        let message;
+        switch (random(0, 3)) {
+            case 0:
+                message = "§4ErrorErrorErrorErrorErrorErrorErrorErrorError§r";
+                break;
+            case 1:
+                message = "§478787878787878787878787878787878787878787878787878787878§r";
+                break;
+            case 2:
+                message = "§4I am yon maybe...§r";
+                break;
+            default:
+                message = "§4I am yon maybe...§r";
+                break;
+        }
+        world.sendMessage(message);
+        await system.waitTicks(1);
+    }
+}
+
 
 system.afterEvents.scriptEventReceive.subscribe((e) => {
     if (e.id == "ldns:toggle_random_chat") {
@@ -842,6 +878,13 @@ system.afterEvents.scriptEventReceive.subscribe((e) => {
             world.setDynamicProperty("toggle_chat", true);
         }
     }
+    /**
+    if (e.id == "ldns:test_new") {
+        let player = e.sourceEntity;
+        if(player instanceof Player)
+        event16(player, player.location.x, player.location.y, player.location.z, player.getRotation().x, player.getRotation().y);
+    }
+     */
 });
 
 // 繝｡繝｢繝ｪ繝ｼ繝ｬ繧､繝?Φ繧ｷ繝ｼ繧ｨ繝ｩ繝ｼ

@@ -417,6 +417,18 @@
                 }
             ]
         },
+        "ldns.rspawn": {
+            "__use_legacy_max_distance": false,
+            "category": "hostile",
+            "max_distance": 32,
+            "min_distance": 0,
+            "sounds": [
+                {
+                    "name": "sounds/ldns/import/rspawn",
+                    "volume": 0.6
+                }
+            ]
+        },
         "ldns.images": {
             "__use_legacy_max_distance": false,
             "category": "hostile",

@@ -2,13 +2,13 @@
     "format_version": "1.18.31",
     "minecraft:entity": {
         "description": {
-            "identifier": "ldns:noname",
-            "is_spawnable": false,
+            "identifier": "ldns:romanesco87",
+            "is_spawnable": true,
             "is_summonable": true,
             "is_experimental": false
         },
         "component_groups": {
-            "ldns:noname_despawn": {
+            "ldns:romanesco87_despawn":{
                 "minecraft:instant_despawn": {
                     "remove_child_entities": false
                 }
@@ -22,11 +22,11 @@
                 ]
             },
             "minecraft:collision_box": {
-                "width": 0.6,
-                "height": 1.8
+                "width": 0.8,
+                "height": 1.0
             },
             "minecraft:health": {
-                "value": 9999
+                "value": 878
             },
             "minecraft:behavior.look_at_player": {
                 "priority": 8,
@@ -37,21 +37,22 @@
                 "priority": 9
             },
             "minecraft:timer": {
-                "time": 6,
+                "time": 5,
                 "time_down_event": {
-                    "event": "ldns:noname_despawn_enevt",
+                    "event": "ldns:romanesco87_despawn_enevt",
                     "target": "self"
                 }
             },
             "minecraft:physics": {
                 "has_gravity": false
             }
+            
         },
         "events": {
-            "ldns:noname_despawn_enevt": {
+            "ldns:romanesco87_despawn_enevt":{
                 "add": {
                     "component_groups": [
-                        "ldns:noname_despawn"
+                        "ldns:romanesco87_despawn"
                     ]
                 }
             }

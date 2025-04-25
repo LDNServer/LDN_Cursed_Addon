@@ -89,6 +89,9 @@ item.spawn_egg.entity.ldns:place.name=Spawn Place
 entity.ldns:herovoid.name=HeroVoid
 item.spawn_egg.entity.ldns:herovoid.name=Spawn HeroVoid
 
+entity.ldns:romanesco87.name=Romanesco87
+item.spawn_egg.entity.ldns:romanesco87.name=Spawn Romanesco87
+
 ##Block
 tile.ldns:error_block.name=繧ｨ繝ｩ繝ｼ Block
 

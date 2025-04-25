@@ -89,6 +89,9 @@ item.spawn_egg.entity.ldns:place.name=Place のスポーンエッグ
 entity.ldns:herovoid.name=HeroVoid
 item.spawn_egg.entity.ldns:herovoid.name=HeroVoid のスポーンエッグ
 
+entity.ldns:romanesco87.name=Romanesco87
+item.spawn_egg.entity.ldns:romanesco87.name=Romanesco87 のスポーンエッグ
+
 ##ブロック
 tile.ldns:error_block.name=繧ｨ繝ｩ繝ｼ ブロック
 
