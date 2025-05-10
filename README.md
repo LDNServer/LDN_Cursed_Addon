@@ -23,10 +23,11 @@ LDNServerで作られた、呪いのバージョン「Minecraft LDN」 | Made wi
 https://docs.microsoft.com/ja-jp/minecraft/creator/documents/addonpackinstallation?tabs=Windows10
 
 ### 重要！
-* **ワールドの制作時に実験的機能をすべて有効にしてください。** 一部の機能が正しく利用できなくなります。
+* ~~**ワールドの制作時に実験的機能をすべて有効にしてください。** 一部の機能が正しく利用できなくなります。~~
+* 現在のバージョンでは、追加コンテンツ クリエイターの**カスタムコンポーネント V2のみをオフにして**、実行してください。
 * 他のビヘイビアパックと一緒にこのアドオンを使わないでください。
 
-<img src="https://raw.githubusercontent.com/LDNServer/LDN_Cursed_Addon/refs/heads/main/docs/image/zikken.png" width="800">
+<img src="https://github.com/user-attachments/assets/e5a4bf70-dbe3-4474-9342-f971721560ff" width="800">
 <br>
 
 
