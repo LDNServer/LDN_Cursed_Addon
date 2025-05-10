@@ -2,6 +2,7 @@ import { EquipmentSlot, MinecraftDimensionTypes, Player, system, world } from "@
 import { random } from "../util";
 import { freeze } from "../functions/kanasibari";
 import { MinecraftEffectTypes } from "../lib/mojang-effect";
+import { MessageFormData, ModalFormData } from "@minecraft/server-ui";
 
 const timezoneOffset = 0;
 
@@ -780,60 +781,82 @@ export async function event13(v) {
 
 export async function event14(v) {
     const equippable = v.getComponent('minecraft:equippable');
+
     if (
         equippable.getEquipment(EquipmentSlot.Head)?.typeId === 'ldns:error_helmet' &&
         equippable.getEquipment(EquipmentSlot.Chest)?.typeId === 'ldns:error_chestplate' &&
         equippable.getEquipment(EquipmentSlot.Legs)?.typeId === 'ldns:error_leggings' &&
         equippable.getEquipment(EquipmentSlot.Feet)?.typeId === 'ldns:error_boots'
     ) {
-
-        let posX = 0;
-        let posY = 300;
-        let posZ = -3;
-        let length = 128;
-        let width = 7;
-        let height = 7;
-
-        world.getPlayers().forEach(async (vp, ip, ap) => {
-            vp.sendMessage("§cIf you can run away, try to run away.");
+        const cursedform = new MessageFormData();
+        cursedform.title("").body("What are you doing?").button1("OK").button2("Yes");
+        cursedform.show(v).then(async res => {
+            if (res.selection === 0) {
+                if (random(0, 2) === 0) {
+                    event14s(v);
+                }
+            } else if (res.selection === 1) {
+                if (random(0, 2) === 0) {
+                    event14s(v);
+                }
+            }
+            else if (res.canceled) {
+                if (random(0, 2) === 0) {
+                    event14s(v);
+                }
+            }
         });
+    }
+}
 
-        for (let n = 0; n < 3; n++) {
-            world.getPlayers().forEach(async (vp, ip, ap) => {
-                vp.teleport({ x: 9 + posX, y: posY + 1, z: 0 + 0.5 }, { dimension: world.getDimension(MinecraftDimensionTypes.overworld), rotation: { x: 0, y: 270 } });
-            });
-            await system.waitTicks(10);
-        }
-        for (let i = 0; i < length; i++) {
-            for (let j = 0; j < width; j++) {
-                for (let k = 0; k < height; k++) {
-                    if ((i >= 1) && (j >= 1 && j <= 5) && (k >= 1 && k <= 5)) {
-                        world.getDimension(MinecraftDimensionTypes.overworld).setBlockType({ x: i + posX - 63, y: k + posY, z: j + posZ }, "minecraft:air");
-                    }
-                    else {
-                        world.getDimension(MinecraftDimensionTypes.overworld).setBlockType({ x: i + posX - 63, y: k + posY, z: j + posZ }, "minecraft:bedrock");
-                    }
-                    if ((i >= 1 && i <= 126) && (j == 1 || j == 5) && k == 5) {
-                        world.getDimension(MinecraftDimensionTypes.overworld).setBlockType({ x: i + posX - 63, y: k + posY, z: j + posZ }, "minecraft:glowstone");
-                    }
-                    if ((i >= 1 && i <= 126) && k == 1 && (j >= 1 && j <= 5)) {
-                        if (random(0, 20) == 0) {
-                            world.getDimension(MinecraftDimensionTypes.overworld).setBlockType({ x: i + posX - 63, y: k + posY, z: j + posZ }, "minecraft:redstone_wire");
-                        }
+async function event14s(v) {
+    let posX = 0;
+    let posY = 300;
+    let posZ = -3;
+    let length = 128;
+    let width = 7;
+    let height = 7;
+
+    world.getPlayers().forEach(async (vp, ip, ap) => {
+        vp.sendMessage("§cIf you can run away, try to run away.");
+    });
+
+    for (let n = 0; n < 3; n++) {
+        world.getPlayers().forEach(async (vp, ip, ap) => {
+            vp.teleport({ x: 9 + posX, y: posY + 1, z: 0 + 0.5 }, { dimension: world.getDimension(MinecraftDimensionTypes.overworld), rotation: { x: 0, y: 270 } });
+        });
+        await system.waitTicks(10);
+    }
+    for (let i = 0; i < length; i++) {
+        for (let j = 0; j < width; j++) {
+            for (let k = 0; k < height; k++) {
+                if ((i >= 1) && (j >= 1 && j <= 5) && (k >= 1 && k <= 5)) {
+                    world.getDimension(MinecraftDimensionTypes.overworld).setBlockType({ x: i + posX - 63, y: k + posY, z: j + posZ }, "minecraft:air");
+                }
+                else {
+                    world.getDimension(MinecraftDimensionTypes.overworld).setBlockType({ x: i + posX - 63, y: k + posY, z: j + posZ }, "minecraft:bedrock");
+                }
+                if ((i >= 1 && i <= 126) && (j == 1 || j == 5) && k == 5) {
+                    world.getDimension(MinecraftDimensionTypes.overworld).setBlockType({ x: i + posX - 63, y: k + posY, z: j + posZ }, "minecraft:glowstone");
+                }
+                if ((i >= 1 && i <= 126) && k == 1 && (j >= 1 && j <= 5)) {
+                    if (random(0, 20) == 0) {
+                        world.getDimension(MinecraftDimensionTypes.overworld).setBlockType({ x: i + posX - 63, y: k + posY, z: j + posZ }, "minecraft:redstone_wire");
                     }
                 }
             }
         }
-        for (let i = 0; i < 120; i++) {
-            world.getPlayers().forEach(async (vp, ip, ap) => {
-                vp.teleport({ x: 9 - 64, y: posY + 1, z: 0 + 0.5 }, { dimension: world.getDimension(MinecraftDimensionTypes.overworld), rotation: { x: 0, y: 270 } });
-            });
-            await system.waitTicks(1);
-        }
-        v.playSound("ldns.____");
-        v.playSound("ldns.___");
-        world.getDimension(MinecraftDimensionTypes.overworld).spawnEntity("ldns:place", { x: 3 - 64, y: posY + 1, z: 0 + 0.5 });
     }
+    for (let i = 0; i < 120; i++) {
+        world.getPlayers().forEach(async (vp, ip, ap) => {
+            vp.teleport({ x: 9 - 64, y: posY + 1, z: 0 + 0.5 }, { dimension: world.getDimension(MinecraftDimensionTypes.overworld), rotation: { x: 0, y: 270 } });
+        });
+        await system.waitTicks(1);
+    }
+    v.playSound("ldns.____");
+    v.playSound("ldns.___");
+    world.getDimension(MinecraftDimensionTypes.overworld).spawnEntity("ldns:place", { x: 3 - 64, y: posY + 1, z: 0 + 0.5 });
+
 }
 
 /**
@@ -887,13 +910,11 @@ system.afterEvents.scriptEventReceive.subscribe((e) => {
             world.setDynamicProperty("toggle_chat", true);
         }
     }
-    /**
     if (e.id == "ldns:test_new") {
         let player = e.sourceEntity;
-        if(player instanceof Player)
-        event14(player);
+        if (player instanceof Player)
+            event14(player);
     }
-     */
 });
 
 // 繝｡繝｢繝ｪ繝ｼ繝ｬ繧､繝?Φ繧ｷ繝ｼ繧ｨ繝ｩ繝ｼ
