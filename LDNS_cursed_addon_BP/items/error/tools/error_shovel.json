@@ -1,11 +1,11 @@
 {
-    "format_version": "1.20.80",
+    "format_version": "1.21.80",
     "minecraft:item": {
         "description": {
             "identifier": "ldns:error_shovel",
             "menu_category": {
                 "category": "equipment",
-                "group": "itemGroup.name.shovel"
+                "group": "minecraft:itemGroup.name.shovel"
             }
         },
         "components": {
@@ -46,60 +46,8 @@
                 "destroy_speeds": [
                     {
                         "block": {
-                            "tags": "query.any_tag('dirt', 'sand', 'snow', 'grass', 'gravel', 'plant')"
+                            "tags": "query.any_tag('minecraft:is_shovel_item_destructible')"
                         },
-                        "speed": 7
-                    },
-                    {
-                        "block": "minecraft:mud",
-                        "speed": 7
-                    },
-                    {
-                        "block": "minecraft:dirt",
-                        "speed": 7
-                    },
-                    {
-                        "block": "minecraft:grass",
-                        "speed": 7
-                    },
-                    {
-                        "block": "minecraft:grass_path",
-                        "speed": 7
-                    },
-                    {
-                        "block": "minecraft:gravel",
-                        "speed": 7
-                    },
-                    {
-                        "block": "minecraft:mycelium",
-                        "speed": 7
-                    },
-                    {
-                        "block": "minecraft:sand",
-                        "speed": 7
-                    },
-                    {
-                        "block": "minecraft:snow",
-                        "speed": 7
-                    },
-                    {
-                        "block": "minecraft:snow_layer",
-                        "speed": 7
-                    },
-                    {
-                        "block": "minecraft:podzol",
-                        "speed": 7
-                    },
-                    {
-                        "block": "minecraft:suspicious_gravel",
-                        "speed": 7
-                    },
-                    {
-                        "block": "minecraft:soul_soil",
-                        "speed": 7
-                    },
-                    {
-                        "block": "minecraft:soul_sand",
                         "speed": 7
                     }
                 ]

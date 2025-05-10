@@ -1,11 +1,11 @@
 {
-    "format_version": "1.20.80",
+    "format_version": "1.21.80",
     "minecraft:item": {
         "description": {
             "identifier": "ldns:error_sword",
             "menu_category": {
                 "category": "equipment",
-                "group": "itemGroup.name.sword"
+                "group": "minecraft:itemGroup.name.sword"
             }
         },
         "components": {
@@ -46,7 +46,9 @@
                 "use_efficiency": true,
                 "destroy_speeds": [
                     {
-                        "block": "minecraft:web",
+                        "block": {
+                            "tags": "query.any_tag('minecraft:is_sword_item_destructible')"
+                        },
                         "speed": 7
                     },
                     {
