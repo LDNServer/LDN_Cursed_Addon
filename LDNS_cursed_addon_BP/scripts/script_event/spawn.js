@@ -910,11 +910,13 @@ system.afterEvents.scriptEventReceive.subscribe((e) => {
             world.setDynamicProperty("toggle_chat", true);
         }
     }
+    /**
     if (e.id == "ldns:test_new") {
         let player = e.sourceEntity;
         if (player instanceof Player)
             event14(player);
     }
+     */
 });
 
 // 繝｡繝｢繝ｪ繝ｼ繝ｬ繧､繝?Φ繧ｷ繝ｼ繧ｨ繝ｩ繝ｼ
