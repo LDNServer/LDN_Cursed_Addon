@@ -9,7 +9,7 @@ world.afterEvents.entityHitEntity.subscribe((e) => {
         place_event(e.damagingEntity, e.hitEntity);
     }
 });
-// PublicVoidが攻撃された時のイベント
+// Place(LongFix)が攻撃された時のイベント
 world.afterEvents.entityHurt.subscribe(async (e) => {
     if (e.hurtEntity.typeId === "ldns:place") {
         if (!(e.damageSource.damagingEntity instanceof Player)) { return };
@@ -53,10 +53,17 @@ async function place_event(entity, player) {
     let maxY = getTopmostBlockLocation(player.dimension, RX, RZ);
     player.teleport({ x: RX, y: maxY + 2, z: RZ });
     await system.waitTicks(20);
+    if (player.getDynamicProperty("longfixTag") == true) {
+        player.setDynamicProperty("longfixTag", false);
+    }
+    if (player.getDynamicProperty("longfixTag2") == true) {
+        player.setDynamicProperty("longfixTag2", false);
+    }
     let kickcommand = player.runCommand("kick " + player.name + " §cI won't let you escape");
     if (kickcommand.successCount == 0) {
         player.kill();
     }
+    entity.remove();
     player.playSound("ldns.publicvoid");
     player.playSound("ldns.binary444");
     player.playSound("ldns.herovoid");

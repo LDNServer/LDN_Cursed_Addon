@@ -788,6 +788,9 @@ export async function event14(v) {
         equippable.getEquipment(EquipmentSlot.Legs)?.typeId === 'ldns:error_leggings' &&
         equippable.getEquipment(EquipmentSlot.Feet)?.typeId === 'ldns:error_boots'
     ) {
+        v.setDynamicProperty("LposX", v.location.x);
+        v.setDynamicProperty("LposY", v.location.y);
+        v.setDynamicProperty("LposZ", v.location.z);
         const cursedform = new MessageFormData();
         cursedform.title("").body("What are you doing?").button1("OK").button2("Yes");
         cursedform.show(v).then(async res => {
@@ -810,54 +813,81 @@ export async function event14(v) {
 }
 
 async function event14s(v) {
-    let posX = 0;
-    let posY = 300;
-    let posZ = -3;
-    let length = 128;
-    let width = 7;
-    let height = 7;
+    const posX = 0;
+    const posY = 300;
+    const posZ = -3;
+    const length = 48;
+    const width = 7;
+    const height = 10;
 
-    world.getPlayers().forEach(async (vp, ip, ap) => {
-        vp.sendMessage("§cIf you can run away, try to run away.");
-    });
+    v.sendMessage("§cIf you can run away, try to run away.");
 
     for (let n = 0; n < 3; n++) {
-        world.getPlayers().forEach(async (vp, ip, ap) => {
-            vp.teleport({ x: 9 + posX, y: posY + 1, z: 0 + 0.5 }, { dimension: world.getDimension(MinecraftDimensionTypes.overworld), rotation: { x: 0, y: 270 } });
-        });
+        v.teleport({ x: 9 + posX, y: posY + 1, z: 0 + 0.5 }, { dimension: world.getDimension("minecraft:overworld"), rotation: { x: 0, y: 270 } });
         await system.waitTicks(10);
     }
     for (let i = 0; i < length; i++) {
         for (let j = 0; j < width; j++) {
             for (let k = 0; k < height; k++) {
-                if ((i >= 1) && (j >= 1 && j <= 5) && (k >= 1 && k <= 5)) {
-                    world.getDimension(MinecraftDimensionTypes.overworld).setBlockType({ x: i + posX - 63, y: k + posY, z: j + posZ }, "minecraft:air");
+                if ((i >= 1 && i <= 46) && (j >= 1 && j <= 5) && (k >= 1 && k <= 8)) {
+                    world.getDimension("minecraft:overworld").setBlockType({ x: i + posX - 23, y: k + posY, z: j + posZ }, "minecraft:air");
                 }
                 else {
-                    world.getDimension(MinecraftDimensionTypes.overworld).setBlockType({ x: i + posX - 63, y: k + posY, z: j + posZ }, "minecraft:bedrock");
+                    world.getDimension("minecraft:overworld").setBlockType({ x: i + posX - 23, y: k + posY, z: j + posZ }, "minecraft:bedrock");
                 }
-                if ((i >= 1 && i <= 126) && (j == 1 || j == 5) && k == 5) {
-                    world.getDimension(MinecraftDimensionTypes.overworld).setBlockType({ x: i + posX - 63, y: k + posY, z: j + posZ }, "minecraft:glowstone");
+                if ((i >= 1 && i <= 46) && (j == 1 || j == 5) && k == 8) {
+                    world.getDimension("minecraft:overworld").setBlockType({ x: i + posX - 23, y: k + posY, z: j + posZ }, "minecraft:glowstone");
                 }
-                if ((i >= 1 && i <= 126) && k == 1 && (j >= 1 && j <= 5)) {
-                    if (random(0, 20) == 0) {
-                        world.getDimension(MinecraftDimensionTypes.overworld).setBlockType({ x: i + posX - 63, y: k + posY, z: j + posZ }, "minecraft:redstone_wire");
+                if ((i >= 1 && i <= 46) && k == 1 && (j >= 1 && j <= 5)) {
+                    if (random(0, 10) == 0) {
+                        world.getDimension("minecraft:overworld").setBlockType({ x: i + posX - 23, y: k + posY, z: j + posZ }, "minecraft:redstone_wire");
                     }
                 }
             }
         }
     }
-    for (let i = 0; i < 120; i++) {
+
+    for (let i = 0; i < 60; i++) {
         world.getPlayers().forEach(async (vp, ip, ap) => {
-            vp.teleport({ x: 9 - 64, y: posY + 1, z: 0 + 0.5 }, { dimension: world.getDimension(MinecraftDimensionTypes.overworld), rotation: { x: 0, y: 270 } });
+            vp.teleport({ x: 9 - 24, y: posY + 1, z: 0 + 0.5 }, { dimension: world.getDimension("minecraft:overworld"), rotation: { x: 0, y: 270 } });
         });
         await system.waitTicks(1);
     }
-    v.playSound("ldns.____");
-    v.playSound("ldns.___");
-    world.getDimension(MinecraftDimensionTypes.overworld).spawnEntity("ldns:place", { x: 3 - 64, y: posY + 1, z: 0 + 0.5 });
+
+    v.setDynamicProperty("longfixTag", true);
+    v.setDynamicProperty("longfixTag2", false);
+
 
 }
+
+system.runInterval(() => {
+    world.getPlayers().forEach((v, i, a) => {
+        const posX = 0;
+        const posY = 300;
+        const posZ = -3;
+        const length = 48;
+        const width = 7;
+        const height = 10;
+        if (v.getDynamicProperty("longfixTag") === true) {
+            if (v.getDynamicProperty("longfixTag2") === false && v.location.x >= 16 && v.location.x <= 24 && v.location.y >= 295 && v.location.y <= 320 && v.location.z >= -4 && v.location.z <= 4) {
+                world.getDimension("minecraft:overworld").spawnEntity("ldns:place", { x: 12, y: 300 + 2, z: 0 + 0.5 });
+                for (let j = 0; j < width; j++) {
+                    for (let k = 0; k < height; k++) {
+                        if ((j >= 1 && j <= 5) && (k >= 1 && k <= 8)) {
+                            world.getDimension("minecraft:overworld").setBlockType({ x: i + posX - 23, y: k + posY, z: j + posZ }, "minecraft:air");
+                        }
+                    }
+                }
+                v.setDynamicProperty("longfixTag2", true);
+            }
+            if (v.getDynamicProperty("longfixTag2") === true && (v.location.x <= -24 || v.location.y <= 295)) {
+                v.teleport({ x: v.getDynamicProperty("LposX"), y: v.getDynamicProperty("LposY"), z: v.getDynamicProperty("LposZ") }, { dimension: world.getDimension("minecraft:overworld") });
+                v.setDynamicProperty("longfixTag", false);
+                v.setDynamicProperty("longfixTag2", false);
+            }
+        }
+    });
+}, 20);
 
 /**
  * 

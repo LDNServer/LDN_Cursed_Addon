@@ -43,7 +43,7 @@
             },
             "minecraft:physics": {},
             "minecraft:movement": {
-                "value": 0.55
+                "value": 0.35
             },
             "minecraft:navigation.walk": {
                 "can_path_over_water": true,

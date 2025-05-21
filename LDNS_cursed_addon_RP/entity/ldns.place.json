@@ -8,14 +8,14 @@
         "default": "slime_outer"
       },
       "textures": {
-        "default": "textures/entity/ldns/import/place"
+        "default": "textures/entity/ldns/import/longfix"
       },
       "geometry": {
-        "default": "geometry.player32"
+        "default": "geometry.longfix"
       },
       "spawn_egg": {
-        "base_color": "#7a7a7a",
-        "overlay_color": "#7a7a7a"
+        "base_color": "#00b7ff",
+        "overlay_color": "#1900ff"
       },
       "scripts": {
         "pre_animation": [
