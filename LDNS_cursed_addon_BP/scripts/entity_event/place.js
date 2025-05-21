@@ -26,13 +26,16 @@ world.afterEvents.entityHurt.subscribe(async (e) => {
             if (item.typeId === 'ldns:pendant_of_heat_sand') {
                 e.damageSource.damagingEntity.runCommand("give @s minecraft:emerald 8");
                 e.damageSource.damagingEntity.sendMessage("§0D§1o§2n§3'§4t §5r§6u§7n §8a§9w§aa§by§c.");
-                let RX = e.damageSource.damagingEntity.getSpawnPoint().x;
-                let RZ = e.damageSource.damagingEntity.getSpawnPoint().z;
-                e.damageSource.damagingEntity.teleport({ x: RX, y: 120, z: RZ });
                 await system.waitTicks(20 * 3);
-                let maxY = getTopmostBlockLocation(e.damageSource.damagingEntity.dimension, RX, RZ);
-                e.damageSource.damagingEntity.teleport({ x: RX, y: maxY + 2, z: RZ });
+                e.damageSource.damagingEntity.teleport({ x: e.damageSource.damagingEntity.getDynamicProperty("LposX"), y: e.damageSource.damagingEntity.getDynamicProperty("LposY"), z: e.damageSource.damagingEntity.getDynamicProperty("LposZ") });
                 container.setItem(i, null);
+                if (e.damageSource.damagingEntity.getDynamicProperty("longfixTag") == true) {
+                    e.damageSource.damagingEntity.setDynamicProperty("longfixTag", false);
+                }
+                if (e.damageSource.damagingEntity.getDynamicProperty("longfixTag2") == true) {
+                    e.damageSource.damagingEntity.setDynamicProperty("longfixTag2", false);
+                }
+                e.hurtEntity.remove();
                 break;
             }
         }
