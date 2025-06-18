@@ -1,4 +1,4 @@
-import { Entity, MinecraftDimensionTypes, Player, world } from "@minecraft/server";
+import { Entity, Player, world } from "@minecraft/server";
 import { random } from '../util';
 
 
@@ -25,7 +25,7 @@ function binary444_event(entity, player) {
     if (!(player instanceof Player)) { return };
     switch (random(0, 48)) {
         case 0:
-            let netherdimension = world.getDimension(MinecraftDimensionTypes.nether);
+            let netherdimension = world.getDimension('minecraft:nether');
             let randomXn = random(player.location.x - 500, player.location.x + 500);
             let randomZn = random(player.location.z - 500, player.location.z + 500);
             let ranodmYn = random(60, 100);
