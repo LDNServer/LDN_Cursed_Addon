@@ -1,4 +1,4 @@
-import { EquipmentSlot, MinecraftDimensionTypes, Player, system, world } from "@minecraft/server";
+import { EquipmentSlot, Player, system, world } from "@minecraft/server";
 import { random } from "../util";
 import { freeze } from "../functions/kanasibari";
 import { MinecraftEffectTypes } from "../lib/mojang-effect";
@@ -314,15 +314,11 @@ world.afterEvents.buttonPush.subscribe(async (e) => {
 });
 
 // 必ずこの向き
-world.afterEvents.itemUseOn.subscribe(async (e) => {
-    const playerlocation = e.source.location
-    let equipments = e.source.getComponent("equippable");
-    let { container } = e.source.getComponent("inventory");
-    const px = playerlocation.x;
-    const py = playerlocation.y;
-    const pz = playerlocation.z;
-    const button = e.source.dimension.getBlock({ x: px, y: py, z: pz });
-    if (!(e.source instanceof Player)) return;
+world.afterEvents.playerInteractWithBlock.subscribe(async (e) => {
+    const { player } = e;
+    let equipments = player.getComponent("equippable");
+    let { container } = player.getComponent("inventory");
+    const button = player.dimension.getBlock(player.location);
     if (
         button.offset({ x: 0, y: -1, z: 0 }).typeId === "ldns:error_block" &&
         button.offset({ x: 1, y: -1, z: 0 }).typeId === "ldns:error_block" &&
