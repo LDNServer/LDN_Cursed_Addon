@@ -1,4 +1,4 @@
-import { Entity, MinecraftDimensionTypes, Player, world } from "@minecraft/server";
+import { Entity, Player, world } from "@minecraft/server";
 import { random } from '../util';
 
 

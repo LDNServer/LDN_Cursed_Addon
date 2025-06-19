@@ -1,5 +1,5 @@
 {
-    "format_version": "1.20.80",
+    "format_version": "1.21.90",
     "minecraft:block": {
         "description": {
             "identifier": "ldns:replace_torch_block",
@@ -8,9 +8,7 @@
             }
         },
         "components": {
-            "minecraft:custom_components": [
-                "ldns:replace_torch_block_c"
-            ],
+            "ldns:replace_torch_block_c": {},
             "minecraft:loot": "loot_tables/blocks/replace_torch_block.json",
             "minecraft:destructible_by_explosion": false,
             "minecraft:destructible_by_mining": false,

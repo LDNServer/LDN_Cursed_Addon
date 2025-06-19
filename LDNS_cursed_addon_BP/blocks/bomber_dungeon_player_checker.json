@@ -1,5 +1,5 @@
 {
-    "format_version": "1.20.80",
+    "format_version": "1.21.90",
     "minecraft:block": {
         "description": {
             "identifier": "ldns:bomber_dungeon_player_checker",
@@ -8,9 +8,7 @@
             }
         },
         "components": {
-            "minecraft:custom_components": [
-                "ldns:bomber_dungeon_player_checker_c"
-            ],
+            "ldns:bomber_dungeon_player_checker_c": {},
             "minecraft:loot": "loot_tables/empty.json",
             "minecraft:destructible_by_explosion": false,
             "minecraft:destructible_by_mining": false,

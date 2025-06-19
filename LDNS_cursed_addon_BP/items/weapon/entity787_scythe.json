@@ -1,5 +1,5 @@
 {
-    "format_version": "1.20.80",
+    "format_version": "1.21.90",
     "minecraft:item": {
         "description": {
             "identifier": "ldns:entity787_scythe",
@@ -8,14 +8,13 @@
             }
         },
         "components": {
+            "ldns:entity787_scythe_c": {},
+            "ldns:custom_tool": {},
             "minecraft:icon": {
                 "textures": {
                     "default": "entity787_scythe"
                 }
             },
-            "minecraft:custom_components": [
-                "ldns:entity787_scythe_c"
-            ],
             "minecraft:hand_equipped": true,
             "minecraft:glint": false,
             "minecraft:stacked_by_data": false,

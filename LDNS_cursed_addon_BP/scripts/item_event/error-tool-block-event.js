@@ -1,18 +1,15 @@
-import { Block, Direction, EnchantmentType, EquipmentSlot, GameMode, ItemStack, Player, system, world } from "@minecraft/server";
+import { EquipmentSlot, GameMode, ItemStack, Player, system, world } from "@minecraft/server";
 
-world.beforeEvents.worldInitialize.subscribe((event) => {
-    // Error斧の時
-    event.itemComponentRegistry.registerCustomComponent("ldns:error_axe_c", {
-        // エンティティを殴ったとき
+system.beforeEvents.startup.subscribe((event) => {
+    event.itemComponentRegistry.registerCustomComponent("ldns:custom_tool", {
         onHitEntity(e) {
-            const { attackingEntity, hadEffect, hitEntity, itemStack } = e;
+            const { attackingEntity, itemStack } = e;
             if (!(attackingEntity instanceof Player)) return;
             // アイテム耐久値の関数
             durabilitys(attackingEntity, itemStack);
         },
-        // ブロックを壊したとき
         onMineBlock(e) {
-            const { block, itemStack, minedBlockPermutation, source } = e;
+            const { itemStack, source } = e;
             if (!(source instanceof Player)) return;
             // アイテム耐久値の関数
             durabilitys(source, itemStack);
@@ -33,167 +30,65 @@ world.beforeEvents.worldInitialize.subscribe((event) => {
         }
         */
     });
-    // Error鍬の時
-    event.itemComponentRegistry.registerCustomComponent("ldns:error_hoe_c", {
-        // エンティティを殴ったとき
-        onHitEntity(e) {
-            const { attackingEntity, hadEffect, hitEntity, itemStack } = e;
-            if (!(attackingEntity instanceof Player)) return;
-            // アイテム耐久値の関数
-            durabilitys(attackingEntity, itemStack);
-        },
-        // ブロックを壊したとき
-        onMineBlock(e) {
-            const { block, itemStack, minedBlockPermutation, source } = e;
-            if (!(source instanceof Player)) return;
-            // アイテム耐久値の関数
-            durabilitys(source, itemStack);
-        },
-        /**
-        // ブロック上で右クリックしたとき
-        onUseOn(e) {
-            const { block, blockFace, source, itemStack } = e;
-            if (!(source instanceof Player)) return;
-            // クリエイティブ時のみ耐久値が減るのを防ぐ
-            if (source.getGameMode() !== GameMode.creative && block.hasTag("grass") && blockFace == Direction.Up) {
-                // 音を鳴らす
-                source.playSound("use.gravel");
-                let item = itemStack.getComponent("durability");
-                item.damage += 1;
-                source.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
-            }
-        }
-        */
-    });
-    // Errorツルハシの時
-    event.itemComponentRegistry.registerCustomComponent("ldns:error_pickaxe_c", {
-        // エンティティを殴ったとき
-        onHitEntity(e) {
-            const { attackingEntity, hadEffect, hitEntity, itemStack } = e;
-            if (!(attackingEntity instanceof Player)) return;
-            // アイテム耐久値の関数
-            durabilitys(attackingEntity, itemStack);
-        },
-        // ブロックを壊したとき
-        onMineBlock(e) {
-            const { block, itemStack, minedBlockPermutation, source } = e;
-            if (!(source instanceof Player)) return;
-            // アイテム耐久値の関数
-            durabilitys(source, itemStack);
-        }
-    });
-    // Errorシャベルの時
-    event.itemComponentRegistry.registerCustomComponent("ldns:error_shovel_c", {
-        // エンティティを殴ったとき
-        onHitEntity(e) {
-            const { attackingEntity, hadEffect, hitEntity, itemStack } = e;
-            if (!(attackingEntity instanceof Player)) return;
-            // アイテム耐久値の関数
-            durabilitys(attackingEntity, itemStack);
-        },
-        // ブロックを壊したとき
-        onMineBlock(e) {
-            const { block, itemStack, minedBlockPermutation, source } = e;
-            if (!(source instanceof Player)) return;
-            // アイテム耐久値の関数
-            durabilitys(source, itemStack);
-        },
-        /**
-        // ブロック上で右クリックしたとき
-        onUseOn(e) {
-            const { block, blockFace, source, itemStack } = e;
-            if (!(source instanceof Player)) return;
-            // 音を鳴らす
-            source.playSound("use.grass");
-            // クリエイティブ時のみ耐久値が減るのを防ぐ
-            if (source.getGameMode() !== GameMode.creative && block.typeId == "minecraft:grass" && blockFace == Direction.Up) {
-                let item = itemStack.getComponent("durability");
-                item.damage += 1;
-                // 更新
-                source.getComponent("equippable").setEquipment(EquipmentSlot.Mainhand, itemStack);
-            }
-        }
-        */
-    });
-    // Error剣の時
-    event.itemComponentRegistry.registerCustomComponent("ldns:error_sword_c", {
-        // エンティティを殴ったとき
-        onHitEntity(e) {
-            const { attackingEntity, hadEffect, hitEntity, itemStack } = e;
-            if (!(attackingEntity instanceof Player)) return;
-            // アイテム耐久値の関数
-            durabilitys(attackingEntity, itemStack);
-        },
-        onMineBlock(e) {
-            const { block, itemStack, minedBlockPermutation, source } = e;
-            if (!(source instanceof Player)) return;
-            // アイテム耐久値の関数
-            durabilitys(source, itemStack);
-        }
-    });
+    
     // Entity787の鎌の時
     event.itemComponentRegistry.registerCustomComponent("ldns:entity787_scythe_c", {
-        // エンティティを殴ったとき
-        onHitEntity(e) {
-            const { attackingEntity, hadEffect, hitEntity, itemStack } = e;
-            if (!(attackingEntity instanceof Player)) return;
-            // アイテム耐久値の関数
-            durabilitys(attackingEntity, itemStack);
-        },
         // 右クリックしたとき
         onUse(e) {
             const { itemStack, source } = e;
             source.playSound("fire.ignite");
             source.playSound("mob.witch.throw");
             // 電波動を出す
-            const scythe_bullets = source.dimension.spawnEntity("ldns:scythe_bullet", { x: source.location.x + (source.getViewDirection().x * 2), y: source.location.y + 3, z: source.location.z + (source.getViewDirection().z * 3) });
+            const hl = source.getHeadLocation();
+            const vd = source.getViewDirection();
+            const scythe_bullets = source.dimension.spawnEntity("ldns:scythe_bullet", { x: hl.x + (vd.x * 1.5), y: hl.y + (vd.y * 1.5), z: hl.z + (vd.z * 1.5) });
             const projectiles = scythe_bullets.getComponent("minecraft:projectile");
             projectiles.airInertia = 1.15;
             projectiles.liquidInertia = 1.15;
             projectiles.gravity = 0.01;
-            projectiles?.shoot({ x: source.getViewDirection().x * 2, y: source.getViewDirection().y * 2, z: source.getViewDirection().z * 2 });
+            projectiles?.shoot({ x: vd.x * 2, y: vd.y * 2, z: vd.z * 2 });
             // アイテム耐久値の関数
             durabilitys(source, itemStack);
         }
     });
     // 松明を壊すブロック
     event.blockComponentRegistry.registerCustomComponent("ldns:replace_torch_block_c", {
-        onTick: (e) => {
+        onTick(e) {
             const { block, dimension } = e;
             // 松明を壊すコマンド
-            dimension.runCommand("fill " + block.x + " " + block.y + " " + block.z + " " + block.x + " " + block.y + " " + block.z + " " + " air 0 destroy");
+            dimension.runCommand(`fill ${block.x} ${block.y} ${block.z} ${block.x} ${block.y} ${block.z} air 0 destroy`);
         }
     });
     // ボマーのダンジョンのブロック
     event.blockComponentRegistry.registerCustomComponent("ldns:bomber_dungeon_player_checker_c", {
-        onTick: (e) => {
+        onTick(e) {
             const { block, dimension } = e;
             // コマンド
-            dimension.runCommand("summon ldns:bomber_dungeon_player_checker_entity " + block.x + " " + (block.y - 1) + " " + block.z);
+            dimension.spawnEntity("ldns:bomber_dungeon_player_checker_entity", { x: block.x, y: block.y - 1, z: block.z });
         }
     });
     // 爆発深層岩の時
     event.blockComponentRegistry.registerCustomComponent("ldns:fake_deepslate_explosive_c", {
         // 壊したとき
-        onPlayerDestroy: (e) => {
-            const { player, block, dimension, destroyedBlockPermutation } = e;
+        onPlayerBreak(e) {
+            const { block, dimension } = e;
             // 爆発コマンド
-            dimension.runCommand("summon ldns:entity.fake_stone_explosive " + + block.x + " " + block.y + " " + block.z);
+            dimension.spawnEntity("ldns:entity.fake_deepslate_explosive", block.location);
         }
     });
     // 爆発石の時
     event.blockComponentRegistry.registerCustomComponent("ldns:fake_stone_explosive_c", {
         // 壊したとき
-        onPlayerDestroy: (e) => {
-            const { player, block, dimension, destroyedBlockPermutation } = e;
+        onPlayerBreak(e) {
+            const { block, dimension } = e;
             // 爆発コマンド
-            dimension.runCommand("summon ldns:entity.fake_stone_explosive " + + block.x + " " + block.y + " " + block.z);
+            dimension.spawnEntity("ldns:entity.fake_stone_explosive", block.location);
         }
     });
 });
 
 world.afterEvents.playerInteractWithBlock.subscribe((e) => {
-    const { block, blockFace, itemStack, player } = e;
+    const { itemStack, player } = e;
     if (itemStack?.typeId == "ldns:error_axe") {
         // 音を鳴らす
         player.playSound("use.wood");
@@ -221,7 +116,7 @@ world.afterEvents.playerInteractWithBlock.subscribe((e) => {
  */
 function durabilitys(player, itemStack) {
     // クリエイティブ時のみ耐久値が減るのを防ぐ
-    if (player.getGameMode() !== GameMode.creative) {
+    if (player.getGameMode() !== GameMode.Creative) {
         let itemdurability = itemStack.getComponent("durability");
         // 壊れた時
         if (itemdurability.damage >= (itemdurability.maxDurability - 1)) {

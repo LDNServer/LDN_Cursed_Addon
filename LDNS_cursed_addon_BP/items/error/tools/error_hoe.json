@@ -1,5 +1,5 @@
 {
-    "format_version": "1.21.80",
+    "format_version": "1.21.90",
     "minecraft:item": {
         "description": {
             "identifier": "ldns:error_hoe",
@@ -9,14 +9,12 @@
             }
         },
         "components": {
+            "ldns:custom_tool": {},
             "minecraft:icon": {
                 "textures": {
                     "default": "error_hoe"
                 }
             },
-            "minecraft:custom_components": [
-                "ldns:error_hoe_c"
-            ],
             "minecraft:hand_equipped": true,
             "minecraft:glint": false,
             "minecraft:stacked_by_data": false,
