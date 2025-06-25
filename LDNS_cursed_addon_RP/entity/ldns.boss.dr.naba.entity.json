@@ -49,6 +49,7 @@
                 "swimming.legs": "animation.player.swim.legs",
                 "riding.arms": "animation.player.riding.arms",
                 "riding.legs": "animation.player.riding.legs",
+                "riding.body": "animation.player.riding.legs",
                 "holding": "animation.player.holding",
                 "brandish_spear": "animation.humanoid.brandish_spear",
                 "holding_spyglass": "animation.humanoid.holding_spyglass",

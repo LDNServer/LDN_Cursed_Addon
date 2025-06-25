@@ -40,11 +40,11 @@
         "charging": "animation.humanoid.charging",
         "bob": "animation.humanoid.bob",
         "damage_nearby_mobs": "animation.humanoid.damage_nearby_mobs",
-        "riding.arms": "animation.player.riding.arms",
-        "riding.legs": "animation.player.riding.legs",
+        "riding.arms": "animation.humanoid.riding.arms",
+        "riding.legs": "animation.humanoid.riding.legs",
+        "riding.body": "animation.humanoid.riding.body",
         "sneaking": "animation.player.sneaking",
-        "holding": "animation.player.holding",
-        "holding_spyglass": "animation.humanoid.holding_spyglass"
+        "holding": "animation.player.holding"
       },
       "animation_controllers": [
         {
