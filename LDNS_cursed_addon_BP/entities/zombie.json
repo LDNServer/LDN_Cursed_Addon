@@ -1,11 +1,11 @@
 {
-    "format_version": "1.17.20",
+    "format_version": "1.21.90",
     "minecraft:entity": {
         "description": {
             "identifier": "minecraft:zombie",
+            "spawn_category": "monster",
             "is_spawnable": true,
-            "is_summonable": true,
-            "is_experimental": false
+            "is_summonable": true
         },
         "component_groups": {
             "minecraft:look_to_start_drowned_transformation": {
@@ -89,8 +89,8 @@
                     ],
                     "seats": {
                         "position": [
-                            0,
-                            1.1,
+                            0.0,
+                            1.175,
                             -0.35
                         ],
                         "lock_rider_rotation": 0
@@ -99,7 +99,7 @@
                 "minecraft:behavior.mount_pathing": {
                     "priority": 2,
                     "speed_multiplier": 1.25,
-                    "target_dist": 0,
+                    "target_dist": 0.0,
                     "track_target": true
                 }
             },
@@ -115,6 +115,9 @@
                 "minecraft:equipment": {
                     "table": "loot_tables/entities/zombie_equipment.json"
                 }
+            },
+            "minecraft:can_break_doors": {
+                "minecraft:annotation.break_door": {}
             },
             "ldns:zombie_default": {
                 "minecraft:variant": {
@@ -139,8 +142,7 @@
                 "minecraft:attack": {
                     "damage": 10
                 },
-                "minecraft:is_charged": {
-                },
+                "minecraft:is_charged": {},
                 "minecraft:health": {
                     "value": 40,
                     "max": 40
@@ -150,6 +152,7 @@
         "components": {
             "minecraft:is_hidden_when_invisible": {},
             "minecraft:nameable": {},
+            // Zombie Components
             "minecraft:type_family": {
                 "family": [
                     "zombie",
@@ -158,7 +161,13 @@
                     "mob"
                 ]
             },
-            "minecraft:equip_item": {},
+            "minecraft:equip_item": {
+                "excluded_items": [
+                    {
+                        "item": "minecraft:banner:15"
+                    }
+                ]
+            },
             "minecraft:collision_box": {
                 "width": 0.6,
                 "height": 1.9
@@ -171,7 +180,6 @@
                 "can_walk": true,
                 "can_break_doors": true
             },
-            "minecraft:annotation.break_door": {},
             "minecraft:jump.static": {},
             "minecraft:can_climb": {},
             "minecraft:health": {
@@ -198,10 +206,14 @@
                 "breathes_air": true,
                 "breathes_water": true
             },
+            "minecraft:attack": {
+                "damage": 3
+            },
             "minecraft:loot": {
                 "table": "loot_tables/entities/zombie.json"
             },
             "minecraft:shareables": {
+                "singular_pickup": true,
                 "items": [
                     {
                         "item": "minecraft:netherite_sword",
@@ -422,10 +434,12 @@
             "minecraft:despawn": {
                 "despawn_from_distance": {}
             },
+            // Zombie Behaviors
             "minecraft:behavior.equip_item": {
                 "priority": 2
             },
-            "minecraft:behavior.melee_attack": {
+            "minecraft:behavior.melee_box_attack": {
+                "can_spread_on_fire": true,
                 "priority": 3
             },
             "minecraft:behavior.stomp_turtle_egg": {
@@ -440,7 +454,7 @@
                 "priority": 6,
                 "max_dist": 3,
                 "goal_radius": 2,
-                "speed_multiplier": 1,
+                "speed_multiplier": 1.0,
                 "pickup_based_on_chance": true,
                 "can_pickup_any_item": true,
                 "excluded_items": [
@@ -460,14 +474,24 @@
                 "priority": 9
             },
             "minecraft:behavior.hurt_by_target": {
-                "priority": 1
+                "priority": 1,
+                "entity_types": [
+                    {
+                        "filters": {
+                            "test": "is_family",
+                            "subject": "other",
+                            "operator": "!=",
+                            "value": "breeze"
+                        }
+                    }
+                ]
             },
             "minecraft:behavior.nearest_attackable_target": {
                 "priority": 2,
                 "must_see": true,
                 "reselect_targets": true,
-                "within_radius": 25,
-                "must_see_forget_duration": 17,
+                "within_radius": 25.0,
+                "must_see_forget_duration": 17.0,
                 "entity_types": [
                     {
                         "filters": {
@@ -545,65 +569,56 @@
         },
         "events": {
             "minecraft:entity_spawned": {
-                "randomize": [
+                "sequence": [
                     {
-                        "weight": 380,
-                        "remove": {},
-                        "add": {
-                            "component_groups": [
-                                "minecraft:zombie_adult",
-                                "minecraft:can_have_equipment"
-                            ]
-                        }
+                        "randomize": [
+                            {
+                                "weight": 380,
+                                "remove": {},
+                                "add": {
+                                    "component_groups": [
+                                        "minecraft:zombie_adult",
+                                        "minecraft:can_have_equipment"
+                                    ]
+                                }
+                            },
+                            {
+                                "weight": 17,
+                                "remove": {},
+                                "add": {
+                                    "component_groups": [
+                                        "minecraft:zombie_baby",
+                                        "minecraft:can_have_equipment"
+                                    ]
+                                }
+                            },
+                            {
+                                "weight": 3,
+                                "remove": {},
+                                "add": {
+                                    "component_groups": [
+                                        "minecraft:zombie_baby",
+                                        "minecraft:zombie_jockey",
+                                        "minecraft:can_have_equipment"
+                                    ]
+                                }
+                            }
+                        ]
                     },
                     {
-                        "weight": 17,
-                        "remove": {},
-                        "add": {
-                            "component_groups": [
-                                "minecraft:zombie_baby",
-                                "minecraft:can_have_equipment"
-                            ]
-                        }
-                    },
-                    {
-                        "weight": 3,
-                        "remove": {},
-                        "add": {
-                            "component_groups": [
-                                "minecraft:zombie_baby",
-                                "minecraft:zombie_jockey",
-                                "minecraft:can_have_equipment"
-                            ]
-                        }
-                    }
-                ]
-            },
-            "ldns:zombie_geo_randomize": {
-                "randomize": [
-                    {
-                        "weight": 20,
-                        "add": {
-                            "component_groups": [
-                                "ldns:zombie_default"
-                            ]
-                        }
-                    },
-                    {
-                        "weight": 10,
-                        "add": {
-                            "component_groups": [
-                                "ldns:zombie_variant_1"
-                            ]
-                        }
-                    },
-                    {
-                        "weight": 10,
-                        "add": {
-                            "component_groups": [
-                                "ldns:zombie_variant_2"
-                            ]
-                        }
+                        "randomize": [
+                            {
+                                "weight": 10,
+                                "add": {
+                                    "component_groups": [
+                                        "minecraft:can_break_doors"
+                                    ]
+                                }
+                            },
+                            {
+                                "weight": 90
+                            }
+                        ]
                     }
                 ]
             },
@@ -677,6 +692,34 @@
                         "remove": {
                             "component_groups": [
                                 "minecraft:start_drowned_transformation"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "ldns:zombie_geo_randomize": {
+                "randomize": [
+                    {
+                        "weight": 20,
+                        "add": {
+                            "component_groups": [
+                                "ldns:zombie_default"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 10,
+                        "add": {
+                            "component_groups": [
+                                "ldns:zombie_variant_1"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 10,
+                        "add": {
+                            "component_groups": [
+                                "ldns:zombie_variant_2"
                             ]
                         }
                     }

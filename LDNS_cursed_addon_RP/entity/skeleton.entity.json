@@ -15,8 +15,7 @@
         "custom_1":"geometry.ldns.custom_skeleton"
       },
       "spawn_egg": {
-        "texture": "spawn_egg",
-        "texture_index": 9
+        "texture": "spawn_egg_skeleton"
       },
       "scripts": {
         "pre_animation": [
