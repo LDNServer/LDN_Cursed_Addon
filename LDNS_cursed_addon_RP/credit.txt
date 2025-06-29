@@ -1,13 +1,10 @@
 ====CREDIT====
+福知山よんぱち (Tester,Code)
 Kagaribi172 (Code,Texture)
-福知山よんぱち (Tester,Code,Assistant)
 親子丼株式会社 (Tester)
-mayonaka8478 (Texture)
 Shiumano (Tester)
-無意識 (Assistant)
 tutinoko9900(Code)
 sakurago(Texture)
-kamiyasuri(Texture)
 
 ====SUB_CREDIT====
 Tei(Texture)
@@ -16,3 +13,8 @@ Test_Alpha(Texture)
 ====Special thanks====
 LDN Server - LDNS
 ドクターナバの研究所 所長 ナバ
+
+======================
+無意識 (Assistant)
+mayonaka8478 (Texture)
+kamiyasuri(Texture)

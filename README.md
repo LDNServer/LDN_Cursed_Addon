@@ -27,7 +27,7 @@ https://docs.microsoft.com/ja-jp/minecraft/creator/documents/addonpackinstallati
 * 他のビヘイビアパックと一緒にこのアドオンを使わないでください。
 
 
-<img src="https://github.com/user-attachments/assets/e5a4bf70-dbe3-4474-9342-f971721560ff" width="800">
+<img src="docs/image/zikken.png" width="800">
 <br>
 
 
@@ -56,3 +56,20 @@ https://docs.microsoft.com/ja-jp/minecraft/creator/documents/addonpackinstallati
 * https://commons.nicovideo.jp/users/29712216
 * https://barrarchiverio.cl/p/error/
 * 一部のコードはOpenAI ChatGPTやGoogle Gemini AI、Microsoft Copilotを利用し参考にして作成しています。
+
+## 作成者クレジット
+====CREDIT====
+福知山よんぱち (Tester,Code)
+Kagaribi172 (Code,Texture)
+親子丼株式会社 (Tester)
+Shiumano (Tester)
+tutinoko9900(Code)
+sakurago(Texture)
+
+====SUB_CREDIT====
+Tei(Texture)
+Test_Alpha(Texture)
+
+====Special thanks====
+LDN Server - LDNS
+ドクターナバの研究所 所長 ナバ
