@@ -58,18 +58,18 @@ https://docs.microsoft.com/ja-jp/minecraft/creator/documents/addonpackinstallati
 * 一部のコードはOpenAI ChatGPTやGoogle Gemini AI、Microsoft Copilotを利用し参考にして作成しています。
 
 ## 作成者クレジット
-====CREDIT====
-福知山よんぱち (Tester,Code)
-Kagaribi172 (Code,Texture)
-親子丼株式会社 (Tester)
-Shiumano (Tester)
-tutinoko9900(Code)
-sakurago(Texture)
+====CREDIT====<br>
+福知山よんぱち (Tester,Code)<br>
+Kagaribi172 (Code,Texture)<br>
+親子丼株式会社 (Tester)<br>
+Shiumano (Tester)<br>
+tutinoko9900(Code)<br>
+sakurago(Texture)<br>
 
-====SUB_CREDIT====
-Tei(Texture)
-Test_Alpha(Texture)
+====SUB_CREDIT====<br>
+Tei(Texture)<br>
+Test_Alpha(Texture)<br>
 
-====Special thanks====
-LDN Server - LDNS
+====Special thanks====<br>
+LDN Server - LDNS<br>
 ドクターナバの研究所 所長 ナバ
