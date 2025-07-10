@@ -11,7 +11,7 @@
         "default": "textures/entity/ldns/import/publicvoid"
       },
       "geometry": {
-        "default": "geometry.player32"
+        "default": "geometry.humanoid"
       },
       "spawn_egg": {
         "base_color": "#ffffff",
