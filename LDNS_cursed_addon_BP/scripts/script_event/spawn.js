@@ -100,7 +100,7 @@ system.runInterval(async () => {
             })
         }
         // I_am_you_maybeが出てくる
-        else if (rand <= 1800 && rand > 1900) {
+        else if (rand <= 1900 && rand > 1800) {
             event17(v);
         }
     }
