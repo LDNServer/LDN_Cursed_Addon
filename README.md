@@ -69,7 +69,7 @@ sakurago(Texture)<br>
 ====SUB_CREDIT====<br>
 Tei(Texture)<br>
 Test_Alpha(Texture)<br>
-fz_kazu220(Texture)<br>
+かずぎつね(Texture)<br>
 
 ====Special thanks====<br>
 LDN Server - LDNS<br>
