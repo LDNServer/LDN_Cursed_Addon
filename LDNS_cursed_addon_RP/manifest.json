@@ -2,10 +2,10 @@
     "format_version": 2,
     "header": {
         "description": "LDNServerによる呪いのアドオンのリソースパック。 実験的機能をすべて有効にして使ってください。",
-        "name": "§c§l呪いのアドオン§r(リソースパック)§b Presented by LDNServer§a v1.1.4",
+        "name": "§c§l呪いのアドオン§r(リソースパック)§b Presented by LDNServer§a v1.1.5",
         "uuid": "7247237e-e820-4b73-9e5c-f25fdbc8669f",
-        "version": [1, 1, 4],
-        "min_engine_version": [ 1, 20, 30]
+        "version": [1, 1, 5],
+        "min_engine_version": [ 1, 21, 90]
     },
     "metadata":{
       "authors":["Kagaribi172(code,texture)", "Yon4800(fact,code,assistant)", "oyakodon_yuugen(fact)", "tutinoko9900(code)", "sakurago(texture)", "kamiyasuri(texture)", "dr_naba(leader)"],
@@ -16,13 +16,13 @@
             "description": "やほー！燃えるオブジェクトとかが作ったリソパだよ！",
             "type": "resources",
             "uuid": "84636a5d-21c1-41ed-9140-e4223f0a92c4",
-            "version": [1, 1, 4]
+            "version": [1, 1, 5]
         }
     ],
     "dependencies": [
         {
             "uuid": "4115a0c0-60cf-4a69-a4e3-af05b58b9b53",
-            "version": [1, 1, 4]
+            "version": [1, 1, 5]
         }
     ]
 }
