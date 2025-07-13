@@ -22,7 +22,8 @@ import './entity_event/vill';
 import './entity_event/public_void';
 import './entity_event/binary444';
 import './entity_event/herovoid';
-import './entity_event/place'
+import './entity_event/place';
+import './entity_event/iamyoumaybe'
 
 const timezoneOffset = 0;
 

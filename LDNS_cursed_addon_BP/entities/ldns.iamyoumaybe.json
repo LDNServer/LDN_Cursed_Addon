@@ -1,0 +1,63 @@
+{
+    "format_version": "1.21.90",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "ldns:iamyoumaybe",
+            "is_spawnable": true,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+        "component_groups": {
+            "ldns:iamyoumaybe_despawn": {
+                "minecraft:instant_despawn": {
+                    "remove_child_entities": false
+                }
+            }
+        },
+        "components": {
+            "minecraft:nameable": {},
+            "minecraft:type_family": {
+                "family": [
+                    "mob"
+                ]
+            },
+            "minecraft:collision_box": {
+                "width": 0.6,
+                "height": 1.8
+            },
+            "minecraft:health": {
+                "value": 7878
+            },
+            "minecraft:behavior.look_at_player": {
+                "priority": 8,
+                "look_distance": 6,
+                "probability": 0.02
+            },
+            "minecraft:behavior.random_look_around": {
+                "priority": 9
+            },
+            "minecraft:timer": {
+                "time": 16,
+                "time_down_event": {
+                    "event": "ldns:iamyoumaybe_despawn_enevt",
+                    "target": "self"
+                }
+            },
+            "minecraft:physics": {
+                "has_gravity": true
+            },
+            "minecraft:scale": {
+                "value": 7.8
+            }
+        },
+        "events": {
+            "ldns:iamyoumaybe_despawn_enevt": {
+                "add": {
+                    "component_groups": [
+                        "ldns:iamyoumaybe_despawn"
+                    ]
+                }
+            }
+        }
+    }
+}

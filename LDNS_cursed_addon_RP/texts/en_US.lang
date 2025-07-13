@@ -92,6 +92,9 @@ item.spawn_egg.entity.ldns:herovoid.name=Spawn HeroVoid
 entity.ldns:romanesco87.name=Romanesco87
 item.spawn_egg.entity.ldns:romanesco87.name=Spawn Romanesco87
 
+entity.ldns:iamyoumaybe.name=I am you maybe
+item.spawn_egg.entity.ldns:iamyoumaybe.name=Spawn "I am you maybe"
+
 ##Block
 tile.ldns:error_block.name=繧ｨ繝ｩ繝ｼ Block
 

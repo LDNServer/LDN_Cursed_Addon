@@ -452,6 +452,42 @@
                     "volume": 0.6
                 }
             ]
+        },
+        "ldns.time_mad_I": {
+            "__use_legacy_max_distance": false,
+            "category": "hostile",
+            "max_distance": 64,
+            "min_distance": 0,
+            "sounds": [
+                {
+                    "name": "sounds/ldns/other/time_mad",
+                    "volume": 1.0
+                }
+            ]
+        },
+        "ldns.iamyoumaybe": {
+            "__use_legacy_max_distance": false,
+            "category": "hostile",
+            "max_distance": 64,
+            "min_distance": 0,
+            "sounds": [
+                {
+                    "name": "sounds/ldns/iamyoumaybe/iamyoumaybe0",
+                    "volume": 1.0
+                },
+                {
+                    "name": "sounds/ldns/iamyoumaybe/iamyoumaybe1",
+                    "volume": 1.0
+                },
+                {
+                    "name": "sounds/ldns/iamyoumaybe/iamyoumaybe2",
+                    "volume": 1.0
+                },
+                {
+                    "name": "sounds/ldns/iamyoumaybe/iamyoumaybe3",
+                    "volume": 1.0
+                }
+            ]
         }
     }
 }

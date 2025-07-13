@@ -99,6 +99,10 @@ system.runInterval(async () => {
                 event16(ve, ve.location.x, ve.location.y, ve.location.z, ve.getRotation().x, ve.getRotation().y);
             })
         }
+        // I_am_you_maybeが出てくる
+        else if (rand <= 1800 && rand > 1900) {
+            event17(v);
+        }
     }
 }, 20 * 45);
 
@@ -924,6 +928,14 @@ async function event16(v, posX, posY, posZ, pitch, yaw) {
     }
 }
 
+/**
+ * 
+ * @param {Player} v 
+ */
+function event17(v) {
+    world.getDimension(v.dimension.id).spawnEntity("ldns:iamyoumaybe", { x: v.location.x + 30, y: v.location.y + 25, z: v.location.z });
+}
+
 
 system.afterEvents.scriptEventReceive.subscribe((e) => {
     if (e.id == "ldns:toggle_random_chat") {
@@ -936,13 +948,11 @@ system.afterEvents.scriptEventReceive.subscribe((e) => {
             world.setDynamicProperty("toggle_chat", true);
         }
     }
-    /**
     if (e.id == "ldns:test_new") {
         let player = e.sourceEntity;
         if (player instanceof Player)
-            event14(player);
+            event17(player);
     }
-     */
 });
 
 // 繝｡繝｢繝ｪ繝ｼ繝ｬ繧､繝?Φ繧ｷ繝ｼ繧ｨ繝ｩ繝ｼ
