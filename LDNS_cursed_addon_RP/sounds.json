@@ -294,14 +294,14 @@
             ],
             "volume": 1.0
          },
-         "ldns:cbed":{
+         "ldns:tbd_s":{
             "events": {
                "ambient": {
                   "pitch": [
                      0.5,
                      2.0
                   ],
-                  "sound": "ldns.cbed"
+                  "sound": "ldns.tbd_s"
                },
                "hurt": "use.wood",
                "death": "use.wood"

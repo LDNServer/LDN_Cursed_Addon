@@ -24,7 +24,7 @@ import './entity_event/binary444';
 import './entity_event/herovoid';
 import './entity_event/place';
 import './entity_event/iamyoumaybe';
-import './entity_event/cbed';
+import './entity_event/tbd';
 
 const timezoneOffset = 0;
 

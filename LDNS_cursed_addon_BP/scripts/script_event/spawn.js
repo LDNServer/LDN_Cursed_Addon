@@ -11,13 +11,13 @@ let names = ["James", "Olivia", "Liam", "Emma", "Noah", "Ava", "William", "Sophi
 let ctimes = 10600;
 
 system.runInterval(() => {
-    if (world.getDynamicProperty("cbed") === true) {
+    if (world.getDynamicProperty("tbd") === true) {
         events();
     }
 }, 20 * 10);
 
 system.runInterval(async () => {
-    if (world.getDynamicProperty("cbed") !== true) {
+    if (world.getDynamicProperty("tbd") !== true) {
         events();
     }
 }, 20 * 45);

@@ -1,7 +1,7 @@
 {
 	"format_version": "1.8.0",
 	"animations": {
-		"animation.cbed.movearms": {
+		"animation.tbd.movearms": {
 			"animation_length": 2,
 			"bones": {
 				"s_arm": {

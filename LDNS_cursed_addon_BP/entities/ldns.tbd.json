@@ -2,7 +2,7 @@
     "format_version": "1.21.90",
     "minecraft:entity": {
         "description": {
-            "identifier": "ldns:cbed",
+            "identifier": "ldns:tbd",
             "is_spawnable": false,
             "is_summonable": true,
             "is_experimental": false
@@ -41,7 +41,7 @@
                 "value": 1.0
             },
             "minecraft:loot": {
-                "table": "loot_tables/entities/cbed.json"
+                "table": "loot_tables/entities/tbd.json"
             },
             "minecraft:nameable": {},
             "minecraft:persistent": {},

@@ -2,7 +2,7 @@
     "format_version": "1.20.80",
     "minecraft:item": {
         "description": {
-            "identifier": "ldns:cbed_item",
+            "identifier": "ldns:tbd_item",
             "menu_category": {
                 "category": "items"
             }
@@ -10,11 +10,11 @@
         "components": {
             "minecraft:icon": {
                 "textures": {
-                    "default": "cbed"
+                    "default": "tbd"
                 }
             },
             "minecraft:entity_placer": {
-                "entity": "ldns:cbed"
+                "entity": "ldns:tbd"
             },
             "minecraft:hand_equipped": false,
             "minecraft:stacked_by_data": true,

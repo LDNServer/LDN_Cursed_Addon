@@ -3,15 +3,15 @@ import { MinecraftEffectTypes } from "../lib/mojang-effect";
 import { random } from "../util";
 
 world.beforeEvents.playerInteractWithEntity.subscribe((event) => {
-    if (event.target.typeId == "ldns:cbed") {
-        if (world.getTimeOfDay() >= 12000 && world.getDynamicProperty("cbed") === false || world.getDynamicProperty("cbed") == undefined) {
-            world.setDynamicProperty("cbed", true);
-            world.setDynamicProperty("cbed_player", event.player.id);
+    if (event.target.typeId == "ldns:tbd") {
+        if (world.getTimeOfDay() >= 12000 && world.getDynamicProperty("tbd") === false || world.getDynamicProperty("tbd") == undefined) {
+            world.setDynamicProperty("tbd", true);
+            world.setDynamicProperty("tbd_player", event.player.id);
             world.sendMessage("あなたはですか。");
             system.run(() => {
                 world.setTimeOfDay(10);
             });
-        } else if (world.getDynamicProperty("cbed") === true) {
+        } else if (world.getDynamicProperty("tbd") === true) {
             world.sendMessage("あなたはです。");
         } else {
             world.sendMessage("あなたはです。あなたはですか。");
@@ -20,14 +20,14 @@ world.beforeEvents.playerInteractWithEntity.subscribe((event) => {
 });
 
 system.runInterval(async () => {
-    if (world.getDynamicProperty("cbed") === true && world.getTimeOfDay() === 1) {
-        world.setDynamicProperty("cbed", false);
+    if (world.getDynamicProperty("tbd") === true && world.getTimeOfDay() === 1) {
+        world.setDynamicProperty("tbd", false);
     }
-    if (world.getDynamicProperty("cbed") === true && world.getTimeOfDay() === 6000) {
+    if (world.getDynamicProperty("tbd") === true && world.getTimeOfDay() === 6000) {
         world.setTimeOfDay(13000);
     }
-    if (world.getDynamicProperty("cbed") === true) {
-        let cplayer = world.getPlayers().find(p => p.id === world.getDynamicProperty("cbed_player"));
+    if (world.getDynamicProperty("tbd") === true) {
+        let cplayer = world.getPlayers().find(p => p.id === world.getDynamicProperty("tbd_player"));
         if (cplayer == undefined) {
             return;
         }
@@ -58,7 +58,7 @@ system.runInterval(async () => {
 }, 1);
 
 world.afterEvents.entityDie.subscribe((event) => {
-    if (event.deadEntity instanceof Player && event.deadEntity.id === world.getDynamicProperty("cbed_player")) {
+    if (event.deadEntity instanceof Player && event.deadEntity.id === world.getDynamicProperty("tbd_player")) {
         world.getPlayers().forEach(async (v, i, a) => {
             v.kill();
         });

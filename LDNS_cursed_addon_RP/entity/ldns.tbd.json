@@ -2,22 +2,22 @@
   "format_version": "1.10.0",
   "minecraft:client_entity": {
     "description": {
-      "identifier": "ldns:cbed",
+      "identifier": "ldns:tbd",
       "materials": {
         "default": "entity_alphatest"
       },
       "textures": {
-        "default": "textures/entity/ldns/cbed"
+        "default": "textures/entity/ldns/tbd"
       },
       "geometry": {
-        "default": "geometry.cbed"
+        "default": "geometry.tbd"
       },
       "render_controllers": [
         "controller.render.default"
       ],
       "animations": {
-        "move" : "animation.cbed.movearms",
-        "movearms": "controller.animation.ldns_cbed.move"
+        "move" : "animation.tbd.movearms",
+        "movearms": "controller.animation.ldns_tbd.move"
       },
       "scripts": {
         "animate": [
