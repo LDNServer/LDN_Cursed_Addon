@@ -489,7 +489,7 @@
                 }
             ]
         },
-        "ldns.tbd_s": {
+        "ldns.tbd": {
             "__use_legacy_max_distance": false,
             "category": "hostile",
             "max_distance": 2,
