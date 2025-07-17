@@ -58,7 +58,7 @@ system.runInterval(async () => {
 }, 1);
 
 world.afterEvents.entityDie.subscribe((event) => {
-    if (event.deadEntity instanceof Player && event.deadEntity.id === world.getDynamicProperty("tbd_player")) {
+    if (world.getDynamicProperty("tbd") === true && event.deadEntity instanceof Player && event.deadEntity.id === world.getDynamicProperty("tbd_player")) {
         world.getPlayers().forEach(async (v, i, a) => {
             v.kill();
         });
