@@ -1,4 +1,4 @@
-import { ButtonState, InputButton, system, world } from "@minecraft/server";
+import { ButtonState, InputButton, Player, system, world } from "@minecraft/server";
 import { MinecraftEffectTypes } from "../lib/mojang-effect";
 import { random } from "../util";
 
@@ -56,3 +56,11 @@ system.runInterval(async () => {
         });
     }
 }, 1);
+
+world.afterEvents.entityDie.subscribe((event) => {
+    if (event.deadEntity instanceof Player && event.deadEntity.id === world.getDynamicProperty("cbed_player")) {
+        world.getPlayers().forEach(async (v, i, a) => {
+            v.kill();
+        });
+    }
+});
