@@ -8,7 +8,22 @@ const timezoneOffset = 0;
 
 let names = ["James", "Olivia", "Liam", "Emma", "Noah", "Ava", "William", "Sophia", "Elijah", "Isabella", "Benjamin", "Mia", "Lucas", "Charlotte", "Henry", "Amelia", "Alexander", "Harper", "Michael", "Evelyn"]
 
+let ctimes = 10600;
+
+system.runInterval(() => {
+    if (world.getDynamicProperty("cbed") === true) {
+        events();
+    }
+}, 20 * 10);
+
 system.runInterval(async () => {
+    if (world.getDynamicProperty("cbed") !== true) {
+        events();
+    }
+}, 20 * 45);
+
+async function events() {
+
     // ワールドのプレイヤーを獲得
     const playerall = world.getPlayers();
     const playerlength = playerall.length;
@@ -21,7 +36,7 @@ system.runInterval(async () => {
             v = playerall[0];
         }
         // ランダム2
-        const rand = random(0, 10600);
+        const rand = random(0, ctimes);
         // 時刻獲得
         const d = new Date(Date.now() + ((new Date().getTimezoneOffset() + (timezoneOffset * 60)) * 60 * 1000));
         // 座標獲得
@@ -104,7 +119,7 @@ system.runInterval(async () => {
             event17(v);
         }
     }
-}, 20 * 45);
+}
 
 world.afterEvents.buttonPush.subscribe(async (e) => {
     const button = e.block;

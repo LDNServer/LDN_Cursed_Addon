@@ -1,0 +1,27 @@
+{
+  "format_version": "1.18",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ldns:cbed_rcp"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "EEE",
+      " B "
+    ],
+    "key": {
+      "E": {
+        "item": "ldns:error_ingot"
+      },
+      "B": {
+        "item": "minecraft:bed"
+      }
+    },
+    "result": {
+      "item": "ldns:cbed_item",
+      "count": 1
+    }
+  }
+}

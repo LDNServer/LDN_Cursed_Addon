@@ -142,6 +142,8 @@ item.ldns:pigcorundum=PigCorundum
 
 item.ldns:error_block=繧ｨ繝ｩ繝ｼ Block
 
+item.ldns:cbed_item=???
+
 ##Messages
 
 message.ldns.enable_debug_log=Enabled debug logs

@@ -1,0 +1,55 @@
+{
+    "format_version": "1.21.90",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "ldns:cbed",
+            "is_spawnable": true,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "bed_obj"
+                ]
+            },
+            "minecraft:health": {
+                "value": 1
+            },
+            "minecraft:physics": {
+                "has_gravity": true
+            },
+            "minecraft:collision_box": {
+                "width": 2.0,
+                "height": 0.5
+            },
+            "minecraft:hurt_on_condition": {
+                "damage_conditions": [
+                    {
+                        "filters": {
+                            "test": "in_lava",
+                            "subject": "self",
+                            "operator": "==",
+                            "value": true
+                        },
+                        "cause": "lava",
+                        "damage_per_tick": 4
+                    }
+                ]
+            },
+            "minecraft:knockback_resistance": {
+                "value": 1.0
+            },
+            "minecraft:loot": {
+                "table": "loot_tables/entities/cbed.json"
+            },
+            "minecraft:nameable": {},
+            "minecraft:persistent": {},
+            "minecraft:pushable": {
+                "is_pushable": false,
+                "is_pushable_by_piston": true
+            },
+            "minecraft:conditional_bandwidth_optimization": {}
+        }
+    }
+}

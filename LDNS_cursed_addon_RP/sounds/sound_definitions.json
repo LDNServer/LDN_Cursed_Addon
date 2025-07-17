@@ -488,6 +488,18 @@
                     "volume": 1.0
                 }
             ]
+        },
+        "ldns.cbed": {
+            "__use_legacy_max_distance": false,
+            "category": "hostile",
+            "max_distance": 2,
+            "min_distance": 0,
+            "sounds": [
+                {
+                    "name": "sounds/ldns/PV",
+                    "volume": 1.0
+                }
+            ]
         }
     }
 }

@@ -73,6 +73,9 @@
 		},
 		"dn3895": {
 			"textures": "textures/item/ldns/dn3895"
+		},
+		"cbed": {
+			"textures": "textures/item/ldns/cbed_item"
 		}
 	}
 }

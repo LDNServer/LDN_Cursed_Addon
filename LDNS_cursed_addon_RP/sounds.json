@@ -293,6 +293,24 @@
                1.20
             ],
             "volume": 1.0
+         },
+         "ldns:cbed":{
+            "events": {
+               "ambient": {
+                  "pitch": [
+                     0.5,
+                     2.0
+                  ],
+                  "sound": "ldns.cbed"
+               },
+               "hurt": "use.wood",
+               "death": "use.wood"
+            },
+            "pitch": [
+               0.80,
+               1.20
+            ],
+            "volume": 1.0
          }
       }
    }

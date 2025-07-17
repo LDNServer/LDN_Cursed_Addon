@@ -1,0 +1,58 @@
+import { ButtonState, InputButton, system, world } from "@minecraft/server";
+import { MinecraftEffectTypes } from "../lib/mojang-effect";
+import { random } from "../util";
+
+world.beforeEvents.playerInteractWithEntity.subscribe((event) => {
+    if (event.target.typeId == "ldns:cbed") {
+        if (world.getTimeOfDay() >= 12000 && world.getDynamicProperty("cbed") === false || world.getDynamicProperty("cbed") == undefined) {
+            world.setDynamicProperty("cbed", true);
+            world.setDynamicProperty("cbed_player", event.player.id);
+            world.sendMessage("あなたはですか。");
+            system.run(() => {
+                world.setTimeOfDay(10);
+            });
+        } else if (world.getDynamicProperty("cbed") === true) {
+            world.sendMessage("あなたはです。");
+        } else {
+            world.sendMessage("あなたはです。あなたはですか。");
+        }
+    }
+});
+
+system.runInterval(async () => {
+    if (world.getDynamicProperty("cbed") === true && world.getTimeOfDay() === 1) {
+        world.setDynamicProperty("cbed", false);
+    }
+    if (world.getDynamicProperty("cbed") === true && world.getTimeOfDay() === 6000) {
+        world.setTimeOfDay(13000);
+    }
+    if (world.getDynamicProperty("cbed") === true) {
+        let cplayer = world.getPlayers().find(p => p.id === world.getDynamicProperty("cbed_player"));
+        if (cplayer == undefined) {
+            return;
+        }
+        let health = cplayer.getComponent("minecraft:health");
+        health.setCurrentValue(1);
+        cplayer.addEffect(MinecraftEffectTypes.Hunger, 20 * 10, { amplifier: 255 });
+        cplayer.addEffect(MinecraftEffectTypes.Slowness, 20 * 10, { amplifier: 4 });
+        let yjumptest = cplayer.location.y;
+        if (cplayer.inputInfo.getButtonState(InputButton.Jump) == ButtonState.Pressed) {
+            for (let x = 0; x < 20; x++) {
+                cplayer.teleport({ x: cplayer.location.x, y: yjumptest, z: cplayer.location.z });
+                await system.waitTicks(1);
+            }
+        }
+        world.getPlayers().forEach(async (v, i, a) => {
+            if (!cplayer) {
+                v.addEffect(MinecraftEffectTypes.Slowness, 20 * 10, { amplifier: 2 });
+                if (random(0, 20 * 60 * 20) == 0) {
+                    v.dimension.spawnEntity("ldns:lightning_object", v.location);
+                }
+                let vhealth = v.getComponent("minecraft:health");
+                if (vhealth.currentValue >= 10) {
+                    vhealth.setCurrentValue(10);
+                }
+            }
+        });
+    }
+}, 1);

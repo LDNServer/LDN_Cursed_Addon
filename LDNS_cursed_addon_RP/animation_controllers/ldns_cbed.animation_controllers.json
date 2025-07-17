@@ -1,0 +1,20 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.ldns_cbed.move": {
+            "initial_state": "loop",
+            "states": {
+                "loop": {
+                    "animations": [
+                        "move"
+                    ],
+                    "transitions": [
+                        {
+                            "loop": "query.all_animations_finished"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
