@@ -294,7 +294,7 @@
             ],
             "volume": 1.0
          },
-         "ldns:tbd_s":{
+         "ldns:tbd":{
             "events": {
                "ambient": {
                   "pitch": [
