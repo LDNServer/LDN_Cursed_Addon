@@ -95,6 +95,15 @@ item.spawn_egg.entity.ldns:romanesco87.name=Romanesco87 のスポーンエッグ
 entity.ldns:iamyoumaybe.name=I am you maybe
 item.spawn_egg.entity.ldns:iamyoumaybe.name="I am you maybe" のスポーンエッグ
 
+entity.ldns:never_sleep.name=§4Never Sleep
+item.spawn_egg.entity.ldns:never_sleep.name=§4Never Sleep§r のスポーンエッグ
+
+entity.ldns:ov7.name=Oblivionv7
+item.spawn_egg.entity.ldns:ov7.name=Oblivionv7 のスポーンエッグ
+
+entity.ldns:ov8.name=Oblivionv8
+item.spawn_egg.entity.ldns:ov8.name=Oblivionv8 のスポーンエッグ
+
 ##ブロック
 tile.ldns:error_block.name=繧ｨ繝ｩ繝ｼ ブロック
 

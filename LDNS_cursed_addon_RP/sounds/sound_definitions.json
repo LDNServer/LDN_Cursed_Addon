@@ -500,6 +500,18 @@
                     "volume": 1.0
                 }
             ]
+        },
+        "ldns.never_sleep": {
+            "__use_legacy_max_distance": false,
+            "category": "hostile",
+            "max_distance": 64,
+            "min_distance": 0,
+            "sounds": [
+                {
+                    "name": "sounds/ldns/never_sleep",
+                    "volume": 1.0
+                }
+            ]
         }
     }
 }

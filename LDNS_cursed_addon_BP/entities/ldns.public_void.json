@@ -42,10 +42,14 @@
                 "value": 0.44
             },
             "minecraft:navigation.walk": {
-              "can_path_over_water": true,
-              "can_pass_doors": true,
-              "can_open_doors": true,
-              "avoid_water": false
+                "can_path_over_water": true,
+                "can_pass_doors": true,
+                "can_open_doors": true,
+                "avoid_water": false
+            },
+            "minecraft:behavior.open_door": {
+                "priority": 6,
+                "close_door_after": true
             },
             "minecraft:movement.basic": {},
             "minecraft:jump.static": {},

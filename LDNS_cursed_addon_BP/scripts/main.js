@@ -25,6 +25,9 @@ import './entity_event/herovoid';
 import './entity_event/place';
 import './entity_event/iamyoumaybe';
 import './entity_event/tbd';
+import './entity_event/never_sleep';
+import './entity_event/ov7';
+import './entity_event/ov8';
 
 const timezoneOffset = 0;
 

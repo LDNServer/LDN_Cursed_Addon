@@ -47,6 +47,10 @@
               "can_open_doors": true,
               "avoid_water": false
             },
+            "minecraft:behavior.open_door": {
+                "priority": 6,
+                "close_door_after": true
+            },
             "minecraft:movement.basic": {},
             "minecraft:jump.static": {},
             "minecraft:can_climb": {},

@@ -2,7 +2,7 @@
     "format_version": "1.18.31",
     "minecraft:entity": {
         "description": {
-            "identifier": "ldns:herovoid",
+            "identifier": "ldns:never_sleep",
             "is_spawnable": true,
             "is_summonable": true,
             "is_experimental": false
@@ -11,7 +11,6 @@
             "minecraft:nameable": {},
             "minecraft:type_family": {
                 "family": [
-                    "monster",
                     "mob"
                 ]
             },
@@ -20,11 +19,10 @@
                 "height": 1.8
             },
             "minecraft:health": {
-                "value": 44,
-                "max": 44
+                "value": 66
             },
             "minecraft:loot": {
-                "table": "loot_tables/entities/herovoid.json"
+                "table": "loot_tables/entities/never_sleep.json"
             },
             "minecraft:behavior.look_at_player": {
                 "priority": 8,
@@ -39,13 +37,14 @@
             },
             "minecraft:physics": {},
             "minecraft:movement": {
-                "value": 0.44
+                "value": 0.666
             },
             "minecraft:navigation.walk": {
-              "can_path_over_water": true,
-              "can_pass_doors": true,
-              "can_open_doors": true,
-              "avoid_water": false
+                "can_walk": true,
+                "can_path_over_water": true,
+                "can_pass_doors": true,
+                "can_open_doors": true,
+                "avoid_water": false
             },
             "minecraft:behavior.open_door": {
                 "priority": 6,
@@ -55,7 +54,7 @@
             "minecraft:jump.static": {},
             "minecraft:can_climb": {},
             "minecraft:attack": {
-                "damage": 3
+                "damage": 5
             },
             "minecraft:behavior.melee_attack": {
                 "priority": 1

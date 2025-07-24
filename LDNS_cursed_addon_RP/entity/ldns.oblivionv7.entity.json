@@ -2,20 +2,20 @@
   "format_version": "1.8.0",
   "minecraft:client_entity": {
     "description": {
-      "identifier": "ldns:public_void",
+      "identifier": "ldns:ov7",
       "min_engine_version": "1.8.0",
       "materials": {
-        "default": "entity_emissive_alpha_one_sided"
+        "default": "entity_alphatest"
       },
       "textures": {
-        "default": "textures/entity/ldns/import/publicvoid"
+        "default": "textures/entity/ldns/ov7"
       },
       "geometry": {
         "default": "geometry.humanoid.custom"
       },
       "spawn_egg": {
-        "base_color": "#ffffff",
-        "overlay_color": "#000000"
+        "base_color": "#000000",
+        "overlay_color": "#ff0000"
       },
       "scripts": {
         "pre_animation": [

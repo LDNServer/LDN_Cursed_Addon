@@ -2,20 +2,20 @@
   "format_version": "1.8.0",
   "minecraft:client_entity": {
     "description": {
-      "identifier": "ldns:public_void",
+      "identifier": "ldns:never_sleep",
       "min_engine_version": "1.8.0",
       "materials": {
-        "default": "entity_emissive_alpha_one_sided"
+        "default": "entity_alphatest"
       },
       "textures": {
-        "default": "textures/entity/ldns/import/publicvoid"
+        "default": "textures/entity/ldns/never_sleep"
       },
       "geometry": {
-        "default": "geometry.humanoid.custom"
+        "default": "geometry.humanoid.customSlim"
       },
       "spawn_egg": {
-        "base_color": "#ffffff",
-        "overlay_color": "#000000"
+        "base_color": "#ff0000",
+        "overlay_color": "#777777"
       },
       "scripts": {
         "pre_animation": [

@@ -118,6 +118,10 @@ async function events() {
         else if (rand <= 1900 && rand > 1800) {
             event17(v);
         }
+        // oblivionv7 or oblivionv8が出てくる
+        else if (rand <= 2000 && rand > 1900) {
+            event18(v);
+        }
     }
 }
 
@@ -949,6 +953,14 @@ async function event16(v, posX, posY, posZ, pitch, yaw) {
  */
 function event17(v) {
     world.getDimension(v.dimension.id).spawnEntity("ldns:iamyoumaybe", { x: v.location.x + 30, y: v.location.y + 25, z: v.location.z });
+}
+
+function event18(v) {
+    if (random(0, 2) == 0) {
+        world.getDimension(v.dimension.id).spawnEntity("ldns:ov7", { x: v.location.x + random(-32, 32), y: random(-20, 60), z: v.location.z + random(-32, 32) });
+    } else {
+        world.getDimension(v.dimension.id).spawnEntity("ldns:ov8", { x: v.location.x + random(-32, 32), y: random(-20, 60), z: v.location.z + random(-32, 32) });
+    }
 }
 
 
