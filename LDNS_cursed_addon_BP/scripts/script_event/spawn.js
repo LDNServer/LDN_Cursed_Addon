@@ -454,6 +454,14 @@ world.afterEvents.playerInteractWithBlock.subscribe(async (e) => {
     }
 });
 
+function isEven(number) {
+    return number % 2 === 0;
+}
+
+function isOdd(number) {
+    return number % 2 !== 0;
+}
+
 /**
  * 
  * @param {Date} d 
@@ -461,8 +469,8 @@ world.afterEvents.playerInteractWithBlock.subscribe(async (e) => {
  * @param {import("@minecraft/server").Vector3} playerlocation 
  */
 function event0(d, v, playerlocation) {
-    // UTC 12~24時の時にPPが出る
-    if (d.getHours() <= 24 && d.getHours() >= 12) {
+    // UTCが偶数の時にPPが出る
+    if (isEven(d.getHours())) {
         v.dimension.runCommand("tellraw @a {\"rawtext\":[{\"text\":\"If the hand §oholding§r the leg §3trembles§r, cut §lthe leg off.§r§§\"}]}");
         v.playSound("ldns.pp_spawn");
         v.onScreenDisplay.setTitle("ppse");
@@ -470,8 +478,8 @@ function event0(d, v, playerlocation) {
         v.playSound("ldns.ppyy_spawn");
         v.dimension.spawnEntity("ldns:pp", playerlocation);
     }
-    // UTC 0~12時の時にYYが出る
-    else if (d.getHours() <= 12 && d.getHours() >= 0) {
+    // UTCが奇数の時にYYが出る
+    else if (isOdd(d.getHours())) {
         v.dimension.runCommand("tellraw @a {\"rawtext\":[{\"text\":\"I'm on your §lside§r, so I'll keep§l§o watching§r until that §6blood dries§r.\"}]}");
         v.playSound("ldns.yy_spawn");
         v.onScreenDisplay.setTitle("yyse");
@@ -511,8 +519,8 @@ function event1(v) {
  * @param {Player} v 
  */
 function event2(d, v) {
-    if (d.getHours() <= 24 || d.getHours() >= 12) { v.runCommand("give @s ldns:dn3895"); }
-    else if (d.getHours() <= 12 || d.getHours() >= 0) { v.runCommand("give @s ldns:ld5987"); }
+    if (isEven(d.getHours())) { v.runCommand("give @s ldns:dn3895"); }
+    else if (isOdd(d.getHours())) { v.runCommand("give @s ldns:ld5987"); }
 }
 
 /**

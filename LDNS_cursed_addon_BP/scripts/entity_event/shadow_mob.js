@@ -3,6 +3,14 @@ import { random } from "../util";
 
 const timezoneOffset = 0;
 
+function isEven(number) {
+    return number % 2 === 0;
+}
+
+function isOdd(number) {
+    return number % 2 !== 0;
+}
+
 // 影のものが倒された時のイベント
 world.afterEvents.entityDie.subscribe((edae) => {
     const { damageSource, deadEntity } = edae;
@@ -21,8 +29,8 @@ world.afterEvents.entityDie.subscribe((edae) => {
             // ペンダントの場合
             if (item.typeId === 'ldns:pendant_of_heat_sand') {
                 if (random(0, 8) === 0) {
-                    if (d.getHours() <= 24 || d.getHours() >= 12) { damageSource.damagingEntity.runCommand("give @s ldns:ld5987"); }
-                    else if (d.getHours() <= 12 || d.getHours() >= 0) { damageSource.damagingEntity.runCommand("give @s ldns:dn3895"); }
+                    if (isEven(d.getHours())) { damageSource.damagingEntity.runCommand("give @s ldns:ld5987"); }
+                    else if (isOdd(d.getHours())) { damageSource.damagingEntity.runCommand("give @s ldns:dn3895"); }
                     container.setItem(i, null);
                     break;
                 }
