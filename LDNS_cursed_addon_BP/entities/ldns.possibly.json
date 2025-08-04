@@ -1,0 +1,46 @@
+{
+    "format_version": "1.18.31",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "ldns:possibly",
+            "is_spawnable": true,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+        "components": {
+            "minecraft:nameable": {},
+            "minecraft:type_family": {
+                "family": [
+                    "maybe"
+                ]
+            },
+            "minecraft:collision_box": {
+                "width": 0.8,
+                "height": 2.0
+            },
+            "minecraft:health": {
+                "value": 300,
+                "max": 300
+            },
+            "minecraft:behavior.look_at_player": {
+                "priority": 8,
+                "look_distance": 6,
+                "probability": 0.02
+            },
+            "minecraft:experience_reward": {
+                "on_death": "5"
+            },
+            "minecraft:behavior.random_look_around": {
+                "priority": 9
+            },
+            "minecraft:physics": {},
+            "minecraft:movement": {
+                "value": 0.0
+            },
+            "minecraft:scale": {
+                "value": 3.0
+            },
+            "minecraft:jump.static": {}
+        }
+    }
+}

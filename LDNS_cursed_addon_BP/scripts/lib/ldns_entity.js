@@ -17,5 +17,16 @@ export const targetEntities = {
     'ldns:skeleton_trader': {},
     'ldns:pp': {},
     'ldns:yy': {},
-    "ldns:entity787": {}
+    "ldns:entity787": {},
+    "ldns:never_sleep": {},
+    "ldns:ov7": {},
+    "ldns:ov8": {},
+    "ldns:place": {},
+    "ldns:possibly": {},
+    "ldns:shadow_mob_desert": {},
+    "ldns:vill": {},
+    "ldns:tbd": {},
+    "ldns:binary444": {},
+    "ldns:herovoid": {},
+    "ldns:public_void": {}
 }

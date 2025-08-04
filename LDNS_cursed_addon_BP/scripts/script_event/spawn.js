@@ -122,6 +122,10 @@ async function events() {
         else if (rand <= 2000 && rand > 1900) {
             event18(v);
         }
+        // 謎のformが出てくる
+        else if (rand <= 2010 && rand > 2000) {
+            event19(v);
+        }
     }
 }
 
@@ -963,11 +967,42 @@ function event17(v) {
     world.getDimension(v.dimension.id).spawnEntity("ldns:iamyoumaybe", { x: v.location.x + 30, y: v.location.y + 25, z: v.location.z });
 }
 
+/**
+ * 
+ * @param {Player} v 
+ */
 function event18(v) {
     if (random(0, 2) == 0) {
         world.getDimension(v.dimension.id).spawnEntity("ldns:ov7", { x: v.location.x + random(-32, 32), y: random(-20, 60), z: v.location.z + random(-32, 32) });
     } else {
         world.getDimension(v.dimension.id).spawnEntity("ldns:ov8", { x: v.location.x + random(-32, 32), y: random(-20, 60), z: v.location.z + random(-32, 32) });
+    }
+}
+
+/**
+ * 
+ * @param {Player} v 
+ */
+function event19(v) {
+    if (v.getDynamicProperty("possibly") == undefined || v.getDynamicProperty("possibly") == null || v.getDynamicProperty("possibly") == -1) {
+        const Pform = new MessageFormData();
+        Pform.title("Possibly").body("I am there.").button1("§kUndefine§r").button2("§kNull§r");
+        Pform.show(v).then(async res => {
+            if (res.selection === 0) {
+                if (random(0, 2) === 0) {
+                    v.setDynamicProperty("possibly", 0);
+                }
+            } else if (res.selection === 1) {
+                if (random(0, 2) === 0) {
+                    v.setDynamicProperty("possibly", 0);
+                }
+            }
+            else if (res.canceled) {
+                if (random(0, 2) === 0) {
+                    v.setDynamicProperty("possibly", 0);
+                }
+            }
+        });
     }
 }
 
@@ -983,13 +1018,11 @@ system.afterEvents.scriptEventReceive.subscribe((e) => {
             world.setDynamicProperty("toggle_chat", true);
         }
     }
-    /**
     if (e.id == "ldns:test_new") {
         let player = e.sourceEntity;
         if (player instanceof Player)
-            event17(player);
+            event19(player);
     }
-     */
 });
 
 // 繝｡繝｢繝ｪ繝ｼ繝ｬ繧､繝?Φ繧ｷ繝ｼ繧ｨ繝ｩ繝ｼ

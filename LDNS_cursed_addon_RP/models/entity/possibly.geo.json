@@ -1,0 +1,84 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.possibly",
+				"texture_width": 32,
+				"texture_height": 32,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "rightleg",
+					"pivot": [-1, 9, 0],
+					"cubes": [
+						{"origin": [-2, 0, -1], "size": [2, 9, 2], "uv": [0, 8]}
+					]
+				},
+				{
+					"name": "leftleg",
+					"pivot": [1, 9, 0],
+					"cubes": [
+						{"origin": [0, 0, -1], "size": [2, 9, 2], "uv": [8, 8]}
+					]
+				},
+				{
+					"name": "head",
+					"pivot": [0, 18, 0],
+					"rotation": [-15, 0, 0],
+					"cubes": [
+						{"origin": [-3, 17.75, -2], "size": [4, 4, 4], "pivot": [-1, 18, 0], "rotation": [0, 15, -17.5], "uv": [0, 0]},
+						{"origin": [-1, 17.75, -2], "size": [4, 4, 4], "pivot": [1, 18, 0], "rotation": [0, -15, 17.5], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "body",
+					"pivot": [0, 13.5, 0],
+					"cubes": [
+						{"origin": [-2, 9, -1], "size": [4, 9, 2], "uv": [20, 0]},
+						{"origin": [-2, 9, -1], "size": [4, 9, 2], "inflate": 0.2, "uv": [20, 11]}
+					]
+				},
+				{
+					"name": "rightarm",
+					"pivot": [-2, 16, 0],
+					"rotation": [-15, 0, 0],
+					"cubes": [
+						{"origin": [-4, 11.06815, -1.51764], "size": [2, 6, 2], "uv": [0, 24]},
+						{"origin": [-4, 11.06815, -1.51764], "size": [2, 6, 2], "inflate": 0.2, "uv": [8, 24]}
+					]
+				},
+				{
+					"name": "leftarm",
+					"pivot": [2, 16, 0],
+					"rotation": [-15, 0, 0],
+					"cubes": [
+						{"origin": [2, 11, -1], "size": [2, 6, 2], "uv": [16, 24]},
+						{"origin": [2, 11, -1], "size": [2, 6, 2], "inflate": 0.2, "uv": [24, 24]}
+					]
+				},
+				{
+					"name": "rightarm2",
+					"pivot": [-1, 16, 0],
+					"rotation": [39.54528, -9.74186, 47.69165],
+					"cubes": [
+						{"origin": [-2, 10, -1], "size": [2, 6, 2], "pivot": [-1, 16, 0], "rotation": [0, 90, 0], "uv": [0, 24]},
+						{"origin": [-1, 4, 0], "size": [2, 6, 2], "pivot": [-1, 10, 1], "rotation": [-90, 30, -90], "uv": [0, 24]}
+					]
+				},
+				{
+					"name": "leftarm2",
+					"pivot": [1, 16, 0],
+					"rotation": [39.54528, 9.74186, -47.69165],
+					"cubes": [
+						{"origin": [0, 10, -1], "size": [2, 6, 2], "pivot": [1, 16, 0], "rotation": [0, -90, 0], "uv": [16, 24]},
+						{"origin": [-1, 4, 0], "size": [2, 6, 2], "pivot": [1, 10, 1], "rotation": [-90, -30, 90], "uv": [16, 24]}
+					]
+				}
+			]
+		}
+	]
+}
