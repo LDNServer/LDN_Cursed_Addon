@@ -32,25 +32,17 @@ system.runInterval(() => {
                 world.sendMessage("The difficulty level was set to Hard.");
                 break;
             case 3:
-                world.gameRules.doDayLightCycle = true;
-                world.sendMessage("Gamemode's doDayLightCycle has been set to True.");
-                break;
-            case 4:
-                world.gameRules.doDayLightCycle = false;
-                world.sendMessage("Gamemode's doDayLightCycle has been set to False.");
-                break;
-            case 5:
                 world.sendMessage("I'm livewinner A666");
                 break;
-            case 6:
+            case 4:
                 world.getDimension("overworld").setWeather(WeatherType.Clear);
                 world.sendMessage("The weather was set to clear.");
                 break;
-            case 7:
+            case 5:
                 world.getDimension("overworld").setWeather(WeatherType.Rain);
                 world.sendMessage("The weather was set to rain.");
                 break;
-            case 8:
+            case 6:
                 world.getDimension("overworld").setWeather(WeatherType.Thunder);
                 world.sendMessage("The weather was set to thunder.");
                 break;
