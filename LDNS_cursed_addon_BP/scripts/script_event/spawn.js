@@ -119,7 +119,7 @@ async function events() {
             event17(v);
         }
         // oblivionv7 or oblivionv8が出てくる
-        else if (rand <= 2000 && rand > 1900) {
+        else if (rand <= 1920 && rand > 1900) {
             event18(v);
         }
         // 謎のformが出てくる
