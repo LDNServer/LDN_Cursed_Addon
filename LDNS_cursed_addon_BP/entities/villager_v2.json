@@ -1467,6 +1467,7 @@
         "height": 1.9
       },
       "minecraft:nameable": {
+        "always_show": true
       },
       "minecraft:movement": {
         "value": 0.5

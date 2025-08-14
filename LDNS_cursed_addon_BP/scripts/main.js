@@ -28,7 +28,8 @@ import './entity_event/tbd';
 import './entity_event/never_sleep';
 import './entity_event/ov7';
 import './entity_event/ov8';
-import './entity_event/possibly'
+import './entity_event/possibly';
+import './entity_event/personal_villager'
 
 const timezoneOffset = 0;
 

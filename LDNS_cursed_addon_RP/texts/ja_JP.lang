@@ -107,6 +107,9 @@ item.spawn_egg.entity.ldns:ov8.name=Oblivionv8 のスポーンエッグ
 entity.ldns:possibly.name=Possibly
 item.spawn_egg.entity.ldns:possibly.name=Possibly のスポーンエッグ
 
+entity.ldns:pv.name=Personal Villager
+item.spawn_egg.entity.ldns:pv.name=Personal Villager のスポーンエッグ
+
 ##ブロック
 tile.ldns:error_block.name=繧ｨ繝ｩ繝ｼ ブロック
 

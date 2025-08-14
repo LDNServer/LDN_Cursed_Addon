@@ -1,0 +1,149 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "ldns:pv",
+      "is_spawnable": true,
+      "is_summonable": true
+    },
+    "component_groups": {
+      "ldns:pv_explosion": {
+        "minecraft:explode": {
+          "breaks_blocks": false,
+          "power": 16
+        },
+        "minecraft:instant_despawn": {
+          "remove_child_entities": false
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "mob"
+        ]
+      },
+      "minecraft:experience_reward": {
+        "on_death": 66
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "on_damage": {
+              "filters": [
+                {
+                  "test": "has_damage",
+                  "operator": "equals",
+                  "value": "suffocation",
+                  "subject": "self"
+                }
+              ],
+              "target": "self"
+            },
+            "deals_damage": "no"
+          }
+        ]
+      },
+      "minecraft:breathable": {
+        "total_supply": 15,
+        "suffocate_time": 0
+      },
+      "minecraft:health": {
+        "value": 78
+      },
+      "minecraft:collision_box": {
+        "width": 0.6,
+        "height": 1.9
+      },
+      "minecraft:movement": {
+        "value": 0.78
+      },
+      "minecraft:navigation.walk": {
+        "is_amphibious": true,
+        "can_path_over_water": true,
+        "can_pass_doors": true,
+        "can_open_doors": true,
+        "can_walk": true,
+        "avoid_water": true
+      },
+      "minecraft:annotation.open_door": {},
+      "minecraft:movement.basic": {},
+      "minecraft:can_climb": {},
+      "minecraft:persistent": {},
+      "minecraft:behavior.float": {
+        "priority": 0
+      },
+      "minecraft:behavior.move_indoors": {
+        "priority": 4,
+        "speed_multiplier": 0.8
+      },
+      "minecraft:behavior.restrict_open_door": {
+        "priority": 5
+      },
+      "minecraft:behavior.open_door": {
+        "priority": 6,
+        "close_door_after": true
+      },
+      "minecraft:behavior.random_stroll": {
+        "priority": 11,
+        "speed_multiplier": 0.6
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 12,
+        "look_distance": 64,
+        "probability": 0.02
+      },
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:conditional_bandwidth_optimization": {},
+      "minecraft:attack": {
+        "damage": 6
+      },
+      "minecraft:behavior.nearest_attackable_target": {
+        "priority": 1,
+        "entity_types": [
+          {
+            "filters": {
+              "all_of": {
+                "all_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              }
+            },
+            "max_dist": 64
+          }
+        ],
+        "must_see": true
+      },
+      "minecraft:behavior.melee_attack": {
+        "priority": 1
+      },
+      "minecraft:timer": {
+        "time": 80,
+        "time_down_event": {
+          "event": "ldns:pv_explosion_event",
+          "target": "self"
+        }
+      },
+      "minecraft:jump.static": {
+        "jump_power": 0.66
+      }
+    },
+    "events": {
+      "ldns:pv_explosion_event": {
+        "add": {
+          "component_groups": [
+            "ldns:pv_explosion"
+          ]
+        }
+      }
+    }
+  }
+}

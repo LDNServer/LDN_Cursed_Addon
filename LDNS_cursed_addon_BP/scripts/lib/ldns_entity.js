@@ -28,5 +28,6 @@ export const targetEntities = {
     "ldns:tbd": {},
     "ldns:binary444": {},
     "ldns:herovoid": {},
-    "ldns:public_void": {}
+    "ldns:public_void": {},
+    "ldns:pv": {}
 }
