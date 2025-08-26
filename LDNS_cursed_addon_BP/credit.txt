@@ -2,13 +2,11 @@
 福知山よんぱち (Tester,Code)
 Kagaribi172 (Code,Texture)
 親子丼株式会社 (Tester)
-Shiumano (Tester)
 tutinoko9900(Code)
-sakurago(Texture)
-
-====SUB_CREDIT====
 Tei(Texture)
 Test_Alpha(Texture)
+
+====SUB_CREDIT====
 かずぎつね(Texture)
 
 ====Special thanks====
@@ -19,3 +17,5 @@ LDN Server - LDNS
 無意識 (Assistant)
 mayonaka8478 (Texture)
 kamiyasuri(Texture)
+sakurago(Texture)
+Shiumano (Tester)
