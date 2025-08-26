@@ -65,7 +65,7 @@ Kagaribi172 (Code,Texture)<br>
 Shiumano (Tester)<br>
 tutinoko9900(Code)<br>
 sakurago(Texture)<br>
-Tei(Texture)<br>
+てぃ(Texture)<br>
 Test_Alpha(Texture)<br>
 
 ====SUB_CREDIT====<br>

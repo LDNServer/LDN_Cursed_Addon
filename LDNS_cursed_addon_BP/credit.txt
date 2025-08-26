@@ -3,7 +3,7 @@
 Kagaribi172 (Code,Texture)
 親子丼株式会社 (Tester)
 tutinoko9900(Code)
-Tei(Texture)
+てぃ(Texture)
 Test_Alpha(Texture)
 
 ====SUB_CREDIT====
