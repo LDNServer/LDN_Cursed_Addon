@@ -101,6 +101,9 @@ item.spawn_egg.entity.ldns:possibly.name=Spawn Possibly
 entity.ldns:pv.name=Personal Villager
 item.spawn_egg.entity.ldns:pv.name=Spawn Personal Villager
 
+entity.ldns:error64.name=Error64
+item.spawn_egg.entity.ldns:error64.name=Spawn Error64
+
 ##Block
 tile.ldns:error_block.name=繧ｨ繝ｩ繝ｼ Block
 

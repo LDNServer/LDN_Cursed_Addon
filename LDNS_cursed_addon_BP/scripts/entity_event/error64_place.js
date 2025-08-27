@@ -1,7 +1,17 @@
 import { Entity, Player, system, world } from "@minecraft/server";
 import { random } from '../util';
 import { getTopmostBlockLocation } from '../functions/max_y';
+import { event14 } from "../script_event/spawn";
 
+system.runInterval(() => {
+    world.getPlayers().forEach((v, i, a) => {
+        let nearerror64 = world.getDimension("minecraft:overworld").getEntities({ type: "ldns:error64", location: v.location, maxDistance: 8.6 });
+        nearerror64.forEach((e, ei, ea) => {
+            e.remove();
+            event14(v);
+        });
+    });
+}, 3);
 
 world.afterEvents.entityHitEntity.subscribe((e) => {
     if (e.damagingEntity.typeId === "ldns:place") {
@@ -27,7 +37,11 @@ world.afterEvents.entityHurt.subscribe(async (e) => {
                 e.damageSource.damagingEntity.runCommand("give @s minecraft:emerald 8");
                 e.damageSource.damagingEntity.sendMessage("§0D§1o§2n§3'§4t §5r§6u§7n §8a§9w§aa§by§c.");
                 await system.waitTicks(20 * 3);
-                e.damageSource.damagingEntity.teleport({ x: e.damageSource.damagingEntity.getDynamicProperty("LposX"), y: e.damageSource.damagingEntity.getDynamicProperty("LposY"), z: e.damageSource.damagingEntity.getDynamicProperty("LposZ") });
+                if (e.damageSource.damagingEntity.getDynamicProperty("LposX") == undefined || e.damageSource.damagingEntity.getDynamicProperty("LposY") == undefined || e.damageSource.damagingEntity.getDynamicProperty("LposZ")) {
+                    e.damageSource.damagingEntity.teleport({ x: 0, y: getTopmostBlockLocation(e.damageSource.damagingEntity.dimension, 0, 0), z: 0 });
+                } else {
+                    e.damageSource.damagingEntity.teleport({ x: e.damageSource.damagingEntity.getDynamicProperty("LposX"), y: e.damageSource.damagingEntity.getDynamicProperty("LposY"), z: e.damageSource.damagingEntity.getDynamicProperty("LposZ") });
+                }
                 container.setItem(i, null);
                 if (e.damageSource.damagingEntity.getDynamicProperty("longfixTag") == true) {
                     e.damageSource.damagingEntity.setDynamicProperty("longfixTag", false);
@@ -49,13 +63,9 @@ world.afterEvents.entityHurt.subscribe(async (e) => {
  */
 async function place_event(entity, player) {
     if (!(player instanceof Player)) { return };
-    let RX = random(-500, 500);
-    let RZ = random(-500, 500);
-    player.teleport({ x: RX, y: 120, z: RZ });
-    await system.waitTicks(20 * 3);
-    let maxY = getTopmostBlockLocation(player.dimension, RX, RZ);
-    player.teleport({ x: RX, y: maxY + 2, z: RZ });
-    await system.waitTicks(20);
+    let RX = 0;
+    let RZ = 0;
+    player.teleport({ x: RX, y: getTopmostBlockLocation(player.dimension, RX, RZ) + 2, z: RZ });
     if (player.getDynamicProperty("longfixTag") == true) {
         player.setDynamicProperty("longfixTag", false);
     }

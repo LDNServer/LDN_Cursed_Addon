@@ -3,6 +3,7 @@ import { random } from "../util";
 import { freeze } from "../functions/kanasibari";
 import { MinecraftEffectTypes } from "../lib/mojang-effect";
 import { MessageFormData, ModalFormData } from "@minecraft/server-ui";
+import { getTopmostBlockLocation } from "../functions/max_y";
 
 const timezoneOffset = 0;
 
@@ -100,9 +101,9 @@ async function events() {
         else if (rand <= 1500 && rand > 1400) {
             event13(v);
         }
-        // 謎の場所
-        else if (rand <= 1510 && rand > 1500) {
-            event14(v);
+        // error64が出てくる
+        else if (rand <= 1525 && rand > 1500) {
+            event14X(v);
         }
         // ランダムチャット
         else if (rand <= 1700 && rand > 1600 && world.getDynamicProperty("toggle_chat")) {
@@ -123,7 +124,7 @@ async function events() {
             event18(v);
         }
         // 謎のformが出てくる
-        else if (rand <= 2010 && rand > 2000) {
+        else if (rand <= 2005 && rand > 2000) {
             event19(v);
         }
     }
@@ -657,7 +658,7 @@ async function event4(d, v, playerlength, playerall) {
  */
 async function event5(v) {
     if (random(0, 8) <= 7) {
-        world.getDimension(v.dimension.id).spawnEntity("ldns:attacker_nitwit_villager", v.location);
+        v.dimension.spawnEntity("ldns:attacker_nitwit_villager", v.location);
     }
 }
 
@@ -666,7 +667,7 @@ async function event5(v) {
  * @param {Player} v 
  */
 function event6(v) {
-    world.getDimension(v.dimension.id).spawnEntity("ldns:mysterious_players", v.location);
+    v.dimension.spawnEntity("ldns:mysterious_players", v.location);
 }
 
 /**
@@ -761,7 +762,7 @@ export async function event11(playerall, v) {
     }
     world.setDynamicProperty("villTGS", false);
     // Mobをスポーン
-    world.getDimension(v.dimension.id).spawnEntity("ldns:vill", { x: spawnX, y: spawnY, z: spawnZ });
+    v.dimension.spawnEntity("ldns:vill", { x: spawnX, y: spawnY, z: spawnZ });
     // 追いかけるためのIDを指定
     world.setDynamicProperty("villTGid", v.id);
     world.setDynamicProperty("villTGS", true);
@@ -784,66 +785,59 @@ export async function event12(v) {
  * @param {Player} v 
  */
 export async function event13(v) {
+    let xX = v.location.x + 15;
+    let zZ = v.location.z - 15;
     switch (random(0, 3)) {
         case 0:
             v.playSound("ldns.publicvoid");
             for (let i = 0; i < random(2, 6); i++) {
-                v.dimension.spawnEntity("ldns:public_void", { x: v.location.x + 15, y: v.location.y + 5, z: v.location.z });
+                v.dimension.spawnEntity("ldns:public_void", { x: xX, y: getTopmostBlockLocation(v.dimension, xX, zZ) + 2, z: zZ });
             }
             break;
         case 1:
             v.playSound("ldns.binary444");
             for (let i = 0; i < random(2, 6); i++) {
-                v.dimension.spawnEntity("ldns:binary444", { x: v.location.x + 15, y: v.location.y + 5, z: v.location.z });
+                v.dimension.spawnEntity("ldns:binary444", { x: xX, y: getTopmostBlockLocation(v.dimension, xX, zZ) + 2, z: zZ });
             }
             break;
         case 2:
             v.playSound("ldns.herovoid");
             for (let i = 0; i < random(2, 6); i++) {
-                v.dimension.spawnEntity("ldns:herovoid", { x: v.location.x + 15, y: v.location.y + 5, z: v.location.z });
+                v.dimension.spawnEntity("ldns:herovoid", { x: xX, y: getTopmostBlockLocation(v.dimension, xX, zZ) + 2, z: zZ });
             }
             break;
     }
 }
+
+/**
+ * 
+ * @param {Player} v 
+ */
+function event14X(v) {
+    let xX = v.location.x + 60;
+    let zZ = v.location.z - 60;
+    v.dimension.spawnEntity("ldns:error64", { x: xX, y: getTopmostBlockLocation(v.dimension, xX, zZ) + 2, z: zZ });
+}
+
 /**
  * 
  * @param {Player} v 
  */
 
 export async function event14(v) {
-    const equippable = v.getComponent('minecraft:equippable');
-
-    if (
-        equippable.getEquipment(EquipmentSlot.Head)?.typeId === 'ldns:error_helmet' &&
-        equippable.getEquipment(EquipmentSlot.Chest)?.typeId === 'ldns:error_chestplate' &&
-        equippable.getEquipment(EquipmentSlot.Legs)?.typeId === 'ldns:error_leggings' &&
-        equippable.getEquipment(EquipmentSlot.Feet)?.typeId === 'ldns:error_boots'
-    ) {
-        v.setDynamicProperty("LposX", v.location.x);
-        v.setDynamicProperty("LposY", v.location.y);
-        v.setDynamicProperty("LposZ", v.location.z);
-        const cursedform = new MessageFormData();
-        cursedform.title("").body("What are you doing?").button1("OK").button2("Yes");
-        cursedform.show(v).then(async res => {
-            if (res.selection === 0) {
-                if (random(0, 2) === 0) {
-                    event14s(v);
-                }
-            } else if (res.selection === 1) {
-                if (random(0, 2) === 0) {
-                    event14s(v);
-                }
-            }
-            else if (res.canceled) {
-                if (random(0, 2) === 0) {
-                    event14s(v);
-                }
-            }
-        });
-    }
+    v.setDynamicProperty("LposX", v.location.x);
+    v.setDynamicProperty("LposY", v.location.y);
+    v.setDynamicProperty("LposZ", v.location.z);
+    const cursedform = new MessageFormData();
+    cursedform.title("").body("I saw").button1("Yes").button2("Okay");
+    cursedform.show(v).then(async res => {
+        if (random(0, 3) === 0) {
+            event14s(v);
+        }
+    });
 }
 
-async function event14s(v) {
+export async function event14s(v) {
     const posX = 0;
     const posY = 300;
     const posZ = -3;
@@ -912,6 +906,10 @@ system.runInterval(() => {
                 v.setDynamicProperty("longfixTag2", true);
             }
             if (v.getDynamicProperty("longfixTag2") === true && (v.location.x <= -24 || v.location.y <= 295)) {
+                let LongFix = world.getDimension("minecraft:overworld").getEntities({ type: "ldns:place", location: v.location, maxDistance: 60 });
+                LongFix.forEach((e, ei, ea) => {
+                    e.remove();
+                });
                 v.teleport({ x: v.getDynamicProperty("LposX"), y: v.getDynamicProperty("LposY"), z: v.getDynamicProperty("LposZ") }, { dimension: world.getDimension("minecraft:overworld") });
                 v.setDynamicProperty("longfixTag", false);
                 v.setDynamicProperty("longfixTag2", false);
@@ -964,7 +962,9 @@ async function event16(v, posX, posY, posZ, pitch, yaw) {
  * @param {Player} v 
  */
 function event17(v) {
-    world.getDimension(v.dimension.id).spawnEntity("ldns:iamyoumaybe", { x: v.location.x + 30, y: v.location.y + 25, z: v.location.z });
+    let xX = v.location.x - 33;
+    let zZ = v.location.z;
+    v.dimension.spawnEntity("ldns:iamyoumaybe", { x: xX, y: getTopmostBlockLocation(v.dimension, xX, zZ) + 2, z: zZ });
 }
 
 /**
@@ -973,9 +973,9 @@ function event17(v) {
  */
 function event18(v) {
     if (random(0, 2) == 0) {
-        world.getDimension(v.dimension.id).spawnEntity("ldns:ov7", { x: v.location.x + random(-32, 32), y: random(-20, 60), z: v.location.z + random(-32, 32) });
+        v.dimension.spawnEntity("ldns:ov7", { x: v.location.x + random(-32, 32), y: random(-20, 60), z: v.location.z + random(-32, 32) });
     } else {
-        world.getDimension(v.dimension.id).spawnEntity("ldns:ov8", { x: v.location.x + random(-32, 32), y: random(-20, 60), z: v.location.z + random(-32, 32) });
+        v.dimension.spawnEntity("ldns:ov8", { x: v.location.x + random(-32, 32), y: random(-20, 60), z: v.location.z + random(-32, 32) });
     }
 }
 
@@ -1021,7 +1021,7 @@ system.afterEvents.scriptEventReceive.subscribe((e) => {
     if (e.id == "ldns:test_new") {
         let player = e.sourceEntity;
         if (player instanceof Player)
-            event19(player);
+            event14X(player);
     }
 });
 

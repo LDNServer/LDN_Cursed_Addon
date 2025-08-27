@@ -5,12 +5,6 @@ import { Dimension, Entity, Player, system, world } from "@minecraft/server";
  * @param {number} z
  */
 export function getTopmostBlockLocation(dimension, x, z) {
-    let y = 319;
-    while (y >= -64) {
-        if (!dimension.getBlock({ x, y, z }).matches("air")) {
-            return y;
-        }
-        y--;
-    }
-    return 120;
+    let ground = world.getDimension(dimension.id).getBlockBelow({ x: x, y: 200, z: z }, { includeLiquidBlocks: false });
+    return ground.location.y
 }

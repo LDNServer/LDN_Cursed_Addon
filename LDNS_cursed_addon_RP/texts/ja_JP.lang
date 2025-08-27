@@ -110,6 +110,9 @@ item.spawn_egg.entity.ldns:possibly.name=Possibly のスポーンエッグ
 entity.ldns:pv.name=Personal Villager
 item.spawn_egg.entity.ldns:pv.name=Personal Villager のスポーンエッグ
 
+entity.ldns:error64.name=Error64
+item.spawn_egg.entity.ldns:error64.name=Error64 のスポーンエッグ
+
 ##ブロック
 tile.ldns:error_block.name=繧ｨ繝ｩ繝ｼ ブロック
 
