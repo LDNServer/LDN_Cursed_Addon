@@ -814,8 +814,8 @@ export async function event13(v) {
  * @param {Player} v 
  */
 function event14X(v) {
-    let xX = v.location.x + 60;
-    let zZ = v.location.z - 60;
+    let xX = v.location.x + 30;
+    let zZ = v.location.z - 30;
     v.dimension.spawnEntity("ldns:error64", { x: xX, y: getTopmostBlockLocation(v.dimension, xX, zZ) + 2, z: zZ });
 }
 
